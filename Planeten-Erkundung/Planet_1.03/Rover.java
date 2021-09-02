@@ -6,7 +6,8 @@ public class Rover extends Actor
 
     public void act() 
     {
-
+        fahre();
+        entferneMarke();
     } 
 
 
