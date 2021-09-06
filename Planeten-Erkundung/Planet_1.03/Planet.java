@@ -22,6 +22,9 @@ public class Planet extends World
         this.addObject(new Marke(),6,5);
         this.addObject(new Huegel(),0,8);
         this.addObject(new Huegel(),1,8);
+        this.addObject(new Huegel(),9,5);
+        this.addObject(new Huegel(),8,9);
+        this.addObject(new Huegel(),2,4);
         prepare();
     }
 

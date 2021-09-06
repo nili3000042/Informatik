@@ -6,11 +6,24 @@ public class Rover extends Actor
 
     public void act() 
     {
-        fahre();
-        entferneMarke();
+        fahren2(3);
     } 
 
-
+    public void fahren(int Fahren_Anzahl) 
+    {
+        while(Fahren_Anzahl > 0)
+             {
+                    fahre();
+                    Fahren_Anzahl = Fahren_Anzahl-1;
+              }
+    } 
+    public void fahren2(int Fahren_Anzahl) 
+    {
+        for(int i = 0; i<Fahren_Anzahl; i++)
+           {
+                    fahre();
+           }
+    } 
     /**
      * Der Rover bewegt sich ein Feld in Fahrtrichtung weiter.
      * Sollte sich in Fahrtrichtung ein Objekt der Klasse Huegel befinden oder er sich an der Grenze der Welt befinden,
@@ -24,6 +37,9 @@ public class Rover extends Actor
         if(huegelVorhanden("vorne"))
         {
             nachricht("Zu steil!");
+            drehe("rechts");
+            move(1);
+            Greenfoot.delay(1);
         }
         else if(getRotation()==270 && getY()==1)
         {
