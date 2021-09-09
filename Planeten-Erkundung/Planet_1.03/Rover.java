@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Rover extends Actor
@@ -6,9 +7,68 @@ public class Rover extends Actor
 
     public void act() 
     {
-        fahren2(3);
+        SBS33NR2();
     } 
-
+    
+    
+    public void test() 
+    {
+        fahre();
+    } 
+    /** Aufgaben **/
+    public void SBS29NR9_1() 
+    {
+        fahren(2);
+        analysiereGestein();
+        fahre();
+        analysiereGestein();
+        drehe("rechts");
+        fahre();
+        drehe("rechts");
+        fahre();
+        analysiereGestein();
+    }
+    public void SBS33NR1() 
+    {
+        drehe("rechts");
+        int i = 0;
+        while(!gesteinVorhanden())
+        {
+            fahre();
+            i = i+1;
+        }
+        analysiereGestein();
+        drehe("rechts");
+        drehe("rechts");
+        fahren(i);
+        drehe("rechts");
+    } 
+    public void SBS33NR2() 
+    {
+        int x = 5;
+        int y = 5;
+        String richtung = "rechts";
+        while(y != 0)
+        {
+            fahren(x-1);
+            if(y-1 > 0)
+            {
+                drehe(richtung);
+                fahre();
+                drehe(richtung);
+                if(richtung == "links")
+                {
+                    richtung = "rechts"; 
+                }
+                else
+                {
+                    richtung = "links";
+                }
+            }
+            y = y-1;
+        }
+    } 
+    /** Commands selbst erstellt **/
     public void fahren(int Fahren_Anzahl) 
     {
         while(Fahren_Anzahl > 0)
@@ -24,6 +84,63 @@ public class Rover extends Actor
                     fahre();
            }
     } 
+    public void fahre2()
+    {
+        int posX = getX();
+        int posY = getY();
+
+        if(huegelVorhanden("vorne"))
+        {
+            nachricht("Zu steil!");
+            drehe("rechts");
+            move(1);
+            Greenfoot.delay(1);
+        }
+        else if(getRotation()==270 && getY()==1)
+        {
+            nachricht("Ich kann mich nicht bewegen");
+        }
+        else
+        {
+            move(1);
+            Greenfoot.delay(1);
+        }
+        if(posX==getX()&&posY==getY()&&!huegelVorhanden("vorne"))
+        {
+            nachricht("Ich kann mich nicht bewegen");
+        }
+    }
+    public void Mapdurchfahren() 
+    {
+        if(huegelVorhanden("vorne"))
+        {
+            nachricht("Zu steil!");
+            drehe("rechts");
+            fahre();
+            drehe("links");
+            fahren(2);
+            drehe("links");
+            fahre();
+            analysiereGestein();
+        }
+        else if(getRotation()==270 && getY()==1)
+        {
+            nachricht("Ich kann mich nicht bewegen");
+            drehe("rechts");
+            fahre();
+            drehe("rechts");
+            analysiereGestein();
+        }
+        else
+        {
+            fahre();
+            analysiereGestein();
+        }
+    } 
+    
+    
+    
+    /** Commands Nicht selbst erstellt **/
     /**
      * Der Rover bewegt sich ein Feld in Fahrtrichtung weiter.
      * Sollte sich in Fahrtrichtung ein Objekt der Klasse Huegel befinden oder er sich an der Grenze der Welt befinden,
@@ -37,9 +154,6 @@ public class Rover extends Actor
         if(huegelVorhanden("vorne"))
         {
             nachricht("Zu steil!");
-            drehe("rechts");
-            move(1);
-            Greenfoot.delay(1);
         }
         else if(getRotation()==270 && getY()==1)
         {
