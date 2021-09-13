@@ -7,7 +7,7 @@ public class Rover extends Actor
 
     public void act() 
     {
-        SBS33NR2();
+        SBS41NR1();
     } 
     
     
@@ -16,32 +16,28 @@ public class Rover extends Actor
         fahre();
     } 
     /** Aufgaben **/
-    public void SBS29NR9_1() 
+    public void SBS41NR1() 
     {
-        fahren(2);
-        analysiereGestein();
-        fahre();
-        analysiereGestein();
-        drehe("rechts");
-        fahre();
-        drehe("rechts");
-        fahre();
-        analysiereGestein();
+        while(!markeVorhanden())
+        {
+         while(huegelVorhanden("rechts"))
+         {
+             if(huegelVorhanden("vorn"))
+             {
+                 drehe("rechts");
+             }
+             fahre();
+         }
+         drehe("rechts");
+         fahre();
+        }
     }
-    public void SBS33NR1() 
+    public void Aufgabe_1() 
     {
-        drehe("rechts");
-        int i = 0;
-        while(!gesteinVorhanden())
+        while (gesteinVorhanden())
         {
             fahre();
-            i = i+1;
         }
-        analysiereGestein();
-        drehe("rechts");
-        drehe("rechts");
-        fahren(i);
-        drehe("rechts");
     } 
     public void SBS33NR2() 
     {
@@ -68,6 +64,33 @@ public class Rover extends Actor
             y = y-1;
         }
     } 
+     public void SBS33NR1() 
+    {
+        drehe("rechts");
+        int i = 0;
+        while(!gesteinVorhanden())
+        {
+            fahre();
+            i = i+1;
+        }
+        analysiereGestein();
+        drehe("rechts");
+        drehe("rechts");
+        fahren(i);
+        drehe("rechts");
+    } 
+    public void SBS29NR9_1() 
+    {
+        fahren(2);
+        analysiereGestein();
+        fahre();
+        analysiereGestein();
+        drehe("rechts");
+        fahre();
+        drehe("rechts");
+        fahre();
+        analysiereGestein();
+    }
     /** Commands selbst erstellt **/
     public void fahren(int Fahren_Anzahl) 
     {
