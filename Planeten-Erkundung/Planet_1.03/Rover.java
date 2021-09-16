@@ -7,7 +7,7 @@ public class Rover extends Actor
 
     public void act() 
     {
-        SBS41NR1();
+        SBS41_43NR6();
     } 
     
     
@@ -16,15 +16,81 @@ public class Rover extends Actor
         fahre();
     } 
     /** Aufgaben **/
-    public void SBS41NR1() 
+    public void SBS41_43NR6() 
     {
+        do
+        {
+            fahre();
+        }while(huegelVorhanden("rechts"));
+    } 
+    public void SBS41_43NR5() 
+    {
+        while (gesteinVorhanden())
+        {
+            analysiereGestein();
+            setzeMarke();
+            fahre();
+        }
+    } 
+    public void SBS41_43NR4(String Aufgabe) 
+    {
+        if (Aufgabe == "a")
+        {
+            while(huegelVorhanden("links"))
+            {
+                fahre();
+            }
+        }
+        if (Aufgabe == "b")
+        {
+            while(huegelVorhanden("rechts"))
+            {
+                fahre();
+            }
+        }
+        if (Aufgabe == "c")
+        {
+            while(!huegelVorhanden("rechts"))
+            {
+                fahre();
+            }
+        }
+    } 
+    public void SBS41_43NR2() 
+    {
+        fahre();
         while(!markeVorhanden())
         {
          while(huegelVorhanden("rechts"))
          {
-             if(huegelVorhanden("vorn"))
+             if(huegelVorhanden("vorne"))
              {
-                 drehe("rechts");
+                 drehe("links");
+             }
+             fahre();
+             if(gesteinVorhanden())
+             {
+                 analysiereGestein();
+             }
+         }
+         drehe("rechts");
+         fahre();
+         if(gesteinVorhanden())
+             {
+                 analysiereGestein();
+             }
+        }
+    }
+    public void SBS41_43NR1() 
+    {
+        fahre();
+        while(!markeVorhanden())
+        {
+         while(huegelVorhanden("rechts"))
+         {
+             if(huegelVorhanden("vorne"))
+             {
+                 drehe("links");
              }
              fahre();
          }
@@ -64,7 +130,7 @@ public class Rover extends Actor
             y = y-1;
         }
     } 
-     public void SBS33NR1() 
+    public void SBS33NR1() 
     {
         drehe("rechts");
         int i = 0;
@@ -92,6 +158,30 @@ public class Rover extends Actor
         analysiereGestein();
     }
     /** Commands selbst erstellt **/
+    public void mountain_climb()
+    {
+        int posX = getX();
+        int posY = getY();
+
+        if(!huegelVorhanden("vorne"))
+        {
+            nachricht("Kein Hügel!");
+        }
+        else if(getRotation()==270 && getY()==1)
+        {
+            nachricht("Ich kann mich nicht bewegen");
+        }
+        else
+        {
+            move(1);
+            Greenfoot.delay(1);
+        }
+
+        if(posX==getX()&&posY==getY()&&!huegelVorhanden("vorne"))
+        {
+            nachricht("Ich kann mich nicht bewegen");
+        }
+    }
     public void fahren(int Fahren_Anzahl) 
     {
         while(Fahren_Anzahl > 0)
