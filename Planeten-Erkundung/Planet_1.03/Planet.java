@@ -8,24 +8,20 @@ import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Planet extends World
 {
     private static int zellenGroesse = 50;
+    public static int PREPARE = 6;
 
    /**
-     * Erschaffe eine Welt mit 15 * 12 Zellen.
-     */
-    public Planet()
-    {
+    * Erschaffe eine Welt mit 15 * 12 Zellen.
+    */
+   public Planet()
+   {
         super(16, 12, zellenGroesse);
         setBackground("images/boden.png");
         setPaintOrder(String.class, Rover.class, Marke.class, Gestein.class, Huegel.class);
         Greenfoot.setSpeed(20);
-        prepare(6);
-    }
-
-    
-   /**
-     * Bereite die Welt f�r den Programmstart vor.
-     * Das hei�t: Erzeuge die Anfangs-Objekte und f�ge sie der Welt hinzu.
-     */
+        prepare(PREPARE);
+   }
+   
    public void prepare(int a)
    {
         if (a==0) /** Situation 0 */
@@ -38,7 +34,6 @@ public class Planet extends World
             this.addObject(new Huegel(),9,5);
             this.addObject(new Huegel(),8,9);
             this.addObject(new Huegel(),2,4);
-            int PREPARE = a;
         }
         if (a==1) /** Situation SB S.29 nr.9 */
         {
@@ -47,7 +42,6 @@ public class Planet extends World
             this.addObject(new Gestein(),6,5);
             this.addObject(new Gestein(),5,6);
             this.addObject(new Gestein(),6,6);
-            int PREPARE = a;
         }
         if (a==2) /** Situation SB S.33 nr.1 */
         {
@@ -55,12 +49,10 @@ public class Planet extends World
             this.addObject(new Gestein(),3,9);
             this.addObject(new Rover(),5,5);
             this.addObject(new Gestein(),5,9);
-            int PREPARE = a;
         }
         if (a==3) /** Situation SB S.33 nr.2 */
         {
             this.addObject(new Rover(),3,5);
-            int PREPARE = a;
         }
         if (a==4) /** Situation Aufgabe 1 */
         {
@@ -73,7 +65,6 @@ public class Planet extends World
             this.addObject(new Gestein(),9,5);
             this.addObject(new Gestein(),10,5);
             this.addObject(new Gestein(),11,5);
-            int PREPARE = a;
         }
         if (a==5) /** Situation SB S.41-43 nr.1/2 */
         {
@@ -101,7 +92,6 @@ public class Planet extends World
                     this.addObject(new Gestein(),x,y);
                 }
             }
-            int PREPARE = a;
         }
         if (a==6) /** Situation SB S.41-43 nr.4/6 */
         {
@@ -114,7 +104,6 @@ public class Planet extends World
             this.addObject(new Huegel(),4,6);
             this.addObject(new Huegel(),5,6);
             this.addObject(new Huegel(),6,6);
-            int PREPARE = a;
         }
         if (a==7) /** Situation SB S.41-43 nr.5 */
         {
@@ -125,10 +114,9 @@ public class Planet extends World
             this.addObject(new Gestein(),6,5);
             this.addObject(new Gestein(),7,5);
             this.addObject(new Gestein(),8,5);
-            int PREPARE = a;
         }
    }
-   public int getRandomNumber(int start,int end)
+   public static int getRandomNumber(int start,int end)
    {    /*getRandomNumber(20,30);*/
        int normal = Greenfoot.getRandomNumber(end-start+1);
        return normal+start;

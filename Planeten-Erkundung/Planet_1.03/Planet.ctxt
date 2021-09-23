@@ -6,7 +6,6 @@ comment1.target=Planet()
 comment1.text=\r\n\ Erschaffe\ eine\ Welt\ mit\ 15\ *\ 12\ Zellen.\r\n
 comment2.params=a
 comment2.target=void\ prepare(int)
-comment2.text=\r\n\ Bereite\ die\ Welt\ f\u00EF\u00BF\u00BDr\ den\ Programmstart\ vor.\r\n\ Das\ hei\u00EF\u00BF\u00BDt\:\ Erzeuge\ die\ Anfangs-Objekte\ und\ f\u00EF\u00BF\u00BDge\ sie\ der\ Welt\ hinzu.\r\n
 comment3.params=start\ end
 comment3.target=int\ getRandomNumber(int,\ int)
 numComments=4
