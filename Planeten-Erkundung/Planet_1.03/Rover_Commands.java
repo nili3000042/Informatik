@@ -8,6 +8,14 @@ public class Rover_Commands extends Rover_OG_Commands
         fahre();
     }
     /** Commands selbst erstellt **/
+    public void Gesteinsproben_Reihe(int a) 
+    {
+        for (int i=0; i<a; i++)
+        {
+            analysiereGestein();
+            fahre();
+        }
+    }
     public void mountain_climb()
     {
         int posX = getX();

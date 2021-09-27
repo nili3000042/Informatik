@@ -8,7 +8,7 @@ import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Planet extends World
 {
     private static int zellenGroesse = 50;
-    public static int PREPARE = 6;
+    public static int PREPARE = 7;
 
    /**
     * Erschaffe eine Welt mit 15 * 12 Zellen.
@@ -24,6 +24,10 @@ public class Planet extends World
    
    public void prepare(int a)
    {
+        if (a==-1) /** Situation __ */
+        {
+            ;
+        } 
         if (a==0) /** Situation 0 */
         {
             this.addObject(new Rover(),3,5);
