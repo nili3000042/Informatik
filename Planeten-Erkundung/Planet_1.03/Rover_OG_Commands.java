@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Rover_OG_Commands extends Actor
 {
-    private Display anzeige; 
+    public Display anzeige; 
     /** Commands Nicht selbst erstellt **/
     /**
      * Der Rover bewegt sich ein Feld in Fahrtrichtung weiter.
@@ -202,7 +202,7 @@ public class Rover_OG_Commands extends Actor
 
     }
 
-    class Display extends Actor
+    public class Display extends Actor
     {
         GreenfootImage bild; 
 

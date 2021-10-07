@@ -8,8 +8,9 @@ import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Planet extends World
 {
     private static int zellenGroesse = 50;
-    public static int PREPARE = 7;
-
+    /*private static String pREPARE = Greenfoot.ask("Please Input Code Coresponding to situation");
+    public static int PREPARE = Integer.parseInt(pREPARE);*/
+    public static int PREPARE = -1;
    /**
     * Erschaffe eine Welt mit 15 * 12 Zellen.
     */
@@ -22,12 +23,8 @@ public class Planet extends World
         prepare(PREPARE);
    }
    
-   public void prepare(int a)
-   {
-        if (a==-1) /** Situation __ */
-        {
-            ;
-        } 
+    public void prepare(int a)
+    {
         if (a==0) /** Situation 0 */
         {
             this.addObject(new Rover(),3,5);
@@ -39,7 +36,7 @@ public class Planet extends World
             this.addObject(new Huegel(),8,9);
             this.addObject(new Huegel(),2,4);
         }
-        if (a==1) /** Situation SB S.29 nr.9 */
+        else if (a==1) /** Situation SB S.29 nr.9 */
         {
             this.addObject(new Rover(),3,5);
             this.addObject(new Gestein(),5,5);
@@ -47,18 +44,18 @@ public class Planet extends World
             this.addObject(new Gestein(),5,6);
             this.addObject(new Gestein(),6,6);
         }
-        if (a==2) /** Situation SB S.33 nr.1 */
+        else if (a==2) /** Situation SB S.33 nr.1 */
         {
             this.addObject(new Rover(),3,5);
             this.addObject(new Gestein(),3,9);
             this.addObject(new Rover(),5,5);
             this.addObject(new Gestein(),5,9);
         }
-        if (a==3) /** Situation SB S.33 nr.2 */
+        else if (a==3) /** Situation SB S.33 nr.2 */
         {
             this.addObject(new Rover(),3,5);
         }
-        if (a==4) /** Situation Aufgabe 1 */
+        else if (a==4) /** Situation Aufgabe 1 */
         {
             this.addObject(new Rover(),3,5);
             this.addObject(new Gestein(),3,5);
@@ -70,7 +67,7 @@ public class Planet extends World
             this.addObject(new Gestein(),10,5);
             this.addObject(new Gestein(),11,5);
         }
-        if (a==5) /** Situation SB S.41-43 nr.1/2 */
+        else if (a==5) /** Situation SB S.41-43 nr.1/2 */
         {
             this.addObject(new Rover(),6,1);
             this.addObject(new Marke(),5,1);
@@ -97,7 +94,7 @@ public class Planet extends World
                 }
             }
         }
-        if (a==6) /** Situation SB S.41-43 nr.4/6 */
+        else if (a==6) /** Situation SB S.41-43 nr.4/6 */
         {
             this.addObject(new Rover(),3,5);
             this.addObject(new Huegel(),3,4);
@@ -109,7 +106,7 @@ public class Planet extends World
             this.addObject(new Huegel(),5,6);
             this.addObject(new Huegel(),6,6);
         }
-        if (a==7) /** Situation SB S.41-43 nr.5 */
+        else if (a==7) /** Situation SB S.41-43 nr.5 */
         {
             this.addObject(new Rover(),3,5);
             this.addObject(new Gestein(),3,5);
@@ -119,7 +116,36 @@ public class Planet extends World
             this.addObject(new Gestein(),7,5);
             this.addObject(new Gestein(),8,5);
         }
-   }
+        else if (a==8) /** Situation Aufgabe 7.10.2021 */
+        {
+            this.addObject(new Rover(),3,5);
+            this.addObject(new Huegel(),3,6);
+            this.addObject(new Huegel(),4,6);
+            this.addObject(new Huegel(),5,6);
+            this.addObject(new Huegel(),6,6);
+            this.addObject(new Huegel(),3,7);
+            this.addObject(new Huegel(),4,7);
+            this.addObject(new Huegel(),5,7);
+            this.addObject(new Huegel(),6,7);
+        }
+        else if (a==9) /** Situation AB: Übungen zu Bedingungen Aufgabe 1 */
+        {
+            ;
+        }
+        else if (a==10) /** Situation AB: Übungen zu Bedingungen Aufgabe 2 */
+        {
+            ;
+        }
+        else if (a==11) /** Situation AB: Übungen zu Bedingungen Aufgabe 3 */
+        {
+            ;
+        }
+        else if (a==-1) /** Situation __ */
+        {
+            ;
+        } 
+    }
+
    public static int getRandomNumber(int start,int end)
    {    /*getRandomNumber(20,30);*/
        int normal = Greenfoot.getRandomNumber(end-start+1);

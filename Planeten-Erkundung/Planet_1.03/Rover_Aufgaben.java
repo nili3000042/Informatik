@@ -25,21 +25,21 @@ public class Rover_Aufgaben extends Rover_Commands
     } 
     public void SBS41_43NR4(String Aufgabe) 
     {
-        if (Aufgabe == "a")
+        if (Aufgabe == "a)")
         {
             while(huegelVorhanden("links"))
             {
                 fahre();
             }
         }
-        if (Aufgabe == "b")
+        if (Aufgabe == "b)")
         {
             while(huegelVorhanden("rechts"))
             {
                 fahre();
             }
         }
-        if (Aufgabe == "c")
+        if (Aufgabe == "c)")
         {
             while(!huegelVorhanden("rechts"))
             {
