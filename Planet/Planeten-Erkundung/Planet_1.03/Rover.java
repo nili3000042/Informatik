@@ -83,6 +83,22 @@ public class Rover extends Rover_Aufgaben
                 zaehler ++;
             }
         }
+        else if (Planet.PREPARE == 9) /** Situation AB: Übungen zu Bedingungen Aufgabe 1 */
+        {
+            AB_ÜzBA1();
+        }
+        else if (Planet.PREPARE == 10) /** Situation AB: Übungen zu Bedingungen Aufgabe 2 */
+        {
+            AB_ÜzBA2();
+        }
+        else if (Planet.PREPARE == 11) /** Situation AB: Übungen zu Bedingungen Aufgabe 3 */
+        {
+            AB_ÜzBA3();
+        }
+        else if (Planet.PREPARE == 12) /** Situation Aufgabe 25.10.2021 */
+        {
+            Aufgabe_25102021();
+        }
         else if (Planet.PREPARE == -1) /** Situation __ */
         {
             ;

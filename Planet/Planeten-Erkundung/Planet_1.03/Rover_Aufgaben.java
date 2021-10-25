@@ -7,6 +7,47 @@ public class Rover_Aufgaben extends Rover_Commands
         fahren(2);
     }
     /** Aufgaben **/
+    public void Aufgabe_25102021() 
+    {
+        while(!markeVorhanden())
+        {
+            if(!huegelVorhanden("vorne"))
+            {
+                fahre();
+            }
+            else if(!huegelVorhanden("rechts"))
+            {
+                drehe("rechts");
+            }
+            else if(!huegelVorhanden("links"))
+            {
+                drehe("links");
+            }
+        }
+    }
+    public void AB_ÜzBA3() 
+    {
+        test();
+    }
+    public void AB_ÜzBA2() 
+    {
+        fahre();
+    }
+    public void AB_ÜzBA1() 
+    {
+        for(int i=0;i<10;i++)
+        {
+            if(gesteinVorhanden())
+            {
+                analysiereGestein();
+            }
+            fahre();
+            if(gesteinVorhanden())
+            {
+                analysiereGestein();
+            }
+        }
+    }
     public void SBS41_43NR6() 
     {
         do
