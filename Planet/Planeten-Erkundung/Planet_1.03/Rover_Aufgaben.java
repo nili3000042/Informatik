@@ -27,11 +27,67 @@ public class Rover_Aufgaben extends Rover_Commands
     }
     public void AB_ÜzBA3() 
     {
-        test();
+        int i = 0;
+        while(!markeVorhanden())
+        {
+            if(!huegelVorhanden("rechts"))
+            {
+                drehe("rechts");
+                fahre();
+                if (i==1)
+                {
+                    i=0;
+                }
+            }
+            else if(!huegelVorhanden("links"))
+            {
+                drehe("links");
+                fahre();
+                if (i==1)
+                {
+                    i=0;
+                }
+            }
+            else if(!huegelVorhanden("vorne"))
+            {
+                fahre();
+                if (i==1)
+                {
+                    i=0;
+                }
+            }
+            else if(i == 1 )
+            {
+                nachricht("Ich bin Umzingelt, Klettere jetzt");
+                mountain_climb();
+            }
+            else
+            {
+                drehe("rechts");
+                i=1;
+            }
+        }
     }
     public void AB_ÜzBA2() 
     {
-        fahre();
+        int i = 0;
+        while(i<3)
+        {
+            if(markeVorhanden())
+            {
+                entferneMarke();
+                i = i + 1;
+                if (i<3)
+                {
+                    fahre();
+                }
+            }
+            else
+            {
+                setzeMarke();
+                fahre();
+            }
+        }
     }
     public void AB_ÜzBA1() 
     {

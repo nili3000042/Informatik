@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=People
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ PEOPLE.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ tut,\ was\ auch\ immer\ PEOPLE\ tun\ will.\ Diese\ Methode\ wird\ aufgerufen,\ \r\n\ sobald\ der\ 'Act'\ oder\ 'Run'\ Button\ in\ der\ Umgebung\ angeklickt\ werden.\ \r\n
+numComments=2
