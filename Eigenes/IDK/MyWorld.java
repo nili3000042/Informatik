@@ -17,7 +17,7 @@ public class MyWorld extends World
     {    
         // Erstellt eine neue Welt mit 600x400 Zellen und einer Zell-Größe von 1x1 Pixeln.
         super(600, 600, 1); 
-        addObject(new People(), 300, 200);
+        this.addObject(new Player(), 300, 300);
     }
     public static int getRandomNumber(int start,int end)
     {    /*getRandomNumber(20,30);*/

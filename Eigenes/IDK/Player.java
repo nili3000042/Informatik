@@ -6,29 +6,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class People extends Actor
+public class Player extends Movedbyplayer
 {
+    public int Cooldown =100000001;
     /**
      * Act - tut, was auch immer PEOPLE tun will. Diese Methode wird aufgerufen, 
      * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
      */
     public void act() 
     {
-        if(Greenfoot.isKeyDown("w"))
+        wasd_Rotate();
+        if(Greenfoot.isKeyDown("space") && Cooldown>50)
         {
-            this.move(3);
+            Schuss Peng = new Schuss();
+            Peng.setRotation(getRotation());
+            this.getWorld().addObject(Peng, this.getX(), this.getY());
+            Cooldown = 1;
         }
-        if(Greenfoot.isKeyDown("s"))
-        {
-            this.move(-3);
-        }
-        if(Greenfoot.isKeyDown("a"))
-        {
-            this.turn(-5);
-        }
-        if(Greenfoot.isKeyDown("d"))
-        {
-            this.turn(5);
-        }
+        Cooldown=Cooldown+1;
     }    
 }

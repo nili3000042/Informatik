@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Schuss
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ Schuss.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Schuss()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ tut,\ was\ auch\ immer\ Schuss\ tun\ will.\ Diese\ Methode\ wird\ aufgerufen,\ \r\n\ sobald\ der\ 'Act'\ oder\ 'Run'\ Button\ in\ der\ Umgebung\ angeklickt\ werden.\ \r\n
+numComments=3
