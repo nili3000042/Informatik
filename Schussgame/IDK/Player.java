@@ -16,7 +16,7 @@ public class Player extends Movedbyplayer
     public void act() 
     {
         wasd_Rotate();
-        if(Greenfoot.isKeyDown("space") && Cooldown>50)
+        if(Greenfoot.isKeyDown("space") && Cooldown>5)
         {
             Schuss Peng = new Schuss();
             Peng.setRotation(getRotation());

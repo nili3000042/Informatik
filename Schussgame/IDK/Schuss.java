@@ -8,20 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  */
 public class Schuss extends Actor
 {
-    public Schuss()
-    {
-        
-    }
-    /**
-     * Act - tut, was auch immer Schuss tun will. Diese Methode wird aufgerufen, 
-     * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
-     */
     public void act() 
     {
-        this. move(3);
+        this.move(6);
+        Kill_Slime();
         if(this.isAtEdge())
         {
-            this.getWorld().removeObject(this);
+            suicide();
         }
     }    
+    public void suicide()
+    {
+        this.getWorld().removeObject(this);
+    }
+    public void Kill_Slime()
+    {
+        if(this.isTouching(Slime.class))
+        {
+            this.removeTouching(Slime.class);
+            MyWorld.Slimes=MyWorld.Slimes-1;
+            MyWorld.Score=MyWorld.Score+1;
+        }
+    }
 }
