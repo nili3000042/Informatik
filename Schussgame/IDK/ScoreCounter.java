@@ -18,7 +18,6 @@ public class ScoreCounter extends Actor
     }
     public void display_score()
     {
-        String score_string = Integer.toString(MyWorld.Score);
-        setImage(new GreenfootImage("Score: " + score_string, 50, Color.WHITE, new Color(0,0,0,0)));
+        setImage(new GreenfootImage("Score: " + MyWorld.Score, 50, Color.WHITE, new Color(0,0,0,0)));
     }
 }

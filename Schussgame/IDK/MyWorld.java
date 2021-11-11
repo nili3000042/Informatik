@@ -14,6 +14,7 @@ public class MyWorld extends World
     public static int Score =0;
     public static int Hearts =3;
     public int wait =0;
+    public int Max_Slimes =1;
     public MyWorld()
     {    
         // Erstellt eine neue Welt mit 600x400 Zellen und einer Zell-Größe von 1x1 Pixeln.
@@ -27,11 +28,24 @@ public class MyWorld extends World
         Score =0;
         Hearts =3;
         wait =0;
+        Max_Slimes =1;
     }
     public void act()
     {       
         slime_spawning();
         GameOver();
+        aktualisieren();
+    }
+    public void upgrades()
+    {
+        
+    }
+    public void aktualisieren()
+    {
+        if(Score>10)
+        {
+            Max_Slimes=Score/2;
+        }
     }
     public void GameOver()
     {
@@ -52,6 +66,7 @@ public class MyWorld extends World
                 Score =0;
                 Hearts =3;
                 wait =0;
+                Max_Slimes =0;
             }
             else
             {
@@ -61,7 +76,7 @@ public class MyWorld extends World
     }
     public void slime_spawning()
     {
-        if(Cooldown>200 && Slimes<50)
+        if(Cooldown>1000-Score && Slimes<Max_Slimes)
         {
             if(FlipFlop==0)
             {

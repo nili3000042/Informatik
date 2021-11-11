@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 public class Player extends Movedbyplayer
 {
     public int Cooldown =100000001;
+    public int upgrade_level =1;
     /**
      * Act - tut, was auch immer PEOPLE tun will. Diese Methode wird aufgerufen, 
      * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
@@ -16,13 +17,25 @@ public class Player extends Movedbyplayer
     public void act() 
     {
         wasd_Rotate();
-        if(Greenfoot.isKeyDown("space") && Cooldown>5)
+        gun();
+        upgrade();
+    }    
+    public void upgrade()
+    {
+        
+    }
+    public void gun()
+    {
+        if(Greenfoot.isKeyDown("space") && Cooldown>1)
         {
             Schuss Peng = new Schuss();
             Peng.setRotation(getRotation());
             this.getWorld().addObject(Peng, this.getX(), this.getY());
-            Cooldown = 1;
+            Cooldown = 2;
         }
-        Cooldown=Cooldown+1;
-    }    
+        else if(!Greenfoot.isKeyDown("space"))
+        {
+            Cooldown=Cooldown+1;
+        }
+    }
 }
