@@ -22,7 +22,11 @@ public class Player extends Movedbyplayer
     }    
     public void upgrade()
     {
-        
+        if(isTouching(Upgrades.class))
+        {
+            upgrade_level = upgrade_level+1;
+            removeTouching(Upgrades.class);
+        }
     }
     public void gun()
     {
