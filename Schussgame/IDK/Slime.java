@@ -18,8 +18,8 @@ public class Slime extends Actor
     {
         if(isTouching(Player.class))
         {
-            MyWorld.Hearts=MyWorld.Hearts-1;
-            MyWorld.Slimes=MyWorld.Slimes-1;
+            MyWorld.Hearts--;
+            MyWorld.Slimes--;
             suicide();
         }
     }

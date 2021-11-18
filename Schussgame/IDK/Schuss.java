@@ -25,9 +25,13 @@ public class Schuss extends Actor
     {
         if(this.isTouching(Slime.class))
         {
-            this.removeTouching(Slime.class);
             MyWorld.Slimes=MyWorld.Slimes-1;
             MyWorld.Score=MyWorld.Score+1;
+            if(Greenfoot.getRandomNumber(101)>50&&MyWorld.upgrade_level<200)
+            {
+                getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            this.removeTouching(Slime.class);
         }
     }
 }

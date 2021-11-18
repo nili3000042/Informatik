@@ -15,6 +15,7 @@ public class MyWorld extends World
     public static int Hearts =3;
     public int wait =0;
     public int Max_Slimes =1;
+    public static int upgrade_level =0;
     public MyWorld()
     {    
         // Erstellt eine neue Welt mit 600x400 Zellen und einer Zell-Größe von 1x1 Pixeln.
@@ -22,6 +23,11 @@ public class MyWorld extends World
         this.addObject(new Player(), 300, 300);
         this.addObject(new ScoreCounter(), 300,30);
         this.addObject(new HeartCounter(), 300,70);
+        this.addObject(new UpgradeCounter(),300,570);
+        for(int i=0;i<250;i++)
+        {
+            this.addObject(new Upgrade(),350,300);
+        }
         Cooldown =100000001;
         Slimes =0;
         FlipFlop =0;
@@ -29,12 +35,14 @@ public class MyWorld extends World
         Hearts =3;
         wait =0;
         Max_Slimes =1;
+        upgrade_level =0;
     }
     public void act()
     {       
         slime_spawning();
         GameOver();
         aktualisieren();
+        upgrades();
     }
     public void upgrades()
     {
@@ -60,13 +68,15 @@ public class MyWorld extends World
                 this.addObject(new Player(), 300, 300);
                 this.addObject(new ScoreCounter(), 300,30);
                 this.addObject(new HeartCounter(), 300,70);
+                this.addObject(new UpgradeCounter(),300,570);
                 Cooldown =100000001;
                 Slimes =0;
                 FlipFlop =0;
                 Score =0;
                 Hearts =3;
                 wait =0;
-                Max_Slimes =0;
+                Max_Slimes =1;
+                upgrade_level =0;
             }
             else
             {
