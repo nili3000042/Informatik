@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=DataWildBattle
+comment1.params=
+comment1.target=void\ act()
+comment2.params=playerAttackType
+comment2.target=void\ startTurn(java.lang.String)
+comment3.params=
+comment3.target=void\ failedRun()
+comment4.params=attack
+comment4.target=void\ endFirstTurn(BattleAttack)
+comment5.params=attack
+comment5.target=void\ endLastTurn(BattleAttack)
+comment6.params=
+comment6.target=boolean\ playerPlaysFirst()
+comment7.params=attackType\ enemyType1\ enemyType2
+comment7.target=double\ getEfficiency(java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=8

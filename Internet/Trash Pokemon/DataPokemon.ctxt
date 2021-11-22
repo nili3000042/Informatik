@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DataPokemon
+comment1.params=
+comment1.target=DataPokemon()
+comment2.params=
+comment2.target=int\ numberOfAlivePokemons()
+comment3.params=index
+comment3.target=void\ changePokemon(int)
+comment4.params=
+comment4.target=void\ pokemonCenterHeal()
+numComments=5

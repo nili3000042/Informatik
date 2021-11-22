@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=ObjectSpecialNPCProfessor
+comment1.params=status
+comment1.target=ObjectSpecialNPCProfessor(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ time5()
+comment4.params=
+comment4.target=void\ time4()
+comment5.params=
+comment5.target=void\ time3()
+comment6.params=
+comment6.target=void\ time2()
+comment7.params=
+comment7.target=void\ time1()
+comment8.params=
+comment8.target=void\ time0()
+numComments=9

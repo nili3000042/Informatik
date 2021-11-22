@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Warp
+comment1.params=destinationWorld\ x\ y\ width\ height\ index
+comment1.target=Warp(java.lang.String,\ int,\ int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

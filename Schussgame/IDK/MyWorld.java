@@ -2,13 +2,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
 /**
  * Ergänzen Sie hier eine Beschreibung für die Klasse MyWorld.
- * 
+ * Ideen
+ * -Sound
+ * -Cooldown show
+ * -Different asset player
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
 public class MyWorld extends World
 {
-    public int Cooldown =100000001;
+    public int Cooldown_Slimes =100000001;
     public static int Slimes =0;
     public int FlipFlop =0;
     public static int Score =0;
@@ -16,6 +19,7 @@ public class MyWorld extends World
     public int wait =0;
     public int Max_Slimes =1;
     public static int upgrade_level =0;
+    public static int Cooldown_Gun =-10;
     public MyWorld()
     {    
         // Erstellt eine neue Welt mit 600x400 Zellen und einer Zell-Größe von 1x1 Pixeln.
@@ -24,11 +28,7 @@ public class MyWorld extends World
         this.addObject(new ScoreCounter(), 300,30);
         this.addObject(new HeartCounter(), 300,70);
         this.addObject(new UpgradeCounter(),300,570);
-        for(int i=0;i<250;i++)
-        {
-            this.addObject(new Upgrade(),350,300);
-        }
-        Cooldown =100000001;
+        Cooldown_Slimes =100000001;
         Slimes =0;
         FlipFlop =0;
         Score =0;
@@ -36,17 +36,36 @@ public class MyWorld extends World
         wait =0;
         Max_Slimes =1;
         upgrade_level =0;
+        Cooldown_Gun =-10;
     }
     public void act()
     {       
         slime_spawning();
         GameOver();
         aktualisieren();
-        upgrades();
+        cheat_code();
     }
-    public void upgrades()
+    public void cheat_code()
     {
-        
+        if(Greenfoot.isKeyDown("c"))
+        {
+            if(Greenfoot.isKeyDown("h"))
+            {
+                if(Greenfoot.isKeyDown("e"))
+                {   
+                    if(Greenfoot.isKeyDown("a"))
+                    {
+                        if(Greenfoot.isKeyDown("t"))
+                        {
+                            for(int i=0;i<250;i++)
+                            {
+                                this.addObject(new Upgrade(),350,300);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     public void aktualisieren()
     {
@@ -69,7 +88,7 @@ public class MyWorld extends World
                 this.addObject(new ScoreCounter(), 300,30);
                 this.addObject(new HeartCounter(), 300,70);
                 this.addObject(new UpgradeCounter(),300,570);
-                Cooldown =100000001;
+                Cooldown_Slimes =100000001;
                 Slimes =0;
                 FlipFlop =0;
                 Score =0;
@@ -77,6 +96,7 @@ public class MyWorld extends World
                 wait =0;
                 Max_Slimes =1;
                 upgrade_level =0;
+                Cooldown_Gun =-10;
             }
             else
             {
@@ -86,7 +106,7 @@ public class MyWorld extends World
     }
     public void slime_spawning()
     {
-        if(Cooldown>1000-Score && Slimes<Max_Slimes)
+        if(Cooldown_Slimes>1000-Score && Slimes<Max_Slimes)
         {
             if(FlipFlop==0)
             {
@@ -95,7 +115,7 @@ public class MyWorld extends World
                 this.addObject(Rimuru,getRandomNumber(0,600),0);
                 FlipFlop=1;
                 Slimes = Slimes+1;
-                Cooldown=0;
+                Cooldown_Slimes=0;
             }
             else if (FlipFlop==1)
             {
@@ -104,7 +124,7 @@ public class MyWorld extends World
                 this.addObject(Rimuru,0,getRandomNumber(0,600));
                 FlipFlop=2;
                 Slimes = Slimes+1;
-                Cooldown=0;
+                Cooldown_Slimes=0;
             }
             else if (FlipFlop==2)
             {
@@ -113,7 +133,7 @@ public class MyWorld extends World
                 this.addObject(Rimuru,getRandomNumber(0,600),600);
                 FlipFlop=3;
                 Slimes = Slimes+1;
-                Cooldown=0;
+                Cooldown_Slimes=0;
             }
             else
             {
@@ -122,12 +142,12 @@ public class MyWorld extends World
                 this.addObject(Rimuru,600,getRandomNumber(0,600));
                 FlipFlop=0;
                 Slimes = Slimes+1;
-                Cooldown=0;
+                Cooldown_Slimes=0;
             }
         }
         else
         {
-            Cooldown=Cooldown+getRandomNumber(0,50);
+            Cooldown_Slimes=Cooldown_Slimes+getRandomNumber(0,50);
         }
     }
     public static int getRandomNumber(int start,int end)

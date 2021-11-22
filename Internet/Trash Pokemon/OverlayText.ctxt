@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=OverlayText
+comment1.params=texts\ textTime
+comment1.target=OverlayText(java.lang.String[],\ int)
+comment2.params=texts\ textTime\ world
+comment2.target=OverlayText(java.lang.String[],\ int,\ java.lang.String)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ displayText()
+comment5.params=text
+comment5.target=void\ animateText(java.lang.String)
+comment6.params=
+comment6.target=void\ resetAnimation()
+comment7.params=x\ y
+comment7.target=void\ setLocation(int,\ int)
+numComments=8

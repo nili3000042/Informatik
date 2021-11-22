@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=BattleButtonMenu
+comment1.params=type
+comment1.target=BattleButtonMenu(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ run()
+numComments=4

@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  */
 public class Player extends Movedbyplayer
 {
-    public int Cooldown =100000001;
     /**
      * Act - tut, was auch immer PEOPLE tun will. Diese Methode wird aufgerufen, 
      * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
@@ -31,30 +30,30 @@ public class Player extends Movedbyplayer
     {
         if(MyWorld.upgrade_level<100)
         {
-            if(Greenfoot.isKeyDown("space") && Cooldown>MyWorld.upgrade_level*-1+200)
+            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun>MyWorld.upgrade_level)
             {
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
-                Cooldown = 0;
+                MyWorld.Cooldown_Gun = 300;
             }
             else if(!Greenfoot.isKeyDown("space"))
             {
-                Cooldown=Cooldown+1;
+                MyWorld.Cooldown_Gun=MyWorld.Cooldown_Gun-1;
             }
         }
         else if (MyWorld.upgrade_level<200)
         {
-            if(Greenfoot.isKeyDown("space") && Cooldown>MyWorld.upgrade_level*-1+210)
+            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun>MyWorld.upgrade_level)
             {
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
-                Cooldown = 0;
+                MyWorld.Cooldown_Gun = 220;
             }
             else
             {
-                Cooldown=Cooldown+1;
+                MyWorld.Cooldown_Gun=MyWorld.Cooldown_Gun-1;
             }
         }
         else
