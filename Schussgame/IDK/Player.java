@@ -28,9 +28,9 @@ public class Player extends Movedbyplayer
     }
     public void gun()
     {
-        if(MyWorld.upgrade_level<100)
+        if(MyWorld.upgrade_level<20)
         {
-            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun>MyWorld.upgrade_level)
+            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
             {
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
@@ -42,14 +42,14 @@ public class Player extends Movedbyplayer
                 MyWorld.Cooldown_Gun=MyWorld.Cooldown_Gun-1;
             }
         }
-        else if (MyWorld.upgrade_level<200)
+        else if (MyWorld.upgrade_level<40)
         {
-            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun>MyWorld.upgrade_level)
+            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
             {
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
-                MyWorld.Cooldown_Gun = 220;
+                MyWorld.Cooldown_Gun = 150;
             }
             else
             {

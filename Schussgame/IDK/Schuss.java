@@ -27,7 +27,7 @@ public class Schuss extends Actor
         {
             MyWorld.Slimes=MyWorld.Slimes-1;
             MyWorld.Score=MyWorld.Score+1;
-            if(Greenfoot.getRandomNumber(101)>50&&MyWorld.upgrade_level<200)
+            if(Greenfoot.getRandomNumber(101)>50&&MyWorld.upgrade_level<40)
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }

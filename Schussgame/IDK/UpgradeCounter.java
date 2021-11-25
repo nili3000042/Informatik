@@ -10,7 +10,7 @@ public class UpgradeCounter extends Actor
 {
     public UpgradeCounter()
     {
-         setImage(new GreenfootImage("Upgrade Gun: ", 50, Color.WHITE, new Color(0,0,0,0)));
+         setImage(new GreenfootImage("Upgrade Gun: 0 /20", 50, Color.WHITE, new Color(0,0,0,0)));
     }   
     public void act()
     {
@@ -18,15 +18,14 @@ public class UpgradeCounter extends Actor
     }
     public void display_score()
     {
-        if(MyWorld.upgrade_level<100)
+        if(MyWorld.upgrade_level<20)
         {
-            setImage(new GreenfootImage("Upgrade Gun: " + MyWorld.upgrade_level, 50, Color.WHITE, new Color(0,0,0,0)));
+            setImage(new GreenfootImage("Upgrade Gun: " + MyWorld.upgrade_level+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
         }
-        else if(MyWorld.upgrade_level<200)
+        else if(MyWorld.upgrade_level<40)
         {
-            int test = MyWorld.upgrade_level - 100;
-            String test1 = test+"";
-            setImage(new GreenfootImage("Upgrade Minigun: " + test1, 50, Color.WHITE, new Color(0,0,0,0)));
+            int test = MyWorld.upgrade_level - 20;
+            setImage(new GreenfootImage("Upgrade Minigun: " + test+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
         }
         else
         {

@@ -9,6 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Slime extends Actor
 {
     public int normal=0;
+    public int wait=0;
+    public int wait_2=0;
+    public int a=0;
+    public int b=0;
+    public int c=0;
     public void act()
     {
         rnd_Move();
@@ -30,10 +35,67 @@ public class Slime extends Actor
             this.move(2);
             normal=normal+1;
         }
+        else if(Greenfoot.getRandomNumber(100)>50&&wait_2==0|wait_2==1)
+        {
+            if(wait==0)
+            {
+                a= MyWorld.getRandomNumber(0,360);
+                b=this.getRotation();
+                c=a-b;
+                wait=1;
+                wait_2=1;
+            }
+            if(c<0)
+            {
+                this.turn(-1);
+                this.move(1);
+                c++;
+            }
+            else if(c>0)
+            {
+                this.turn(+1);
+                this.move(1);
+                c--;
+            }
+            else
+            {
+                normal=0;
+                wait=0;
+                wait_2=0;
+            }
+        }
+        else if(wait_2==0|wait_2==2)
+        {
+            if(wait==0)
+            {
+                a=this.getRotation();
+                b=this.getRotation();
+                c=a-b;
+                wait=1;
+                wait_2=2;
+            }
+            if(c<0)
+            {
+                this.turn(-1);
+                this.move(1);
+                c++;
+            }
+            else if(c>0)
+            {
+                this.turn(+1);
+                this.move(1);
+                c--;
+            }
+            else
+            {
+                normal=0;
+                wait=0;
+                wait_2=0;
+            }
+        }
         else
         {
-            setRotation(MyWorld.getRandomNumber(0,360));
-            normal=0;
+            naormal=0;
         }
     }
     public void suicide()

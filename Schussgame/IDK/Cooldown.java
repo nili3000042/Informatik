@@ -10,7 +10,7 @@ public class Cooldown extends Actor
 {
     public Cooldown()
     {
-         setImage(new GreenfootImage("Score: ", 50, Color.WHITE, new Color(0,0,0,0)));
+         setImage(new GreenfootImage("Cooldown: 0", 50, Color.WHITE, new Color(0,0,0,0)));
     }   
     public void act()
     {
@@ -18,6 +18,21 @@ public class Cooldown extends Actor
     }
     public void display_score()
     {
-        setImage(new GreenfootImage("Score: " + MyWorld.Score, 50, Color.WHITE, new Color(0,0,0,0)));
+        int Cooldown_Short = MyWorld.Cooldown_Gun-MyWorld.upgrade_level;
+        if(MyWorld.upgrade_level<40)
+        {
+            if(Cooldown_Short<0)
+            {
+                setImage(new GreenfootImage("Cooldown: 0", 50, Color.WHITE, new Color(0,0,0,0)));
+            }
+            else
+            {
+                setImage(new GreenfootImage("Cooldown: "+Cooldown_Short, 50, Color.WHITE, new Color(0,0,0,0)));
+            }
+        }
+        else
+        {
+            setImage(new GreenfootImage("No Cooldown", 50, Color.WHITE, new Color(0,0,0,0)));
+        }
     }
 }
