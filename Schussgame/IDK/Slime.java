@@ -16,7 +16,9 @@ public class Slime extends Actor
     public int c=0;
     public void act()
     {
-        rnd_Move();
+        //rnd_Move();
+        rnd_Move_No_Animation();
+        //getWorld().showText("a:"+a+"b:"+b+"c:"+c+"normal:"+normal+"wait:"+wait+"wait_2:"+wait_2, 300, 300);
         Kill_Player();
     }
     public void Kill_Player()
@@ -28,6 +30,24 @@ public class Slime extends Actor
             suicide();
         }
     }
+    public void rnd_Move_No_Animation()
+    {
+        if (normal<10)
+        {
+            this.move(2);
+            normal=normal+1;
+        }
+        else if(Greenfoot.getRandomNumber(100)>50)
+        {
+            this.setRotation(Greenfoot.getRandomNumber(361));
+            normal=0;
+        }
+        else
+        {
+            this.turnTowards(getWorld().getObjects(Player.class).get(0).getX(),getWorld().getObjects(Player.class).get(0).getY());
+            normal=0;
+        }
+    }
     public void rnd_Move()
     {
         if (normal<10)
@@ -35,7 +55,7 @@ public class Slime extends Actor
             this.move(2);
             normal=normal+1;
         }
-        else if(Greenfoot.getRandomNumber(100)>50&&wait_2==0|wait_2==1)
+        else if(Greenfoot.getRandomNumber(100)>100000&&wait_2==0|wait_2==1)
         {
             if(wait==0)
             {
@@ -69,8 +89,10 @@ public class Slime extends Actor
             if(wait==0)
             {
                 a=this.getRotation();
+                this.turnTowards(getWorld().getObjects(Player.class).get(0).getX(),getWorld().getObjects(Player.class).get(0).getY());
                 b=this.getRotation();
-                c=a-b;
+                this.setRotation(a);
+                c=b-a;
                 wait=1;
                 wait_2=2;
             }
@@ -95,7 +117,7 @@ public class Slime extends Actor
         }
         else
         {
-            naormal=0;
+            normal=0;
         }
     }
     public void suicide()

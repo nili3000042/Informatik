@@ -10,7 +10,7 @@ public class HeartCounter extends Actor
 {
     public HeartCounter()
     {
-         setImage(new GreenfootImage("♥ ♥ ♥", 50, Color.RED, new Color(0,0,0,0)));
+         setImage(new GreenfootImage("♥ ♥ ♥ ❤️", 50, Color.RED, new Color(0,0,0,0)));
     }   
     public void act()
     {
@@ -20,7 +20,7 @@ public class HeartCounter extends Actor
     {
         if(MyWorld.Hearts==3)
         {
-            setImage(new GreenfootImage("♥ ♥ ♥", 50, Color.RED, new Color(0,0,0,0)));
+            setImage(new GreenfootImage("♥ ♥ ♥ ❤️", 50, Color.RED, new Color(0,0,0,0)));
         }
         else if(MyWorld.Hearts==2)
         {
