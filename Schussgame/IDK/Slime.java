@@ -27,6 +27,7 @@ public class Slime extends NPC
         {
             MyWorld.Hearts--;
             MyWorld.Slimes--;
+            Greenfoot.playSound("cyborg_hurt_one.wav");
             suicide();
         }
     }
@@ -34,7 +35,7 @@ public class Slime extends NPC
     {
         if (normal<10)
         {
-            this.move(2);
+            this.move(1);
             normal=normal+1;
         }
         else if(Greenfoot.getRandomNumber(100)>70)

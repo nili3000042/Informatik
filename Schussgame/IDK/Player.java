@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 public class Player extends PC
 {
     GreenfootSound Minigun = new GreenfootSound("minigun.wav");
+    public int wait=0;
     public void act() 
     {
         wasd_Rotate();
@@ -18,11 +19,25 @@ public class Player extends PC
     }    
     public void regen()
     {
-        if(isTouching(Heart.class))
+        if(isTouching(Heart.class)&&MyWorld.Hearts<10)
         {
             MyWorld.Hearts++;
             Greenfoot.playSound("upmid.wav");
             removeTouching(Heart.class);
+        }
+        else if(isTouching(Heart.class))
+        {
+            getWorld().showText("Max Lives Reached", 640, 360);
+            wait=1;
+        }
+        if(wait>0)
+        {
+            wait++;
+        }
+        if(wait>10)
+        {
+            getWorld().showText("", 640, 360);
+            wait=0;
         }
     }
     public void upgrade()

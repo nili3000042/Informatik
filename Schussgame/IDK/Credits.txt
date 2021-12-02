@@ -10,5 +10,8 @@ https://opengameart.org/content/tank-set
 https://opengameart.org/content/this-game-is-over
 https://opengameart.org/content/bullet-collection-1-m484
 https://opengameart.org/content/q009s-weapon-sounds
+https://opengameart.org/content/game-over-theme
+https://opengameart.org/content/cyborg-hurt
+https://opengameart.org/content/medpak-kit-32x32
 Greenfoot Forum
 Greenfoot

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Ideen\r\n\ -Fullscreen\r\n\ -Game\ over\ Sound\r\n\ -Mini\ gun\ Sound\r\n\ -Taking\ Damage\ Sound\r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Ideen\r\n\ -Fullscreen\r\n\ -Highscore\r\n\ -Shield\r\n\ -Different\ Power\ ups\r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=MyWorld()
 comment2.params=

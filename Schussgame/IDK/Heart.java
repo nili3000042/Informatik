@@ -8,8 +8,5 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Heart extends NPC
 {
-    public Heart()
-    {
-         setImage(new GreenfootImage("♥", 50, Color.RED, new Color(0,0,0,0)));
-    }   
+    
 }

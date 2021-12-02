@@ -20,11 +20,11 @@ public class PC extends Actor
         }
         if(Greenfoot.isKeyDown("a"))
         {
-            this.turn(-5);
+            this.turn(-3);
         }
         if(Greenfoot.isKeyDown("d"))
         {
-            this.turn(5);
+            this.turn(3);
         }
     }
     public void wasd_Grid()

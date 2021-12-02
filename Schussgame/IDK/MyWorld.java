@@ -3,9 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 /**
  * Ideen
  * -Fullscreen
- * -Game over Sound
- * -Mini gun Sound
- * -Taking Damage Sound
+ * -Highscore
+ * -Shield
+ * -Different Power ups
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
@@ -20,13 +20,14 @@ public class MyWorld extends World
     public int Max_Slimes =1;
     public static int upgrade_level =0;
     public static int Cooldown_Gun =-10;
-    int c =0;
-    int h =0;
-    int e =0;
-    int a =0;
-    int z =0;
+    public int c =0;
+    public int h =0;
+    public int e =0;
+    public int a =0;
+    public int z =0;
     GreenfootSound tense_backgroundMusic = new GreenfootSound("Trouble.wav");
     GreenfootSound backgroundMusic = new GreenfootSound("dungeon theme.wav");
+    GreenfootSound GameOverMusic = new GreenfootSound("No Hope.wav");
     public MyWorld()
     {    
         super(1280, 720, 1); // Erstellt eine neue Welt mit 1280x720 Zellen und einer Zell-Größe von 1x1 Pixeln.
@@ -137,12 +138,9 @@ public class MyWorld extends World
             removeObjects(getObjects(Actor.class));
             tense_backgroundMusic.stop();
             backgroundMusic.stop();
-            /*if(z==0)
-            {
-                Greenfoot.playSound("ThisGameIsOver.wav");
-                z =1;
-            }*/
+            GameOverMusic.playLoop();
             this.addObject(new GameOver(),640,360);
+            this.addObject(new Credits(), 240,360);
             this.addObject(new OnlyScore(),640,360);
             if(Greenfoot.isKeyDown("y")&&wait>100)
             {
@@ -166,6 +164,7 @@ public class MyWorld extends World
                 e =0;
                 a =0;
                 z =0;
+                GameOverMusic.stop();
             }
             else
             {
@@ -181,7 +180,7 @@ public class MyWorld extends World
             {
                 Slime Rimuru = new Slime();
                 Rimuru.setRotation(90);
-                this.addObject(Rimuru,getRandomNumber(0,720),0);
+                this.addObject(Rimuru,getRandomNumber(0,1280),0);
                 FlipFlop=1;
                 Slimes = Slimes+1;
                 Cooldown_Slimes=0;
@@ -190,7 +189,7 @@ public class MyWorld extends World
             {
                 Slime Rimuru = new Slime();
                 Rimuru.setRotation(0);
-                this.addObject(Rimuru,0,getRandomNumber(0,1280));
+                this.addObject(Rimuru,0,getRandomNumber(0,720));
                 FlipFlop=2;
                 Slimes = Slimes+1;
                 Cooldown_Slimes=0;
@@ -199,7 +198,7 @@ public class MyWorld extends World
             {
                 Slime Rimuru = new Slime();
                 Rimuru.setRotation(270);
-                this.addObject(Rimuru,getRandomNumber(0,720),1280);
+                this.addObject(Rimuru,getRandomNumber(0,1280),720);
                 FlipFlop=3;
                 Slimes = Slimes+1;
                 Cooldown_Slimes=0;
@@ -208,7 +207,7 @@ public class MyWorld extends World
             {
                 Slime Rimuru = new Slime();
                 Rimuru.setRotation(180);
-                this.addObject(Rimuru,720,getRandomNumber(0,1280));
+                this.addObject(Rimuru,1280,getRandomNumber(0,720));
                 FlipFlop=0;
                 Slimes = Slimes+1;
                 Cooldown_Slimes=0;

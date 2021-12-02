@@ -36,6 +36,10 @@ public class Schuss extends NPC
             {
                 getWorld().addObject(new Heart(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
+            else if(Greenfoot.getRandomNumber(101)>95&&MyWorld.Hearts<10)
+            {
+                getWorld().addObject(new Heart(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
             this.removeTouching(Slime.class);
         }
     }
