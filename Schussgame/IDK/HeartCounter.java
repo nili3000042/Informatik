@@ -6,11 +6,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HeartCounter extends Actor
+public class HeartCounter extends Displays
 {
     public HeartCounter()
     {
-         setImage(new GreenfootImage("♥ ♥ ♥ ❤️", 50, Color.RED, new Color(0,0,0,0)));
+         setImage(new GreenfootImage("♥ ♥ ♥ ♥ ♥", 50, Color.RED, new Color(0,0,0,0)));
     }   
     public void act()
     {
@@ -18,9 +18,19 @@ public class HeartCounter extends Actor
     }
     public void aktualisieren()
     {
-        if(MyWorld.Hearts==3)
+        if(MyWorld.Hearts==5)
         {
-            setImage(new GreenfootImage("♥ ♥ ♥ ❤️", 50, Color.RED, new Color(0,0,0,0)));
+            setImage(new GreenfootImage("♥ ♥ ♥ ♥ ♥", 50, Color.RED, new Color(0,0,0,0)));
+        }
+
+        else if(MyWorld.Hearts==4)
+        {
+            setImage(new GreenfootImage("♥ ♥ ♥ ♥", 50, Color.RED, new Color(0,0,0,0)));
+        }
+
+        else if(MyWorld.Hearts==3)
+        {
+            setImage(new GreenfootImage("♥ ♥ ♥", 50, Color.RED, new Color(0,0,0,0)));
         }
         else if(MyWorld.Hearts==2)
         {

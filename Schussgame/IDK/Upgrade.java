@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Upgrade extends Actor
+public class Upgrade extends NPC
 {
     /**
      * Act - tut, was auch immer Upgrades tun will. Diese Methode wird aufgerufen, 

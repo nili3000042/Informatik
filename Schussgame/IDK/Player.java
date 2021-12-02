@@ -6,23 +6,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Player extends Movedbyplayer
+public class Player extends PC
 {
-    /**
-     * Act - tut, was auch immer PEOPLE tun will. Diese Methode wird aufgerufen, 
-     * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
-     */
+    GreenfootSound Minigun = new GreenfootSound("minigun.wav");
     public void act() 
     {
         wasd_Rotate();
         gun();
         upgrade();
+        regen();
     }    
+    public void regen()
+    {
+        if(isTouching(Heart.class))
+        {
+            MyWorld.Hearts++;
+            Greenfoot.playSound("upmid.wav");
+            removeTouching(Heart.class);
+        }
+    }
     public void upgrade()
     {
         if(isTouching(Upgrade.class))
         {
             MyWorld.upgrade_level = MyWorld.upgrade_level+1;
+            Greenfoot.playSound("upshort.wav");
             removeTouching(Upgrade.class);
         }
     }
@@ -30,11 +38,13 @@ public class Player extends Movedbyplayer
     {
         if(MyWorld.upgrade_level<20)
         {
+            setImage("tanks (4).png");
             if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
             {
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
+                Greenfoot.playSound("lmg_fire01.wav");
                 MyWorld.Cooldown_Gun = 300;
             }
             else if(!Greenfoot.isKeyDown("space"))
@@ -44,11 +54,13 @@ public class Player extends Movedbyplayer
         }
         else if (MyWorld.upgrade_level<40)
         {
+            setImage("tanks (3).png");
             if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
             {
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
+                Greenfoot.playSound("lmg_fire01.wav");
                 MyWorld.Cooldown_Gun = 150;
             }
             else
@@ -58,11 +70,17 @@ public class Player extends Movedbyplayer
         }
         else
         {
+            setImage("tanks (2).png");
             if(Greenfoot.isKeyDown("space"))
             {
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
+                Minigun.playLoop();
+            }
+            else  if(!Greenfoot.isKeyDown("space"))
+            {
+                Minigun.stop();
             }
         }
     }

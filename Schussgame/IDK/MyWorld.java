@@ -1,11 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
 /**
- * Ergänzen Sie hier eine Beschreibung für die Klasse MyWorld.
  * Ideen
- * -Sound
- * -Different asset player
  * -Fullscreen
+ * -Game over Sound
+ * -Mini gun Sound
+ * -Taking Damage Sound
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
@@ -15,7 +15,7 @@ public class MyWorld extends World
     public static int Slimes =0;
     public int FlipFlop =0;
     public static int Score =0;
-    public static int Hearts =3;
+    public static int Hearts =5;
     public int wait =0;
     public int Max_Slimes =1;
     public static int upgrade_level =0;
@@ -24,10 +24,13 @@ public class MyWorld extends World
     int h =0;
     int e =0;
     int a =0;
+    int z =0;
+    GreenfootSound tense_backgroundMusic = new GreenfootSound("Trouble.wav");
+    GreenfootSound backgroundMusic = new GreenfootSound("dungeon theme.wav");
     public MyWorld()
     {    
-        // Erstellt eine neue Welt mit 600x400 Zellen und einer Zell-Größe von 1x1 Pixeln.
-        super(1280, 720, 1); 
+        super(1280, 720, 1); // Erstellt eine neue Welt mit 1280x720 Zellen und einer Zell-Größe von 1x1 Pixeln.
+        this.setPaintOrder(Displays.class,PC.class,NPC.class);
         this.addObject(new Player(), 640, 360);
         this.addObject(new ScoreCounter(), 640,30);
         this.addObject(new HeartCounter(), 640,70);
@@ -37,7 +40,7 @@ public class MyWorld extends World
         Slimes =0;
         FlipFlop =0;
         Score =0;
-        Hearts =3;
+        Hearts =5;
         wait =0;
         Max_Slimes =1;
         upgrade_level =0;
@@ -46,6 +49,7 @@ public class MyWorld extends World
         h =0;
         e =0;
         a =0;
+        z =0;
     }
     public void act()
     {       
@@ -53,6 +57,45 @@ public class MyWorld extends World
         GameOver();
         aktualisieren();
         cheat_code();
+        Background_Music();
+        Pause_Menu();
+    }
+    public void Pause_Menu()
+    {
+        if(Greenfoot.isKeyDown("p")|z==1)
+        {
+            if(z==0)
+            {
+                this.addObject(new PauseMenu(),640,360);
+                tense_backgroundMusic.stop();
+                backgroundMusic.stop();
+                Greenfoot.stop();
+                z=1;
+            }
+            if(wait>0)
+            {
+                this.removeObjects(getObjects(PauseMenu.class));
+                wait =0;
+                z =0;
+            }
+            else
+            {
+                wait=wait+1;
+            }
+        }
+    }
+    public void Background_Music()
+    {
+        if(Hearts==1)
+        {
+            backgroundMusic.stop();
+            tense_backgroundMusic.playLoop();
+        }
+        else if (Hearts>0)
+        {
+            tense_backgroundMusic.stop();
+            backgroundMusic.playLoop();
+        }
     }
     public void cheat_code()
     {
@@ -92,6 +135,13 @@ public class MyWorld extends World
         if(Hearts<1)
         {
             removeObjects(getObjects(Actor.class));
+            tense_backgroundMusic.stop();
+            backgroundMusic.stop();
+            /*if(z==0)
+            {
+                Greenfoot.playSound("ThisGameIsOver.wav");
+                z =1;
+            }*/
             this.addObject(new GameOver(),640,360);
             this.addObject(new OnlyScore(),640,360);
             if(Greenfoot.isKeyDown("y")&&wait>100)
@@ -106,7 +156,7 @@ public class MyWorld extends World
                 Slimes =0;
                 FlipFlop =0;
                 Score =0;
-                Hearts =3;
+                Hearts =5;
                 wait =0;
                 Max_Slimes =1;
                 upgrade_level =0;
@@ -115,6 +165,7 @@ public class MyWorld extends World
                 h =0;
                 e =0;
                 a =0;
+                z =0;
             }
             else
             {

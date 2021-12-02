@@ -6,11 +6,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Schuss extends Actor
+public class Schuss extends NPC
 {
     public void act() 
     {
-        this.move(6);
+        this.move(20);
         Kill_Slime();
         if(this.isAtEdge())
         {
@@ -27,9 +27,14 @@ public class Schuss extends Actor
         {
             MyWorld.Slimes=MyWorld.Slimes-1;
             MyWorld.Score=MyWorld.Score+1;
-            if(Greenfoot.getRandomNumber(101)>50&&MyWorld.upgrade_level<40)
+            Greenfoot.playSound("impactsplat05[].wav");
+            if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40)
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            if(Greenfoot.getRandomNumber(101)>70&&MyWorld.Hearts<5)
+            {
+                getWorld().addObject(new Heart(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
             this.removeTouching(Slime.class);
         }

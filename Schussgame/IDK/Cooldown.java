@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cooldown extends Actor
+public class Cooldown extends Displays
 {
     public Cooldown()
     {
@@ -14,9 +14,9 @@ public class Cooldown extends Actor
     }   
     public void act()
     {
-        display_score();
+        display_cooldown();
     }
-    public void display_score()
+    public void display_cooldown()
     {
         int Cooldown_Short = MyWorld.Cooldown_Gun-MyWorld.upgrade_level;
         if(MyWorld.upgrade_level<40)
