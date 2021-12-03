@@ -23,12 +23,11 @@ public class Slime extends NPC
     }
     public void Kill_Player()
     {
-        if(isTouching(Player.class))
+        if(isTouching(Player.class)&&MyWorld.player_immortal==0)
         {
             MyWorld.Hearts--;
-            MyWorld.Slimes--;
             Greenfoot.playSound("cyborg_hurt_one.wav");
-            suicide();
+            MyWorld.player_immortal=150;
         }
     }
     public void rnd_Move_No_Animation()

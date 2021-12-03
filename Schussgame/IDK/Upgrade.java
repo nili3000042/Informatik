@@ -8,12 +8,5 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  */
 public class Upgrade extends NPC
 {
-    /**
-     * Act - tut, was auch immer Upgrades tun will. Diese Methode wird aufgerufen, 
-     * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
-     */
-    public void act() 
-    {
-        // Ergänzen Sie Ihren Quelltext hier...
-    }    
+     
 }

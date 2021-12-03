@@ -10,7 +10,7 @@ public class ScoreCounter extends Displays
 {
     public ScoreCounter()
     {
-         setImage(new GreenfootImage("Score: ", 50, Color.WHITE, new Color(0,0,0,0)));
+         setImage(new GreenfootImage("Score: 0", 50, Color.WHITE, new Color(0,0,0,0)));
     }   
     public void act()
     {

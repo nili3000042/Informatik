@@ -20,6 +20,8 @@ public class MyWorld extends World
     public int Max_Slimes =1;
     public static int upgrade_level =0;
     public static int Cooldown_Gun =-10;
+    public static int player_immortal =0;
+    public static int forcefield_active =0;
     public int c =0;
     public int h =0;
     public int e =0;
@@ -32,6 +34,7 @@ public class MyWorld extends World
     {    
         super(1280, 720, 1); // Erstellt eine neue Welt mit 1280x720 Zellen und einer Zell-Größe von 1x1 Pixeln.
         this.setPaintOrder(Displays.class,PC.class,NPC.class);
+        Greenfoot.setSpeed(50); // Number of times Act is performed per Second(Can change depending on performance).
         this.addObject(new Player(), 640, 360);
         this.addObject(new ScoreCounter(), 640,30);
         this.addObject(new HeartCounter(), 640,70);
@@ -46,6 +49,8 @@ public class MyWorld extends World
         Max_Slimes =1;
         upgrade_level =0;
         Cooldown_Gun =-10;
+        player_immortal =0;
+        forcefield_active =0;
         c =0;
         h =0;
         e =0;
@@ -60,6 +65,18 @@ public class MyWorld extends World
         cheat_code();
         Background_Music();
         Pause_Menu();
+        forcefield();
+    }
+    public void forcefield()
+    {
+        if(forcefield_active>0)
+        {
+            
+        }
+        else
+        {
+            removeObjects(getObjects(Forcefield.class));
+        }
     }
     public void Pause_Menu()
     {
@@ -159,6 +176,8 @@ public class MyWorld extends World
                 Max_Slimes =1;
                 upgrade_level =0;
                 Cooldown_Gun =-10;
+                player_immortal =0;
+                forcefield_active =0;
                 c =0;
                 h =0;
                 e =0;
@@ -222,5 +241,16 @@ public class MyWorld extends World
     {    /*getRandomNumber(20,30);*/
        int normal = Greenfoot.getRandomNumber(end-start+1);
        return normal+start;
+    }
+    public static boolean even(int num)
+    {
+        if (num % 2 == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

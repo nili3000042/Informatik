@@ -10,13 +10,31 @@ public class Player extends PC
 {
     GreenfootSound Minigun = new GreenfootSound("minigun.wav");
     public int wait=0;
+    public int wait_2=0;
     public void act() 
     {
         wasd_Rotate();
         gun();
         upgrade();
         regen();
+        lose_immortality();
     }    
+    public void lose_immortality()
+    {
+        if(MyWorld.player_immortal>0)
+        {
+            MyWorld.player_immortal--;
+            if(MyWorld.even(MyWorld.player_immortal)&&wait_2==0)
+            {
+                setImage(new GreenfootImage("", 50, Color.RED, new Color(0,0,0,0)));
+                wait_2=1;
+            }
+            else if(MyWorld.even(MyWorld.player_immortal))
+            {
+                wait_2=0;
+            }
+        }
+    }
     public void regen()
     {
         if(isTouching(Heart.class)&&MyWorld.Hearts<10)
