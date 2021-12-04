@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Ideen\r\n\ -Fullscreen\r\n\ -Highscore\r\n\ -Shield\r\n\ -Different\ Power\ ups\r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Ideen\r\n\ -Fullscreen\r\n\ -Highscore\r\n\ -Lautst\u00E4rke\r\n\ -Start\ Menu\r\n\ when\ complete\r\n\ -complete\ credits\r\n\ -\r\n\ -size\ down\r\n\ \ -code\r\n\ \ -images/sounds\r\n\ \ \ -wav\ to\ mp3\r\n\ -upload\ to\ greenfoot\ forum\r\n\ -Dokumentation\r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=MyWorld()
 comment10.params=start\ end
@@ -16,7 +16,7 @@ comment4.target=void\ Pause_Menu()
 comment5.params=
 comment5.target=void\ Background_Music()
 comment6.params=
-comment6.target=void\ cheat_code()
+comment6.target=void\ cheat_codes()
 comment7.params=
 comment7.target=void\ aktualisieren()
 comment8.params=

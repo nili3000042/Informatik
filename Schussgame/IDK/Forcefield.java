@@ -8,12 +8,65 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Forcefield extends NPC
 {
-    /**
-     * Act - do whatever the Forcefield wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public int image =0;
+    public int kills=0;
     public void act()
     {
-        // Add your action code here.
+        change_image();
+        Kill_Slime();
+        move();
+    }
+    public void move()
+    {
+        this.setLocation(getOneIntersectingObject(Player.class).getX(), getOneIntersectingObject(Player.class).getY());
+    }
+    public void Kill_Slime()
+    {
+        if(this.isTouching(Slime.class))
+        {
+            MyWorld.Slimes=MyWorld.Slimes-1;
+            MyWorld.Score++;
+            Greenfoot.playSound("zap14.ogg");
+            if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40)
+            {
+                getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            else if(Greenfoot.getRandomNumber(101)>50)
+            {
+                getWorld().addObject(new Forcefield_item(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            if(Greenfoot.getRandomNumber(101)>70&&MyWorld.Hearts<5)
+            {
+                getWorld().addObject(new Heart(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            else if(Greenfoot.getRandomNumber(101)>95&&MyWorld.Hearts<10)
+            {
+                getWorld().addObject(new Heart(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            this.removeTouching(Slime.class);
+        }
+    }
+    public void change_image()
+    {
+        if(image==0)
+        {
+            setImage("SpellBoundemptya1.png");
+            image=1;
+        }
+        else if(image==1)
+        {
+            setImage("SpellBoundemptya2.png");
+            image=2;
+        }
+        else if(image==2)
+        {
+            setImage("SpellBoundemptya3.png");
+            image=3;
+        }
+        else if(image==3)
+        {
+            setImage("SpellBoundemptya2.png");
+            image=0;
+        }
     }
 }

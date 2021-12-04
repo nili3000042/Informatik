@@ -13,5 +13,8 @@ https://opengameart.org/content/q009s-weapon-sounds
 https://opengameart.org/content/game-over-theme
 https://opengameart.org/content/cyborg-hurt
 https://opengameart.org/content/medpak-kit-32x32
+https://opengameart.org/content/spell-sounds-starter-pack
+https://opengameart.org/content/force-field-electric-hum
+https://opengameart.org/content/spellbound-icon
 Greenfoot Forum
 Greenfoot

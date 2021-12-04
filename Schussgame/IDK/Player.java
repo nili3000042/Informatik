@@ -18,7 +18,23 @@ public class Player extends PC
         upgrade();
         regen();
         lose_immortality();
+        forcefield();
     }    
+    public void forcefield()
+    {
+        if(isTouching(Forcefield_item.class))
+        {
+            if(!MyWorld.forcefield)
+            {
+                getWorld().addObject(new Forcefield(), this.getX(), this.getY());
+                getWorld().addObject(new Forcefield_timer(), 640, 610);
+                MyWorld.forcefield=true;
+            }
+            MyWorld.forcefield_active = MyWorld.forcefield_active+1000;
+            Greenfoot.playSound("upmid.wav");
+            removeTouching(Forcefield_item.class);
+        }
+    }
     public void lose_immortality()
     {
         if(MyWorld.player_immortal>0)

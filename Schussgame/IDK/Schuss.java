@@ -25,12 +25,16 @@ public class Schuss extends NPC
     {
         if(this.isTouching(Slime.class))
         {
-            MyWorld.Slimes=MyWorld.Slimes-1;
-            MyWorld.Score=MyWorld.Score+1;
+            MyWorld.Slimes--;
+            MyWorld.Score++;
             Greenfoot.playSound("impactsplat05[].wav");
             if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40)
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            else if(Greenfoot.getRandomNumber(101)>50)
+            {
+                getWorld().addObject(new Forcefield_item(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
             if(Greenfoot.getRandomNumber(101)>70&&MyWorld.Hearts<5)
             {

@@ -4,13 +4,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * Ideen
  * -Fullscreen
  * -Highscore
- * -Shield
- * -Different Power ups
+ * -Lautstärke
+ * -Start Menu
+ * when complete
+ * -complete credits
+ * -
+ * -size down
+ *  -code
+ *  -images/sounds
+ *   -wav to mp3
+ * -upload to greenfoot forum
+ * -Dokumentation
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
 public class MyWorld extends World
 {
+    public static int game_speed =50;
     public int Cooldown_Slimes =100000001;
     public static int Slimes =0;
     public int FlipFlop =0;
@@ -22,19 +32,17 @@ public class MyWorld extends World
     public static int Cooldown_Gun =-10;
     public static int player_immortal =0;
     public static int forcefield_active =0;
-    public int c =0;
-    public int h =0;
-    public int e =0;
-    public int a =0;
+    public static boolean forcefield =false;
     public int z =0;
     GreenfootSound tense_backgroundMusic = new GreenfootSound("Trouble.wav");
     GreenfootSound backgroundMusic = new GreenfootSound("dungeon theme.wav");
     GreenfootSound GameOverMusic = new GreenfootSound("No Hope.wav");
+    GreenfootSound Forcefield = new GreenfootSound("hjm-shield_hum_50.wav");
     public MyWorld()
     {    
         super(1280, 720, 1); // Erstellt eine neue Welt mit 1280x720 Zellen und einer Zell-Größe von 1x1 Pixeln.
         this.setPaintOrder(Displays.class,PC.class,NPC.class);
-        Greenfoot.setSpeed(50); // Number of times Act is performed per Second(Can change depending on performance).
+        Greenfoot.setSpeed(game_speed); // Number of times Act is performed per Second(Can change depending on performance).
         this.addObject(new Player(), 640, 360);
         this.addObject(new ScoreCounter(), 640,30);
         this.addObject(new HeartCounter(), 640,70);
@@ -51,10 +59,7 @@ public class MyWorld extends World
         Cooldown_Gun =-10;
         player_immortal =0;
         forcefield_active =0;
-        c =0;
-        h =0;
-        e =0;
-        a =0;
+        forcefield =false;
         z =0;
     }
     public void act()
@@ -62,7 +67,7 @@ public class MyWorld extends World
         slime_spawning();
         GameOver();
         aktualisieren();
-        cheat_code();
+        cheat_codes();
         Background_Music();
         Pause_Menu();
         forcefield();
@@ -71,11 +76,15 @@ public class MyWorld extends World
     {
         if(forcefield_active>0)
         {
-            
+            forcefield_active--;
+            Forcefield.playLoop();
         }
         else
         {
             removeObjects(getObjects(Forcefield.class));
+            removeObjects(getObjects(Forcefield_timer.class));
+            Forcefield.stop();
+            forcefield =false;
         }
     }
     public void Pause_Menu()
@@ -115,30 +124,19 @@ public class MyWorld extends World
             backgroundMusic.playLoop();
         }
     }
-    public void cheat_code()
+    public void cheat_codes()
     {
-        if(Greenfoot.isKeyDown("c")|c==1)
+        if(Greenfoot.isKeyDown("u"))
         {
-            if(Greenfoot.isKeyDown("h")|h==1)
-            {
-                if(Greenfoot.isKeyDown("e")|e==1)
-                {   
-                    if(Greenfoot.isKeyDown("a")|a==1)
-                    {
-                        if(Greenfoot.isKeyDown("t"))
-                        {
-                            for(int i=0;i<20;i++)
-                            {
-                                this.addObject(new Upgrade(),690,360);
-                            }
-                        }
-                        a=1;
-                    }
-                    e=1;
-                }
-                h=1;
-            }
-            c=1;
+            this.addObject(new Upgrade(),690,360);
+        }
+        if(Greenfoot.isKeyDown("h"))
+        {
+            this.addObject(new Heart(),740,360);
+        }
+        if(Greenfoot.isKeyDown("f"))
+        {
+            this.addObject(new Forcefield_item(),790,360);
         }
     }
     public void aktualisieren()
@@ -178,10 +176,7 @@ public class MyWorld extends World
                 Cooldown_Gun =-10;
                 player_immortal =0;
                 forcefield_active =0;
-                c =0;
-                h =0;
-                e =0;
-                a =0;
+                forcefield =false;
                 z =0;
                 GameOverMusic.stop();
             }

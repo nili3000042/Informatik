@@ -27,7 +27,7 @@ public class Cooldown extends Displays
             }
             else
             {
-                setImage(new GreenfootImage("Cooldown: "+Cooldown_Short, 50, Color.WHITE, new Color(0,0,0,0)));
+                setImage(new GreenfootImage("Cooldown: "+Cooldown_Short/MyWorld.game_speed, 50, Color.WHITE, new Color(0,0,0,0)));
             }
         }
         else
