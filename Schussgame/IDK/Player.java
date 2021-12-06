@@ -87,7 +87,7 @@ public class Player extends PC
     {
         if(MyWorld.upgrade_level<20)
         {
-            setImage("tanks (4).png");
+            setImage("tanks (R4).png");
             if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
             {
                 Schuss Peng = new Schuss();
@@ -103,7 +103,7 @@ public class Player extends PC
         }
         else if (MyWorld.upgrade_level<40)
         {
-            setImage("tanks (3).png");
+            setImage("tanks (R3).png");
             if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
             {
                 Schuss Peng = new Schuss();
@@ -119,7 +119,7 @@ public class Player extends PC
         }
         else
         {
-            setImage("tanks (2).png");
+            setImage("tanks (R2).png");
             if(Greenfoot.isKeyDown("space"))
             {
                 Schuss Peng = new Schuss();

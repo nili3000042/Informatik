@@ -6,7 +6,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * -Highscore
  * -Lautstärke
  * -Start Menu
- * -change tank colour (red)
  * -multiplayer Second (blue)
  * when complete
  * -complete credits
@@ -35,6 +34,7 @@ public class MyWorld extends World
     public static int forcefield_active =0;
     public static boolean forcefield =false;
     public int z =0;
+    public boolean startmenu =false;
     GreenfootSound tense_backgroundMusic = new GreenfootSound("Trouble.wav");
     GreenfootSound backgroundMusic = new GreenfootSound("dungeon theme.wav");
     GreenfootSound GameOverMusic = new GreenfootSound("No Hope.wav");
@@ -49,6 +49,7 @@ public class MyWorld extends World
         this.addObject(new HeartCounter(), 640,70);
         this.addObject(new UpgradeCounter(),640,690);
         this.addObject(new Cooldown(), 640, 650);
+        this.addObject(new StartMenu(), 640, 360);
         Cooldown_Slimes =100000001;
         Slimes =0;
         FlipFlop =0;
@@ -62,9 +63,10 @@ public class MyWorld extends World
         forcefield_active =0;
         forcefield =false;
         z =0;
+        startmenu =true;
     }
     public void act()
-    {       
+    {
         slime_spawning();
         GameOver();
         aktualisieren();
@@ -72,6 +74,15 @@ public class MyWorld extends World
         Background_Music();
         Pause_Menu();
         forcefield();
+        startmenu();
+    }
+    public void startmenu()
+    {
+        if(startmenu==true)
+        {
+            removeObjects(getObjects(StartMenu.class));
+            startmenu=false;
+        }
     }
     public void forcefield()
     {
