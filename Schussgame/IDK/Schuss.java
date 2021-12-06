@@ -32,7 +32,7 @@ public class Schuss extends NPC
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
-            else if(Greenfoot.getRandomNumber(101)>50)
+            else if(Greenfoot.getRandomNumber(101)>50&&MyWorld.forcefield_active<180)
             {
                 getWorld().addObject(new Forcefield_item(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }

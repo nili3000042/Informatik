@@ -24,14 +24,19 @@ public class Forcefield extends NPC
     {
         if(this.isTouching(Slime.class))
         {
-            MyWorld.Slimes=MyWorld.Slimes-1;
-            MyWorld.Score++;
+            MyWorld.Slimes--;
+            kills++;
+            if(kills==2)
+            {
+                MyWorld.Score++;
+                kills=0;
+            }
             Greenfoot.playSound("zap14.ogg");
             if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40)
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
-            else if(Greenfoot.getRandomNumber(101)>50)
+            else if(Greenfoot.getRandomNumber(101)>50&&MyWorld.forcefield_active<180)
             {
                 getWorld().addObject(new Forcefield_item(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }

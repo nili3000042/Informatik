@@ -6,9 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * -Highscore
  * -Lautstärke
  * -Start Menu
+ * -change tank colour (red)
+ * -multiplayer Second (blue)
  * when complete
  * -complete credits
- * -
  * -size down
  *  -code
  *  -images/sounds
