@@ -2,11 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
 /**
  * Ideen
- * -Fullscreen
- * -Highscore
  * -multiplayer Second (blue)
  * when complete
- * -complete credits
  * -size down
  *  -code
  *  -images/sounds

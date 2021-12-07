@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ PEOPLE.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ forcefield()
+comment3.params=
+comment3.target=void\ lose_immortality()
+comment4.params=
+comment4.target=void\ regen()
+comment5.params=
+comment5.target=void\ upgrade()
+comment6.params=
+comment6.target=void\ gun()
+numComments=7
