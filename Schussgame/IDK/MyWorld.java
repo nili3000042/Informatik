@@ -150,6 +150,10 @@ public class MyWorld extends World
         {
             this.addObject(new Forcefield_item(),790,360);
         }
+        if(Greenfoot.isKeyDown("c"))
+        {
+            Score++;
+        }
     }
     public void aktualisieren()
     {
