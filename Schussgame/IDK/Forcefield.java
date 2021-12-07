@@ -18,7 +18,7 @@ public class Forcefield extends NPC
     }
     public void move()
     {
-        this.setLocation(getOneIntersectingObject(Player.class).getX(), getOneIntersectingObject(Player.class).getY());
+        this.setLocation(getWorld().getObjects(Player.class).get(0).getX(),getWorld().getObjects(Player.class).get(0).getY());
     }
     public void Kill_Slime()
     {
