@@ -31,12 +31,12 @@ public class Forcefield extends NPC
                 MyWorld.Score++;
                 kills=0;
             }
-            Greenfoot.playSound("zap14.ogg");
+            Greenfoot.playSound("zap14.mp3");
             if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40)
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
-            else if(Greenfoot.getRandomNumber(101)>50&&MyWorld.forcefield_active<180)
+            else if(Greenfoot.getRandomNumber(101)>50&&MyWorld.forcefield_active/MyWorld.game_speed<180)
             {
                 getWorld().addObject(new Forcefield_item(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }

@@ -27,12 +27,12 @@ public class Schuss extends NPC
         {
             MyWorld.Slimes--;
             MyWorld.Score++;
-            Greenfoot.playSound("impactsplat05[].wav");
+            Greenfoot.playSound("impactsplat05[].mp3");
             if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40)
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
-            else if(Greenfoot.getRandomNumber(101)>50&&MyWorld.forcefield_active<180)
+            else if(Greenfoot.getRandomNumber(101)>50&&MyWorld.forcefield_active/MyWorld.game_speed<180)
             {
                 getWorld().addObject(new Forcefield_item(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }

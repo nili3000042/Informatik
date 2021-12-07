@@ -4,15 +4,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * Ideen
  * -Fullscreen
  * -Highscore
- * -Lautstärke
- * -Start Menu
  * -multiplayer Second (blue)
  * when complete
  * -complete credits
  * -size down
  *  -code
  *  -images/sounds
- *   -wav to mp3
  * -upload to greenfoot forum
  * -Dokumentation
  * @author (Ihr Name) 
@@ -31,14 +28,14 @@ public class MyWorld extends World
     public static int upgrade_level =0;
     public static int Cooldown_Gun =-10;
     public static int player_immortal =0;
-    public static int forcefield_active =0;
+    public static int forcefield_active =10000;
     public static boolean forcefield =false;
     public int z =0;
     public boolean startmenu =false;
-    GreenfootSound tense_backgroundMusic = new GreenfootSound("Trouble.wav");
-    GreenfootSound backgroundMusic = new GreenfootSound("dungeon theme.wav");
-    GreenfootSound GameOverMusic = new GreenfootSound("No Hope.wav");
-    GreenfootSound Forcefield = new GreenfootSound("hjm-shield_hum_50.wav");
+    GreenfootSound tense_backgroundMusic = new GreenfootSound("Trouble.mp3");
+    GreenfootSound backgroundMusic = new GreenfootSound("dungeon theme.mp3");
+    GreenfootSound GameOverMusic = new GreenfootSound("No Hope.mp3");
+    GreenfootSound Forcefield = new GreenfootSound("hjm-shield_hum_50.mp3");
     public MyWorld()
     {    
         super(1280, 720, 1); // Erstellt eine neue Welt mit 1280x720 Zellen und einer Zell-Größe von 1x1 Pixeln.

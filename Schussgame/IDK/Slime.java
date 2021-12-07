@@ -26,7 +26,7 @@ public class Slime extends NPC
         if(isTouching(Player.class)&&MyWorld.player_immortal==0)
         {
             MyWorld.Hearts--;
-            Greenfoot.playSound("cyborg_hurt_one.wav");
+            Greenfoot.playSound("cyborg_hurt_one.mp3");
             MyWorld.player_immortal=150;
         }
     }

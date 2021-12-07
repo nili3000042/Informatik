@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  */
 public class Player extends PC
 {
-    GreenfootSound Minigun = new GreenfootSound("minigun.wav");
+    GreenfootSound Minigun = new GreenfootSound("minigun.mp3");
     public int wait=0;
     public int wait_2=0;
     public void act() 
@@ -31,7 +31,7 @@ public class Player extends PC
                 MyWorld.forcefield=true;
             }
             MyWorld.forcefield_active = MyWorld.forcefield_active+1000;
-            Greenfoot.playSound("upmid.wav");
+            Greenfoot.playSound("upmid.mp3");
             removeTouching(Forcefield_item.class);
         }
     }
@@ -56,7 +56,7 @@ public class Player extends PC
         if(isTouching(Heart.class)&&MyWorld.Hearts<10)
         {
             MyWorld.Hearts++;
-            Greenfoot.playSound("upmid.wav");
+            Greenfoot.playSound("upmid.mp3");
             removeTouching(Heart.class);
         }
         else if(isTouching(Heart.class))
@@ -79,7 +79,7 @@ public class Player extends PC
         if(isTouching(Upgrade.class))
         {
             MyWorld.upgrade_level = MyWorld.upgrade_level+1;
-            Greenfoot.playSound("upshort.wav");
+            Greenfoot.playSound("upshort.mp3");
             removeTouching(Upgrade.class);
         }
     }
@@ -93,7 +93,7 @@ public class Player extends PC
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
-                Greenfoot.playSound("lmg_fire01.wav");
+                Greenfoot.playSound("lmg_fire01.mp3");
                 MyWorld.Cooldown_Gun = 300;
             }
             else if(!Greenfoot.isKeyDown("space"))
@@ -109,7 +109,7 @@ public class Player extends PC
                 Schuss Peng = new Schuss();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
-                Greenfoot.playSound("lmg_fire01.wav");
+                Greenfoot.playSound("lmg_fire01.mp3");
                 MyWorld.Cooldown_Gun = 150;
             }
             else
