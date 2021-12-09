@@ -7,7 +7,7 @@ public class CooldownDisplay extends Displays //Displays the current Cooldown.
     }   
     public void act()
     {
-        if(MyWorld.upgrade_level<40)
+        if(MyWorld.upgrade_level<60)
         {
             if(MyWorld.Cooldown_Gun-MyWorld.upgrade_level<0)// setting image to cooldown: 0 so that no negative values are shown.
             {

@@ -25,7 +25,7 @@ public class Forcefield extends NPC //A Forcefield centered on the player, to ki
                 kills=0; //sets kills to 0.
             }
             Greenfoot.playSound("zap14.mp3"); //Plays the kill sound.
-            if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40) //Spawns Upgrade if max Lv. isn't reached and luck.
+            if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<60) //Spawns Upgrade if max Lv. isn't reached and luck.
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }

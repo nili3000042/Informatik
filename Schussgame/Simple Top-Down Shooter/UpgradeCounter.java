@@ -16,6 +16,11 @@ public class UpgradeCounter extends Displays //Displays the Current Upgrade Lv.
             int test = MyWorld.upgrade_level - 20;
             setImage(new GreenfootImage("Upgrade Lv.Ⅱ: " + test+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
         }
+        else if(MyWorld.upgrade_level<60)
+        {
+            int test = MyWorld.upgrade_level - 40;
+            setImage(new GreenfootImage("Upgrade Lv.Ⅲ: " + test+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
+        }
         else //Shows the level cap.
         {
             setImage(new GreenfootImage("Upgrade Lv.Ⅲ: MAX", 50, Color.WHITE, new Color(0,0,0,0)));

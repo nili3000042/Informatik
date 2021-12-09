@@ -95,12 +95,12 @@ public class Player extends PC //The Player.
             removeTouching(Upgrade.class); //Removes the Item.
         }
     }
-    public void gun()
+    public void gun() //Fires Bullets to Kill Slimes.
     {
-        if(MyWorld.upgrade_level<20)
+        if(MyWorld.upgrade_level<20) //when the lv. is under 20.
         {
-            setImage("tanks (R4).png");
-            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
+            setImage("tanks (R4).png"); //Shows Tank image corresponding to Lv.
+            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level) //When Space is pressed and Cooldown is zero creates bullet and plays gun sound.
             {
                 Bullet Peng = new Bullet();
                 Peng.setRotation(getRotation());
@@ -108,15 +108,15 @@ public class Player extends PC //The Player.
                 Greenfoot.playSound("lmg_fire01.mp3");
                 MyWorld.Cooldown_Gun = 300;
             }
-            else if(!Greenfoot.isKeyDown("space"))
+            else if(!Greenfoot.isKeyDown("space")) //As long as key is not pressed the cooldown goes down
             {
                 MyWorld.Cooldown_Gun=MyWorld.Cooldown_Gun-1;
             }
         }
-        else if (MyWorld.upgrade_level<40)
+        else if (MyWorld.upgrade_level<40) //when the lv. is under 40.
         {
-            setImage("tanks (R3).png");
-            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
+            setImage("tanks (R3).png"); //Shows Tank image corresponding to Lv.
+            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)  //When Space is pressed and Cooldown is zero creates bullet and plays gun sound.
             {
                 Bullet Peng = new Bullet();
                 Peng.setRotation(getRotation());
@@ -124,22 +124,38 @@ public class Player extends PC //The Player.
                 Greenfoot.playSound("lmg_fire01.mp3");
                 MyWorld.Cooldown_Gun = 150;
             }
-            else
+            else //When no Bullets are fired Cooldown goes down.
             {
                 MyWorld.Cooldown_Gun=MyWorld.Cooldown_Gun-1;
             }
         }
-        else
+        else if (MyWorld.upgrade_level<60) //when the lv. is under 60.
         {
-            setImage("tanks (R2).png");
-            if(Greenfoot.isKeyDown("space"))
+            setImage("tanks (R2).png"); //Shows Tank image corresponding to Lv.
+            if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)  //When Space is pressed and Cooldown is zero creates bullet and plays gun sound.
+            {
+                Bullet Peng = new Bullet();
+                Peng.setRotation(getRotation());
+                this.getWorld().addObject(Peng, this.getX(), this.getY());
+                Greenfoot.playSound("lmg_fire01.mp3");
+                MyWorld.Cooldown_Gun = 80;
+            }
+            else //When no Bullets are fired Cooldown goes down.
+            {
+                MyWorld.Cooldown_Gun=MyWorld.Cooldown_Gun-1;
+            }
+        }
+        else  //when the lv. is  MAX.
+        {
+            setImage("tanks (R1).png"); //Shows Tank image corresponding to Lv.
+            if(Greenfoot.isKeyDown("space")) //As long as Space is pressed bullets are fired and the sound is looped.
             {
                 Bullet Peng = new Bullet();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
                 Minigun.playLoop();
             }
-            else  if(!Greenfoot.isKeyDown("space"))
+            else  if(!Greenfoot.isKeyDown("space")) //Stops sound when key isn't pressed.
             {
                 Minigun.stop();
             }

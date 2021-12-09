@@ -17,7 +17,7 @@ public class Bullet extends NPC //Shoot from the Player to kill enemys.
             MyWorld.Slimes--; //Decreses the number of Slimes by 1.
             MyWorld.Score++; //Increases Score by 1.
             Greenfoot.playSound("impactsplat05[].mp3"); //Plays the kill sound.
-            if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40) //Spawns Upgrade if max Lv. isn't reached and luck.
+            if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<60) //Spawns Upgrade if max Lv. isn't reached and luck.
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
