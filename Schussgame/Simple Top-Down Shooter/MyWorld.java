@@ -1,21 +1,8 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
-
-/**
- * Ideen
- * -multiplayer Second (blue)
- * when complete
- * -size down
- *  -code
- *  -images/sounds
- * -upload to greenfoot forum
- * -Dokumentation
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
-public class MyWorld extends World
+import greenfoot.*;
+public class MyWorld extends World //The world in wich the game happens.
 {
     public static int game_speed =50;
-    public int Cooldown_Slimes =100000001;
+    public int Cooldown_Slimes =1001;
     public static int Slimes =0;
     public int FlipFlop =0;
     public static int Score =0;
@@ -42,7 +29,7 @@ public class MyWorld extends World
         this.addObject(new ScoreCounter(), 640,30);
         this.addObject(new HeartCounter(), 640,70);
         this.addObject(new UpgradeCounter(),640,690);
-        this.addObject(new Cooldown(), 640, 650);
+        this.addObject(new CooldownDisplay(), 640, 650);
         this.addObject(new StartMenu(), 640, 360);
         Cooldown_Slimes =100000001;
         Slimes =0;
@@ -174,7 +161,7 @@ public class MyWorld extends World
                 this.addObject(new ScoreCounter(), 640,30);
                 this.addObject(new HeartCounter(), 640,70);
                 this.addObject(new UpgradeCounter(),640,690);
-                this.addObject(new Cooldown(), 640, 650);
+                this.addObject(new CooldownDisplay(), 640, 650);
                 Cooldown_Slimes =100000001;
                 Slimes =0;
                 FlipFlop =0;

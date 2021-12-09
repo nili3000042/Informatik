@@ -1,0 +1,10 @@
+ * Ideen
+ * -multiplayer Second (blue)
+ * -Fullscreen
+ * -highscore
+ * when complete
+ * -size down
+ *  -code
+ *  -images/sounds
+ * -upload to greenfoot forum
+ * -Dokumentation

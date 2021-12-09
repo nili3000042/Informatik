@@ -1,12 +1,5 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class SCgjswagd here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Forcefield_timer extends Displays
+import greenfoot.*;
+public class Forcefield_timer extends Displays //Displays the current Forcefield time left.
 {
     public Forcefield_timer()
     {

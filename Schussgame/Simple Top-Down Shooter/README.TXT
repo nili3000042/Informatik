@@ -6,9 +6,9 @@ alles, was er/sie wissen muss. Üblicherweise sollte der Kommentar
 zumindest die folgenden Angaben umfassen:
 ------------------------------------------------------------------------
 
-PROJEKTBEZEICHNUNG:
-PROJEKTZWECK:
-VERSION oder DATUM:
-WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN):
-BENUTZERHINWEISE:
+PROJEKTBEZEICHNUNG: Simple Top-Down Shooter
+PROJEKTZWECK: Game
+VERSION oder DATUM: V1.0 08.12.2021
+WIE IST DAS PROJEKT ZU STARTEN: like every other greenfoot Project
+AUTOR(EN): nili3000042
+BENUTZERHINWEISE: null
