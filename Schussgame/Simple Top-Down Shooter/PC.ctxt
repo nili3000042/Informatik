@@ -1,10 +1,3 @@
 #BlueJ class context
 comment0.target=PC
-comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ Movedbyplayer.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
-comment1.params=
-comment1.target=void\ wasd_Rotate()
-comment2.params=
-comment2.target=void\ wasd_Grid()
-comment3.params=
-comment3.target=void\ Dragging()
-numComments=4
+numComments=1
