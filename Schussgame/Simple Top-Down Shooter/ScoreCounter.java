@@ -1,22 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class SCgjswagd here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class ScoreCounter extends Displays
+import greenfoot.*;
+public class ScoreCounter extends Displays // Displays the current Score.
 {
-    public ScoreCounter()
+    public ScoreCounter() // Displays the Score at the start of the Game (0).
     {
          setImage(new GreenfootImage("Score: 0", 50, Color.WHITE, new Color(0,0,0,0)));
     }   
-    public void act()
-    {
-        display_score();
-    }
-    public void display_score()
+    public void act() //Updates the Score.
     {
         setImage(new GreenfootImage("Score: " + MyWorld.Score, 50, Color.WHITE, new Color(0,0,0,0)));
     }

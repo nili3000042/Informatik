@@ -1,7 +1,7 @@
 import greenfoot.*;
 public class CooldownDisplay extends Displays //Displays the current Cooldown.
 {
-    public CooldownDisplay() // setting image to colldown: 0 so that no negative values are shown.
+    public CooldownDisplay() // setting image to cooldown: 0 so that no negative values are shown.
     {
          setImage(new GreenfootImage("Cooldown: 0", 50, Color.WHITE, new Color(0,0,0,0))); 
     }   
@@ -9,7 +9,7 @@ public class CooldownDisplay extends Displays //Displays the current Cooldown.
     {
         if(MyWorld.upgrade_level<40)
         {
-            if(MyWorld.Cooldown_Gun-MyWorld.upgrade_level<0)// setting image to colldown: 0 so that no negative values are shown.
+            if(MyWorld.Cooldown_Gun-MyWorld.upgrade_level<0)// setting image to cooldown: 0 so that no negative values are shown.
             {
                 setImage(new GreenfootImage("Cooldown: 0", 50, Color.WHITE, new Color(0,0,0,0)));
             }

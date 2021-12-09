@@ -1,22 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class SCgjswagd here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class HeartCounter extends Displays
+import greenfoot.*;
+public class HeartCounter extends Displays //Shows the current Hearts left.
 {
-    public HeartCounter()
+    public HeartCounter() //Shows the Hearts at the start of the Game (5).
     {
          setImage(new GreenfootImage("♥ ♥ ♥ ♥ ♥", 50, Color.RED, new Color(0,0,0,0)));
     }   
-    public void act()
-    {
-        aktualisieren();
-    }
-    public void aktualisieren()
+    public void act() //Updates the current Hearts Left.
     {
         if(MyWorld.Hearts==10)
         {

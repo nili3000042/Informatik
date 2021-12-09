@@ -1,3 +1,3 @@
 import greenfoot.*;
-public class PauseMenu extends Displays //Is used to display a Image (in this case the Pause Menu).
+public class PauseMenu extends Displays //Is used to display an Image (in this case the Pause Menu).
 {}

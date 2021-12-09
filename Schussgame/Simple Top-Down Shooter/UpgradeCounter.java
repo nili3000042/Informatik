@@ -1,22 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class SCgjswagd here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class UpgradeCounter extends Displays
+import greenfoot.*;
+public class UpgradeCounter extends Displays //Displays the Current Upgrade Lv.
 {
-    public UpgradeCounter()
+    public UpgradeCounter() // Shows the Lv. at the Start of the Game (0).
     {
          setImage(new GreenfootImage("Upgrade Lv.Ⅰ: 0 /20", 50, Color.WHITE, new Color(0,0,0,0)));
     }   
-    public void act()
-    {
-        display_upgrade();
-    }
-    public void display_upgrade()
+    public void act() //Updates the Lv.
     {
         if(MyWorld.upgrade_level<20)
         {
@@ -27,7 +16,7 @@ public class UpgradeCounter extends Displays
             int test = MyWorld.upgrade_level - 20;
             setImage(new GreenfootImage("Upgrade Lv.Ⅱ: " + test+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
         }
-        else
+        else //Shows the level cap.
         {
             setImage(new GreenfootImage("Upgrade Lv.Ⅲ: MAX", 50, Color.WHITE, new Color(0,0,0,0)));
         }

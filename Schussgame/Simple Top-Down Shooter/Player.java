@@ -1,17 +1,10 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
-
-/**
- * Ergänzen Sie hier eine Beschreibung für die Klasse PEOPLE.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
-public class Player extends PC
+import greenfoot.*;
+public class Player extends PC //The Player.
 {
-    GreenfootSound Minigun = new GreenfootSound("minigun.mp3");
-    public int wait=0;
-    public int wait_2=0;
-    public void act() 
+    GreenfootSound Minigun = new GreenfootSound("minigun.mp3"); //Makes it playable as a Loop.
+    public int wait=0; //Temp value
+    public int wait_2=0; //Temp value
+    public void act() //Done around 50 times per secound.
     {
         wasd_Rotate();
         gun();
@@ -20,27 +13,46 @@ public class Player extends PC
         lose_immortality();
         forcefield();
     }    
-    public void forcefield()
+    public void wasd_Rotate() //Moves the Player with the wasd keys.
     {
-        if(isTouching(Forcefield_item.class))
+        if(Greenfoot.isKeyDown("w")) //Moves forward using w.
         {
-            if(!MyWorld.forcefield)
+            this.move(3);
+        }
+        if(Greenfoot.isKeyDown("s")) //Moves backwards using s.
+        {
+            this.move(-3);
+        }
+        if(Greenfoot.isKeyDown("a")) //Turns counterclockwise using a.
+        {
+            this.turn(-3);
+        }
+        if(Greenfoot.isKeyDown("d")) //Turns clockwise using a.
+        {
+            this.turn(3);
+        }
+    }
+    public void forcefield() //Spawns the Forcefield that Protects the Player.
+    {
+        if(isTouching(Forcefield_item.class)) //Makes shure it is touching the item.
+        {
+            if(!MyWorld.forcefield) //Checks that there is no forcefield object already and Spawns object if there isn't. Asweĺl as a timer to display the current Forcefield time left.
             {
                 getWorld().addObject(new Forcefield(), this.getX(), this.getY());
                 getWorld().addObject(new Forcefield_timer(), 640, 610);
                 MyWorld.forcefield=true;
             }
-            MyWorld.forcefield_active = MyWorld.forcefield_active+1000;
-            Greenfoot.playSound("upmid.mp3");
-            removeTouching(Forcefield_item.class);
+            MyWorld.forcefield_active = MyWorld.forcefield_active+1000; //Adds 20 Seconds to the Forcefield time.
+            Greenfoot.playSound("upmid.mp3"); // Plays a nice Sound.
+            removeTouching(Forcefield_item.class); //Removes the Item.
         }
     }
-    public void lose_immortality()
+    public void lose_immortality() //makes the player lose immortality.
     {
-        if(MyWorld.player_immortal>0)
+        if(MyWorld.player_immortal>0) //makes shure the Player has immortality.
         {
-            MyWorld.player_immortal--;
-            if(MyWorld.even(MyWorld.player_immortal)&&wait_2==0)
+            MyWorld.player_immortal--; //immortality decreases by 1.
+            if(MyWorld.even(MyWorld.player_immortal)&&wait_2==0) //makes it so that the player image is changed around every 4/50 of a secound to get a flickering effect while the player is immortal.
             {
                 setImage(new GreenfootImage("", 50, Color.RED, new Color(0,0,0,0)));
                 wait_2=1;
@@ -53,13 +65,13 @@ public class Player extends PC
     }
     public void regen()
     {
-        if(isTouching(Heart.class)&&MyWorld.Hearts<10)
+        if(isTouching(MediKit.class)&&MyWorld.Hearts<10) //Makes shure it is touching the item and the player has less than 10 hearts.
         {
-            MyWorld.Hearts++;
-            Greenfoot.playSound("upmid.mp3");
-            removeTouching(Heart.class);
+            MyWorld.Hearts++; //Increases the Hearts by 1.
+            Greenfoot.playSound("upmid.mp3"); // Plays a nice Sound.
+            removeTouching(MediKit.class); //Removes the Item.
         }
-        else if(isTouching(Heart.class))
+        else if(isTouching(MediKit.class)) //Tells the player that the Max lives are reached.
         {
             getWorld().showText("Max Lives Reached", 640, 360);
             wait=1;
@@ -68,7 +80,7 @@ public class Player extends PC
         {
             wait++;
         }
-        if(wait>10)
+        if(wait>10) //makes the text disapear.
         {
             getWorld().showText("", 640, 360);
             wait=0;
@@ -76,11 +88,11 @@ public class Player extends PC
     }
     public void upgrade()
     {
-        if(isTouching(Upgrade.class))
+        if(isTouching(Upgrade.class)) //Makes shure it is touching the item.
         {
-            MyWorld.upgrade_level = MyWorld.upgrade_level+1;
-            Greenfoot.playSound("upshort.mp3");
-            removeTouching(Upgrade.class);
+            MyWorld.upgrade_level = MyWorld.upgrade_level+1; //Increases Lv.
+            Greenfoot.playSound("upshort.mp3"); // Plays a nice Sound.
+            removeTouching(Upgrade.class); //Removes the Item.
         }
     }
     public void gun()
@@ -90,7 +102,7 @@ public class Player extends PC
             setImage("tanks (R4).png");
             if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
             {
-                Schuss Peng = new Schuss();
+                Bullet Peng = new Bullet();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
                 Greenfoot.playSound("lmg_fire01.mp3");
@@ -106,7 +118,7 @@ public class Player extends PC
             setImage("tanks (R3).png");
             if(Greenfoot.isKeyDown("space") && MyWorld.Cooldown_Gun<MyWorld.upgrade_level)
             {
-                Schuss Peng = new Schuss();
+                Bullet Peng = new Bullet();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
                 Greenfoot.playSound("lmg_fire01.mp3");
@@ -122,7 +134,7 @@ public class Player extends PC
             setImage("tanks (R2).png");
             if(Greenfoot.isKeyDown("space"))
             {
-                Schuss Peng = new Schuss();
+                Bullet Peng = new Bullet();
                 Peng.setRotation(getRotation());
                 this.getWorld().addObject(Peng, this.getX(), this.getY());
                 Minigun.playLoop();

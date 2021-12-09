@@ -125,7 +125,7 @@ public class MyWorld extends World //The world in wich the game happens.
         }
         if(Greenfoot.isKeyDown("h"))
         {
-            this.addObject(new Heart(),740,360);
+            this.addObject(new MediKit(),740,360);
         }
         if(Greenfoot.isKeyDown("f"))
         {

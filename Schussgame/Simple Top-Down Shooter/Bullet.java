@@ -1,30 +1,22 @@
 import greenfoot.*;
-public class Forcefield extends NPC //A Forcefield centered on the player, to kill Slimes.
+public class Bullet extends NPC //Shoot from the Player to kill enemys.
 {
-    public int image =0; //Used to keep track of wich image is currently displayed.
-    public int kills=0; //Used to make shure that only every other kill is counted.
     public void act() //Done around 50 times per secound.
     {
-        change_image();
+        this.move(20); //Moves the Bullet.
         Kill_Slime();
-        move();
-    }
-    public void move() //Keep the Forcefield centered on the Player.
-    {
-        this.setLocation(getWorld().getObjects(Player.class).get(0).getX(),getWorld().getObjects(Player.class).get(0).getY());
+        if(this.isAtEdge()) // Kills itself if it touches the Edge.
+        {
+            this.getWorld().removeObject(this);
+        }
     }
     public void Kill_Slime() //Kill's Slimes it touches
     {
         if(this.isTouching(Slime.class)) // Makes Shure it touches a Slime
         {
             MyWorld.Slimes--; //Decreses the number of Slimes by 1.
-            kills++; //Increases the kill count.
-            if(kills==2) //Every other kill
-            {
-                MyWorld.Score++; //Increases Score by 1.
-                kills=0; //sets kills to 0.
-            }
-            Greenfoot.playSound("zap14.mp3"); //Plays the kill sound.
+            MyWorld.Score++; //Increases Score by 1.
+            Greenfoot.playSound("impactsplat05[].mp3"); //Plays the kill sound.
             if(Greenfoot.getRandomNumber(101)>20&&MyWorld.upgrade_level<40) //Spawns Upgrade if max Lv. isn't reached and luck.
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
@@ -42,29 +34,6 @@ public class Forcefield extends NPC //A Forcefield centered on the player, to ki
                 getWorld().addObject(new MediKit(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
             this.removeTouching(Slime.class); //Removes slime from the Game.
-        }
-    }
-    public void change_image() //Changes the image to get an Electric Effect.
-    {
-        if(image==0)
-        {
-            setImage("SpellBoundemptya1.png");
-            image=1;
-        }
-        else if(image==1)
-        {
-            setImage("SpellBoundemptya2.png");
-            image=2;
-        }
-        else if(image==2)
-        {
-            setImage("SpellBoundemptya3.png");
-            image=3;
-        }
-        else if(image==3)
-        {
-            setImage("SpellBoundemptya2.png");
-            image=0;
         }
     }
 }

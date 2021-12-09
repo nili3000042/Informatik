@@ -1,19 +1,8 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Forcefield_item here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Forcefield_item extends NPC
+import greenfoot.*;
+public class Forcefield_item extends NPC // A Pickupable item used to give the Player a Forcefield.
 {
-    public int image =0;
-    public void act()
-    {
-        change_image();
-    }
-    public void change_image()
+    public int image =0; //Used to keep track of wich image is currently displayed.
+    public void act() //Changes the image to get an Electric Effect.
     {
         if(image==0)
         {

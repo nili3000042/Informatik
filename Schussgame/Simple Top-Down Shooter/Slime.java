@@ -1,127 +1,37 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Slime here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Slime extends NPC
+import greenfoot.*;
+public class Slime extends NPC //Enemy of the Player.
 {
     public int normal=0;
-    public int wait=0;
-    public int wait_2=0;
-    public int a=0;
-    public int b=0;
-    public int c=0;
-    public void act()
+    public void act() //Done around 50 times per secound.
     {
-        //rnd_Move();
-        rnd_Move_No_Animation();
-        //getWorld().showText("a:"+a+"b:"+b+"c:"+c+"normal:"+normal+"wait:"+wait+"wait_2:"+wait_2, 300, 300);
+        rnd_Move();
         Kill_Player();
     }
-    public void Kill_Player()
+    public void Kill_Player() //Kills the Player.
     {
-        if(isTouching(Player.class)&&MyWorld.player_immortal==0)
+        if(isTouching(Player.class)&&MyWorld.player_immortal==0) //Makes shure it touches the Player and the Player isn't immortal.
         {
-            MyWorld.Hearts--;
-            Greenfoot.playSound("cyborg_hurt_one.mp3");
-            MyWorld.player_immortal=150;
+            MyWorld.Hearts--; //Decreases the Hearts of the Player.
+            Greenfoot.playSound("cyborg_hurt_one.mp3"); //Playes the Taking Damage sound.
+            MyWorld.player_immortal=150; //Gives the Player around 3 Seconds of Immortality.
         }
     }
-    public void rnd_Move_No_Animation()
+    public void rnd_Move() //Makes the Slime move more or less randomly.
     {
-        if (normal<10)
+        if (normal<10) //the slime moves Forwards for around 1/5 of a second.
         {
             this.move(1);
             normal=normal+1;
         }
-        else if(Greenfoot.getRandomNumber(100)>70)
+        else if(Greenfoot.getRandomNumber(100)>70) //Has a chance of moving one random direction.
         {
             this.setRotation(Greenfoot.getRandomNumber(361));
             normal=0;
         }
-        else
+        else //Is more likely to Move Towards.
         {
             this.turnTowards(getWorld().getObjects(Player.class).get(0).getX(),getWorld().getObjects(Player.class).get(0).getY());
             normal=0;
         }
-    }
-    public void rnd_Move()
-    {
-        if (normal<10)
-        {
-            this.move(2);
-            normal=normal+1;
-        }
-        else if(Greenfoot.getRandomNumber(100)>100000&&wait_2==0|wait_2==1)
-        {
-            if(wait==0)
-            {
-                a= MyWorld.getRandomNumber(0,360);
-                b=this.getRotation();
-                c=a-b;
-                wait=1;
-                wait_2=1;
-            }
-            if(c<0)
-            {
-                this.turn(-1);
-                this.move(1);
-                c++;
-            }
-            else if(c>0)
-            {
-                this.turn(+1);
-                this.move(1);
-                c--;
-            }
-            else
-            {
-                normal=0;
-                wait=0;
-                wait_2=0;
-            }
-        }
-        else if(wait_2==0|wait_2==2)
-        {
-            if(wait==0)
-            {
-                a=this.getRotation();
-                this.turnTowards(getWorld().getObjects(Player.class).get(0).getX(),getWorld().getObjects(Player.class).get(0).getY());
-                b=this.getRotation();
-                this.setRotation(a);
-                c=b-a;
-                wait=1;
-                wait_2=2;
-            }
-            if(c<0)
-            {
-                this.turn(-1);
-                this.move(1);
-                c++;
-            }
-            else if(c>0)
-            {
-                this.turn(+1);
-                this.move(1);
-                c--;
-            }
-            else
-            {
-                normal=0;
-                wait=0;
-                wait_2=0;
-            }
-        }
-        else
-        {
-            normal=0;
-        }
-    }
-    public void suicide()
-    {
-        this.getWorld().removeObject(this);
     }
 }
