@@ -9,11 +9,11 @@ public class Slime extends NPC //Enemy of the Player.
     }
     public void Kill_Player() //Kills the Player.
     {
-        if(isTouching(Player.class)&&MyWorld.player_immortal==0) //Makes shure it touches the Player and the Player isn't immortal.
+        if(isTouching(Player.class)&&getWorld().getObjects(Player.class).get(0).immortal==0) //Makes shure it touches the Player and the Player isn't immortal.
         {
-            MyWorld.Hearts--; //Decreases the Hearts of the Player.
+            getWorld().getObjects(Player.class).get(0).Hearts--; //Decreases the Hearts of the Player.
             Greenfoot.playSound("cyborg_hurt_one.mp3"); //Playes the Taking Damage sound.
-            MyWorld.player_immortal=150; //Gives the Player around 3 Seconds of Immortality.
+            getWorld().getObjects(Player.class).get(0).immortal=150; //Gives the Player around 3 Seconds of Immortality.
         }
     }
     public void rnd_Move() //Makes the Slime move more or less randomly.

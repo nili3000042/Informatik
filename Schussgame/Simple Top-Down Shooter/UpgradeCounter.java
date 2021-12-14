@@ -7,18 +7,18 @@ public class UpgradeCounter extends Displays //Displays the Current Upgrade Lv.
     }   
     public void act() //Updates the Lv.
     {
-        if(MyWorld.upgrade_level<20)
+        if(getWorld().getObjects(Player.class).get(0).upgrade_level<20)
         {
-            setImage(new GreenfootImage("Upgrade Lv.Ⅰ: " + MyWorld.upgrade_level+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
+            setImage(new GreenfootImage("Upgrade Lv.Ⅰ: " + getWorld().getObjects(Player.class).get(0).upgrade_level+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
         }
-        else if(MyWorld.upgrade_level<40)
+        else if(getWorld().getObjects(Player.class).get(0).upgrade_level<40)
         {
-            int test = MyWorld.upgrade_level - 20;
+            int test = getWorld().getObjects(Player.class).get(0).upgrade_level - 20;
             setImage(new GreenfootImage("Upgrade Lv.Ⅱ: " + test+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
         }
-        else if(MyWorld.upgrade_level<60)
+        else if(getWorld().getObjects(Player.class).get(0).upgrade_level<60)
         {
-            int test = MyWorld.upgrade_level - 40;
+            int test = getWorld().getObjects(Player.class).get(0).upgrade_level - 40;
             setImage(new GreenfootImage("Upgrade Lv.Ⅲ: " + test+" /20", 50, Color.WHITE, new Color(0,0,0,0)));
         }
         else //Shows the level cap.
