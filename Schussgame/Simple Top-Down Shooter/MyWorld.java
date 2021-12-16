@@ -135,28 +135,31 @@ public class MyWorld extends World //The world in wich the game happens.
     }
     public void slime_spawning() // Spawns Slimes.
     {
-        if(Slimes<Max_Slimes) //Checks that the Max number of slimes isn't reached already.
+        for(int i=0;i*1000>Score;i++) //Makes the Game able to spawn more Slimes Later in the Game.
         {
-            int FlipFlop = Greenfoot.getRandomNumber(4); //gets random number to select on wich border tzo spawn slimes.
-            if(FlipFlop==0) //Spawns Slime at Random point on the Bottom Border.
+            if(Slimes<Max_Slimes) //Checks that the Max number of slimes isn't reached already.
             {
-                this.addObject(new Slime(),getRandomNumber(0,1280),0);
-                Slimes = Slimes+1;
-            }
-            else if (FlipFlop==1) //Spawns Slime at Random point on the Left Border.
-            {
-                this.addObject(new Slime(),0,getRandomNumber(0,720));
-                Slimes = Slimes+1;
-            }
-            else if (FlipFlop==2) //Spawns Slime at Random point on the Top Border.
-            {
-                this.addObject(new Slime(),getRandomNumber(0,1280),720);
-                Slimes = Slimes+1;
-            }
-            else  //Spawns Slime at Random point on the Right Border.
-            {
-                this.addObject(new Slime(),1280,getRandomNumber(0,720));
-                Slimes = Slimes+1;
+                int FlipFlop = Greenfoot.getRandomNumber(4); //gets random number to select on wich border tzo spawn slimes.
+                if(FlipFlop==0) //Spawns Slime at Random point on the Bottom Border.
+                {
+                    this.addObject(new Slime(),getRandomNumber(0,1280),0);
+                    Slimes = Slimes+1;
+                }
+                else if (FlipFlop==1) //Spawns Slime at Random point on the Left Border.
+                {
+                    this.addObject(new Slime(),0,getRandomNumber(0,720));
+                    Slimes = Slimes+1;
+                }
+                else if (FlipFlop==2) //Spawns Slime at Random point on the Top Border.
+                {
+                    this.addObject(new Slime(),getRandomNumber(0,1280),720);
+                    Slimes = Slimes+1;
+                }
+                else  //Spawns Slime at Random point on the Right Border.
+                {
+                    this.addObject(new Slime(),1280,getRandomNumber(0,720));
+                    Slimes = Slimes+1;
+                }
             }
         }
     }
