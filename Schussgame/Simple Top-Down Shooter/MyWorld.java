@@ -135,7 +135,8 @@ public class MyWorld extends World //The world in wich the game happens.
     }
     public void slime_spawning() // Spawns Slimes.
     {
-        for(int i=0;i*1000>Score;i++) //Makes the Game able to spawn more Slimes Later in the Game.
+        int i=0;
+        while(i*1000<Score+1) //Makes the Game able to spawn more Slimes Later in the Game.
         {
             if(Slimes<Max_Slimes) //Checks that the Max number of slimes isn't reached already.
             {
@@ -161,6 +162,7 @@ public class MyWorld extends World //The world in wich the game happens.
                     Slimes = Slimes+1;
                 }
             }
+            i++;
         }
     }
     public static int getRandomNumber(int start,int end) //gets you a Random number between two numbers.
