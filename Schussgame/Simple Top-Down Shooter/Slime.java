@@ -1,7 +1,7 @@
 import greenfoot.*;
 public class Slime extends NPC //Enemy of the Player.
 {
-    public int normal=0;
+    public int normal=10;
     public void act() //Done around 50 times per secound.
     {
         rnd_Move();

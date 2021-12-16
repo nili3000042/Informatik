@@ -4,9 +4,7 @@ public class MyWorld extends World //The world in wich the game happens.
     public static int game_speed =50; // Number of times Act is performed per Second(Can change depending on performance).
     public static int Slimes =0; // The Number of Slimes currently in the game.
     public static int Score =0; // The Score.
-    public int wait =0; // Temp storage.
     public int Max_Slimes =1; //The current number of Slimes Max at a time.
-    public int wait_2 =0; // Temp storage.
     GreenfootSound tense_backgroundMusic = new GreenfootSound("Trouble.mp3"); //Makes it playable as a Loop.
     GreenfootSound backgroundMusic = new GreenfootSound("dungeon theme.mp3"); //Makes it playable as a Loop.
     GreenfootSound GameOverMusic = new GreenfootSound("No Hope.mp3"); //Makes it playable as a Loop.
@@ -24,18 +22,21 @@ public class MyWorld extends World //The world in wich the game happens.
         game_speed =50; // Number of times Act is performed per Second(Can change depending on performance).
         Slimes =0; // The Number of Slimes currently in the game.
         Score =0; // The Score.
-        wait =0; // Temp storage.
         Max_Slimes =1; //The current number of Slimes Max at a time.
-        wait_2 =0; // Temp storage.
+        getObjects(Player.class).get(0).Cooldown_Gun =-10; // Cooldown until player can shoot again.
+        getObjects(Player.class).get(0).upgrade_level =0; // Current level of the player.
+        getObjects(Player.class).get(0).Hearts =5; // The amounts of Hearts.
+        getObjects(Player.class).get(0).immortal =3*MyWorld.game_speed; // Time the Player is immortal they start with 3 seconds.
+        getObjects(Player.class).get(0).forcefield_time =0; // The current Forcefield time.
     }
     public void act() //Done around 50 times per Second.
     {
         slime_spawning();
-        GameOver();
         update_Max();
         Background_Music();
         Pause_Menu();
         startmenu();
+        GameOver();
         //cheat_codes(); // Used to test new features.
     }
     public void startmenu() //Deletes the Startmenu.
@@ -47,6 +48,10 @@ public class MyWorld extends World //The world in wich the game happens.
     }
     public void Pause_Menu() //Makes the Pause Menu possible.
     {
+        if(!getObjects(PauseMenu.class).isEmpty()) //Checks if the Pausemenu is there.
+        {
+            this.removeObjects(getObjects(PauseMenu.class)); //Removes the Pausemenu.
+        }
         if(Greenfoot.isKeyDown("p")) //If the player presses P
         {
             this.addObject(new PauseMenu(),640,360); //adds the Pausemenu.
@@ -54,118 +59,108 @@ public class MyWorld extends World //The world in wich the game happens.
             backgroundMusic.stop(); //Stops Background Music.
             Greenfoot.stop(); //Pauses Greenfoot.
         }
-        if(!getObjects(PauseMenu.class).isEmpty()) //Checks if the Pausemenu is there.
-        {
-            this.removeObjects(getObjects(PauseMenu.class)); //Removes the Pausemenu.
-        }
     }
-    public void Background_Music() //
+    public void Background_Music() //Changes the Background Music.
     {
-        if(getObjects(Player.class).get(0).Hearts==1)
+        if(getObjects(Player.class).get(0).Hearts==1) //If the Player has only 1 Heart Remaining it gets Tense.
         {
             backgroundMusic.stop();
             tense_backgroundMusic.playLoop();
         }
-        else if (getObjects(Player.class).get(0).Hearts>0)
+        else if(getObjects(Player.class).get(0).Hearts>1) //Else the Background is Calm.
         {
             tense_backgroundMusic.stop();
             backgroundMusic.playLoop();
         }
     }
-    public void cheat_codes()
+    public void cheat_codes() //Cheat codes for tests.
     {
-        if(Greenfoot.isKeyDown("u"))
+        if(Greenfoot.isKeyDown("u")) //Spawns Upgrades.
         {
             this.addObject(new Upgrade(),690,360);
         }
-        if(Greenfoot.isKeyDown("h"))
+        if(Greenfoot.isKeyDown("h")) //Spawns Medikits.
         {
             this.addObject(new MediKit(),740,360);
         }
-        if(Greenfoot.isKeyDown("f"))
+        if(Greenfoot.isKeyDown("f")) //Spawns Forcefields.
         {
             this.addObject(new Forcefield_item(),790,360);
         }
-        if(Greenfoot.isKeyDown("c"))
+        if(Greenfoot.isKeyDown("c")) //Adds to the Score.
         {
             Score++;
         }
     }
-    public void update_Max()
+    public void update_Max() //Updates the Maximum number of slimes at a Time.
     {
-        if(Score>2)
+        if(Score>2) //Makes shure the score is higher than 2 to prevent problems from happening.
         {
-            Max_Slimes=Score/2;
+            Max_Slimes=Score/2; //Sets max slimes to halve of the Score.
         }
     }
-    public void GameOver()
+    public void GameOver() //This Void ends the Game.
     {
-        if(getObjects(Player.class).get(0).Hearts<1)
+        if(!getObjects(GameOver.class).isEmpty()) //Resets the Game.
         {
-            removeObjects(getObjects(Actor.class));
-            tense_backgroundMusic.stop();
-            backgroundMusic.stop();
-            GameOverMusic.playLoop();
-            this.addObject(new GameOver(),640,360);
-            this.addObject(new Credits(), 240,360);
-            this.addObject(new OnlyScore(),640,360);
-            if(Greenfoot.isKeyDown("y")&&wait>100)
-            {
-                removeObjects(getObjects(Actor.class));
-                this.addObject(new Player(), 640, 360); //adds the Player.
-                this.addObject(new ScoreCounter(), 640,30); //adds the ScoreCounter.
-                this.addObject(new HeartCounter(), 640,70); //adds the Heart Display.
-                this.addObject(new UpgradeCounter(),640,690); //adds the upgrade Display.
-                this.addObject(new CooldownDisplay(), 640, 650); //adds the Cooldown Display.
-                game_speed =50; // Number of times Act is performed per Second(Can change depending on performance).
-                Slimes =0; // The Number of Slimes currently in the game.
-                Score =0; // The Score.
-                wait =0; // Temp storage.
-                Max_Slimes =1; //The current number of Slimes Max at a time.
-                GameOverMusic.stop();
-            }
-            else
-            {
-                wait++;
-            }
+            removeObjects(getObjects(Actor.class)); //Wipes the World clean.
+            this.addObject(new Player(), 640, 360); //adds the Player.
+            this.addObject(new ScoreCounter(), 640,30); //adds the ScoreCounter.
+            this.addObject(new HeartCounter(), 640,70); //adds the Heart Display.
+            this.addObject(new UpgradeCounter(),640,690); //adds the upgrade Display.
+            this.addObject(new CooldownDisplay(), 640, 650); //adds the Cooldown Display.
+            game_speed =50; // Number of times Act is performed per Second(Can change depending on performance).
+            Slimes =0; // The Number of Slimes currently in the game.
+            Score =0; // The Score.
+            Max_Slimes =1; //The current number of Slimes Max at a time.
+            getObjects(Player.class).get(0).Cooldown_Gun =-10; // Cooldown until player can shoot again.
+            getObjects(Player.class).get(0).upgrade_level =0; // Current level of the player.
+            getObjects(Player.class).get(0).Hearts =5; // The amounts of Hearts.
+            getObjects(Player.class).get(0).immortal =3*MyWorld.game_speed; // Time the Player is immortal they start with 3 seconds.
+            getObjects(Player.class).get(0).forcefield_time =0; // The current Forcefield time.
+            GameOverMusic.stop(); //Stops the Game over Music.
+        }
+        if(getObjects(Player.class).get(0).Hearts<1) //Detects if player is dead.
+        {
+            removeObjects(getObjects(Actor.class)); //Wipes the World clean.
+            tense_backgroundMusic.stop(); //Stops the Background Music.
+            backgroundMusic.stop(); //Stops the Background Music.
+            GameOverMusic.playLoop(); //Plays the Game Over Music.
+            this.addObject(new Player(), 640, 360); //adds player to prevent some bugs.
+            this.addObject(new GameOver(),640,360); //adds the GameOver display.
+            this.addObject(new Credits(), 240,360); //adds the Credits.
+            this.addObject(new OnlyScore(),640,360); //adds only the score.
+            Greenfoot.stop(); //Pauses Greenfoot.
         }
     }
-    public void slime_spawning()
+    public void slime_spawning() // Spawns Slimes.
     {
-        if(Slimes<Max_Slimes)
+        if(Slimes<Max_Slimes) //Checks that the Max number of slimes isn't reached already.
         {
-            int FlipFlop = Greenfoot.getRandomNumber(4);
-            if(FlipFlop==0)
+            int FlipFlop = Greenfoot.getRandomNumber(4); //gets random number to select on wich border tzo spawn slimes.
+            if(FlipFlop==0) //Spawns Slime at Random point on the Bottom Border.
             {
-                Slime Rimuru = new Slime();
-                Rimuru.setRotation(90);
-                this.addObject(Rimuru,getRandomNumber(0,1280),0);
+                this.addObject(new Slime(),getRandomNumber(0,1280),0);
                 Slimes = Slimes+1;
             }
-            else if (FlipFlop==1)
+            else if (FlipFlop==1) //Spawns Slime at Random point on the Left Border.
             {
-                Slime Rimuru = new Slime();
-                Rimuru.setRotation(0);
-                this.addObject(Rimuru,0,getRandomNumber(0,720));
+                this.addObject(new Slime(),0,getRandomNumber(0,720));
                 Slimes = Slimes+1;
             }
-            else if (FlipFlop==2)
+            else if (FlipFlop==2) //Spawns Slime at Random point on the Top Border.
             {
-                Slime Rimuru = new Slime();
-                Rimuru.setRotation(270);
-                this.addObject(Rimuru,getRandomNumber(0,1280),720);
+                this.addObject(new Slime(),getRandomNumber(0,1280),720);
                 Slimes = Slimes+1;
             }
-            else
+            else  //Spawns Slime at Random point on the Right Border.
             {
-                Slime Rimuru = new Slime();
-                Rimuru.setRotation(180);
-                this.addObject(Rimuru,1280,getRandomNumber(0,720));
+                this.addObject(new Slime(),1280,getRandomNumber(0,720));
                 Slimes = Slimes+1;
             }
         }
     }
-    public static int getRandomNumber(int start,int end)
+    public static int getRandomNumber(int start,int end) //gets you a Random number between two numbers.
     {    /*getRandomNumber(20,30);*/
        int normal = Greenfoot.getRandomNumber(end-start+1);
        return normal+start;
