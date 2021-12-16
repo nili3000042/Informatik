@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Player_2
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ ijkl_Rotate()
+comment3.params=
+comment3.target=void\ forcefield()
+comment4.params=
+comment4.target=void\ lose_immortality()
+comment5.params=
+comment5.target=void\ regen()
+comment6.params=
+comment6.target=void\ upgrade()
+comment7.params=
+comment7.target=void\ gun()
+numComments=8
