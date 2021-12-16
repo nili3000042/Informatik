@@ -7,7 +7,6 @@ public class MyWorld extends World //The world in wich the game happens.
     public int wait =0; // Temp storage.
     public int Max_Slimes =1; //The current number of Slimes Max at a time.
     public int wait_2 =0; // Temp storage.
-    public boolean startmenu =false; //Stores if the startmenu is there.
     GreenfootSound tense_backgroundMusic = new GreenfootSound("Trouble.mp3"); //Makes it playable as a Loop.
     GreenfootSound backgroundMusic = new GreenfootSound("dungeon theme.mp3"); //Makes it playable as a Loop.
     GreenfootSound GameOverMusic = new GreenfootSound("No Hope.mp3"); //Makes it playable as a Loop.
@@ -28,51 +27,39 @@ public class MyWorld extends World //The world in wich the game happens.
         wait =0; // Temp storage.
         Max_Slimes =1; //The current number of Slimes Max at a time.
         wait_2 =0; // Temp storage.
-        startmenu =true; //Stores if the startmenu is there.
     }
-    public void act()
+    public void act() //Done around 50 times per Second.
     {
         slime_spawning();
         GameOver();
-        aktualisieren();
-        cheat_codes(); // Used to test new features.
+        update_Max();
         Background_Music();
         Pause_Menu();
         startmenu();
+        //cheat_codes(); // Used to test new features.
     }
-    public void startmenu()
+    public void startmenu() //Deletes the Startmenu.
     {
-        if(startmenu==true)
+        if(!getObjects(StartMenu.class).isEmpty()) //Checks if the Startmenu is there.
         {
-            removeObjects(getObjects(StartMenu.class));
-            startmenu=false;
+            removeObjects(getObjects(StartMenu.class)); //Removes the Startmenu.
         }
     }
-    public void Pause_Menu()
+    public void Pause_Menu() //Makes the Pause Menu possible.
     {
-        if(Greenfoot.isKeyDown("p")|wait_2==1)
+        if(Greenfoot.isKeyDown("p")) //If the player presses P
         {
-            if(wait_2==0)
-            {
-                this.addObject(new PauseMenu(),640,360);
-                tense_backgroundMusic.stop();
-                backgroundMusic.stop();
-                Greenfoot.stop();
-                wait_2=1;
-            }
-            if(wait>0)
-            {
-                this.removeObjects(getObjects(PauseMenu.class));
-                wait =0;
-                wait_2 =0;
-            }
-            else
-            {
-                wait++;
-            }
+            this.addObject(new PauseMenu(),640,360); //adds the Pausemenu.
+            tense_backgroundMusic.stop(); //Stops Background Music.
+            backgroundMusic.stop(); //Stops Background Music.
+            Greenfoot.stop(); //Pauses Greenfoot.
+        }
+        if(!getObjects(PauseMenu.class).isEmpty()) //Checks if the Pausemenu is there.
+        {
+            this.removeObjects(getObjects(PauseMenu.class)); //Removes the Pausemenu.
         }
     }
-    public void Background_Music()
+    public void Background_Music() //
     {
         if(getObjects(Player.class).get(0).Hearts==1)
         {
@@ -104,7 +91,7 @@ public class MyWorld extends World //The world in wich the game happens.
             Score++;
         }
     }
-    public void aktualisieren()
+    public void update_Max()
     {
         if(Score>2)
         {
@@ -135,7 +122,6 @@ public class MyWorld extends World //The world in wich the game happens.
                 Score =0; // The Score.
                 wait =0; // Temp storage.
                 Max_Slimes =1; //The current number of Slimes Max at a time.
-                wait_2 =0; // Temp storage.
                 GameOverMusic.stop();
             }
             else

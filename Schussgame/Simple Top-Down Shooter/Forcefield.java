@@ -29,7 +29,7 @@ public class Forcefield extends NPC //A Forcefield centered on the player, to ki
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
-            else if(Greenfoot.getRandomNumber(101)>80&&getWorld().getObjects(Player.class).get(0).forcefield_active/MyWorld.game_speed<180) //Spawns a Forcefield if no upgrade was spawned, based on lucḱ and you have less then 180 seconds of Forcefield time left.
+            else if(Greenfoot.getRandomNumber(101)>80&&getWorld().getObjects(Player.class).get(0).forcefield_time/MyWorld.game_speed<180) //Spawns a Forcefield if no upgrade was spawned, based on lucḱ and you have less then 180 seconds of Forcefield time left.
             {
                 getWorld().addObject(new Forcefield_item(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }

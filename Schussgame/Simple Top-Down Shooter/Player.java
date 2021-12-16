@@ -7,8 +7,7 @@ public class Player extends PC //The Player.
     public static int upgrade_level =0; // Current level of the player.
     public static int Hearts =5; // The amounts of Hearts.
     public static int immortal =3*MyWorld.game_speed; // Time the Player is immortal they start with 3 seconds.
-    public static int forcefield_active =0; // The current Forcefield time.
-    public static boolean forcefield =false; // Is there a Forcefield
+    public static int forcefield_time =0; // The current Forcefield time.
     public int wait=0; //Temp value
     public int wait_2=0; //Temp value
     public void act() //Done around 50 times per secound.
@@ -43,19 +42,18 @@ public class Player extends PC //The Player.
     {
         if(isTouching(Forcefield_item.class)) //Makes shure it is touching the item.
         {
-            if(!forcefield) //Checks that there is no forcefield object already and Spawns object if there isn't. Asweĺl as a timer to display the current Forcefield time left.
+            if(getWorld().getObjects(Forcefield.class).isEmpty()) //Checks that there is no forcefield object already and Spawns object if there isn't. Asweĺl as a timer to display the current Forcefield time left.
             {
                 getWorld().addObject(new Forcefield(), this.getX(), this.getY());
                 getWorld().addObject(new Forcefield_timer(), 640, 610);
-                forcefield=true;
             }
-            forcefield_active = forcefield_active+1000; //Adds 20 Seconds to the Forcefield time.
+            forcefield_time = forcefield_time+1000; //Adds 20 Seconds to the Forcefield time.
             Greenfoot.playSound("upmid.mp3"); // Plays a nice Sound.
             removeTouching(Forcefield_item.class); //Removes the Item.
         }
-        if(forcefield_active>0) //If there is forcefield time left.
+        if(forcefield_time>0) //If there is forcefield time left.
         {
-            forcefield_active--; //Forcefield time decreassas by 1.
+            forcefield_time--; //Forcefield time decreassas by 1.
             Forcefield.playLoop(); //Makes the forcefield sound play in the Background.
         }
         else //If there is no forcefield time left.
@@ -63,7 +61,6 @@ public class Player extends PC //The Player.
             getWorld().removeObjects(getWorld().getObjects(Forcefield.class)); //Removes the Forcefield.
             getWorld().removeObjects(getWorld().getObjects(Forcefield_timer.class)); //Removes the Forcefield timer.
             Forcefield.stop(); //Stops the forcefield sound playing in the Background.
-            forcefield =false; //Set that there is no Forcefield anymore.
         }
     }
     public void lose_immortality() //makes the player lose immortality.
