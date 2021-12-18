@@ -20,13 +20,27 @@ public class Player_2 extends PC //The Player_2.
             regen();
             lose_immortality();
             forcefield();
+            Revive();
         }
         else
         {
             setImage(new GreenfootImage("", 50, Color.RED, new Color(0,0,0,0)));
             immortal= 200;
+            forcefield_time =0;
+            getWorld().removeObjects(getWorld().getObjects(Forcefield_2.class)); //Removes the Forcefield.
+            getWorld().removeObjects(getWorld().getObjects(Forcefield_timer_2.class)); //Removes the Forcefield timer.
+            Forcefield.stop(); //Stops the forcefield sound playing in the Background.
         }
     }    
+    public void Revive() //Revives other Player.
+    {
+        if(isTouching(Revive.class)&&getWorld().getObjects(Player_1.class).get(0).Hearts==0) //Makes shure it is touching the item.
+        {
+            getWorld().getObjects(Player_1.class).get(0).Hearts =2; //Sets the other Player Hearts to 2.
+            Greenfoot.playSound("uplong.mp3"); // Plays a nice Sound.
+            removeTouching(Revive.class); //Removes the Item.
+        }
+    }
     public void ijkl_Rotate() //Moves the Player_2 with the ijkl keys.
     {
         if(Greenfoot.isKeyDown("i")) //Moves forward using i.
