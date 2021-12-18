@@ -40,7 +40,7 @@ public class Slime extends NPC //Enemy of the Player.
         }
         else //Is more likely to Move Towards.
         {
-            if(Greenfoot.getRandomNumber(2)==1) // 50/50 chance it moves towards Player_1;
+            if(Greenfoot.getRandomNumber(2)==1&&getWorld().getObjects(Player_1.class).get(0).Hearts>0|getWorld().getObjects(Player_2.class).get(0).Hearts==0) // 50/50 chance it moves towards Player_1;
             {
                 this.turnTowards(getWorld().getObjects(Player_1.class).get(0).getX(),getWorld().getObjects(Player_1.class).get(0).getY());
             }

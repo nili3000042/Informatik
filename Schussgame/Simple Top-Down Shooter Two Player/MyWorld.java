@@ -11,24 +11,36 @@ public class MyWorld extends World //The world in wich the game happens.
     public MyWorld() // Done at the beginning of the Game.
     {    
         super(1280, 720, 1); // Creates a new world with 1280x720 cells and a cell-sice of 1x1 Pixel.
+        reset();
+        this.addObject(new StartMenu(), 640, 360); //adds the Startmenu.
+    }
+    public void reset()
+    {
         this.setPaintOrder(Displays.class,PC.class,NPC.class); //Makes it so that the Displayed are always shown on top of enemys.
         Greenfoot.setSpeed(game_speed); // Tell the Game the game_speed.
-        this.addObject(new Player(), 600, 360); //adds the Player.
-        this.addObject(new Player_2(), 680, 360); //adds the Player.
+        this.addObject(new Player_1(), 426, 360); //adds the Player_1.
+        this.addObject(new Player_2(), 854, 360); //adds the Player_2.
         this.addObject(new ScoreCounter(), 640,30); //adds the ScoreCounter.
-        this.addObject(new HeartCounter(), 640,70); //adds the Heart Display.
-        this.addObject(new UpgradeCounter(),640,690); //adds the upgrade Display.
-        this.addObject(new CooldownDisplay(), 640, 650); //adds the Cooldown Display.
-        this.addObject(new StartMenu(), 640, 360); //adds the Startmenu.
+        this.addObject(new HeartCounter_1(), 426,70); //adds the Heart Display.
+        this.addObject(new HeartCounter_2(), 854,70); //adds the Heart Display.
+        this.addObject(new UpgradeCounter_1(),426,690); //adds the upgrade Display.
+        this.addObject(new UpgradeCounter_2(),854,690); //adds the upgrade Display.
+        this.addObject(new CooldownDisplay_1(), 426, 650); //adds the Cooldown Display.
+        this.addObject(new CooldownDisplay_2(), 854, 650); //adds the Cooldown Display.
         game_speed =50; // Number of times Act is performed per Second(Can change depending on performance).
         Slimes =0; // The Number of Slimes currently in the game.
         Score =0; // The Score.
         Max_Slimes =1; //The current number of Slimes Max at a time.
-        getObjects(Player.class).get(0).Cooldown_Gun =-10; // Cooldown until player can shoot again.
-        getObjects(Player.class).get(0).upgrade_level =0; // Current level of the player.
-        getObjects(Player.class).get(0).Hearts =5; // The amounts of Hearts.
-        getObjects(Player.class).get(0).immortal =3*MyWorld.game_speed; // Time the Player is immortal they start with 3 seconds.
-        getObjects(Player.class).get(0).forcefield_time =0; // The current Forcefield time.
+        getObjects(Player_1.class).get(0).Cooldown_Gun =-10; // Cooldown until player can shoot again.
+        getObjects(Player_1.class).get(0).upgrade_level =0; // Current level of the player.
+        getObjects(Player_1.class).get(0).Hearts =5; // The amounts of Hearts.
+        getObjects(Player_1.class).get(0).immortal =3*MyWorld.game_speed; // Time the Player is immortal they start with 3 seconds.
+        getObjects(Player_1.class).get(0).forcefield_time =0; // The current Forcefield time.
+        getObjects(Player_2.class).get(0).Cooldown_Gun =-10; // Cooldown until player can shoot again.
+        getObjects(Player_2.class).get(0).upgrade_level =0; // Current level of the player.
+        getObjects(Player_2.class).get(0).Hearts =5; // The amounts of Hearts.
+        getObjects(Player_2.class).get(0).immortal =3*MyWorld.game_speed; // Time the Player is immortal they start with 3 seconds.
+        getObjects(Player_2.class).get(0).forcefield_time =0; // The current Forcefield time.
     }
     public void act() //Done around 50 times per Second.
     {
@@ -63,12 +75,12 @@ public class MyWorld extends World //The world in wich the game happens.
     }
     public void Background_Music() //Changes the Background Music.
     {
-        if(getObjects(Player.class).get(0).Hearts==1) //If the Player has only 1 Heart Remaining it gets Tense.
+        if(getObjects(Player_1.class).get(0).Hearts==1|getObjects(Player_2.class).get(0).Hearts==1) //If the Player has only 1 Heart Remaining it gets Tense.
         {
             backgroundMusic.stop();
             tense_backgroundMusic.playLoop();
         }
-        else if(getObjects(Player.class).get(0).Hearts>1) //Else the Background is Calm.
+        else if(getObjects(Player_1.class).get(0).Hearts>1|getObjects(Player_2.class).get(0).Hearts>1) //Else the Background is Calm.
         {
             tense_backgroundMusic.stop();
             backgroundMusic.playLoop();
@@ -105,29 +117,17 @@ public class MyWorld extends World //The world in wich the game happens.
         if(!getObjects(GameOver.class).isEmpty()) //Resets the Game.
         {
             removeObjects(getObjects(Actor.class)); //Wipes the World clean.
-            this.addObject(new Player(), 640, 360); //adds the Player.
-            this.addObject(new ScoreCounter(), 640,30); //adds the ScoreCounter.
-            this.addObject(new HeartCounter(), 640,70); //adds the Heart Display.
-            this.addObject(new UpgradeCounter(),640,690); //adds the upgrade Display.
-            this.addObject(new CooldownDisplay(), 640, 650); //adds the Cooldown Display.
-            game_speed =50; // Number of times Act is performed per Second(Can change depending on performance).
-            Slimes =0; // The Number of Slimes currently in the game.
-            Score =0; // The Score.
-            Max_Slimes =1; //The current number of Slimes Max at a time.
-            getObjects(Player.class).get(0).Cooldown_Gun =-10; // Cooldown until player can shoot again.
-            getObjects(Player.class).get(0).upgrade_level =0; // Current level of the player.
-            getObjects(Player.class).get(0).Hearts =5; // The amounts of Hearts.
-            getObjects(Player.class).get(0).immortal =3*MyWorld.game_speed; // Time the Player is immortal they start with 3 seconds.
-            getObjects(Player.class).get(0).forcefield_time =0; // The current Forcefield time.
+            reset();
             GameOverMusic.stop(); //Stops the Game over Music.
         }
-        if(getObjects(Player.class).get(0).Hearts<1) //Detects if player is dead.
+        else if(getObjects(Player_1.class).get(0).Hearts<1&&getObjects(Player_2.class).get(0).Hearts<1) //Detects if both players are dead.
         {
             removeObjects(getObjects(Actor.class)); //Wipes the World clean.
             tense_backgroundMusic.stop(); //Stops the Background Music.
             backgroundMusic.stop(); //Stops the Background Music.
             GameOverMusic.playLoop(); //Plays the Game Over Music.
-            this.addObject(new Player(), 640, 360); //adds player to prevent some bugs.
+            this.addObject(new Player_1(), 640, 360); //adds player to prevent some bugs.
+            this.addObject(new Player_2(), 640, 360); //adds player to prevent some bugs.
             this.addObject(new GameOver(),640,360); //adds the GameOver display.
             this.addObject(new Credits(), 240,360); //adds the Credits.
             this.addObject(new OnlyScore(),640,360); //adds only the score.

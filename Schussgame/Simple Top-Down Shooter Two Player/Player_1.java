@@ -12,12 +12,20 @@ public class Player_1 extends PC //The Player.
     public int wait_2=0; //Temp value
     public void act() //Done around 50 times per secound.
     {
-        wasd_Rotate();
-        gun();
-        upgrade();
-        regen();
-        lose_immortality();
-        forcefield();
+        if(Hearts>0)
+        {
+            wasd_Rotate();
+            gun();
+            upgrade();
+            regen();
+            lose_immortality();
+            forcefield();
+        }
+        else
+        {
+            setImage(new GreenfootImage("", 50, Color.RED, new Color(0,0,0,0)));
+            immortal= 200;
+        }
     }    
     public void wasd_Rotate() //Moves the Player with the wasd keys.
     {
@@ -45,7 +53,7 @@ public class Player_1 extends PC //The Player.
             if(getWorld().getObjects(Forcefield_1.class).isEmpty()) //Checks that there is no forcefield object already and Spawns object if there isn't. Asweĺl as a timer to display the current Forcefield time left.
             {
                 getWorld().addObject(new Forcefield_1(), this.getX(), this.getY());
-                getWorld().addObject(new Forcefield_timer(), 640, 610);
+                getWorld().addObject(new Forcefield_timer_1(), 426, 610);
             }
             forcefield_time = forcefield_time+1000; //Adds 20 Seconds to the Forcefield time.
             Greenfoot.playSound("upmid.mp3"); // Plays a nice Sound.
@@ -59,7 +67,7 @@ public class Player_1 extends PC //The Player.
         else //If there is no forcefield time left.
         {
             getWorld().removeObjects(getWorld().getObjects(Forcefield_1.class)); //Removes the Forcefield.
-            getWorld().removeObjects(getWorld().getObjects(Forcefield_timer.class)); //Removes the Forcefield timer.
+            getWorld().removeObjects(getWorld().getObjects(Forcefield_timer_1.class)); //Removes the Forcefield timer.
             Forcefield.stop(); //Stops the forcefield sound playing in the Background.
         }
     }

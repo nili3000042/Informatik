@@ -17,7 +17,11 @@ public class Bullet extends NPC //Shoot from the Player to kill enemys.
             MyWorld.Slimes--; //Decreses the number of Slimes by 1.
             MyWorld.Score++; //Increases Score by 1.
             Greenfoot.playSound("impactsplat05[].mp3"); //Plays the kill sound.
-            if(Greenfoot.getRandomNumber(101)>20&&getWorld().getObjects(Player_1.class).get(0).upgrade_level<60|Greenfoot.getRandomNumber(101)>20&&getWorld().getObjects(Player_2.class).get(0).upgrade_level<60) //Spawns Upgrade if max Lv. isn't reached and luck.
+            if(Greenfoot.getRandomNumber(101)>20&&getWorld().getObjects(Player_1.class).get(0).upgrade_level<60) //Spawns Upgrade if max Lv. isn't reached and luck.
+            {
+                getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            else if(Greenfoot.getRandomNumber(101)>20&&getWorld().getObjects(Player_2.class).get(0).upgrade_level<60) //Spawns Upgrade if max Lv. isn't reached and luck.
             {
                 getWorld().addObject(new Upgrade(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
@@ -25,11 +29,19 @@ public class Bullet extends NPC //Shoot from the Player to kill enemys.
             {
                 getWorld().addObject(new Forcefield_item(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
-            if(Greenfoot.getRandomNumber(101)>70&&getWorld().getObjects(Player_1.class).get(0).Hearts<5|Greenfoot.getRandomNumber(101)>70&&getWorld().getObjects(Player_2.class).get(0).Hearts<5) //If you have less then 5 hearts it can randomly spawn a Medikit.
+            if(Greenfoot.getRandomNumber(101)>70&&getWorld().getObjects(Player_1.class).get(0).Hearts<5) //If you have less then 5 hearts it can randomly spawn a Medikit.
             {
                 getWorld().addObject(new MediKit(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }
-            else if(Greenfoot.getRandomNumber(101)>95&&getWorld().getObjects(Player_1.class).get(0).Hearts<10|Greenfoot.getRandomNumber(101)>95&&getWorld().getObjects(Player_2.class).get(0).Hearts<10) //If you have less than 10 Hearts it is less likely to spawn a Medikit.
+            else if(Greenfoot.getRandomNumber(101)>95&&getWorld().getObjects(Player_1.class).get(0).Hearts<10) //If you have less than 10 Hearts it is less likely to spawn a Medikit.
+            {
+                getWorld().addObject(new MediKit(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            else if(Greenfoot.getRandomNumber(101)>70&&getWorld().getObjects(Player_2.class).get(0).Hearts<5) //If you have less then 5 hearts it can randomly spawn a Medikit.
+            {
+                getWorld().addObject(new MediKit(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
+            }
+            else if(Greenfoot.getRandomNumber(101)>95&&getWorld().getObjects(Player_2.class).get(0).Hearts<10) //If you have less than 10 Hearts it is less likely to spawn a Medikit.
             {
                 getWorld().addObject(new MediKit(), getOneIntersectingObject(Slime.class).getX(), getOneIntersectingObject(Slime.class).getY());
             }

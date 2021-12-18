@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=HeartCounter
+comment0.target=CooldownDisplay_1
 comment1.params=
-comment1.target=HeartCounter()
+comment1.target=CooldownDisplay_1()
 comment2.params=
 comment2.target=void\ act()
 numComments=3
