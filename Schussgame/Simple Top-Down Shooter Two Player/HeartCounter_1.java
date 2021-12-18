@@ -49,7 +49,7 @@ public class HeartCounter_1 extends Displays //Shows the current Hearts left.
         }
         else if(getWorld().getObjects(Player_1.class).get(0).Hearts==0)
         {
-            setImage(new GreenfootImage("", 50, Color.RED, new Color(0,0,0,0)));
+            setImage(new GreenfootImage("Dead", 50, Color.RED, new Color(0,0,0,0)));
         }
     }
 }

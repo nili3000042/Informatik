@@ -104,6 +104,11 @@ public class MyWorld extends World //The world in wich the game happens.
         {
             Score++;
         }
+        if(Greenfoot.isKeyDown("v")) //Makes both Players Immortal.
+        {
+            getObjects(Player_1.class).get(0).immortal =3*MyWorld.game_speed;
+            getObjects(Player_2.class).get(0).immortal =3*MyWorld.game_speed;
+        }
     }
     public void update_Max() //Updates the Maximum number of slimes at a Time.
     {
