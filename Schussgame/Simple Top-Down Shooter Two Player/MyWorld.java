@@ -50,7 +50,7 @@ public class MyWorld extends World //The world in wich the game happens.
         Pause_Menu();
         startmenu();
         GameOver();
-        cheat_codes(); // Used to test new features.
+        //cheat_codes(); // Used to test new features.
     }
     public void startmenu() //Deletes the Startmenu.
     {
