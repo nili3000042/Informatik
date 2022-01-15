@@ -1,4 +1,0 @@
- * Ideen
- * -Fullscreen
- * -highscore
- * when complete
