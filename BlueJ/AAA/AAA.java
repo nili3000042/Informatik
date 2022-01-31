@@ -7,4 +7,20 @@
  */
 public class AAA
 {
+    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    private int x;
+
+    /**
+     * Konstruktor für Objekte der Klasse AAA
+     */
+    public AAA()
+    {
+        // Instanzvariable initialisieren
+        x = 0;
+    }
+    
+    public void hallo()
+    {
+        System.out.println("Hallo Welt");
+    }
 }
