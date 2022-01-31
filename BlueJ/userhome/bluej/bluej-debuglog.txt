@@ -1,0 +1,109 @@
+BlueJ run started: Mon Jan 31 13:37:28 CET 2022
+BlueJ version 5.0.2
+Java version 11.0.10
+JavaFX version 11.0.2+1
+Virtual machine: OpenJDK 64-Bit Server VM 11.0.10+9 (AdoptOpenJDK)
+Running on: Windows 10 10.0 (amd64)
+Java Home: H:\Infomatik\Schule\BlueJ\BlueJ\jdk
+----
+Detected language "german" based on iso639-2 code "deu"
+Opening project: H:\Infomatik\Schule\BlueJ\AAA
+1643632734311: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
+java.io.FileNotFoundException while reading import cache: userhome\bluej\import-cache.xml (Das System kann die angegebene Datei nicht finden)
+Exception in thread "JavaFX Application Thread" java.lang.NullPointerException
+	at bluej.parser.entity.ParsedReflective.getSuperTypes(ParsedReflective.java:97)
+	at bluej.parser.ParseUtils.getCompletionsForTarget(ParseUtils.java:298)
+	at bluej.parser.ParseUtils.getPossibleCompletions(ParseUtils.java:83)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:946)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:887)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.<init>(FlowErrorManager.java:303)
+	at bluej.editor.flow.FlowErrorManager.showErrors(FlowErrorManager.java:113)
+	at bluej.editor.flow.FlowErrorManager.lambda$addErrorHighlight$0(FlowErrorManager.java:107)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Exception in thread "JavaFX Application Thread" java.lang.NullPointerException
+	at bluej.parser.entity.ParsedReflective.getSuperTypes(ParsedReflective.java:97)
+	at bluej.parser.ParseUtils.getCompletionsForTarget(ParseUtils.java:298)
+	at bluej.parser.ParseUtils.getPossibleCompletions(ParseUtils.java:83)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:946)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:887)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.<init>(FlowErrorManager.java:303)
+	at bluej.editor.flow.FlowErrorManager.showErrors(FlowErrorManager.java:113)
+	at bluej.editor.flow.FlowErrorManager.lambda$addErrorHighlight$0(FlowErrorManager.java:107)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Exception in thread "JavaFX Application Thread" java.lang.NullPointerException
+	at bluej.parser.entity.ParsedReflective.getSuperTypes(ParsedReflective.java:97)
+	at bluej.parser.ParseUtils.getCompletionsForTarget(ParseUtils.java:298)
+	at bluej.parser.ParseUtils.getPossibleCompletions(ParseUtils.java:83)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:946)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:887)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.<init>(FlowErrorManager.java:303)
+	at bluej.editor.flow.FlowErrorManager.showErrors(FlowErrorManager.java:113)
+	at bluej.editor.flow.FlowErrorManager.lambda$addErrorHighlight$0(FlowErrorManager.java:107)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Exception in thread "JavaFX Application Thread" java.lang.NullPointerException
+	at bluej.parser.entity.ParsedReflective.getSuperTypes(ParsedReflective.java:97)
+	at bluej.parser.ParseUtils.getCompletionsForTarget(ParseUtils.java:298)
+	at bluej.parser.ParseUtils.getPossibleCompletions(ParseUtils.java:83)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:946)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:887)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.<init>(FlowErrorManager.java:303)
+	at bluej.editor.flow.FlowErrorManager.showErrors(FlowErrorManager.java:113)
+	at bluej.editor.flow.FlowErrorManager.lambda$addErrorHighlight$0(FlowErrorManager.java:107)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Exception in thread "JavaFX Application Thread" java.lang.NullPointerException
+	at bluej.parser.entity.ParsedReflective.getSuperTypes(ParsedReflective.java:97)
+	at bluej.parser.ParseUtils.getCompletionsForTarget(ParseUtils.java:298)
+	at bluej.parser.ParseUtils.getPossibleCompletions(ParseUtils.java:83)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:946)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.getPossibleCorrectionsStream(FlowErrorManager.java:887)
+	at bluej.editor.flow.FlowErrorManager$ErrorDetails.<init>(FlowErrorManager.java:303)
+	at bluej.editor.flow.FlowErrorManager.showErrors(FlowErrorManager.java:113)
+	at bluej.editor.flow.FlowErrorManager.lambda$addErrorHighlight$0(FlowErrorManager.java:107)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+====
+
+====
+BlueJ run started: Mon Jan 31 13:43:17 CET 2022
+BlueJ version 5.0.2
+Java version 11.0.10
+JavaFX version 11.0.2+1
+Virtual machine: OpenJDK 64-Bit Server VM 11.0.10+9 (AdoptOpenJDK)
+Running on: Windows 10 10.0 (amd64)
+Java Home: H:\Infomatik\BlueJ\BlueJ\jdk
+----
+Opening project: H:\Infomatik\Schule\BlueJ\AAA
+1643632999952: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
