@@ -19,7 +19,7 @@ public class AAA
         x = 0;
     }
     
-    public void hallo()
+    public static void hallo()
     {
         System.out.println("Hallo Welt");
     }
