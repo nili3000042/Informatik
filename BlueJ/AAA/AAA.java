@@ -23,4 +23,13 @@ public class AAA
     {
         System.out.println(Ausgabe);
     }
+    public void YEAT()
+    {
+        x=0;
+        for(int i=0;i<101;i++)
+        {
+            x=x+i;
+        }
+        System.out.println(x);
+    }
 }
