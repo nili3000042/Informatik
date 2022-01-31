@@ -19,8 +19,8 @@ public class AAA
         x = 0;
     }
     
-    public static void hallo()
+    public static void hallo(String Ausgabe)
     {
-        System.out.println("Hallo Welt");
+        System.out.println(Ausgabe);
     }
 }
