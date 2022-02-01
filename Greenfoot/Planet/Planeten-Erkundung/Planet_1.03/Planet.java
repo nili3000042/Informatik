@@ -10,7 +10,7 @@ public class Planet extends World
     private static int zellenGroesse = 50;
     /*private static String pREPARE = Greenfoot.ask("Please Input Code Coresponding to situation");
     public static int PREPARE = Integer.parseInt(pREPARE);*/
-    public static int PREPARE = 11;
+    public static int PREPARE = 5;
    /**
     * Erschaffe eine Welt mit 15 * 12 Zellen.
     */
