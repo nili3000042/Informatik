@@ -83,6 +83,10 @@ public class Planet extends World
                 {
                     this.addObject(new Huegel(),x,y);
                 }
+                else 
+                {
+                    i--;
+                }
             }
             for ( int i=0; i<20; i++)
             {
@@ -91,6 +95,10 @@ public class Planet extends World
                 if (getObjectsAt(x, y, null).isEmpty())
                 {
                     this.addObject(new Gestein(),x,y);
+                }
+                else 
+                {
+                    i--;
                 }
             }
         }

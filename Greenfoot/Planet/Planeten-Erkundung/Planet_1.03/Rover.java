@@ -1,4 +1,4 @@
-1import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
 /**
  * Ergänzen Sie hier eine Beschreibung für die Klasse Ro.
@@ -40,8 +40,8 @@ public class Rover extends Rover_Aufgaben
         }
         else if (Planet.PREPARE == 5) /** Situation SB S.41-43 nr.1/2 */
         {
-            String input = Greenfoot.ask("Situation SB S.41-43 nr.1/2");
-            int inputINT = Integer.parseInt(input);
+            //String input = Greenfoot.ask("Situation SB S.41-43 nr.1/2");
+            int inputINT = 2;//Integer.parseInt(input);
             if (inputINT == 1)
             {
                 SBS41_43NR1();
