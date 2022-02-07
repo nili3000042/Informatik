@@ -5,7 +5,7 @@ import java.util.Scanner;
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class AAA
+public class Rechner
 {
     Scanner scan = new Scanner(System.in);
     //String eingabe = scan.nextLine();
@@ -13,17 +13,21 @@ public class AAA
     /**
      * Konstruktor für Objekte der Klasse AAA
      */
-    public AAA()
+    public Rechner()
     {
         System.out.println('\u000c');
         System.out.println("Wie heist du?");
         String eingabe = scan.nextLine();
         Begrüßung(eingabe);
-        Rechnen();
+        Rechnen(false);
     }
-    public void Rechnen()
+    public void Rechnen(boolean intro_überspringen)
     {
-        System.out.println("Was soll ich Rechnen?");
+        double a =0;
+        if(intro_überspringen==false)
+        {
+            System.out.println("Was soll ich Rechnen?");
+        }
         double eingabe1 = scan.nextDouble();
         char Methode = scan.next().charAt(0);
         if(Methode == '+')
@@ -46,13 +50,20 @@ public class AAA
             double eingabe2 = scan.nextDouble();
             geteilt(eingabe1,eingabe2);
         }
+        else if(Methode == 'Y')
+        {
+            YEAT(eingabe1);
+        }
         else 
         {
             System.out.println("Ich kann dich nicht verstehen, bitte versuche nochmal.");
-            Rechnen();
+            a =1;
+            Rechnen(true);
         }
-        System.out.println("Soll ich nochmal Rechnen?");
-        double a =0;
+        if(a==0)
+        {
+            System.out.println("Soll ich nochmal Rechnen?");
+        }
         while(a ==0)
         {
             char eingabe = scan.next().charAt(0);
@@ -62,7 +73,7 @@ public class AAA
             }
             else if(eingabe == 'y')
             {
-                Rechnen();
+                Rechnen(false);
                 a =1;
             }
             else 

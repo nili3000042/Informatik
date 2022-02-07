@@ -1,11 +1,11 @@
 #BlueJ class context
-comment0.target=AAA
+comment0.target=Rechner
 comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ AAA.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
-comment1.target=AAA()
+comment1.target=Rechner()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ AAA\r\n
-comment2.params=
-comment2.target=void\ Rechnen()
+comment2.params=intro_\u00FCberspringen
+comment2.target=void\ Rechnen(boolean)
 comment3.params=a\ b
 comment3.target=void\ plus(double,\ double)
 comment4.params=a\ b
