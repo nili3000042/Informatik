@@ -137,7 +137,7 @@ public class Verschachtelte_Schleifen_Bsp
             }
             else
             {
-                for(double j=1;j<(größe*2);j++)
+                for(double j=(größe*2);j>i;j--)
                 {
                     System.out.print("X");
                 }
