@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 /**
  * Beschreiben Sie hier die Klasse Scanner.
  * 
@@ -179,7 +179,7 @@ public class Zahlen_Vergleichen
                 c=b;
                 b=ii;
             } 
-        } while(c>a|c>b|b>a);
+        } while(!(c<b&&b<a));
         System.out.println(a+" ist größer als "+b+".");
         System.out.println(b+" ist größer als "+c+".");
     }
@@ -205,7 +205,7 @@ public class Zahlen_Vergleichen
                 d=c;
                 c=ii;
             }
-        } while(d>c|d>b|d>a|c>b|c>a|b>a);
+        } while(!(d<c&&c<b&&b<a));
         System.out.println(a+" ist größer als "+b+".");
         System.out.println(b+" ist größer als "+c+".");
         System.out.println(c+" ist größer als "+d+".");
@@ -238,7 +238,7 @@ public class Zahlen_Vergleichen
                 e=d;
                 d=ii;
             }
-        } while(e>d|e>c|e>b|e>a|d>c|d>b|d>a|c>b|c>a|b>a);
+        } while(!(e<d&&d<c&&c<b&&b<a));
         System.out.println(a+" ist größer als "+b+".");
         System.out.println(b+" ist größer als "+c+".");
         System.out.println(c+" ist größer als "+d+".");
@@ -278,7 +278,7 @@ public class Zahlen_Vergleichen
                 f=e;
                 e=ii;
             }
-        } while(f>e|f>d|f>c|f>b|f>a|e>d|e>c|e>b|e>a|d>c|d>b|d>a|c>b|c>a|b>a);
+        } while(!(f<e&&e<d&&d<c&&c<b&&b<a));
         System.out.println(a+" ist größer als "+b+".");
         System.out.println(b+" ist größer als "+c+".");
         System.out.println(c+" ist größer als "+d+".");
@@ -325,7 +325,7 @@ public class Zahlen_Vergleichen
                 g=f;
                 f=ii;
             }
-        } while(g>f|g>e|g>d|g>c|g>b|g>a|f>e|f>d|f>c|f>b|f>a|e>d|e>c|e>b|e>a|d>c|d>b|d>a|c>b|c>a|b>a);
+        } while(!(g<f&&f<e&&e<d&&d<c&&c<b&&b<a));
         System.out.println(a+" ist größer als "+b+".");
         System.out.println(b+" ist größer als "+c+".");
         System.out.println(c+" ist größer als "+d+".");
@@ -379,7 +379,7 @@ public class Zahlen_Vergleichen
                 h=g;
                 g=ii;
             }
-        } while(h>g|h>f|h>e|h>d|h>c|h>b|h>a|g>f|g>e|g>d|g>c|g>b|g>a|f>e|f>d|f>c|f>b|f>a|e>d|e>c|e>b|e>a|d>c|d>b|d>a|c>b|c>a|b>a);
+        } while(!(h<g&&g<f&&f<e&&e<d&&d<c&&c<b&&b<a));
         System.out.println(a+" ist größer als "+b+".");
         System.out.println(b+" ist größer als "+c+".");
         System.out.println(c+" ist größer als "+d+".");
@@ -440,7 +440,7 @@ public class Zahlen_Vergleichen
                 i=h;
                 h=ii;
             }
-        } while(i>h|i>g|i>f|i>e|i>d|i>c|i>b|i>a|h>g|h>f|h>e|h>d|h>c|h>b|h>a|g>f|g>e|g>d|g>c|g>b|g>a|f>e|f>d|f>c|f>b|f>a|e>d|e>c|e>b|e>a|d>c|d>b|d>a|c>b|c>a|b>a);
+        } while(!(i<h&&h<g&&g<f&&f<e&&e<d&&d<c&&c<b&&b<a));
         System.out.println(a+" ist größer als "+b+".");
         System.out.println(b+" ist größer als "+c+".");
         System.out.println(c+" ist größer als "+d+".");
@@ -508,7 +508,7 @@ public class Zahlen_Vergleichen
                 j=i;
                 i=ii;
             }
-        } while(j>i|j>h|j>g|j>f|j>e|j>d|j>c|j>b|j>a|i>h|i>g|i>f|i>e|i>d|i>c|i>b|i>a|h>g|h>f|h>e|h>d|h>c|h>b|h>a|g>f|g>e|g>d|g>c|g>b|g>a|f>e|f>d|f>c|f>b|f>a|e>d|e>c|e>b|e>a|d>c|d>b|d>a|c>b|c>a|b>a);
+        } while(!(j<i&&i<h&&h<g&&g<f&&f<e&&e<d&&d<c&&c<b&&b<a));
         System.out.println(a+" ist größer als "+b+".");
         System.out.println(b+" ist größer als "+c+".");
         System.out.println(c+" ist größer als "+d+".");

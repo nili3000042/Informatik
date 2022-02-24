@@ -5,7 +5,7 @@ import java.util.*;
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class New
+public class Scanner_Bsp
 {
     Scanner scan = new Scanner(System.in);
     //String eingabe = scan.nextLine();
@@ -13,8 +13,19 @@ public class New
     //char eingabe = scan.next().charAt(0);
     //System.out.println("Was soll ich Rechnen?");
     //System.out.println('\u000c');
-    public New()
+    public Scanner_Bsp()
     {
         System.out.println('\u000c');
+        hallo();
+    }
+    public void hallo()
+    {
+        System.out.println("Wie heißt du?");
+        String name = scan.nextLine();
+        System.out.println("Woher kommst du?");
+        String Wohnort = scan.nextLine();
+        System.out.println("Wie alt bist du?");
+        double Alter = scan.nextDouble();
+        System.out.println("Du bist "+name+", "+Alter+" Jahre, aus "+Wohnort+" .");
     }
 }

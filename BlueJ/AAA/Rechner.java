@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 /**
  * Beschreiben Sie hier die Klasse AAA.
  * 
