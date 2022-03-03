@@ -53,12 +53,12 @@ public class Main_Hub
             new Scanner_Bsp();
             System.out.println("");
             System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-            System.out.println("Möchtest du weitergehen in den nächsten Bereich "+'"'+"Scanner_While_Bsp"+'"'+"?");
+            System.out.println("Möchtest du weitergehen in den nächsten Bereich "+'"'+"Scanner_While_Bsp_Chose"+'"'+"?");
             eingabe = scan.next().charAt(0);
         } while (eingabe!='y');
         do
         {
-            new Scanner_While_Bsp();
+            new Scanner_While_Bsp_Chose();
             System.out.println("");
             System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             System.out.println("Möchtest du weitergehen in den nächsten Bereich "+'"'+"Beenden"+'"'+"?");
