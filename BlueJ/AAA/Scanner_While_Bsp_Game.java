@@ -21,14 +21,8 @@ public class Scanner_While_Bsp_Game
     char eingabe_tips = 'y';
     char eingabe_versuche = 'y';
     int Spieleranzahl = 0;
-    String Spieler1 = "N/A";
-    String Spieler2 = "N/A";
-    String Spieler3 = "N/A";
-    String Spieler4 = "N/A";
-    String Spieler5 = "N/A";
-    String Spieler6 = "N/A";
-    String Spieler7 = "N/A";
-    String Spieler8 = "N/A";
+    String [] Spieler = {"N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A"};
+    int[] Score = {0,0,0,0,0,0,0,0};
     public Scanner_While_Bsp_Game()
     {
         System.out.println('\u000c');
@@ -43,7 +37,7 @@ public class Scanner_While_Bsp_Game
             }
             else if(eingabe == 'T')
             {
-                Turnier(false);
+                Turnier(false,false);
                 i++;
             }
             else if(eingabe == 'Z')
@@ -61,14 +55,14 @@ public class Scanner_While_Bsp_Game
     {
         
     }
-    public void Turnier(boolean fast_start)
+    public void Turnier(boolean fast_start,boolean same_Players)
     {
         System.out.println("Du spielst jetzt den TURNIERMODUS.");
         if(fast_start==false)
         {
            Turnier_Settings(); 
         }
-        Turnier_Game();
+        Turnier_Game(same_Players);
         System.out.println('\u000c');
         System.out.println("Möchtet ihr nochmal spielen?");
         for(int i=0;i==0;)
@@ -76,8 +70,43 @@ public class Scanner_While_Bsp_Game
             char eingabe = scan.next().charAt(0);
             if(eingabe == 'y')
             {
-                
-                Turnier(true);
+                System.out.println("Möchtet ihr die Einstellungen ändern?");
+                for(int j=0;i==0;)
+                {
+                    char eingabe1 = scan.next().charAt(0);
+                    if(eingabe1 == 'y')
+                    {
+                        Turnier_Settings();
+                        i++;
+                    }
+                    else if(eingabe1=='n')
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        System.out.println("Ich konnte dich nicht verstehen, bitte antworte nur mit y und n.");
+                    }
+                }
+                System.out.println("Möchtet ihr mit den selben Spielern spielen?");
+                for(int j=0;i==0;)
+                {
+                    char eingabe1 = scan.next().charAt(0);
+                    if(eingabe1 == 'y')
+                    {
+                        Turnier(true,true);
+                        i++;
+                    }
+                    else if(eingabe1=='n')
+                    {
+                        Turnier(true,false);
+                        i++;
+                    }
+                    else
+                    {
+                        System.out.println("Ich konnte dich nicht verstehen, bitte antworte nur mit y und n.");
+                    }
+                }
                 i++;
             }
             else if(eingabe == 'n')
@@ -154,7 +183,7 @@ public class Scanner_While_Bsp_Game
             }
         }
     }
-    public void Turnier_Game()
+    public void Turnier_Game(boolean same_Players)
     {
         
     }
