@@ -21,12 +21,14 @@ public class Scanner_While_Bsp_Game
     char eingabe_tips = 'y';
     char eingabe_versuche = 'y';
     int Spieleranzahl = 0;
-    String [] Spieler = {"N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A"};
-    int[] Score = {0,0,0,0,0,0,0,0};
+    int max_score = 0;
+    int pos_max_p = -1;
+    String [] Spieler =new String[99];
+    int[] Score =new int[99];
     public Scanner_While_Bsp_Game()
     {
         System.out.println('\u000c');
-        System.out.println("Möchtest du denn T = Turniermodus(2-8p), C = Gegencommodus(1p) oder Z = Computerratenmodus(1p) Spielen?");
+        System.out.println("Möchtest du denn T = Turniermodus(2-99p), C = Gegencommodus(1p) oder Z = Computerratenmodus(1p) Spielen?");
         for(int i=0;i==0;)
         {
             char eingabe = scan.next().charAt(0);
@@ -37,7 +39,7 @@ public class Scanner_While_Bsp_Game
             }
             else if(eingabe == 'T')
             {
-                Turnier(false,false);
+                Turnier(false);
                 i++;
             }
             else if(eingabe == 'Z')
@@ -55,14 +57,14 @@ public class Scanner_While_Bsp_Game
     {
         
     }
-    public void Turnier(boolean fast_start,boolean same_Players)
+    public void Turnier(boolean fast_start)
     {
         System.out.println("Du spielst jetzt den TURNIERMODUS.");
         if(fast_start==false)
         {
            Turnier_Settings(); 
         }
-        Turnier_Game(same_Players);
+        Turnier_Game();
         System.out.println('\u000c');
         System.out.println("Möchtet ihr nochmal spielen?");
         for(int i=0;i==0;)
@@ -77,10 +79,12 @@ public class Scanner_While_Bsp_Game
                     if(eingabe1 == 'y')
                     {
                         Turnier_Settings();
+                        Turnier(true);
                         i++;
                     }
                     else if(eingabe1=='n')
                     {
+                        Turnier(true);
                         i++;
                     }
                     else
@@ -88,26 +92,6 @@ public class Scanner_While_Bsp_Game
                         System.out.println("Ich konnte dich nicht verstehen, bitte antworte nur mit y und n.");
                     }
                 }
-                System.out.println("Möchtet ihr mit den selben Spielern spielen?");
-                for(int j=0;i==0;)
-                {
-                    char eingabe1 = scan.next().charAt(0);
-                    if(eingabe1 == 'y')
-                    {
-                        Turnier(true,true);
-                        i++;
-                    }
-                    else if(eingabe1=='n')
-                    {
-                        Turnier(true,false);
-                        i++;
-                    }
-                    else
-                    {
-                        System.out.println("Ich konnte dich nicht verstehen, bitte antworte nur mit y und n.");
-                    }
-                }
-                i++;
             }
             else if(eingabe == 'n')
             {
@@ -149,6 +133,7 @@ public class Scanner_While_Bsp_Game
             }
             else if(eingabe_versuche == 'n')
             {
+                start_versuche=1999999999;
                 System.out.println("Möchtet ihr Tips aktivieren?");
                 for(int i=0;i==0;)
                 {
@@ -173,19 +158,99 @@ public class Scanner_While_Bsp_Game
         for(int i=0;i==0;)
         {
             Spieleranzahl = scan.nextInt();
-            if(2<Spieleranzahl&&Spieleranzahl<8)
+            if(1<Spieleranzahl&&Spieleranzahl<100)
             {
                 i++;
             }
             else
             {
-                System.out.println("Ich konnte dich nicht verstehen, bitte antworte nur mit einer Zahl zwischen 2 und 8 an.");
+                System.out.println("Ich konnte dich nicht verstehen, bitte antworte nur mit einer Zahl zwischen 2 und 99 an.");
             }
         }
+        for(int i=1;i<=Spieleranzahl;i++)
+        {
+            System.out.println("Wie heißt Spieler "+i+"?");
+            Spieler[i-1] = scan.next();
+        }
     }
-    public void Turnier_Game(boolean same_Players)
+    public void Turnier_Game()
     {
-        
+        for(int i=0; i<Spieleranzahl;i++)
+        {
+            System.out.println(Spieler[i]+" fängt an.");
+            Score[i] = Turnier_Round();
+            if(Score[i]< max_score)
+            {
+                max_score= Score[i];
+                pos_max_p= i;
+            }
+            System.out.println(Spieler[i]+" hat "+Score[i]+" Versuche gebraucht.");
+        }
+        System.out.println(Spieler[pos_max_p]+" hat mit "+Score[pos_max_p]+" Versuchen gewonnen!!!");
+        System.out.println("Herzlichen Glückwunsch");
+        String eingabe = scan.next();
+    }
+    public int Turnier_Round()
+    {
+        double lösung = rnd.nextInt(max_zahl+1);
+        double raten = -1;
+        int versuche =0;
+        System.out.println("Lass uns ein Spiel spielen.");
+        System.out.println("Ich habe mir eine Zufählige Zahl zwischen 0 und "+max_zahl+" ausgedacht,");
+        System.out.println("und du musst sie erraten.");
+        if(eingabe_versuche=='y')
+        {
+            System.out.println("Du hast "+start_versuche+" Versuche.");
+        }
+        if(eingabe_tips=='y')
+        {
+            System.out.println("Weil ich nett bin, werde ich dir Tips geben.");
+        }
+        System.out.println("Alles verstanden?");
+        char eingabe = scan.next().charAt(0);
+        System.out.println("Na dann, Lass das Raten beginnen.");
+        while (raten!=lösung&&versuche<start_versuche)
+        {
+            raten = scan.nextDouble();
+            if(raten==lösung)
+            {
+                System.out.println("Dass ist richtig, meine Zahl ist "+lösung+".");
+                versuche++;
+            }
+            else if(raten<lösung&&eingabe_tips=='y')
+            {
+                System.out.println("Schade, deine Zahl ist zu klein, versuche nochmal.");
+                versuche++;
+                if(eingabe_versuche=='y')
+                {
+                    System.out.println("Du hast noch "+(start_versuche-versuche)+" Versuche.");
+                }
+            }
+            else if(raten>lösung&&eingabe_tips=='y')
+            {
+                System.out.println("Schade, deine Zahl ist zu groß, versuche nochmal.");
+                versuche++;
+                if(eingabe_versuche=='y')
+                {
+                    System.out.println("Du hast noch "+(start_versuche-versuche)+" Versuche.");
+                }
+            }
+            else if(raten!=lösung)
+            {
+                System.out.println("Schade, dass ist nicht richtig, versuche nochmal.");
+                versuche++;
+                if(eingabe_versuche=='y')
+                {
+                    System.out.println("Du hast noch "+(start_versuche-versuche)+" Versuche.");
+                }
+            }
+        }
+        if(versuche>=start_versuche)
+        {
+            System.out.println("Ha du hast keine Versuche mehr, du hast verloren.");
+            System.out.println("Meine Zahl wäre "+lösung+" gewesen");
+        }
+        return versuche;
     }
     public void Chose(boolean fast_start)
     {
