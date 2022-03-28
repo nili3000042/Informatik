@@ -69,6 +69,14 @@ public class Main_Hub
             new Array_Bsp();
             System.out.println("");
             System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("Möchtest du weitergehen in den nächsten Bereich "+'"'+"Array_Erstellen_Bsp"+'"'+"?");
+            eingabe = scan.next().charAt(0);
+        } while (eingabe!='y');
+        do
+        {
+            new Array_Erstellen_Bsp();
+            System.out.println("");
+            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             System.out.println("Möchtest du weitergehen in den nächsten Bereich "+'"'+"Beenden"+'"'+"?");
             eingabe = scan.next().charAt(0);
         } while (eingabe!='y');
