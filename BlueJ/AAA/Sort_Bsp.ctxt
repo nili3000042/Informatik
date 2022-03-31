@@ -1,8 +1,6 @@
 #BlueJ class context
-comment0.target=Scanner_While_Bsp_Chose
+comment0.target=Sort_Bsp
 comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Scanner.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
-comment1.target=Scanner_While_Bsp_Chose()
-comment2.params=
-comment2.target=void\ Chose()
-numComments=3
+comment1.target=Sort_Bsp()
+numComments=2

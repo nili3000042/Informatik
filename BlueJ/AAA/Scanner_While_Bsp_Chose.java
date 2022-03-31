@@ -5,7 +5,7 @@ import java.util.*;
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Scanner_While_Bsp_Chose
+public class Scanner_While_Bsp_Chose extends Scanner_While_Bsp
 {
     Scanner scan = new Scanner(System.in);
     Random rnd = new Random();
@@ -99,128 +99,6 @@ public class Scanner_While_Bsp_Chose
             {
                 System.out.println("Ich konnte dich nicht verstehen, bitte antworte nur mit y und n.");
             }
-        }
-    }
-    public void Raten_tips()
-    {
-        double lösung = rnd.nextInt(max_zahl+1);
-        double raten = 1111111;
-        System.out.println("Lass uns ein Spiel spielen.");
-        System.out.println("Ich habe mir eine Zufählige Zahl zwischen 0 und "+max_zahl+" ausgedacht,");
-        System.out.println("und du musst sie erraten.");
-        System.out.println("Alles verstanden?");
-        char eingabe = scan.next().charAt(0);
-        System.out.println("Na dann, Lass das Raten beginnen.");
-        while (raten!=lösung)
-        {
-            raten = scan.nextDouble();
-            if(raten==lösung)
-            {
-                System.out.println("Dass ist richtig, meine Zahl ist "+lösung+".");
-            }
-            else if(raten<lösung)
-            {
-                System.out.println("Schade, deine Zahl ist zu klein, versuche nochmal.");
-            }
-            else if(raten>lösung)
-            {
-                System.out.println("Schade, deine Zahl ist zu groß, versuche nochmal.");
-            }
-        }
-    }
-    public void Raten()
-    {
-        double lösung = rnd.nextInt(max_zahl+1);
-        double raten = 1111111;
-        System.out.println("Lass uns ein Spiel spielen.");
-        System.out.println("Ich habe mir eine Zufählige Zahl zwischen 0 und "+max_zahl+" ausgedacht,");
-        System.out.println("und du musst sie erraten.");
-        System.out.println("Alles verstanden?");
-        char eingabe = scan.next().charAt(0);
-        System.out.println("Na dann, Lass das Raten beginnen.");
-        while (raten!=lösung)
-        {
-            raten = scan.nextDouble();
-            if(raten==lösung)
-            {
-                System.out.println("Dass ist richtig, meine Zahl ist "+lösung+".");
-            }
-            else
-            {
-                System.out.println("Schade, dass ist nicht richtig, versuche nochmal.");
-            }
-        }
-    }
-    public void Raten_limit_tips()
-    {
-        double lösung = rnd.nextInt(max_zahl+1);
-        double raten = 1111111;
-        int versuche = start_versuche;
-        System.out.println("Lass uns ein Spiel spielen.");
-        System.out.println("Ich habe mir eine Zufählige Zahl zwischen 0 und "+max_zahl+" ausgedacht,");
-        System.out.println("und du musst sie erraten.");
-        System.out.println("Du hast "+versuche+" Versuche.");
-        System.out.println("Alles verstanden?");
-        char eingabe = scan.next().charAt(0);
-        System.out.println("Na dann, Lass das Raten beginnen.");
-        while (raten!=lösung&&versuche>0)
-        {
-            raten = scan.nextDouble();
-            if(raten==lösung)
-            {
-                System.out.println("Dass ist richtig, meine Zahl ist "+lösung+".");
-            }
-            else if(raten<lösung)
-            {
-                System.out.println("Schade, deine Zahl ist zu klein, versuche nochmal.");
-                versuche--;
-                System.out.println("Du hast noch "+versuche+" Versuche.");
-            }
-            else if(raten>lösung)
-            {
-                System.out.println("Schade, deine Zahl ist zu groß, versuche nochmal.");
-                versuche--;
-                System.out.println("Du hast noch "+versuche+" Versuche.");
-            }
-        }
-        if(versuche<=0)
-        {
-            System.out.println("Ha du hast keine Versuche mehr, du hast verloren.");
-            System.out.println("Meine Zahl wäre "+lösung+" gewesen");
-            System.exit(0);
-        }
-    }
-    public void Raten_limit()
-    {
-        double lösung = rnd.nextInt(max_zahl+1);
-        double raten = 1111111;
-        int versuche = start_versuche;
-        System.out.println("Lass uns ein Spiel spielen.");
-        System.out.println("Ich habe mir eine Zufählige Zahl zwischen 0 und "+max_zahl+" ausgedacht,");
-        System.out.println("und du musst sie erraten.");
-        System.out.println("Du hast "+versuche+" Versuche.");
-        System.out.println("Alles verstanden?");
-        char eingabe = scan.next().charAt(0);
-        System.out.println("Na dann, Lass das Raten beginnen.");
-        while (raten!=lösung&&versuche>0)
-        {
-            raten = scan.nextDouble();
-            if(raten==lösung)
-            {
-                System.out.println("Dass ist richtig, meine Zahl ist "+lösung+".");
-            }
-            else
-            {
-                System.out.println("Schade, dass ist nicht richtig, versuche nochmal.");
-                versuche--;
-                System.out.println("Du hast noch "+versuche+" Versuche.");
-            }
-        }
-        if(versuche<=0)
-        {
-            System.out.println("Ha du hast keine Versuche mehr, du hast verloren.");
-            System.out.println("Meine Zahl wäre "+lösung+" gewesen");
-            System.exit(0);
         }
     }
 }

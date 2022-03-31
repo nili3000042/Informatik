@@ -5,7 +5,7 @@ import java.util.*;
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class CopyOfNew
+public class Sort_Bsp
 {
     Scanner scan = new Scanner(System.in);
     Random rnd = new Random();
@@ -14,7 +14,7 @@ public class CopyOfNew
     //char eingabe = scan.next().charAt(0);
     //System.out.println("Was soll ich Rechnen?");
     //System.out.println('\u000c');
-    public CopyOfNew()
+    public Sort_Bsp()
     {
         System.out.println('\u000c');
     }
