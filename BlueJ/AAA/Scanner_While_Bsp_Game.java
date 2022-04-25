@@ -5,7 +5,7 @@ import java.util.*;
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Scanner_While_Bsp_Game
+public class Scanner_While_Bsp_Game extends Scanner_While_Bsp
 {
     Scanner scan = new Scanner(System.in);
     Random rnd = new Random();
