@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Mensch
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Mensch.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=vorname\ nachname\ is_Frau\ mag_Frau\ mag_Mann\ alter\ gr\u00F6\u00DFe
+comment1.target=Mensch(java.lang.String,\ java.lang.String,\ boolean,\ boolean,\ boolean,\ int,\ int)
+comment2.params=
+comment2.target=java.lang.String\ wie_hei\u00DFt_du()
+comment3.params=AA
+comment3.target=void\ aaaa(Mensch)
+numComments=4
