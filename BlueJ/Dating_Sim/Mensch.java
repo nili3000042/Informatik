@@ -14,9 +14,10 @@ public class Mensch
     //char eingabe = scan.next().charAt(0);
     //System.out.println("Was soll ich Rechnen?");
     //System.out.println('\u000c');
-    int IQ = 50;
-    int Aussehen = 50;
-    int Charm = 50;
+    int IQ = rnd.nextInt(21)+40;
+    int Aussehen = rnd.nextInt(21)+40;
+    int Charm = rnd.nextInt(21)+40;
+    int Euro = rnd.nextInt(2001)+4000;
     char beziehungsstatus = 's';
     String Vorname;
     String Nachname;
@@ -26,15 +27,15 @@ public class Mensch
     boolean Mag_Mann;
     boolean Mag_Frau;
     Mensch Partner;
-    public Mensch(String vorname,String nachname,boolean is_Frau,boolean mag_Frau,boolean mag_Mann,int alter,int größe)
+    public Mensch()//String vorname,String nachname,boolean is_Frau,boolean mag_Frau,boolean mag_Mann,int alter,int größe)
     {
-        Größe = größe;
-        Vorname = vorname;
-        Nachname = nachname;
-        Is_Frau = is_Frau;
-        Mag_Mann = mag_Mann;
-        Mag_Frau = mag_Frau;
-        Alter = alter;
+        //Größe = größe;
+        //Vorname = vorname;
+        //Nachname = nachname;
+        //Is_Frau = is_Frau;
+        //Mag_Mann = mag_Mann;
+        //Mag_Frau = mag_Frau;
+        //Alter = alter;
     }
     public String wie_heißt_du()
     {
