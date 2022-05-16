@@ -31,6 +31,8 @@ public class Mensch
     String Vorname;
     String Nachname = N_Namen[rnd.nextInt(N_Namen.length)];
     Mensch Partner;
+    int []impression;
+    int ID;
     public Mensch()
     {
         if(Is_Frau == true)
@@ -49,6 +51,7 @@ public class Mensch
         {
             Mag_Frau=true;
         }
+        make_ID();
     }
     public Mensch(String vorname,String nachname,boolean is_Frau,boolean mag_Frau,boolean mag_Mann,int alter,int größe)
     {
@@ -59,10 +62,11 @@ public class Mensch
         Mag_Mann = mag_Mann;
         Mag_Frau = mag_Frau;
         Alter = alter;
+        make_ID();
     }
-    public void mensch()
+    public void make_ID()
     {
-        new Mensch();
+        ID = ID_List.get_ID();
     }
     public String wie_heißt_du()
     {
