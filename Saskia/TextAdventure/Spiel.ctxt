@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Spiel
+comment1.params=
+comment1.target=Spiel()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Spiel\r\n
+comment2.params=
+comment2.target=void\ spielstart()
+comment3.params=
+comment3.target=void\ Haus()
+comment4.params=
+comment4.target=void\ Tisch()
+comment5.params=
+comment5.target=void\ Schrank()
+comment6.params=
+comment6.target=void\ Keller()
+comment7.params=
+comment7.target=void\ Tunnel()
+comment8.params=
+comment8.target=void\ Schloss()
+numComments=9

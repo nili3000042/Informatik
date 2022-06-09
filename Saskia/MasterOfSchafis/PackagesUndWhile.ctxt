@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=PackagesUndWhile
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ PackagesUndWhile.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=PackagesUndWhile()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ PackagesUndWhile\r\n
+comment2.params=
+comment2.target=void\ \u00DCbung1()
+comment3.params=
+comment3.target=void\ Spielstart()
+comment4.params=
+comment4.target=void\ Einspieler()
+comment5.params=
+comment5.target=void\ Mehrspieler()
+numComments=6
