@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Wuerfel
 comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Scanner.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
-comment1.params=anzahl\ max
-comment1.target=void\ wuerfel(int,\ int)
+comment1.params=
+comment1.target=void\ wuerfeln()
 numComments=2

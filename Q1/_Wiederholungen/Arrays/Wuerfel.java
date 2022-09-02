@@ -14,8 +14,15 @@ public class Wuerfel
     //char eingabe = scan.next().charAt(0);
     //System.out.println("Was soll ich Rechnen?");
     //System.out.println('\u000c');
-    public static void wuerfel(int anzahl, int max)
+    public static void wuerfeln()
     {
-        
+        System.out.println('\u000c');
+        System.out.println("Hallo beim Würfel simmulator 3000!!!!!");
+        char a= 'n';
+        double[][] Würfel;
+        do{
+            System.out.println("Wieviele Seiten soll ihr Würfel haben?");
+            
+        }while(a!='y');
     }
 }
