@@ -26,9 +26,9 @@ object Wuerfel03: TFGUIForm
   TextHeight = 15
   object lWuerfel1: TJLabel
     Tag = 1
-    Left = 32
+    Left = 0
     Top = 0
-    Width = 56
+    Width = 120
     Height = 24
     Hint = 'jLabel1'
     Font.Charset = DEFAULT_CHARSET
@@ -41,7 +41,7 @@ object Wuerfel03: TFGUIForm
     Text = 'Wuerfel'
     HorizontalAlignment = CENTER
     VerticalAlignment = CENTER
-    HorizontalTextPosition = RIGHT
+    HorizontalTextPosition = CENTER
     VerticalTextPosition = CENTER
     IconTextGap = 4
     DisplayedMnemonic = 0

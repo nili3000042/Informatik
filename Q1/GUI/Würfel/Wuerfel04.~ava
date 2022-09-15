@@ -12,21 +12,22 @@ import java.util.*;
  * @author 
  */
 
-public class Wuerfel03 extends JFrame {
+public class Wuerfel04 extends JFrame {
   // Anfang Attribute
   private JLabel lWuerfel1 = new JLabel();
   private JLabel jAusgabe = new JLabel();
   private JButton bWuerfeln1 = new JButton();
   Random rnd = new Random();
   private JNumberField jEingabe = new JNumberField();
+  private JNumberField jNumberField1 = new JNumberField();
   // Ende Attribute
   
-  public Wuerfel03() { 
+  public Wuerfel04() { 
     // Frame-Initialisierung
     super();
     setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-    int frameWidth = 136; 
-    int frameHeight = 165;
+    int frameWidth = 414; 
+    int frameHeight = 396;
     setSize(frameWidth, frameHeight);
     Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
     int x = (d.width - getSize().width) / 2;
@@ -37,10 +38,13 @@ public class Wuerfel03 extends JFrame {
     Container cp = getContentPane();
     cp.setLayout(null);
     // Anfang Komponenten
-    jEingabe.setBounds(16, 24, 88, 24);
+    jNumberField1.setBounds(144, 128, 88, 24);
+    jNumberField1.setText("Seitenanzahl");
+    cp.add(jNumberField1);
+    jEingabe.setBounds(144, 80, 88, 24);
     jEingabe.setText("Anzahl");
     cp.add(jEingabe);
-    bWuerfeln1.setBounds(16, 72, 88, 24);
+    bWuerfeln1.setBounds(144, 280, 88, 24);
     bWuerfeln1.setText("Wuerfeln");
     bWuerfeln1.setMargin(new Insets(2, 2, 2, 2));
     bWuerfeln1.addActionListener(new ActionListener() { 
@@ -49,21 +53,23 @@ public class Wuerfel03 extends JFrame {
       }
     });
     cp.add(bWuerfeln1);
-    jAusgabe.setBounds(8, 48, 88, 24);
+    jAusgabe.setBounds(8, 240, 384, 24);
+    jAusgabe.setHorizontalAlignment(SwingConstants.CENTER);
+    jAusgabe.setHorizontalTextPosition(SwingConstants.CENTER);
     jAusgabe.setText("Summe:");
     cp.add(jAusgabe);
-    lWuerfel1.setBounds(32, 0, 56, 24);
+    lWuerfel1.setBounds(88, 24, 200, 24);
     lWuerfel1.setText("Mehr Wuerfel");
     cp.add(lWuerfel1);
     // Ende Komponenten
     
     setVisible(true);
-  } // end of public Wuerfel03
+  } // end of public Wuerfel04
   
   // Anfang Methoden
   
   public static void main(String[] args) {
-    new Wuerfel03();
+    new Wuerfel04();
   } // end of main
   
   public void bWuerfeln1_ActionPerformed(ActionEvent evt) {
@@ -71,7 +77,7 @@ public class Wuerfel03 extends JFrame {
     int [] wurf=new int[jEingabe.getInt()];
     int summe=0;
     for (int i =0;i<wurf.length;i++) {
-      wurf[i]=rnd.nextInt(6)+1;
+      wurf[i]=rnd.nextInt(jNumberField1.getInt())+1;
       summe=summe+wurf[i];
     } // end of for
     jAusgabe.setText("Summe: "+Integer.toString(summe));
