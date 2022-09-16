@@ -63,8 +63,9 @@ public class Wuerfel01 extends JFrame {
   } // end of main
   
   public void bWuerfeln1_ActionPerformed(ActionEvent evt) {
-    // TODO hier Quelltext einfügen
+    // Deklarieren des integers wurf und initialisierung mit einem zufälligen wert von 1 bis 6.
     int wurf=rnd.nextInt(6)+1;
+    // Gebe die geworfene Nummer aus
     jAusgabe.setText("Augenzahl: "+Integer.toString(wurf));
   } // end of bWuerfeln1_ActionPerformed
 

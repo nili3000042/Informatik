@@ -64,13 +64,18 @@ public class Wuerfel02 extends JFrame {
   } // end of main
   
   public void bWuerfeln1_ActionPerformed(ActionEvent evt) {
-    // TODO hier Quelltext einfügen
+    // Deklarierung und Initialisierung des Integer Arrays wurf der länge anzahl
     int [] wurf=new int[anzahl];
+    // Deklarierung und Initialisierung des Integers summe mit wert 0
     int summe=0;
+    // Wiederhole sooft wie wurf lang ist
     for (int i =0;i<wurf.length;i++) {
+      // Instanzierung von wurf an Position i mit einem zufälligen wert von 6 bis 1
       wurf[i]=rnd.nextInt(6)+1;
+      // wert von wurf in position i wird auf summe addiert.
       summe=summe+wurf[i];
-    } // end of for
+    } // ende von Wiederhole
+    // Gebe die geworfene Summe aus
     jAusgabe.setText("Summe: "+Integer.toString(summe));
   } // end of bWuerfeln1_ActionPerformed
 

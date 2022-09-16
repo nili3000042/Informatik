@@ -1,10 +1,10 @@
 object Wuerfel03: TFGUIForm
-  Left = 1625
-  Top = 316
+  Left = 1691
+  Top = 361
   BorderIcons = [biSystemMenu]
   Caption = 'Wuerfel03'
-  ClientHeight = 116
-  ClientWidth = 120
+  ClientHeight = 145
+  ClientWidth = 170
   Color = clBtnFace
   ParentFont = True
   FormStyle = fsStayOnTop

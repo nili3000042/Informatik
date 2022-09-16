@@ -20,6 +20,8 @@ public class Wuerfel04 extends JFrame {
   Random rnd = new Random();
   private JNumberField jEingabe = new JNumberField();
   private JNumberField jNumberField1 = new JNumberField();
+  private JLabel lAnzahl = new JLabel();
+  private JLabel lSeitenanzahl = new JLabel();
   // Ende Attribute
   
   public Wuerfel04() { 
@@ -33,16 +35,22 @@ public class Wuerfel04 extends JFrame {
     int x = (d.width - getSize().width) / 2;
     int y = (d.height - getSize().height) / 2;
     setLocation(x, y);
-    setTitle("Wuerfel03");
+    setTitle("Wuerfel04");
     setResizable(false);
     Container cp = getContentPane();
     cp.setLayout(null);
     // Anfang Komponenten
-    jNumberField1.setBounds(144, 128, 88, 24);
-    jNumberField1.setText("Seitenanzahl");
+    lSeitenanzahl.setBounds(104, 128, 81, 25);
+    lSeitenanzahl.setText("Seitenanzahl:");
+    cp.add(lSeitenanzahl);
+    lAnzahl.setBounds(136, 80, 49, 25);
+    lAnzahl.setText("Anzahl:");
+    cp.add(lAnzahl);
+    jNumberField1.setBounds(192, 128, 88, 24);
+    jNumberField1.setText("6");
     cp.add(jNumberField1);
-    jEingabe.setBounds(144, 80, 88, 24);
-    jEingabe.setText("Anzahl");
+    jEingabe.setBounds(192, 80, 88, 24);
+    jEingabe.setText("2");
     cp.add(jEingabe);
     bWuerfeln1.setBounds(144, 280, 88, 24);
     bWuerfeln1.setText("Wuerfeln");
@@ -73,13 +81,18 @@ public class Wuerfel04 extends JFrame {
   } // end of main
   
   public void bWuerfeln1_ActionPerformed(ActionEvent evt) {
-    // TODO hier Quelltext einfügen
-    int [] wurf=new int[jEingabe.getInt()];
-    int summe=0;
+    // Deklarierung und Initialisierung des Integer Arrays wurf der länge des wertes in jEingabe
+    int [] wurf=new int[jEingabe.getInt()]; 
+    // Deklarierung und Initialisierung des Integers summe mit wert 0
+    int summe=0;              
+    // Wiederhole sooft wie wurf lang ist
     for (int i =0;i<wurf.length;i++) {
+      // Instanzierung von wurf an Position i mit einem zufälligen wert zwischen 1 und dem wert in jNumberfield1
       wurf[i]=rnd.nextInt(jNumberField1.getInt())+1;
+      // wert von wurf in position i wird auf summe addiert.
       summe=summe+wurf[i];
-    } // end of for
+    } // ende von Wiederhole
+    // Gebe die geworfene Summe aus
     jAusgabe.setText("Summe: "+Integer.toString(summe));
   } // end of bWuerfeln1_ActionPerformed
 

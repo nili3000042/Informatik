@@ -25,8 +25,8 @@ public class Wuerfel03 extends JFrame {
     // Frame-Initialisierung
     super();
     setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-    int frameWidth = 136; 
-    int frameHeight = 165;
+    int frameWidth = 186; 
+    int frameHeight = 184;
     setSize(frameWidth, frameHeight);
     Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
     int x = (d.width - getSize().width) / 2;
@@ -68,13 +68,18 @@ public class Wuerfel03 extends JFrame {
   } // end of main
   
   public void bWuerfeln1_ActionPerformed(ActionEvent evt) {
-    // TODO hier Quelltext einfügen
-    int [] wurf=new int[jEingabe.getInt()];
-    int summe=0;
+    // Deklarierung und Initialisierung des Integer Arrays wurf der länge des wertes in jEingabe
+    int [] wurf=new int[jEingabe.getInt()]; 
+    // Deklarierung und Initialisierung des Integers summe mit wert 0
+    int summe=0;              
+    // Wiederhole sooft wie wurf lang ist
     for (int i =0;i<wurf.length;i++) {
+      // Instanzierung von wurf an Position i mit einem zufälligen wert von 6 bis 1
       wurf[i]=rnd.nextInt(6)+1;
+      // wert von wurf in position i wird auf summe addiert.
       summe=summe+wurf[i];
-    } // end of for
+    } // ende von Wiederhole
+    // Gebe die geworfene Summe aus
     jAusgabe.setText("Summe: "+Integer.toString(summe));
   } // end of bWuerfeln1_ActionPerformed
 

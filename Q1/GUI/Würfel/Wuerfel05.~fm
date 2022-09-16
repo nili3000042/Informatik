@@ -1,6 +1,6 @@
 object Wuerfel05: TFGUIForm
-  Left = 1233
-  Top = 515
+  Left = 763
+  Top = 322
   BorderIcons = [biSystemMenu]
   Caption = 'Wuerfel03'
   ClientHeight = 357
@@ -116,7 +116,7 @@ object Wuerfel05: TFGUIForm
   end
   object jEingabe: TJNumberField
     Tag = 21
-    Left = 144
+    Left = 192
     Top = 80
     Width = 88
     Height = 24
@@ -135,7 +135,7 @@ object Wuerfel05: TFGUIForm
   end
   object jNumberField1: TJNumberField
     Tag = 21
-    Left = 144
+    Left = 192
     Top = 128
     Width = 88
     Height = 24
@@ -193,6 +193,52 @@ object Wuerfel05: TFGUIForm
     HorizontalAlignment = CENTER
     VerticalAlignment = CENTER
     HorizontalTextPosition = CENTER
+    VerticalTextPosition = CENTER
+    IconTextGap = 4
+    DisplayedMnemonic = 0
+    DisplayedMnemonicIndex = 0
+  end
+  object lAnzahl: TJLabel
+    Tag = 1
+    Left = 136
+    Top = 80
+    Width = 49
+    Height = 25
+    Hint = 'jLabel2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = [fsBold]
+    Foreground = 3355443
+    Background = clBtnFace
+    Text = 'Anzahl:'
+    HorizontalAlignment = LEFT
+    VerticalAlignment = CENTER
+    HorizontalTextPosition = RIGHT
+    VerticalTextPosition = CENTER
+    IconTextGap = 4
+    DisplayedMnemonic = 0
+    DisplayedMnemonicIndex = 0
+  end
+  object lSeitenanzahl: TJLabel
+    Tag = 1
+    Left = 104
+    Top = 128
+    Width = 81
+    Height = 25
+    Hint = 'jLabel3'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = [fsBold]
+    Foreground = 3355443
+    Background = clBtnFace
+    Text = 'Seitenanzahl:'
+    HorizontalAlignment = LEFT
+    VerticalAlignment = CENTER
+    HorizontalTextPosition = RIGHT
     VerticalTextPosition = CENTER
     IconTextGap = 4
     DisplayedMnemonic = 0
