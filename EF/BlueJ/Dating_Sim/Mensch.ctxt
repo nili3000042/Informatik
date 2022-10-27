@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Mensch
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Mensch.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n\ Ideen\r\n\ -Passende\ Antworten\r\n
+comment1.params=
+comment1.target=Mensch()
+comment2.params=vorname\ nachname\ is_Frau\ mag_Frau\ mag_Mann\ alter\ gr\u00F6\u00DFe
+comment2.target=Mensch(java.lang.String,\ java.lang.String,\ boolean,\ boolean,\ boolean,\ int,\ int)
+comment3.params=
+comment3.target=void\ make_ID()
+comment4.params=a
+comment4.target=void\ Flirt(Mensch)
+comment5.params=f\ Spruch\ Spruch_Bank
+comment5.target=boolean\ Receive_Flirt(Mensch,\ int,\ int)
+comment6.params=a
+comment6.target=boolean\ Sex_intres(Mensch)
+comment7.params=
+comment7.target=java.lang.String\ wie_hei\u00DFt_du()
+comment8.params=AA
+comment8.target=void\ aaaa(Mensch)
+comment9.params=
+comment9.target=boolean\ test_anmach()
+numComments=10

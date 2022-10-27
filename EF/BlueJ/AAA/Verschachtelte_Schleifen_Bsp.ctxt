@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Verschachtelte_Schleifen_Bsp
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Scanner.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Verschachtelte_Schleifen_Bsp()
+comment2.params=
+comment2.target=void\ einmaleins()
+comment3.params=h\u00F6he\ l\u00E4nge
+comment3.target=void\ XRechteck(double,\ double)
+comment4.params=h\u00F6he\ l\u00E4nge
+comment4.target=void\ Rechteck01(double,\ double)
+comment5.params=gr\u00F6\u00DFe
+comment5.target=void\ Dreieck1(double)
+comment6.params=gr\u00F6\u00DFe
+comment6.target=void\ Dreieck2(double)
+numComments=7

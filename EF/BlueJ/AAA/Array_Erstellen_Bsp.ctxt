@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Array_Erstellen_Bsp
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Scanner.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Array_Erstellen_Bsp()
+comment2.params=
+comment2.target=void\ Zufall()
+comment3.params=
+comment3.target=void\ Eingabe()
+numComments=4

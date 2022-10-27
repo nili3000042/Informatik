@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Struktogramme
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Struktogramme.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Struktogramme()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Struktogramme\r\n
+comment2.params=
+comment2.target=void\ Aufgabe1()
+comment3.params=
+comment3.target=void\ Aufgabe4()
+comment4.params=
+comment4.target=void\ Aufgabe5()
+numComments=5

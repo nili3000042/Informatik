@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Rechner
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ AAA.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Rechner()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ AAA\r\n
+comment2.params=intro_\u00FCberspringen
+comment2.target=void\ Rechnen(boolean)
+comment3.params=a\ b
+comment3.target=void\ plus(double,\ double)
+comment4.params=a\ b
+comment4.target=void\ minus(double,\ double)
+comment5.params=a\ b
+comment5.target=void\ mal(double,\ double)
+comment6.params=a\ b
+comment6.target=void\ geteilt(double,\ double)
+comment7.params=Ausgabe
+comment7.target=void\ hallo(java.lang.String)
+comment8.params=input
+comment8.target=void\ YEAT(double)
+comment9.params=Name
+comment9.target=void\ Begr\u00FC\u00DFung(java.lang.String)
+numComments=10

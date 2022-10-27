@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Hintergrund
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ MyWorld.\r\n\ \r\n\ @author\ (Saskia\ )\ \r\n\ @version\ (V1)\r\n
+comment1.params=
+comment1.target=Hintergrund()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ MyWorld\r\n\ \r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ Leben()
+numComments=4

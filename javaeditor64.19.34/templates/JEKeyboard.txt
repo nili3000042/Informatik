@@ -1,0 +1,47 @@
+Version 2
+Shortcut definition file for the Java-Editor
+
+Allowed shortcuts keys:
+  F1, ..., F12
+  Ctrl+A, ..., Ctrl+Z, Ctrl+F1, ..., Ctrl+F12
+  Shift+Ctrl+A, ..., Shift+Ctrl+Z, Shift+Ctrl+F1, ..., Shift+Ctrl+F12
+  Alt+A, ..., Alt+Z, Alt+F1, ..., Alt+F12
+  Shift+Alt+A, ..., Shift+Alt+Z, Shift+Alt+F1, Shift+Alt+F12
+  Ctrl+Alt+A, ..., Ctrl+Alt+Z, Ctrl+Alt+F1, ..., Ctrl+Alt+F12
+  
+Remove "# " to set an example activ.
+
+In general a menu shortcut takes precedence over an editor shortcut. 
+
+A editor shortcut starts with "shortcut:keys"
+Inside a shortcut definition with | you can specify the
+position of the cursor.
+A shortcut definiton must end with "shortcut:end"
+For a menu item this shortcut is disabled.
+
+Example
+
+# shortcut:Ctrl+I
+# import |
+# shortcut:end
+
+You can replace a shortcut of main menu or editor with another shortcut 
+
+Examples
+
+# replaceMenu:Ctrl+Alt+M
+# with:Shift+Strg+M
+
+# replaceEditor:Ctrl+M
+# with: Ctrl+B
+
+You can disable a shortcut of the main menu or editor
+
+Examples
+
+# disableMenu:Ctrl+I
+# disableEditor:Ctrl+Y
+
+
+
+

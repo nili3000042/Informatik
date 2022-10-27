@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=WorldWildBattle
+comment1.params=
+comment1.target=WorldWildBattle()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ addData()
+comment4.params=
+comment4.target=void\ addOverlays()
+comment5.params=
+comment5.target=void\ addStartObjects()
+comment6.params=
+comment6.target=void\ addMenuButtons()
+comment7.params=
+comment7.target=void\ addFightButtons()
+comment8.params=
+comment8.target=void\ addBagButtons()
+comment9.params=texts\ time
+comment9.target=void\ addOverlayText(java.lang.String[],\ int)
+numComments=10

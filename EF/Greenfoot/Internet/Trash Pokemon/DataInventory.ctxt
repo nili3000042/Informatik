@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=DataInventory
+comment1.params=name\ number
+comment1.target=void\ addItem(java.lang.String,\ int)
+comment2.params=name\ number
+comment2.target=void\ removeItem(java.lang.String,\ int)
+numComments=3

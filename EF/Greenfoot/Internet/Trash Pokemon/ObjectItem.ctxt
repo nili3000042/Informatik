@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ObjectItem
+comment1.params=item\ number\ index
+comment1.target=ObjectItem(java.lang.String,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=boolean\ isInRange()
+numComments=4

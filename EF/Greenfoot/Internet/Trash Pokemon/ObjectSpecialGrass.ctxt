@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ObjectSpecialGrass
+comment1.params=name
+comment1.target=ObjectSpecialGrass(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkPlayer()
+numComments=4

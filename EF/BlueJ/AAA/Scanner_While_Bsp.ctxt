@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Scanner_While_Bsp
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Scanner.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Scanner_While_Bsp()
+comment2.params=
+comment2.target=void\ Raten_tips()
+comment3.params=
+comment3.target=void\ Raten()
+comment4.params=
+comment4.target=void\ Raten_limit_tips()
+comment5.params=
+comment5.target=void\ Raten_limit()
+numComments=6

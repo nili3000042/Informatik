@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=OverlayChoiceTriangle
+comment1.params=optionNumber
+comment1.target=OverlayChoiceTriangle(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=boolean\ canMoveDown()
+comment4.params=
+comment4.target=boolean\ canMoveUp()
+numComments=5

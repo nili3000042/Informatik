@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Scanner_While_Bsp_Game
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Scanner.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Scanner_While_Bsp_Game()
+comment10.params=
+comment10.target=void\ Raten_limit_tips()
+comment11.params=
+comment11.target=void\ Raten_limit()
+comment2.params=
+comment2.target=void\ Computerraten()
+comment3.params=fast_start
+comment3.target=void\ Turnier(boolean)
+comment4.params=
+comment4.target=void\ Turnier_Settings()
+comment5.params=
+comment5.target=void\ Turnier_Game()
+comment6.params=
+comment6.target=int\ Turnier_Round()
+comment7.params=fast_start
+comment7.target=void\ Chose(boolean)
+comment8.params=
+comment8.target=void\ Raten_tips()
+comment9.params=
+comment9.target=void\ Raten()
+numComments=12

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Datas
+comment1.params=
+comment1.target=Datas()
+comment2.params=x\ y
+comment2.target=void\ setLocation(int,\ int)
+numComments=3
