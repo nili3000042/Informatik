@@ -6,13 +6,14 @@
 public class AufgabeListeInt
 {
     List<Integer> a1Liste;
-
+    List<Integer> a2Liste;
     /**
      * Konstruktor für Objekte der Klasse Simultion
      */
     public AufgabeListeInt()
     {
-         a1Liste =  new List<Integer>();
+        a1Liste =  new List<Integer>(); 
+        a2Liste =  new List<Integer>();
     }
 
     /**
@@ -33,7 +34,26 @@ public class AufgabeListeInt
         a1Liste.next();
         a1Liste.setContent(100);
     }
-
+    
+    public void aufgabe2()
+    {
+        // Befehle hier einfügen!!!!!!!!!
+        a2Liste.append(30);
+        a2Liste.append(4);
+        a2Liste.toFirst();
+        a2Liste.insert(3);
+        a2Liste.insert(6);
+        a2Liste.toLast();
+        a2Liste.append(69);
+        a2Liste.insert(20);
+        a2Liste.toFirst();
+        a2Liste.next();
+        a2Liste.remove();
+        a2Liste.next();
+        a2Liste.setContent(420);
+        aufgabe1();
+        a2Liste.concat(a1Liste);
+    }
     //Ausgabe Inhalt Liste
     public void ausgabe(){
         aufgabe1();
@@ -47,14 +67,14 @@ public class AufgabeListeInt
 
     }
     public void ausgabe3(){
-        aufgabe1();
+        aufgabe2();
         
-        while(!a1Liste.isEmpty()){
-            if(a1Liste.hasAccess()){
-                a1Liste.toFirst();
+        while(!a2Liste.isEmpty()){
+            if(a2Liste.hasAccess()){
+                a2Liste.toFirst();
             }
-            System.out.println(a1Liste.getContent());
-            a1Liste.remove();
+            System.out.println(a2Liste.getContent());
+            a2Liste.remove();
         }
 
     }
