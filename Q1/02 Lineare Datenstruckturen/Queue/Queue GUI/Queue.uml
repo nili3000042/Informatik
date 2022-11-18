@@ -1,17 +1,4 @@
-﻿[Files]
-File0=H:\_Informatik\_Q1\02 Lineare Datenstrukturen\Klasse Queue\Queue Fobi\Queue.java
-
-[Box:  - Queue]
-X=20
-Y=40
-MinVis=0
-ShowParameter=4
-SortOrder=0
-ShowIcons=1
-FontSize=12
-FontName=Segoe UI
-
-[Diagram]
+﻿[Diagram]
 comments=0
 OffsetX=0
 OffsetY=0

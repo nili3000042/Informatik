@@ -23,4 +23,14 @@ public class Fahrzeug
     {
         return kennzeichen;
     }
+    
+    public String getFarbe()
+    {
+        return farbe;
+    }
+    
+    public String getModell()
+    {
+        return modell;
+    }
 }

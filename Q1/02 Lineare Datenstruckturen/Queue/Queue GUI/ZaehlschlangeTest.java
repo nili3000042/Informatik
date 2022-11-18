@@ -9,13 +9,13 @@ import java.awt.event.*;
  * @author 
  */
 
-public class QueueTest extends Frame {
+public class ZaehlschlangeTest extends Frame {
   // Anfang Attribute
   private Button btNeu = new Button();
   private Button btEnqueue = new Button();
   private Button btDequeue = new Button();
   private Button btIsEmpty = new Button();
-  private TextField textField1 = new TextField();
+  private Button btGetAnzahl = new Button();
   private Button btFront = new Button();
   private Label labelEingabe = new Label();
   private TextField tfEingabe = new TextField();
@@ -23,10 +23,10 @@ public class QueueTest extends Frame {
   private TextField tfAusgabe = new TextField();
   
   //Verweis auf die Klasse Queue
-  private Queue<String> schlange;
+  private Zaehlschlange<String> schlange;
   // Ende Attribute
   
-  public QueueTest() { 
+  public ZaehlschlangeTest() { 
     // Frame-Initialisierung
     super();
     addWindowListener(new WindowAdapter() {
@@ -39,7 +39,7 @@ public class QueueTest extends Frame {
     int x = (d.width - getSize().width) / 2;
     int y = (d.height - getSize().height) / 2;
     setLocation(x, y);
-    setTitle("QueueTest");
+    setTitle("ZaehlschlangeTest");
     setResizable(false);
     Panel cp = new Panel(null);
     add(cp);
@@ -77,8 +77,6 @@ public class QueueTest extends Frame {
       }
     });
     cp.add(btIsEmpty);
-    textField1.setBounds(128, 80, 105, 1);
-    cp.add(textField1);
     btFront.setBounds(24, 192, 57, 33);
     btFront.setLabel("Front");
     btFront.addActionListener(new ActionListener() { 
@@ -87,6 +85,14 @@ public class QueueTest extends Frame {
       }
     });
     cp.add(btFront);
+    btGetAnzahl.setBounds(96, 192, 57, 33);
+    btGetAnzahl.setLabel("GetAnzahl");
+    btGetAnzahl.addActionListener(new ActionListener() { 
+      public void actionPerformed(ActionEvent evt) { 
+        btGetAnzahl_ActionPerformed(evt);
+      }
+    });
+    cp.add(btGetAnzahl);
     labelEingabe.setBounds(32, 32, 65, 33);
     labelEingabe.setText("Eingabe:");
     cp.add(labelEingabe);
@@ -100,16 +106,16 @@ public class QueueTest extends Frame {
     // Ende Komponenten
     
     setVisible(true);
-  } // end of public QueueTest
+  } // end of public ZaehlschlangeTest
   
   // Anfang Methoden
   
   public static void main(String[] args) {
-    new QueueTest();
+    new ZaehlschlangeTest();
   } // end of main
   
   public void btNeu_ActionPerformed(ActionEvent evt) {
-    schlange = new Queue<>();
+    schlange = new Zaehlschlange<>();
     
   } // end of btNeu_ActionPerformed
 
@@ -124,16 +130,19 @@ public class QueueTest extends Frame {
   } // end of btDequeue_ActionPerformed
 
   public void btIsEmpty_ActionPerformed(ActionEvent evt) {
-       tfAusgabe.setText(""+schlange.isEmpty());  
+       tfAusgabe.setText(""+schlange.isEmpty());      
   } // end of btIsEmpty_ActionPerformed
   
   public void btFront_ActionPerformed(ActionEvent evt) {
-       tfAusgabe.setText(schlange.front());       
+       tfAusgabe.setText(schlange.front());
        if (schlange.isEmpty()) {
           tfAusgabe.setText("Schlange ist Leer");  
-       } // end of if   
+       } // end of if         
   } // end of btFront_ActionPerformed
-
+  
+  public void btGetAnzahl_ActionPerformed(ActionEvent evt) {
+       tfAusgabe.setText(Integer.toString(schlange.getAnzahl()));          
+  } // end of btFront_ActionPerformed
   // Ende Methoden
 } // end of class QueueTest
 

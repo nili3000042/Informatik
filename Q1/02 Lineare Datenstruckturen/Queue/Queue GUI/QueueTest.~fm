@@ -1,6 +1,6 @@
 object QueueTest: TFGUIForm
-  Left = 807
-  Top = 136
+  Left = 916
+  Top = 206
   BorderIcons = [biSystemMenu]
   Caption = 'QueueTest'
   ClientHeight = 262
@@ -20,7 +20,6 @@ object QueueTest: TFGUIForm
   OnCloseQuery = FormCloseQuery
   OnResize = FormResize
   FrameType = 2
-  Modified = False
   Resizable = False
   Undecorated = False
   Background = clWhite

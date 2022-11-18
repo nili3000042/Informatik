@@ -38,8 +38,8 @@ public class Verkehrskontrolle
         verkehrskontrolle = new Queue<Fahrzeug>();
         kolonne = new Queue<Fahrzeug>();
         fahrzeugeInKolonne = 0;
-        //autosErzeugen();
-        //fahrzeugeInDieKolonne();
+        autosErzeugen();
+        fahrzeugeInDieKolonne();
 
         /** Um das Programm leichter zu testen, werden alle 11 Fahrzeuge der Kolonne
          * in den Kontrollbereich überführt.
@@ -53,9 +53,20 @@ public class Verkehrskontrolle
          **/    
     }
 
+    public void alleKontrollieren()
+    {
+        int anzahlInKolonne = getAnzahlFahrzeugeInKolonne();
+        for (int i=0;i<anzahlInKolonne;i++)
+        {
+            herauswinken();
+            dieKontrolle();
+        }
+    }
+
     public void nichtKontrollieren()
     {
         kolonne.dequeue();
+        fahrzeugeInKolonne--;
     }
 
     /** Die Methode soll das Austesten erleichtern. Einige Fahrzeuge werden automatisch

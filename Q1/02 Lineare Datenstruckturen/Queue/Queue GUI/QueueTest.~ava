@@ -19,7 +19,7 @@ public class QueueTest extends Frame {
   private Button btFront = new Button();
   private Label labelEingabe = new Label();
   private TextField tfEingabe = new TextField();
-  private Label lbAusgabe = new Label();
+  private Label labelAusgabe = new Label();
   private TextField tfAusgabe = new TextField();
   
   //Verweis auf die Klasse Queue
@@ -124,11 +124,11 @@ public class QueueTest extends Frame {
   } // end of btDequeue_ActionPerformed
 
   public void btIsEmpty_ActionPerformed(ActionEvent evt) {
-       lbAusgabe.setText(""+schlange.isEmpty());      
+       labelAusgabe.setText(""+schlange.isEmpty());      
   } // end of btIsEmpty_ActionPerformed
   
   public void btFront_ActionPerformed(ActionEvent evt) {
-       lbAusgabe.setText(schlange.front());          
+       labelAusgabe.setText(schlange.front());          
   } // end of btFront_ActionPerformed
 
   // Ende Methoden

@@ -1,7 +1,9 @@
 public class Buero
 {
     Queue<Person> warteschlange;
-
+    
+    private Person person1;
+    
     public Buero()
     {
         warteschlange = new Queue<Person>();
