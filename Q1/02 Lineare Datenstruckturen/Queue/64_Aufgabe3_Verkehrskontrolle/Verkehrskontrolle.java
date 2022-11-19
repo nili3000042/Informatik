@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * Beschreiben Sie hier die Klasse Verkehrskontrolle.
  * Verkehrskontrolle erzeugt zunächst Fahrzeugs und übergibt diese der Kolonne, in der die Fahrzeugs solnange 
@@ -14,7 +15,14 @@ public class Verkehrskontrolle
     private int kontrollierteFahrzeuge;
     private int fahrzeugeInKontrolle;
     private int fahrzeugeInKolonne;
-
+    private int anzahlFahrzeuge;
+    
+    Random rnd = new Random();
+    
+    private String []Modell ={"Golf"+"Yeti"+"Roomster"+"Polo"+"Corsa"+"Mondeo"+"Galaxy"+"Touran"+"BMW3"+"Porsche 911"+"Trabi"};
+    private String []Farbe ={"grau"+"rot"+"gold"+"orange"+"beige"+"weiß"+"schwarz"+"silber"+"blau"+"hellbraun"+"grün"};
+    private String []Character ={"A"+"B"+"C"+"D"+"E"+"F"+"G"+"H"+"I"+"J"+"K"+"L"+"M"+"N"+"O"+"P"+"Q"+"R"+"S"+"T"+"U"+"V"+"W"+"X"+"Y"+"Z"};
+    
     private Fahrzeug auto1;
     private Fahrzeug auto2;
     private Fahrzeug auto3;
@@ -29,6 +37,7 @@ public class Verkehrskontrolle
 
     private Queue<Fahrzeug> verkehrskontrolle;
     private Queue<Fahrzeug> kolonne;
+    private Queue<Fahrzeug> hold;
 
     public Verkehrskontrolle()
     {
@@ -37,10 +46,10 @@ public class Verkehrskontrolle
         fahrzeugeInKontrolle = 0;
         verkehrskontrolle = new Queue<Fahrzeug>();
         kolonne = new Queue<Fahrzeug>();
+        hold = new Queue<Fahrzeug>();
         fahrzeugeInKolonne = 0;
         autosErzeugen();
         fahrzeugeInDieKolonne();
-
         /** Um das Programm leichter zu testen, werden alle 11 Fahrzeuge der Kolonne
          * in den Kontrollbereich überführt.
          */
@@ -51,6 +60,29 @@ public class Verkehrskontrolle
         herauswinken();
         }
          **/    
+    }
+    
+    public void kolonneAusgeben()
+    {
+        Fahrzeug aktuellesFahrzeug;
+        while(!kolonne.isEmpty())
+        {
+            aktuellesFahrzeug = kolonne.front();
+            System.out.println(aktuellesFahrzeug.getModell()+" "+aktuellesFahrzeug.getFarbe()+" "+aktuellesFahrzeug.getKennzeichen()+" "+aktuellesFahrzeug.getVerkehrstauglich());
+            hold.enqueue(aktuellesFahrzeug);
+            kolonne.dequeue();
+        }
+        while(!hold.isEmpty())
+        {
+            aktuellesFahrzeug = hold.front();
+            kolonne.enqueue(aktuellesFahrzeug);
+            hold.dequeue();
+        }
+    }
+    
+    public void randomAuto()
+    {
+        kolonne.enqueue(new Fahrzeug(Modell[rnd.nextInt(Modell.length)], Farbe[rnd.nextInt(Farbe.length)], Character[rnd.nextInt(Character.length)]+Character[rnd.nextInt(Character.length)]+" "+Character[rnd.nextInt(Character.length)]+Character[rnd.nextInt(Character.length)]+" "+rnd.nextInt(9999)+1, rnd.nextBoolean()));
     }
 
     public void alleKontrollieren()
@@ -86,6 +118,7 @@ public class Verkehrskontrolle
         auto9 = new Fahrzeug("BMW3", "gold", "PB AS 12", false);
         auto10 = new Fahrzeug("Porsche 911", "rot", "PB ZZ 911", false);
         auto11 = new Fahrzeug("Trabi", "grau", "B RD 90", true);
+        anzahlFahrzeuge = anzahlFahrzeuge + 11;
     }
 
     public void fahrzeugeInDieKolonne(Fahrzeug pFahrzeug) {
@@ -129,7 +162,7 @@ public class Verkehrskontrolle
     {
         return kontrollierteFahrzeuge;
     }
-
+    
     /** Hilfsmethode,
      * wird nicht für die Funktionalität benötigt
      */
