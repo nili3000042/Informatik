@@ -19,9 +19,9 @@ public class Verkehrskontrolle
     
     Random rnd = new Random();
     
-    private String []Modell ={"Golf"+"Yeti"+"Roomster"+"Polo"+"Corsa"+"Mondeo"+"Galaxy"+"Touran"+"BMW3"+"Porsche 911"+"Trabi"};
-    private String []Farbe ={"grau"+"rot"+"gold"+"orange"+"beige"+"weiß"+"schwarz"+"silber"+"blau"+"hellbraun"+"grün"};
-    private String []Character ={"A"+"B"+"C"+"D"+"E"+"F"+"G"+"H"+"I"+"J"+"K"+"L"+"M"+"N"+"O"+"P"+"Q"+"R"+"S"+"T"+"U"+"V"+"W"+"X"+"Y"+"Z"};
+    private String []Modell ={"Golf","Yeti","Roomster","Polo","Corsa","Mondeo","Galaxy","Touran","BMW3","Porsche 911","Trabi"};
+    private String []Farbe ={"grau","rot","gold","orange","beige","weiß","schwarz","silber","blau","hellbraun","grün"};
+    private String []Character ={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
     
     private Fahrzeug auto1;
     private Fahrzeug auto2;
@@ -62,15 +62,53 @@ public class Verkehrskontrolle
          **/    
     }
     
+    public void rangeKolonneAusgeben(int min, int max)
+    {
+        if(min<max)
+        {
+            Fahrzeug aktuellesFahrzeug;
+            int zaehler = 1;
+            while(!kolonne.isEmpty())
+            {
+                aktuellesFahrzeug = kolonne.front();
+                if(zaehler>=min&&zaehler<=max)
+                {
+                    System.out.println("Position : "+zaehler);
+                    System.out.println("Kennzeichen : "+aktuellesFahrzeug.getKennzeichen());
+                    System.out.println("Modell : "+aktuellesFahrzeug.getModell());
+                    System.out.println("Farbe : "+aktuellesFahrzeug.getFarbe());
+                    System.out.println("Verkehstauglich : "+aktuellesFahrzeug.getVerkehrstauglich());
+                    System.out.println("----------");
+                }
+                hold.enqueue(aktuellesFahrzeug);
+                kolonne.dequeue();
+                zaehler++;
+            }
+            while(!hold.isEmpty())
+            {
+                aktuellesFahrzeug = hold.front();
+                kolonne.enqueue(aktuellesFahrzeug);
+                hold.dequeue();
+            }
+        }
+    }
+    
     public void kolonneAusgeben()
     {
         Fahrzeug aktuellesFahrzeug;
+        int zaehler = 1;
         while(!kolonne.isEmpty())
         {
             aktuellesFahrzeug = kolonne.front();
-            System.out.println(aktuellesFahrzeug.getModell()+" "+aktuellesFahrzeug.getFarbe()+" "+aktuellesFahrzeug.getKennzeichen()+" "+aktuellesFahrzeug.getVerkehrstauglich());
+            System.out.println("Position : "+zaehler);
+            System.out.println("Kennzeichen : "+aktuellesFahrzeug.getKennzeichen());
+            System.out.println("Modell : "+aktuellesFahrzeug.getModell());
+            System.out.println("Farbe : "+aktuellesFahrzeug.getFarbe());
+            System.out.println("Verkehstauglich : "+aktuellesFahrzeug.getVerkehrstauglich());
+            System.out.println("----------");
             hold.enqueue(aktuellesFahrzeug);
             kolonne.dequeue();
+            zaehler++;
         }
         while(!hold.isEmpty())
         {
@@ -80,9 +118,18 @@ public class Verkehrskontrolle
         }
     }
     
-    public void randomAuto()
+    public void mehrRandomAuto(int pMenge)
     {
-        kolonne.enqueue(new Fahrzeug(Modell[rnd.nextInt(Modell.length)], Farbe[rnd.nextInt(Farbe.length)], Character[rnd.nextInt(Character.length)]+Character[rnd.nextInt(Character.length)]+" "+Character[rnd.nextInt(Character.length)]+Character[rnd.nextInt(Character.length)]+" "+rnd.nextInt(9999)+1, rnd.nextBoolean()));
+        while(pMenge>0)
+        {
+            randomAuto();
+            pMenge--;
+        }
+    }
+    
+    private void randomAuto()
+    {
+        fahrzeugeInDieKolonne(new Fahrzeug(Modell[rnd.nextInt(Modell.length)], Farbe[rnd.nextInt(Farbe.length)], Character[rnd.nextInt(Character.length)]+Character[rnd.nextInt(Character.length)]+" "+Character[rnd.nextInt(Character.length)]+Character[rnd.nextInt(Character.length)]+" "+rnd.nextInt(999)+1, rnd.nextBoolean()));
     }
 
     public void alleKontrollieren()
@@ -121,7 +168,7 @@ public class Verkehrskontrolle
         anzahlFahrzeuge = anzahlFahrzeuge + 11;
     }
 
-    public void fahrzeugeInDieKolonne(Fahrzeug pFahrzeug) {
+    private void fahrzeugeInDieKolonne(Fahrzeug pFahrzeug) {
         kolonne.enqueue(pFahrzeug);
         fahrzeugeInKolonne++;
     }
@@ -199,7 +246,7 @@ public class Verkehrskontrolle
         }
     }
 
-    public void kolonneAufloesen()
+    private void kolonneAufloesen()
     {
         while(!kolonne.isEmpty())
         {
@@ -208,7 +255,7 @@ public class Verkehrskontrolle
         }
     }
 
-    public boolean fahrzeugUeberpruefen()
+    private boolean fahrzeugUeberpruefen()
     {
         Fahrzeug aktuellesFahrzeug;
 
