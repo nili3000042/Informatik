@@ -8,7 +8,7 @@ public class Zaehlschlange<ContentType> extends Queue<ContentType>{
   //Bezugsobjekte & Attribute
   private int anzahl;
   
-  
+              
   //Konstruktor oberklasse (Queue) wird aufgerufen mit super
   public Zaehlschlange(){
      super();
@@ -20,7 +20,7 @@ public class Zaehlschlange<ContentType> extends Queue<ContentType>{
         return anzahl;
     }
   
-  //von Queue geerbte Methoden überprüfen
+  //von Queue geerbte Methoden Ã¼berprÃ¼fen
   
   @Override
   public void enqueue(ContentType pContent){
