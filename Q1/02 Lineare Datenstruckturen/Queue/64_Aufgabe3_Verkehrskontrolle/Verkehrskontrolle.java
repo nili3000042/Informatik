@@ -131,6 +131,8 @@ public class Verkehrskontrolle
     {
         fahrzeugeInDieKolonne(new Fahrzeug(Modell[rnd.nextInt(Modell.length)], Farbe[rnd.nextInt(Farbe.length)], Character[rnd.nextInt(Character.length)]+Character[rnd.nextInt(Character.length)]+" "+Character[rnd.nextInt(Character.length)]+Character[rnd.nextInt(Character.length)]+" "+rnd.nextInt(999)+1, rnd.nextBoolean()));
     }
+    
+    
 
     public void alleKontrollieren()
     {
