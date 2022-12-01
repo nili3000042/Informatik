@@ -10,26 +10,82 @@ public class Aufgabe_Gleise
     Stack<String> gleis1;
     Stack<String> gleis2;
     Stack<String> gleis3;
-    Stack<String> warten;
     String [] Ziele = {"Gießen","Regensburg","Bonn"};
     Random rnd = new Random();
+    Scanner scan = new Scanner(System.in);
     public Aufgabe_Gleise()
     {
         gleis1 = new Stack<String>();
         gleis2 = new Stack<String>();
         gleis3 = new Stack<String>();
-        warten = new Stack<String>();
-        fuellen(gleis1,50);
+        System.out.print('\u000c');
+        System.out.println("Wieviele zufählige Waggons sollen erstellt werden?");
+        fuellen(gleis1,scan.nextInt());
+        main();
     }
-
+    public void main()
+    {
+        int a=0;
+        while(a!=5)
+        {
+            System.out.println("1 = Gleis 1 füllen, 2 = sortieren, 3 = momentane Situation ausgeben,");
+            System.out.println("4 = Gleis Leeren, 5 = beenden.");
+            a = scan.nextInt();
+            if(a==1)
+            {
+                System.out.println("Wieviele zufählige Waggons sollen erstellt werden?");
+                fuellen(gleis1,scan.nextInt());
+            }
+            else if(a==2)
+            {
+                sortieren();
+            }
+            else if(a==3)
+            {
+                ausgeben();
+            }
+            else if(a==4)
+            {
+                System.out.println("Welches Gleis soll geleert werden?");
+                System.out.println("1 = Gleis 1, 2 = Gleis 2, 3 = Gleis 3, 4 = Alle Gleise");
+                a = scan.nextInt();
+                if(a==1)
+                {
+                    leeren(gleis1);
+                }
+                else if(a==2)
+                {
+                    leeren(gleis2);
+                }
+                else if(a==3)
+                {
+                    leeren(gleis3);
+                }
+                else if(a==4)
+                {
+                    leeren(gleis1);
+                    leeren(gleis2);
+                    leeren(gleis3);
+                }
+                else
+                {
+                    System.out.println("Error keine Zahl im Bereich 1 bis 4.");
+                    a=0;
+                }
+            }
+            else if(a!=5)
+            {
+                System.out.println("Error keine Zahl im Bereich 1 bis 5.");
+            }
+        }
+    }
     public void fuellen(Stack pGleis,int pAnzahl)
     {
-        for(int i = 0; i>pAnzahl;i++)
+        for(int i = 0; i<pAnzahl;i++)
         {
             pGleis.push(Ziele[rnd.nextInt(Ziele.length)]);
         }
     }
-    
     private void rangieren(Stack<String> pVon,Stack<String> pZu)
     {
         if(!pVon.isEmpty())
@@ -38,7 +94,6 @@ public class Aufgabe_Gleise
             pVon.pop();
         }
     }
-    
     public void sortieren()
     {
         // Alle Waggons von Regensburg aus Gleis 1 und von Gießen auf Gleis 2 und von Bonn auf Gleis 3 bringen
@@ -58,7 +113,7 @@ public class Aufgabe_Gleise
                 {
                     rangieren(gleis3,gleis2); // Schiebe von B3 auf G2
                 } // Ende von Solange
-                rangieren(gleis1,gleis2); // Schiebe von R1 auf B3
+                rangieren(gleis1,gleis3); // Schiebe von R1 auf B3
             }
             else if(gleis1.top()=="Regensburg") // Ansonst wenn der vorderste Waggon von R1 Rot ist
             {
@@ -89,19 +144,30 @@ public class Aufgabe_Gleise
     }
     private void ausgabe(Stack<String> pGleis,String pName)
     {
-        System.out.println("Auf "+pName+" stehen folgende Waggons:");
+        Stack<String> warten;
+        warten = new Stack<String>();
         int zaehler = 1;
+        System.out.println("Auf "+pName+" stehen folgende Waggons:");
         while(!pGleis.isEmpty())
         {
             System.out.println("Position: "+zaehler);
             System.out.println("Ziel: "+pGleis.top());
             warten.push(pGleis.top());
             pGleis.pop();
+            zaehler++;
         }
         while(!warten.isEmpty())
         {
             pGleis.push(warten.top());
             warten.pop();
+        }
+        System.out.println("----------");
+    }
+    public void leeren(Stack pGleis)
+    {
+        while(!pGleis.isEmpty())
+        {
+            pGleis.pop();
         }
     }
 }
