@@ -26,10 +26,10 @@ public class Aufgabe_Gleise
     public void main()
     {
         int a=0;
-        while(a!=5)
+        while(a!=6)
         {
             System.out.println("1 = Gleis 1 füllen, 2 = sortieren, 3 = momentane Situation ausgeben,");
-            System.out.println("4 = Gleis Leeren, 5 = beenden.");
+            System.out.println("4 = Gleis Leeren, 5 = Alles auf Gleis 1 , 6 = beenden.");
             a = scan.nextInt();
             if(a==1)
             {
@@ -73,102 +73,118 @@ public class Aufgabe_Gleise
                     a=0;
                 }
             }
-            else if(a!=5)
+            else if(a==5)
             {
-                System.out.println("Error keine Zahl im Bereich 1 bis 5.");
+                ganzesGleisRangieren(gleis2,gleis1);
+                ganzesGleisRangieren(gleis2,gleis1);
+            }
+            else if(a!=6)
+            {
+                System.out.println("Error keine Zahl im Bereich 1 bis 6.");
             }
         }
     }
-    public void fuellen(Stack pGleis,int pAnzahl)
-    {
-        for(int i = 0; i<pAnzahl;i++)
+        private void fuellen(Stack pGleis,int pAnzahl)
         {
-            pGleis.push(Ziele[rnd.nextInt(Ziele.length)]);
-        }
-    }
-    private void rangieren(Stack<String> pVon,Stack<String> pZu)
-    {
-        if(!pVon.isEmpty())
-        {
-            pZu.push(pVon.top());
-            pVon.pop();
-        }
-    }
-    public void sortieren()
-    {
-        // Alle Waggons von Regensburg aus Gleis 1 und von Gießen auf Gleis 2 und von Bonn auf Gleis 3 bringen
-        while(!gleis1.isEmpty()) // Solange R1 nicht Leer ist
-        {
-            if(gleis1.top()=="Gießen") // Wenn der vorderste Waggon von R1 Grün ist
+            for(int i = 0; i<pAnzahl;i++)
             {
-                while(gleis2.top()=="Regensburg") // Solange der vorderste Waggon von G2 Rot ist
-                {
-                    rangieren(gleis2,gleis3); // Schiebe von G2 auf B3
-                } // Ende von Solange
-                rangieren(gleis1,gleis2); // Schiebe von R1 auf G2
+                pGleis.push(Ziele[rnd.nextInt(Ziele.length)]);
             }
-            else if(gleis1.top()=="Bonn") // Ansonst wenn der vorderste Waggon von R1 Blau ist
+        }
+        private void sortieren()
+        {
+            // Alle Waggons von Regensburg aus Gleis 1 und von Gießen auf Gleis 2 und von Bonn auf Gleis 3 bringen
+            while(!gleis1.isEmpty()) // Solange R1 nicht Leer ist
             {
-                while(gleis3.top()=="Regensburg") // Solange der vorderste Waggon von B3 Rot ist
+                if(gleis1.top()=="Gießen") // Wenn der vorderste Waggon von R1 Grün ist
                 {
-                    rangieren(gleis3,gleis2); // Schiebe von B3 auf G2
-                } // Ende von Solange
-                rangieren(gleis1,gleis3); // Schiebe von R1 auf B3
-            }
-            else if(gleis1.top()=="Regensburg") // Ansonst wenn der vorderste Waggon von R1 Rot ist
-            {
-                if(gleis2.top()=="Regensburg") // Wenn der vorderste Waggon von G2 Rot ist
-                {
+                    while(gleis2.top()=="Regensburg") // Solange der vorderste Waggon von G2 Rot ist
+                    {
+                        rangieren(gleis2,gleis3); // Schiebe von G2 auf B3
+                    } // Ende von Solange
                     rangieren(gleis1,gleis2); // Schiebe von R1 auf G2
                 }
-                else // Ansonsten
+                else if(gleis1.top()=="Bonn") // Ansonst wenn der vorderste Waggon von R1 Blau ist
                 {
+                    while(gleis3.top()=="Regensburg") // Solange der vorderste Waggon von B3 Rot ist
+                    {
+                        rangieren(gleis3,gleis2); // Schiebe von B3 auf G2
+                    } // Ende von Solange
                     rangieren(gleis1,gleis3); // Schiebe von R1 auf B3
                 }
+                else if(gleis1.top()=="Regensburg") // Ansonst wenn der vorderste Waggon von R1 Rot ist
+                {
+                    if(gleis2.top()=="Regensburg") // Wenn der vorderste Waggon von G2 Rot ist
+                    {
+                        rangieren(gleis1,gleis2); // Schiebe von R1 auf G2
+                    }
+                    else // Ansonsten
+                    {
+                        rangieren(gleis1,gleis3); // Schiebe von R1 auf B3
+                    }
+                }
+            } // Ende von Solange
+            while(gleis2.top()=="Regensburg") // Solange der vorderste Waggon von G2 Rot ist
+            {
+                rangieren(gleis2,gleis1); // Schiebe von G2 auf R1
+            } // Ende von Solange
+            while(gleis3.top()=="Regensburg") // Solange der vorderste Waggon von B3 Rot ist
+            {
+                rangieren(gleis3,gleis1); // Schiebe von B3 auf R1
+            } // Ende von Solange
+        }
+            private void rangieren(Stack<String> pVon,Stack<String> pZu)
+            {
+                if(!pVon.isEmpty())
+                {
+                    pZu.push(pVon.top());
+                    pVon.pop();
+                }
             }
-        } // Ende von Solange
-        while(gleis2.top()=="Regensburg") // Solange der vorderste Waggon von G2 Rot ist
+        private void ausgeben()
         {
-            rangieren(gleis2,gleis1); // Schiebe von G2 auf R1
-        } // Ende von Solange
-        while(gleis3.top()=="Regensburg") // Solange der vorderste Waggon von B3 Rot ist
-        {
-            rangieren(gleis3,gleis1); // Schiebe von B3 auf R1
-        } // Ende von Solange
-    }
-    public void ausgeben()
-    {
-        ausgabe(gleis1,"Gleis 1");
-        ausgabe(gleis2,"Gleis 2");
-        ausgabe(gleis3,"Gleis 3");
-    }
-    private void ausgabe(Stack<String> pGleis,String pName)
-    {
-        Stack<String> warten;
-        warten = new Stack<String>();
-        int zaehler = 1;
-        System.out.println("Auf "+pName+" stehen folgende Waggons:");
-        while(!pGleis.isEmpty())
-        {
-            System.out.println("Position: "+zaehler);
-            System.out.println("Ziel: "+pGleis.top());
-            warten.push(pGleis.top());
-            pGleis.pop();
-            zaehler++;
+            int a = ausgabe(gleis1,"Gleis 1");
+            a = a + ausgabe(gleis2,"Gleis 2");
+            a = a + ausgabe(gleis3,"Gleis 3");
+            System.out.println("Insgesamt gibt es "+a+" Waggons.");
+            System.out.println();
         }
-        while(!warten.isEmpty())
+            private int ausgabe(Stack<String> pGleis,String pName)
+            {
+                Stack<String> warten;
+                warten = new Stack<String>();
+                int zaehler = 0;
+                System.out.println("Auf "+pName+" stehen folgende Waggons:");
+                while(!pGleis.isEmpty())
+                {
+                    zaehler++;
+                    System.out.println("Position: "+zaehler);
+                    System.out.println("Ziel: "+pGleis.top());
+                    warten.push(pGleis.top());
+                    pGleis.pop();
+                }
+                while(!warten.isEmpty())
+                {
+                    pGleis.push(warten.top());
+                    warten.pop();
+                }
+                System.out.println("----------");
+                return zaehler;
+            }
+        private void leeren(Stack pGleis)
         {
-            pGleis.push(warten.top());
-            warten.pop();
+            while(!pGleis.isEmpty())
+            {
+                pGleis.pop();
+            }
         }
-        System.out.println("----------");
-    }
-    public void leeren(Stack pGleis)
-    {
-        while(!pGleis.isEmpty())
+        private void ganzesGleisRangieren(Stack<String> pVon,Stack<String> pZu)
         {
-            pGleis.pop();
+            while(!pVon.isEmpty())
+            {
+                pZu.push(pVon.top());
+                pVon.pop();
+            }
         }
-    }
 }
 
