@@ -132,5 +132,12 @@ public class Aufgaben
                 }
                 return zaehler;
             }
+    private void zufall_füllen(Stack<Integer> pStack, int pAnzahl, int pMin, int pMax)
+    {
+        for(int i = 0; i<pAnzahl;i++)
+        {
+            pStack.push(rnd.nextInt(pMax)+pMin);
+        }
+    }
 }
 
