@@ -19,6 +19,12 @@ public class Aufgaben
         zStack3 = new Stack<Integer>();
         System.out.print('\u000c');
     }
+    public void tryout()
+    {
+        zufall_füllen(zStack2,50,1,8);
+        aufgabe1_verschieben();
+        alle_ausgeben();
+    }
     public void aufgabe1()
     {
         aufgabe1_fuellen();
