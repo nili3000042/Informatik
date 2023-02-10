@@ -1,6 +1,6 @@
 object Suche: TFGUIForm
-  Left = 1314
-  Top = 346
+  Left = 318
+  Top = 166
   BorderIcons = [biSystemMenu]
   Caption = 'Suche'
   ClientHeight = 852
