@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=AufgabeQueue_Patienten
+comment0.text=\r\n\ <p>Qualitaets-\ und\ UnterstuetzungsAgentur\ -\ Landesinstitut\ fuer\ Schule,\ Materialien\ zum\ schulinternen\ Lehrplan\ Informatik\ SII</p>\r\n\r\n\ @version\ 2014-03-13\r\n
+comment1.params=
+comment1.target=AufgabeQueue_Patienten()
+comment2.params=
+comment2.target=void\ wartezimmerFuellen()
+comment3.params=
+comment3.target=void\ ausgebenWartezimmer()
+comment4.params=
+comment4.target=void\ wartezimmerLeeren()
+comment5.params=
+comment5.target=void\ wartezimmerAuflisten()
+numComments=6

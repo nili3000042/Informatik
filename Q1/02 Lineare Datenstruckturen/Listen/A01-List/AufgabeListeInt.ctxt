@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=AufgabeListeInt
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=AufgabeListeInt()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Simultion\r\n
+comment2.params=
+comment2.target=void\ aufgabe1()
+comment2.text=\r\n\ Schreiben\ Sie\ einen\ Kommentar\ was\ in\ der\ Liste\ passiert\r\n
+comment3.params=
+comment3.target=void\ aufgabe2()
+comment4.params=
+comment4.target=void\ aufgabe3()
+comment5.params=
+comment5.target=void\ ausgabe()
+comment6.params=
+comment6.target=void\ ausgabe3()
+comment7.params=
+comment7.target=void\ ausgabe4()
+numComments=8

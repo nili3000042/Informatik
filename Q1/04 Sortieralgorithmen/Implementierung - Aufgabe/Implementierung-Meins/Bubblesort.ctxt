@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Bubblesort
+comment0.text=\r\n\ \ \ 0\ \ \ 1\ \ \ 2\ \ \ 3\ \ \ 4\ \ \ \ \ <-----index\ Array\r\n\ \ \ 10\ \ 5\ \ \ 3\ \ \ 7\ \ \ 2\ \ \ \ \ <-----Zahlen\ des\ Array\r\n\ \ \ 10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <-----Neu\ sortiertes\ Array\ \r\n\ \ \ i\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <-----\u00E4u\u00DFereLoop\ \ "durchlauf"\ (eigentlich\ i)\r\n\ \ \ \ \ \ \ j\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <-----innereLoop\ j\r\n\ \ \ \r\n\ \ \ \ \ \ temp\=\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=zahlen
+comment2.target=int[]\ bubbleSort(int[])
+comment3.params=zahlen
+comment3.target=void\ printArray(int[])
+numComments=4

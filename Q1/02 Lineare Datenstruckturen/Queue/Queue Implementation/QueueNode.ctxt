@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=QueueNode
+comment1.params=pContent
+comment1.target=QueueNode(java.lang.Object)
+comment2.params=pNext
+comment2.target=void\ setNext(QueueNode)
+comment3.params=
+comment3.target=QueueNode\ getNext()
+comment4.params=
+comment4.target=java.lang.Object\ getContent()
+numComments=5

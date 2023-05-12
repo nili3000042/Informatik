@@ -20,3 +20,12 @@ public static boolean even(int num)
             return false;
         }
     }
+
+import java.util.*;
+    Scanner scan = new Scanner(System.in);
+    Random rnd = new Random();
+    //String eingabe = scan.nextLine();
+    //double eingabe = scan.nextDouble();
+    //char eingabe = scan.next().charAt(0);
+    //System.out.println("Was soll ich Rechnen?");
+    //System.out.print('\u000c');

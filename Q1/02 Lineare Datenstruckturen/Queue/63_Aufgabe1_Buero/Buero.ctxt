@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Buero
+comment1.params=
+comment1.target=Buero()
+comment2.params=pPerson
+comment2.target=void\ hintenAnstellen(Person)
+comment2.text=\r\n\ Ein\ Patient\ wird\ der\ Schlange\ hinzugef\u00FCgt,\ indem\ er\ als\ hinterstes\ Element\r\n\ der\ Schlange\ eingef\u00FCgt\ wird.\r\n\ @param\:\ pPerson\:\ einzuf\u00FCgender\ Patient\r\n
+comment3.params=
+comment3.target=void\ einlassen()
+comment3.text=\r\n\ Der\ erste\ Patient\ der\ Schlange\ wird\ zum\ Arzt\ gelassen\ und\ anschlie\u00DFend\r\n\ aus\ der\ Schlange\ entfernt.\r\n
+comment4.params=
+comment4.target=void\ sprechstundeBeenden()
+comment4.text=\ Die\ Warteschlange\ wird\ geleert,\ indem\ der\ jeweils\ erste\ Patient\ ausgegeben\ und\ dann\r\n\ aus\ der\ Schlange\ entfernt\ wird.\ Wenn\ die\ Schlange\ leer\ ist\ wird\ dies\ durch\ eine\ Meldung\ \r\n\ angezeigt.\r\n
+numComments=5
