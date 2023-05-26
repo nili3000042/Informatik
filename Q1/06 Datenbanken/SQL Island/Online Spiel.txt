@@ -1,0 +1,31 @@
+MNyb4pY7kF
+
+https://sql-island.informatik.uni-kl.de/#
+
+Select * from bewohner
+Select * from Gegenstand
+Select * from Dorf
+
+Select * from bewohner where beruf = 'Baecker' order by gold DESC
+
+INSERT INTO gegenstand (gegenstand, besitzer) VALUES ('Schwert', 20)
+
+SELECT dorf.name FROM dorf, bewohner WHERE dorf.dorfnr = bewohner.dorfnr AND bewohner.name = 'Dirty Dieter'
+SELECT bewohner.name FROM dorf, bewohner WHERE dorf.haeuptling = bewohner.bewohnernr AND dorf.name = 'Zwiebelhausen'
+
+SELECT COUNT(*) FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Zwiebelhausen'
+SELECT COUNT(*) FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Zwiebelhausen' and bewohner.geschlecht = 'w'
+SELECT bewohner.name FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Zwiebelhausen' and bewohner.geschlecht = 'w'
+
+SELECT SUM(bewohner.gold) FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Gurkendorf'
+SELECT SUM(gold) FROM bewohner WHERE beruf = 'Baecker' or beruf = 'Haendler' or beruf = 'Kaufmann'
+
+SELECT beruf, SUM(bewohner.gold), AVG(bewohner.gold) FROM bewohner GROUP BY beruf ORDER BY AVG(bewohner.gold)
+SELECT status, SUM(bewohner.gold), AVG(bewohner.gold) FROM bewohner GROUP BY status ORDER BY AVG(bewohner.gold)
+
+
+Cheats:
+
+Select * from bewohner where bewohnernr = 20
+
+Update bewohner set gold = gold*gold where bewohnernr = 20

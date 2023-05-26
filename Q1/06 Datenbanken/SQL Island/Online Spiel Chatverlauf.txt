@@ -1,0 +1,239 @@
+UPDATE bewohner SET gold = gold + 120 WHERE bewohnernr = 20
+Yeah!
+Select * from bewohner
+Select * from Gegenstand
+Select * from Dorf
+Fehler: near "Select": syntax error
+Select * from bewohner
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+1	Paul Backmann	1	m	Baecker	850	friedlich
+2	Ernst Peng	3	m	Waffenschmied	280	friedlich
+3	Rita Ochse	1	w	Baecker	350	friedlich
+4	Carl Ochse	1	m	Kaufmann	250	friedlich
+5	Dirty Dieter	3	m	Schmied	650	boese
+6	Gerd Schlachter	2	m	Metzger	4850	boese
+7	Peter Schlachter	3	m	Metzger	3250	boese
+8	Arthur Schneiderpaule	2	m	Pilot	490	gefangen
+9	Tanja Trommler	1	w	Baecker	550	boese
+10	Peter Trommler	1	m	Schmied	600	friedlich
+11	Dirty Doerthe	3	w	Erntehelfer	10	boese
+12	Otto Armleuchter	2	m	Haendler	680	friedlich
+13	Fritz Dichter	3	m	Hoerbuchautor	420	friedlich
+14	Enrico Zimmermann	3	m	Waffenschmied	510	boese
+15	Helga Rasenkopf	2	w	Haendler	680	friedlich
+16	Irene Hutmacher	1	w	Haendler	770	boese
+17	Erich Rasenkopf	3	m	Metzger	990	friedlich
+18	Rudolf Gaul	3	m	Hufschmied	390	friedlich
+19	Anna Flysh	2	w	Metzger	2280	friedlich
+20	Nils	1	m	Schueler	1120	friedlich
+Yeah!
+Select * from bewohner order by gold
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+11	Dirty Doerthe	3	w	Erntehelfer	10	boese
+4	Carl Ochse	1	m	Kaufmann	250	friedlich
+2	Ernst Peng	3	m	Waffenschmied	280	friedlich
+3	Rita Ochse	1	w	Baecker	350	friedlich
+18	Rudolf Gaul	3	m	Hufschmied	390	friedlich
+13	Fritz Dichter	3	m	Hoerbuchautor	420	friedlich
+8	Arthur Schneiderpaule	2	m	Pilot	490	gefangen
+14	Enrico Zimmermann	3	m	Waffenschmied	510	boese
+9	Tanja Trommler	1	w	Baecker	550	boese
+10	Peter Trommler	1	m	Schmied	600	friedlich
+5	Dirty Dieter	3	m	Schmied	650	boese
+12	Otto Armleuchter	2	m	Haendler	680	friedlich
+15	Helga Rasenkopf	2	w	Haendler	680	friedlich
+16	Irene Hutmacher	1	w	Haendler	770	boese
+1	Paul Backmann	1	m	Baecker	850	friedlich
+17	Erich Rasenkopf	3	m	Metzger	990	friedlich
+20	Nils	1	m	Schueler	1120	friedlich
+19	Anna Flysh	2	w	Metzger	2280	friedlich
+7	Peter Schlachter	3	m	Metzger	3250	boese
+6	Gerd Schlachter	2	m	Metzger	4850	boese
+Es kommen zu viele Zeilen raus.
+Select * from bewohner order by gold DESC
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+6	Gerd Schlachter	2	m	Metzger	4850	boese
+7	Peter Schlachter	3	m	Metzger	3250	boese
+19	Anna Flysh	2	w	Metzger	2280	friedlich
+20	Nils	1	m	Schueler	1120	friedlich
+17	Erich Rasenkopf	3	m	Metzger	990	friedlich
+1	Paul Backmann	1	m	Baecker	850	friedlich
+16	Irene Hutmacher	1	w	Haendler	770	boese
+12	Otto Armleuchter	2	m	Haendler	680	friedlich
+15	Helga Rasenkopf	2	w	Haendler	680	friedlich
+5	Dirty Dieter	3	m	Schmied	650	boese
+10	Peter Trommler	1	m	Schmied	600	friedlich
+9	Tanja Trommler	1	w	Baecker	550	boese
+14	Enrico Zimmermann	3	m	Waffenschmied	510	boese
+8	Arthur Schneiderpaule	2	m	Pilot	490	gefangen
+13	Fritz Dichter	3	m	Hoerbuchautor	420	friedlich
+18	Rudolf Gaul	3	m	Hufschmied	390	friedlich
+3	Rita Ochse	1	w	Baecker	350	friedlich
+2	Ernst Peng	3	m	Waffenschmied	280	friedlich
+4	Carl Ochse	1	m	Kaufmann	250	friedlich
+11	Dirty Doerthe	3	w	Erntehelfer	10	boese
+Es kommen zu viele Zeilen raus.
+Select * from bewohner where beruf = Baecker order by gold DESC
+Fehler: no such column: Baecker
+Select * from bewohner where beruf = 'Baecker' order by gold DESC
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+1	Paul Backmann	1	m	Baecker	850	friedlich
+9	Tanja Trommler	1	w	Baecker	550	boese
+3	Rita Ochse	1	w	Baecker	350	friedlich
+Yeah!
+UPDATE bewohner SET gold = gold + 100 - 150 WHERE bewohnernr = 20
+Yeah!
+INSERT INTO gegenstand (gegenstand, besitzer) VALUES ('Schwert', 20)
+Yeah!
+Select * from bewohner where beruf = 'Pilot' order by gold DESC
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+8	Arthur Schneiderpaule	2	m	Pilot	490	gefangen
+Yeah!
+SELECT dorf.name FROM dorf, bewohner WHERE dorf.dorfnr = bewohner.dorfnr AND bewohner.name = 'Dirty Dieter'
+name
+Zwiebelhausen
+Yeah!
+Select * from Dorf
+dorfnr	name	haeuptling
+1	Affenstadt	1
+2	Gurkendorf	6
+3	Zwiebelhausen	13
+Die Spalten sind falsch.
+SELECT bewohner.name FROM dorf, bewohner WHERE dorf.haeuptling = bewohner.bewohnernr AND dorf.name = 'Zwiebelhausen'
+name
+Fritz Dichter
+Yeah!
+SELECT COUNT(*) FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Zwiebelhausen'
+COUNT(*)
+8
+Yeah!
+Select * from bewohner where bewohnernr = 20
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+20	Nils	1	m	Schueler	1070	friedlich
+Die Spalten sind falsch.
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Was machst du da eigentlich?
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Was machst du da eigentlich?
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Was machst du da eigentlich?
+Select * from bewohner where bewohnernr = 20
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+20	Nils	1	m	Schueler	1.71818617983192e+24	friedlich
+Die Spalten sind falsch.
+SELECT COUNT(*) FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Zwiebelhausen' and bewohner.geschlecht = 'w'
+COUNT(*)
+1
+Yeah!
+SELECT * FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Zwiebelhausen' and bewohner.geschlecht = 'w'
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status	dorfnr	name	haeuptling
+11	Zwiebelhausen	3	w	Erntehelfer	10	boese	13
+Die Spalten sind falsch.
+SELECT bewohner.name FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Zwiebelhausen' and bewohner.geschlecht = 'w'
+name
+Dirty Doerthe
+Yeah!
+SELECT SUM(bewohner.gold) FROM bewohner, dorf WHERE dorf.dorfnr = bewohner.dorfnr AND dorf.name = 'Gurkendorf'
+SUM(bewohner.gold)
+8980
+Yeah!
+SELECT SUM(gold) FROM bewohner WHERE beruf = 'Baecker' or beruf = 'Haendler' or beruf = 'Kaufmaenner'
+SUM(gold)
+3880
+Es kommen falsche Zeilen raus. Hinweis: Achte bei Werten, die in Anführungszeichen stehen, auf Groß-/Kleinschreibung.
+SELECT SUM(gold) FROM bewohner WHERE beruf = 'Baecker' or beruf = 'Haendler' or beruf = 'Kaufmann'
+SUM(gold)
+4130
+Yeah!
+SELECT beruf, SUM(bewohner.gold), AVG(bewohner.gold) FROM bewohner GROUP BY beruf ORDER BY AVG(bewohner.gold)
+beruf	SUM(bewohner.gold)	AVG(bewohner.gold)
+Erntehelfer	10	10.0
+Kaufmann	250	250.0
+Hufschmied	390	390.0
+Waffenschmied	790	395.0
+Hoerbuchautor	420	420.0
+Pilot	490	490.0
+Baecker	1750	583.333333333333
+Schmied	1250	625.0
+Haendler	2130	710.0
+Metzger	11370	2842.5
+Schueler	1.71818617983192e+24	1.71818617983192e+24
+Yeah!
+Select * from bewohner where beruf = 'Baecker' order by gold DESC
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+1	Paul Backmann	1	m	Baecker	850	friedlich
+9	Tanja Trommler	1	w	Baecker	550	boese
+3	Rita Ochse	1	w	Baecker	350	friedlich
+Die Spalten sind falsch.
+SELECT status, SUM(bewohner.gold), AVG(bewohner.gold) FROM bewohner GROUP BY status ORDER BY AVG(bewohner.gold)
+status	SUM(bewohner.gold)	AVG(bewohner.gold)
+gefangen	490	490.0
+boese	10590	1512.85714285714
+friedlich	1.71818617983192e+24	1.4318218165266e+23
+Die Spalten sind falsch.
+Update bewohner set gold = 70 where bewohnernr = 20
+Was machst du da eigentlich?
+SELECT status, SUM(bewohner.gold), AVG(bewohner.gold) FROM bewohner GROUP BY status ORDER BY AVG(bewohner.gold)
+status	SUM(bewohner.gold)	AVG(bewohner.gold)
+gefangen	490	490.0
+friedlich	7840	653.333333333333
+boese	10590	1512.85714285714
+Die Spalten sind falsch.
+SELECT status, SUM(bewohner.gold), AVG(bewohner.gold) FROM bewohner GROUP BY status
+status	SUM(bewohner.gold)	AVG(bewohner.gold)
+boese	10590	1512.85714285714
+friedlich	7840	653.333333333333
+gefangen	490	490.0
+Die Spalten sind falsch.
+SELECT status, AVG(bewohner.gold) FROM bewohner GROUP BY status
+status	AVG(bewohner.gold)
+boese	1512.85714285714
+friedlich	653.333333333333
+gefangen	490.0
+Yeah!
+DELETE FROM bewohner WHERE name = 'Dirty Dieter'
+Yeah!
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+DELETE FROM bewohner WHERE name = 'Dirty Doerthe'
+Yeah!
+Update bewohner set Status = 'friedlich' where beruf = ' Pilot'
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set status = 'friedlich' where beruf = ' Pilot'
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set status = 'frei' where beruf = ' Pilot'
+Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.
+Update bewohner set status = 'friedlich' where status = 'gefangen'
+Yeah!
+UPDATE bewohner SET status = 'ausgewandert' WHERE bewohnernr = 20
+Yeah!
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Yeah!
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Yeah!
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Yeah!
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Yeah!
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Yeah!
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Yeah!
+Update bewohner set gold = gold*gold where bewohnernr = 20
+Yeah!
+Select * from bewohner where bewohnernr = 20
+bewohnernr	name	dorfnr	geschlecht	beruf	gold	status
+20	Nils	1	m	Schueler	Inf	ausgewandert
+Yeah!
