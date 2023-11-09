@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=INTree
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ INTree.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=INTree()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ INTree\r\n
+comment2.params=
+comment2.target=void\ preorderAusgabe()
+comment2.text=\r\n\ \r\n
+comment3.params=
+comment3.target=void\ inorderAusgabe()
+comment4.params=
+comment4.target=void\ postorderAusgabe()
+comment5.params=b
+comment5.target=void\ besuchePreorderAusgabe(BinaryTree)
+comment6.params=b
+comment6.target=void\ besucheInorderAusgabe(BinaryTree)
+comment7.params=b
+comment7.target=void\ besuchePostorderAusgabe(BinaryTree)
+numComments=8

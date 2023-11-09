@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=TreeMaker
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ TreeMaker.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=TreeMaker()
+comment2.params=
+comment2.target=void\ make_note_int()
+comment3.params=a
+comment3.target=void\ print(java.lang.String)
+comment4.params=a
+comment4.target=void\ println(java.lang.String)
+numComments=5
