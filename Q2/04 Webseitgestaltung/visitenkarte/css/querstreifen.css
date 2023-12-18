@@ -1,0 +1,327 @@
+﻿/* Stylesheet für Selfhtml Webvisitenkarte (rhtml by n-gin)
+  responsives Layout mit Grid Layout   */
+
+
+
+
+/* ====================================================   GLOBAL DEFINITION   ==================================================== */
+
+/* alternatives Boxmodell */
+html { 
+  box-sizing: border-box; 
+} 
+
+*, ::before, ::after { 
+  box-sizing: inherit; 
+}
+
+
+@media (min-width: 60em) {
+body {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: min-content 1fr min-content;	
+	grid-gap: 2em;
+	min-height: 98vh;
+	color: #555;
+	font: normal 1em/150% Geneva, Helvetica, sans-serif, Verdana;	
+}
+}
+
+header {
+	grid-column: 1 / -1;	
+	margin-bottom: 1em;
+	color: #FFF;
+	border-bottom: 5px solid #c1e7f2;
+	background-color: #1e3940;
+	background-image: linear-gradient(to bottom, #1e3940 0%, #2c8995  100%);
+	box-shadow: 0 5px 10px #555555;
+}
+
+header * {
+text-align: center;
+
+}
+
+header h1 {
+	padding: .5em 0;
+}
+
+header a {
+color: #c1e7f2; 
+background: white;
+bordeR: 1px solid black;
+border-radius: .5em;
+}
+header h1 a:focus, header h1 a:hover, header h1 a:active {
+color: #6DC7DB;
+}
+
+header a{ color: #111; display: block; font-family: 'Open Sans', sans-serif; font-size: 16px; padding-bottom: 38px; position: relative; text-align: center; z-index: 1; }
+
+header a::before { border-top: 1px solid #111; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; }
+
+
+
+ol, ul {
+list-style: none;
+}
+
+q, blockquote {
+quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+content: "";
+content: none;
+}
+
+a img {
+border: none;
+}
+
+
+a {
+	color: #2c8995;
+	text-decoration: underline solid;
+}
+a:focus, 
+a:hover, 
+a:active {
+	color: #2c8995;
+	text-decoration: underline double #c1e7f2;
+}
+
+
+/*
+Wenn ein Element ein title-Attribut hat
+*/
+[title] {
+cursor: help;
+}
+
+a[title] {
+cursor: pointer;
+}
+
+
+/*
+Sidebar
+*/
+body > aside {
+border: 5px solid #c1e7f2;
+outline: 5px solid #28555b;
+box-shadow: 0 5px 10px #555555;
+margin: 1em;
+padding: 1em;
+}
+
+aside h2, aside h3, aside h4 {
+margin-bottom: 10px;
+color: #BAC5C7;
+border-bottom: 1px solid;
+cursor: default;
+}
+
+aside img {
+	width: 5em;
+	float:right;
+	margin-top: -14em;
+}
+
+article {
+	grid-column: 1 / 3;
+}
+
+article h2 {
+	padding-left: 5em;
+}
+
+article img {
+float: right;
+border-radius: .5em;
+margin: -3em .5em .5em 1.5em;
+}
+
+article p {
+margin: 25px 0;
+}
+
+article img {
+	width: 20em;
+}
+
+@media (min-width: 99em) {
+article img {
+	width: 25em;	
+	margin-top: -5em;
+	outline: 1px dashed lime;
+}
+}
+
+article ul {
+margin-left: 1em;
+list-style: square;
+}
+
+article blockquote {
+padding: 15px 10px 5px 15px;
+font-size: 1.1em;
+font-weight: bold;
+line-height: 140%;
+color: #B6B6B6;
+background-color: #ffffff;
+border: 1px solid;
+border-radius: 10px;
+background-size: 100%;
+background-image: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+max-width: 33em;
+}
+article blockquote cite {
+margin-right: 15px;
+display: block;
+text-align: right;
+}
+
+article blockquote cite a {
+border-bottom: 1px dashed;
+}
+article blockquote cite a:focus, article blockquote cite a:hover, article blockquote cite a:active {
+border-bottom-style: solid;
+}
+
+dl{ 
+  display: grid; 
+  grid-template-columns: 5em 10em; 
+}
+dd { 
+  margin: 0; 
+  padding-left: 1em; 
+  grid-column: 2 / 3;  
+}
+dl dd {
+  margin-bottom: .5em;
+}
+
+/*
+Footer
+*/
+footer {
+	grid-column: 1 / -1;	
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+	grid-gap: 1em;
+	margin: 2em 1em 0;
+	padding: 0 1em 0;
+	color: #FFF;
+	text-align: center;
+	border-top: 1px solid #112426;
+	background: #38636a linear-gradient(to bottom, #38636a 0%, #102224 100%);
+	border-top-right-radius: 2em;
+	border-top-left-radius: 2em;
+}
+
+footer a {
+	color: #F6F6F6;
+	border-bottom: 1px dashed;
+}
+footer a:focus, 
+footer a:hover, 
+footer a:active {
+	border-bottom-style: solid;
+}
+footer hr {
+	margin: 10px 15px 0;
+	opacity: .5;
+}
+
+footer #copyright {
+align-items: end;
+text-align: right;
+padding: 2em 2em 0 0;
+}
+footer .copyright span {display:block;}
+
+/* footer ends */
+#social_buttons {
+position: absolute;
+top: 10px;
+right: 10px;
+}
+#social_buttons li {
+margin-right: 5px;
+display: inline;
+}
+#social_buttons li a {
+display: inline-block;
+width: 32px;
+height: 32px;
+text-indent: -9999em;
+overflow: hidden;
+background: url("http://wiki.selfhtml.org/images/1/1f/Design_11_sprites.png") no-repeat -999px -999px;
+opacity: 0.8;
+}
+#social_buttons li a#feed_button {
+background-position: 0 0;
+}
+#social_buttons li a#fb_button {
+background-position: 0 -33px;
+}
+#social_buttons li a#gp_button {
+background-position: 0 -66px;
+}
+#social_buttons li a#tw_button {
+background-position: -33px 0;
+}
+
+
+Drucklayout
+*/
+@media print {
+header h2,
+aside,
+#breadcrumb,
+.about_us,
+.partner_sites,
+#footer_menu,
+#map_button,
+.copyright,
+#social_buttons,
+hr {
+display: none !important;
+}
+
+h1 {
+margin-bottom: 35px;
+font-size: 1.4em;
+font-weight: bold;
+}
+
+h2, h3, h4, h5, h6, p, table, ul {
+margin: 25px 0;
+}
+
+h2, h3, h4, h5, h6, strong {
+font-weight: bold;
+}
+
+ul {
+margin-left: 20px;
+}
+
+a {
+color: #000;
+text-decoration: none;
+}
+
+address {
+	font-style:normal;
+}
+
+.contact_to,
+.email {
+margin-top: 10px;
+}
+}
+/* print ends */
+
+

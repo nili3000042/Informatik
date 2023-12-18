@@ -1,0 +1,162 @@
+/* Stylesheet für Selfhtml Design 11  (Webvisitenkarte)
+  responsives Layout mit Grid Layout  */
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+
+/* ====================================================   GLOBAL DEFINITION   ==================================================== */
+
+/* alternatives Boxmodell */
+html { 
+  box-sizing: border-box; 
+} 
+
+*, ::before, ::after { 
+  box-sizing: inherit; 
+}
+
+
+/* Grundelemente */
+a {
+	color: #09c;
+	text-decoration: underline solid;
+}
+a:focus, 
+a:hover, 
+a:active {
+	text-decoration: underline wavy #09c;
+}
+
+body {
+	min-height: 98vh;
+	background: black;
+	color: lightyellow;
+	padding: 0 1em;
+}
+
+@media (min-width: 60em) {
+body {
+	display: grid;
+	grid-template-columns: 2fr minmax(15em, 1fr);
+	grid-template-rows: min-content 1fr min-content;	
+	grid-gap: 1em 5em;
+}
+}
+
+header {
+	grid-column: 1 / -1;   /* geht über gesamte Breite */	
+}
+
+header * {
+	text-align: center;
+}
+
+header h1 {
+	color: gold; 
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 4em; 
+	font-weight: 400; 
+	font-style: italic; 
+	line-height: 1em; 
+	margin: 0;
+	padding: 0; 
+}
+
+article {
+	grid-row: 2 / -1;
+	padding: 1em;
+	padding-left: 4em;
+}
+
+
+article img {
+	width: 50%;
+	float: right;
+	margin-left: 1em;
+	margin-top: -4em;
+}
+
+@media (min-width: 90em) {
+article img {
+	width: 25em;
+}	
+}
+
+@media (min-width: 120em) {
+article img {
+	width: 33em;
+}	
+}
+#kontakt{
+	padding: 1em;	
+}
+
+#kontakt img {
+	width: 8em;
+}
+
+#copyright {
+	text-align: right;
+}
+
+footer {
+	grid-row: 3 / 4;	
+}
+
+dl{ 
+  display: grid; 
+  grid-template-columns: 5em 10em; 
+}
+
+dd { 
+  margin: 0; 
+  padding-left: 1em; 
+  grid-column: 2 / 3;
+}
+dl dd {
+  margin-bottom: .5em;
+}
+
+a[href^="tel"] { white-space: nowrap; }
+
+
+
+#currentstyle {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.25em;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Chewy);
+	
+	
+blockquote {
+	margin: 6em 0 0 1em;
+	padding: 0 0 2em;
+	max-width: 30em;
+	position: relative;
+}
+
+cite {
+	display: block;
+	text-align: right;
+}
+
+blockquote::before,
+blockquote::after {
+	position: absolute;
+	display: block;
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 10em;
+	color: gold;
+}
+
+blockquote::before {
+	content: '“';
+	left: -0.4em;
+	top: -0.4em;
+}
+
+blockquote::after {
+	content: '— ”';
+	bottom: -0.4em;
+	right: -0.4em;
+}

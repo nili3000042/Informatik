@@ -1,0 +1,109 @@
+/* Stylesheet für Selfhtml Design 11  (Webvisitenkarte)
+  responsives Layout mit Grid Layout */
+
+
+
+
+/* ====================================================   GLOBAL DEFINITION   ==================================================== */
+
+/* alternatives Boxmodell */
+html { 
+  box-sizing: border-box; 
+} 
+
+*, ::before, ::after { 
+  box-sizing: inherit; 
+}
+
+@media (min-width: 60em) {
+body {
+	display: grid;
+	grid-template-columns: 1fr minmax(15em, 1fr);
+	grid-template-rows: min-content 1fr min-content;
+	grid-gap: 1em;
+	min-height: 98vh;
+}
+}
+
+body > * {
+	border-radius: 0 0.5em 0.5em;
+	border: 1px solid;
+	padding: 1em;
+} 
+
+header {
+	grid-column: 1 / -1;   /* geht über gesamte Breite */	
+	background: #F1F3F4;
+	border-color: #d5d5d5;
+}
+
+header * {
+	text-align: center;
+}
+
+article {
+	background: #ffede0;
+	border-color: #df6c20;
+}
+
+
+
+article img {
+	width: 100%;
+}
+
+@media (min-width: 31em) {
+article img {
+	width: 50%;
+	float: right;
+	margin-left: 1em;	
+}
+}
+
+@media (min-width: 50em) {
+article img {
+	width: 40%;
+	margin-top: -3em;	
+}
+}
+
+@media (min-width: 60em) {
+article img {
+	width: 50%;
+}
+}
+
+@media (min-width: 110em) {
+article img {
+	width: 40%;
+}
+}
+
+@media (min-width: 125em) {
+article img {
+	width: 25%;
+}
+}
+
+#kontakt{
+	background: #ebf5d7;
+	border-color: #8db243;	
+}
+
+#kontakt img {
+	width: 8em;
+}
+
+a[href^="tel"] { white-space: nowrap; }
+
+footer {
+	grid-column: 1 / -1;	
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background: #e4ebf2;
+	border-color: #8a9da8;
+}
+
+#currentstyle {
+	font-weight: bold;
+}

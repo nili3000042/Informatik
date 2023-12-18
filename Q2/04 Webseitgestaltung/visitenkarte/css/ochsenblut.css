@@ -1,0 +1,132 @@
+/* Stylesheet für Selfhtml Webvisitenkarte /Scorpions.css)
+  responsives Layout mit Grid Layout  */
+
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Roboto:100');
+
+
+/* ====================================================   GLOBAL DEFINITION   ==================================================== */
+
+/* alternatives Boxmodell */
+html { 
+	box-sizing: border-box; 
+	min-height: 98vh;
+	color: #FFF;	
+	background: #580E0E;
+} 
+
+*, ::before, ::after { 
+	box-sizing: inherit; 
+}
+
+@media (min-width: 60em) {
+body {
+	display: grid;
+	grid-template-columns: 1fr minmax(15em, 30em);
+	grid-template-rows: min-content 1fr min-content;	
+	grid-gap: 1em 2em;
+	max-width: 90em;
+	margin: 0 auto;
+}
+}
+
+
+body > * {
+	padding: 1em;
+} 
+
+header {
+	grid-column: 1 / -1;   /* geht über gesamte Breite */	
+}
+
+header * {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;	
+}
+
+header h1 {
+	font-size: 4em; 
+	font-weight: normal; 
+	line-height: 60px; 
+	margin: 10px 0 20px; 
+	text-transform: uppercase; 
+	text-shadow: 2px 2px 0 #000;
+	margin: 10px 0 24px; 
+}
+
+header p a, h2 {
+	font-size: 1.8em; 
+	letter-spacing: -1px; 
+	color: #DFBF84; 
+	text-transform: uppercase; 
+	text-shadow: 1px 1px 0 #000; 
+	margin: 10px 0 24px; 
+}
+
+article {
+}
+
+
+
+article img {
+	width: 20em;
+	float: right;
+	margin-left: 1em;
+	margin-top: -3em;
+
+}
+
+#kontakt {
+}
+
+#kontakt img {
+	width: 8em;
+}
+
+dl{ 
+  display: grid; 
+  grid-template-columns: 5em 10em; 
+}
+dd { 
+  margin: 0; 
+  padding-left: 1em; 
+  grid-column: 2 / 3;  
+}
+dl dd {
+  margin-bottom: .5em;
+}
+
+a[href^="tel"] { white-space: nowrap; }
+
+a { 
+	color: #e8d4a7; 
+	text-decoration: none; 
+}
+
+a:hover,
+a:focus,
+a:active { color: #da9650; text-decoration: blink; }
+
+footer {
+	grid-column: 1 / -1;	
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+#currentstyle {
+	font-weight: bold;
+	color: #e8d4a7;
+}
+
+blockquote {
+	color: 	#580E0E;
+	background: #e8d4a7; 
+	border: 1px solid black;
+	padding: 1em;
+	margin-left: 0;
+	margin-top: 4em;
+	max-width: 30em;
+}
+
+blockquote cite {
+	display: block;
+}
