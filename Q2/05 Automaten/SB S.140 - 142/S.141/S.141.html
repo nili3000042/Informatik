@@ -1,0 +1,45 @@
+<html><body>
+<style type="text/css">
+<!--
+.HeadLine {color:#000000; Font-Family:Verdana; Font-Size:10pt;
+           background-color:#ABA9D7; vertical-align:top;}
+.TableLine {color:#000000; Font-Family:Verdana; Font-Size:10pt;
+           background-color:#ECEAE6; text-align:right; vertical-align:Top;}
+.TableLine2{color:#000000; Font-Family:Verdana; Font-Size:10pt;
+           background-color:#FFFFFF; vertical-align:Top;}
+.MainFrame {border-style:outset; border-width:1px; border-color:#DDDDDD;}
+-->
+</style>
+<table cellspacing=0 cellpadding=0 class="MainFrame">
+ <tr>
+  <td class="HeadLine" width=100%><b>&nbsp;Automaton</b></td>
+ </tr>
+ <tr>
+  <td>
+   <table cellspacing=5>
+    <tr>
+     <td class="TableLine">Type:</td><td class="TableLine2">DEA</td>
+    </tr>
+    <tr>
+     <td class="TableLine">Transition Graph:</td>
+     <td style="padding:5"><img src="S.141.html1.gif"></td>
+    </tr>
+    <tr>
+     <td class="TableLine" style="vertical-align:middle">Definition:</td>
+     <td style="padding:5; padding-top:9;"><img src="S.141.html2.gif"></td>
+    </tr>
+    <tr>
+     <td class="TableLine">Transition Table:</td>
+     <td style="padding:5"><img src="S.141.html3.gif"></td>
+    </tr>
+    <tr>
+     <td class="TableLine">Grammar:</td><td class="TableLine2">G = (N,T,P,s)<br><br>G = ({q<sub>0</sub>,q<sub>1</sub>,q<sub>2</sub>,q<sub>3</sub>},{<font color="#5555FF">E,K</font>},P,q<sub>0</sub>)<br><br>P = {<br>&nbsp;&nbsp;&nbsp;q<sub>0</sub> -> <font color="#5555FF">K</font> q<sub>1</sub> | <font color="#5555FF">E</font> q<sub>2</sub> <br>&nbsp;&nbsp;&nbsp;q<sub>1</sub> -> <font color="#5555FF">K</font> q<sub>2</sub> | <font color="#5555FF">E</font> q<sub>3</sub> <br>&nbsp;&nbsp;&nbsp;q<sub>2</sub> -> <font color="#5555FF">K</font> q<sub>3</sub> | <font color="#5555FF">E</font>  <br>&nbsp;&nbsp;&nbsp;q<sub>3</sub> -> <font color="#5555FF">K</font>  <br>}</td>
+    </tr>
+    <tr>
+     <td class="TableLine">RegExp:</td><td class="TableLine2">(EE+KKE)+(EK+K(E+KK))K</td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+</body></html>

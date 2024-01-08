@@ -1,0 +1,158 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+
+<svg width="1000px" height="529px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs><font horiz-adv-x="1229">
+    <font-face font-family="Symbol" units-per-em="2048" panose-1="5 5 1 2 1 7 6 2 5 7"
+               ascent="2059" descent="-40" baseline="10"/>
+    <missing-glyph><path d="M256 0V1280H1280V0H256zM288 32H1248V1248H288V32z"/></missing-glyph>
+    <glyph unicode="e" horiz-adv-x="999"><path d="M251 491Q133 535 93 585T53 704Q53 797 131 859Q237
+      944 410 944Q513 944 595 920T706 858T736 785Q736 754 710 729T650 703Q595 703 559 774T498 862Q459
+      888 402 888Q312 888 259 836T206 693Q206 605 250 558Q294 511 371 511Q397 511 428 515Q477 522 505
+      522Q548 522 563 511T579 485Q579 470 566 462Q548 449 503 449Q493 449 470 452Q418 459 385 459Q301
+      459 248 404T194 259Q194 154 249 96T393 37Q464 37 509 80Q535 105 564 184Q583 236 595 248Q627 280
+      663 280Q 705 280 734 251T763 179Q763 110 684 52Q569 -31 391 -31Q203 -31 102 52T0 236Q0 308 54
+      373T251 491z"/></glyph>
+    </font></defs>
+
+    <polygon points="380,94 356,86 356,102" style="fill:#000000"/>
+    <path d="M258,231 Q325,73 380,94" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="380,94 356,86 356,102" style="fill:#000000"/>
+    <rect x="312" y="109" width="31" height="32" fill="#FFFFFF"/>
+    <text x="312" y="136" style="font-size:21pt;font-family:Arial;fill:#000000">
+         a 
+    </text>
+    <polygon points="405,454 410,429 394,431" style="fill:#000000"/>
+    <path d="M276,269 Q410,310 405,454" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="405,454 410,429 394,431" style="fill:#000000"/>
+    <rect x="353" y="326" width="32" height="32" fill="#FFFFFF"/>
+    <text x="353" y="353" style="font-size:21pt;font-family:Arial;fill:#000000">
+         b 
+    </text>
+    <polygon points="421,456 437,437 423,431" style="fill:#000000"/>
+    <path d="M425,121 Q515,287 421,456" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="421,456 437,437 423,431" style="fill:#000000"/>
+    <rect x="447" y="274" width="31" height="32" fill="#FFFFFF"/>
+    <text x="447" y="301" style="font-size:21pt;font-family:Arial;fill:#000000">
+         a 
+    </text>
+    <polygon points="621,76 606,55 596,69" style="fill:#000000"/>
+    <path d="M433,73 Q527,-10 621,76" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="621,76 606,55 596,69" style="fill:#000000"/>
+    <rect x="513" y="26" width="32" height="32" fill="#FFFFFF"/>
+    <text x="513" y="53" style="font-size:21pt;font-family:Arial;fill:#000000">
+         b 
+    </text>
+    <polygon points="251,291 245,316 261,314" style="fill:#000000"/>
+    <path d="M380,476 Q244,433 251,291" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="251,291 245,316 261,314" style="fill:#000000"/>
+    <rect x="272" y="386" width="31" height="32" fill="#FFFFFF"/>
+    <text x="272" y="413" style="font-size:21pt;font-family:Arial;fill:#000000">
+         a 
+    </text>
+    <polygon points="686,485 662,477 662,493" style="fill:#000000"/>
+    <path d="M441,485 Q562,485 686,485" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="686,485 662,477 662,493" style="fill:#000000"/>
+    <rect x="546" y="469" width="32" height="32" fill="#FFFFFF"/>
+    <text x="546" y="496" style="font-size:21pt;font-family:Arial;fill:#000000">
+         b 
+    </text>
+    <polygon points="425,458 445,442 431,434" style="fill:#000000"/>
+    <path d="M632,121 Q529,290 425,458" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="425,458 445,442 431,434" style="fill:#000000"/>
+    <rect x="514" y="274" width="31" height="32" fill="#FFFFFF"/>
+    <text x="514" y="301" style="font-size:21pt;font-family:Arial;fill:#000000">
+         a 
+    </text>
+    <polygon points="437,112 452,133 462,119" style="fill:#000000"/>
+    <path d="M624,114 Q527,198 437,112" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="437,112 452,133 462,119" style="fill:#000000"/>
+    <rect x="513" y="130" width="32" height="32" fill="#FFFFFF"/>
+    <text x="513" y="157" style="font-size:21pt;font-family:Arial;fill:#000000">
+         b 
+    </text>
+    <polygon points="822,288 804,305 818,313" style="fill:#000000"/>
+    <path d="M731,457 Q775,373 822,288" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="822,288 804,305 818,313" style="fill:#000000"/>
+    <rect x="760" y="357" width="31" height="32" fill="#FFFFFF"/>
+    <text x="760" y="384" style="font-size:21pt;font-family:Arial;fill:#000000">
+         a 
+    </text>
+    <polygon points="655,125 651,150 667,148" style="fill:#000000"/>
+    <path d="M712,454 Q683,290 655,125" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="655,125 651,150 667,148" style="fill:#000000"/>
+    <rect x="667" y="274" width="32" height="32" fill="#FFFFFF"/>
+    <text x="667" y="301" style="font-size:21pt;font-family:Arial;fill:#000000">
+         b 
+    </text>
+    <polygon points="277,260 301,268 301,252" style="fill:#000000"/>
+    <path d="M804,260 Q542,260 277,260" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="277,260 301,268 301,252" style="fill:#000000"/>
+    <rect x="527" y="244" width="31" height="32" fill="#FFFFFF"/>
+    <text x="527" y="271" style="font-size:21pt;font-family:Arial;fill:#000000">
+         a 
+    </text>
+    <polygon points="942,153 919,164 931,176" style="fill:#000000"/>
+    <path d="M857,238 Q898,196 942,153" stroke="#000000" fill="none" stroke-width="2"/>
+    <polygon points="942,153 919,164 931,176" style="fill:#000000"/>
+    <rect x="882" y="180" width="32" height="32" fill="#FFFFFF"/>
+    <text x="882" y="207" style="font-size:21pt;font-family:Arial;fill:#000000">
+         b 
+    </text>
+    <path d="M246,260 Q-4,260 246,260" stroke="#000000" fill="none" stroke-width="2"/>
+    <rect x="62" y="244" width="59" height="32" fill="#FFFFFF"/>
+    <text x="62" y="271" style="font-size:21pt;font-family:Arial;fill:#000000">
+        Start
+    </text>
+    <polygon points="215,260 191,252 191,268" style="fill:#000000"/>
+    <circle cx="246" cy="260" r="31" fill="#DDDDDD" stroke="#000000" stroke-width="2"/>
+    <text x="230" y="271" style="font-size:21pt;font-family:Arial;fill:#000000">
+        q
+    </text>
+    <text x="247" y="272" style="font-size:15pt;font-family:Arial;fill:#000000">
+        0
+    </text>
+    <circle cx="410" cy="94" r="31" fill="#DDDDDD" stroke="#000000" stroke-width="2"/>
+    <text x="394" y="104" style="font-size:21pt;font-family:Arial;fill:#000000">
+        q
+    </text>
+    <text x="411" y="105" style="font-size:15pt;font-family:Arial;fill:#000000">
+        1
+    </text>
+    <circle cx="410" cy="485" r="31" fill="#DDDDDD" stroke="#000000" stroke-width="2"/>
+    <text x="394" y="496" style="font-size:21pt;font-family:Arial;fill:#000000">
+        q
+    </text>
+    <text x="411" y="497" style="font-size:15pt;font-family:Arial;fill:#000000">
+        2
+    </text>
+    <circle cx="648" cy="94" r="31" fill="#DDDDDD" stroke="#000000" stroke-width="2"/>
+    <text x="632" y="104" style="font-size:21pt;font-family:Arial;fill:#000000">
+        q
+    </text>
+    <text x="649" y="105" style="font-size:15pt;font-family:Arial;fill:#000000">
+        3
+    </text>
+    <circle cx="717" cy="485" r="31" fill="#DDDDDD" stroke="#000000" stroke-width="2"/>
+    <text x="700" y="496" style="font-size:21pt;font-family:Arial;fill:#000000">
+        q
+    </text>
+    <text x="717" y="497" style="font-size:15pt;font-family:Arial;fill:#000000">
+        4
+    </text>
+    <circle cx="835" cy="260" r="31" fill="#DDDDDD" stroke="#000000" stroke-width="2"/>
+    <text x="819" y="271" style="font-size:21pt;font-family:Arial;fill:#000000">
+        q
+    </text>
+    <text x="836" y="272" style="font-size:15pt;font-family:Arial;fill:#000000">
+        5
+    </text>
+    <circle cx="962" cy="131" r="31" fill="#DDDDDD" stroke="#000000" stroke-width="2"/>
+    <circle cx="962" cy="131" r="25" fill="#DDDDDD" stroke="#000000" stroke-width="2"/>
+    <text x="946" y="142" style="font-size:21pt;font-family:Arial;fill:#000000">
+        q
+    </text>
+    <text x="963" y="143" style="font-size:15pt;font-family:Arial;fill:#000000">
+        6
+    </text>
+</svg>
