@@ -1,0 +1,871 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LANGUAGE>
+ <ENGLISH>
+  <STRING id="1">T-Diagram Editor</STRING>
+  <STRING id="2">T-Diagram Graph</STRING>
+  <STRING id="3">Execute T-Diagram</STRING>
+  <STRING id="10">Open</STRING>
+  <STRING id="11">Save</STRING>
+  <STRING id="12">Undo</STRING>
+  <STRING id="13">Redo</STRING>
+  <STRING id="14">Execute Diagram</STRING>
+  <STRING id="15">Export Diagram</STRING>
+  <STRING id="16">New</STRING>
+  <STRING id="20">File</STRING>
+  <STRING id="21">New Diagram</STRING>
+  <STRING id="22">Open Diagram</STRING>
+  <STRING id="23">Save Diagram</STRING>
+  <STRING id="24">Save Diagram as ...</STRING>
+  <STRING id="25">Exit</STRING>
+  <STRING id="26">Help</STRING>
+  <STRING id="27">Online Help</STRING>
+  <STRING id="28">Introduction Wizard</STRING>
+  <STRING id="29">Change Language</STRING>
+  <STRING id="30">About</STRING>
+  <STRING id="31">Delete selected part(s) of diagram</STRING>
+  <STRING id="32">Execute selected part(s) of diagram</STRING>
+  <STRING id="33">Add Comment</STRING>
+  <STRING id="40">Export Image</STRING>
+  <STRING id="41">Resolution</STRING>
+  <STRING id="42">Format</STRING>
+  <STRING id="43">Export</STRING>
+  <STRING id="44">Clone selected element</STRING>
+  <STRING id="50">Select predefined</STRING>
+  <STRING id="51">Select:</STRING>
+  <STRING id="60">Program / Compiler / Interpreter Run parameter settings</STRING>
+  <STRING id="61">Filename:</STRING>
+  <STRING id="62">Parameters:</STRING>
+  <STRING id="63">Execute in TDiag</STRING>
+  <STRING id="64">Execute external (if you need user input)</STRING>
+  <STRING id="65">Also select conntected elements</STRING>
+  <STRING id="66">Diagram</STRING> 
+
+  <STRING id="70">Language</STRING>
+  <STRING id="71">Language Name:</STRING>
+  <STRING id="72">Language Label:</STRING>
+  <STRING id="73">Language default file Extension:</STRING>
+  <STRING id="74">Create Language</STRING>
+  <STRING id="75">Cancel</STRING>
+  <STRING id="76">New</STRING>
+  <STRING id="77">Select this Language</STRING>
+  <STRING id="78">Language</STRING>
+  <STRING id="79">Extension</STRING>
+  <STRING id="80">Wizard</STRING>
+  <STRING id="81">Close</STRING>
+  <STRING id="82">Previous Step</STRING>
+  <STRING id="83">Next Step</STRING>
+  <STRING id="100">TDiag Project:</STRING>
+  <STRING id="101">Introduction Wizard</STRING>
+  <STRING id="102">New Diagram</STRING>
+  <STRING id="103">Open Diagram</STRING>
+  <STRING id="104">Getting Help:</STRING>
+  <STRING id="105">Online FAQ</STRING>
+  <STRING id="106">A quick introduction to get in touch with TDiag</STRING>
+  <STRING id="107">Create an empty project.</STRING>
+  <STRING id="108">Open an existing project.</STRING>
+  <STRING id="109">To get any further information visit the Online Help Center</STRING>
+  <STRING id="110">Visit the AtoCC website</STRING>
+  <STRING id="120">Execute Diagram:</STRING>
+  <STRING id="121">Execute</STRING>
+  <STRING id="150">Welcome to AtoCC TDiagram Editor!
+
+This wizard will show you how to create a simple diagram and will explain the interface of the editor on the way. You can move panels like this by click and drag the blue caption bar.
+
+Use the button at the right to go one step further.
+  </STRING>
+  <STRING id="151">Here you can create a diagram by drag and drop the parts on the left into the main area.
+
+Let's start with a "Compiler" part. Drag and drop it to the centre of the large white area in the middle.
+
+TDiag will ask you if you want to use a predefined or a custom created compiler. For this sample select the Java Compiler from the list.
+  </STRING>
+  <STRING id="152">The Java Compiler is now selected (highlighted in light yellow color)
+
+On the left side you can see the property list now. As you can see TDiag already made the settings for this compiler.
+
+In the diagram you can see that this compiler has as input language Java and as output BC (Java Bytecode).
+  </STRING>
+  <STRING id="153">The compiler self is written in M (Machinecode - executable file) and is running on the machine "M".
+
+One of the most important settings is the "Filename" property which defines the executable of the compiler and the parameters needed.
+
+Open the Filename property panel by clicking once in the property list at the left side.
+  </STRING>
+  <STRING id="154">The first field is the "Filename". You can either write the file without path in this field (will be treated as a relative path to the diagram file path) or you can use the open dialog by clicking the little icon on the right end of this field.
+
+javac.exe should be in your windows path setting so we do not need a path here.
+  </STRING>
+  <STRING id="155">The next field is the "Parameters" field. Here you need to specify the command line settings for this special compiler.
+
+Remember that each compiler will need its own settings here - consult the manual of the compiler you are going to use for further information.
+  </STRING>
+  <STRING id="156">TDiag offers various placeholders you can show a list by clicking on the little "?" at the right.
+  </STRING>
+  <STRING id="157">We can close the filename property window now and add some more components to our diagram (you can always delete a component by right click a selected part of the diagram).
+
+Drag and drop a "Program" on the left side of our java compiler. By default the new program has no language setting.
+
+Click on "WrittenIn" in the property list to open the language panel.
+  </STRING>
+  <STRING id="158">The language panel offers some predefined common languages to select from. You can also add additional ones by clicking on "New Language" at the bottom of this panel.
+
+For now select "Java" and press "Select this language" or double click on the entry in the list.
+  </STRING>
+  <STRING id="159">Now move the java program component to the right position if it is not already there. You can click and drag an item to move it around.
+
+You will notice that the compiler shape changes its color from a light red to white when the program docks at the right position.
+A light red shape says that this component has no use yet or does not fit to the position. A right diagram should not have any red shapes so.
+  </STRING>
+  <STRING id="160">Parts that match together will automatically dock. If you click again on the component you will select the entire group of parts that are docked together. Try to move the compiler and the program around.
+
+By clicking again you can select an individual part within the group again and change its settings or move it away from the rest to undock it.
+  </STRING>
+  <STRING id="161">It is a bit tricky to switch between a single part and the entire group so play a bit with this to get used to it.
+
+Add another program component on the right side of the compiler that will be our output.
+
+To get it docked we need to set the "WrittenIn" property to BC (Java Bytecode).
+  </STRING>
+  <STRING id="162">If you deselect our new program part by clicking somewhere else in the diagram area you will see that this part is still red and does not want to dock properly.
+
+The reason is that the filenames of the input file on the left and the output file on the right does not match as specified in the "Output Form" property of the compiler.
+  </STRING>
+  <STRING id="163">Open the "Filename" property of the input program and write "testprogram.java" without path in the upcoming dialog.
+
+Now we need to do the same on the output program but write "testprogram.class" in the file property panel.
+
+Now the entire diagram docks into one group because everything matches together.
+  </STRING>
+  <STRING id="164">It is time to add an interpreter below the output program. Drag and drop one from the component list on the left.
+
+Choose the Java Interpreter. Move the interpreter part to the right position if not already there.
+
+Finally we add an input to the interpreted java program. Drag and drop an Input/Output component and place it on the left side of the outputfile above the compiler shape.
+  </STRING>
+  <STRING id="165">We like to have the E/A file we just added to be the first command line parameter for the java program when executed.
+(In java you can read them trough the "String[] args" variable)
+
+In order to have the filename passed as first parameter we need to setup the program "Filename" property again.
+  </STRING>
+  <STRING id="166">Because we added an interpreter we can now change the "Parameters" field on that program. We can either write "%InFile" here or use the drop down to select it.
+
+We are done for now and we can execute the diagram after saving it somewhere by pressing the large "Execute diagram" button at the top.
+  </STRING>
+  <STRING id="167">Here you can see what happens while the diagram is executed. Our diagram will most likely fail to execute because we do not have the "testprogram.java" in the same directory where we placed our diagram file.
+
+Copy that file from the TDiag/Sample directory to same directory where you saved your diagram.
+  </STRING>
+  <STRING id="168">When you execute the diagram again you will see everything is working fine and you get a "Hello World" java window with the filename you set on the E/A component below the "Hello World" text.
+
+If you have not set a file right now for the E/A part go back and do so - execute again to see the different.
+  </STRING>
+  <STRING id="169">You may now start a new project your own and try out the features of TDiagram Editor!
+
+Have fun!
+AtoCC Team
+  </STRING>
+  <STRING id="200">
+You can select a predefined compiler/interpreter here. All settings about parameters
+and languages will be set automatically. But you can change them later, too. All predefined
+compilers/interpreters require that there executables can be found within your system path
+variable and do not need directory information. If this is a problem select the compiler
+executable file over the "Filename" property with full path!
+  </STRING>
+  <STRING id="201">
+Specify the compiler output format here. In most cases the output format will be "%OutFile".
+You can use multiple placeholders listed below:
+
+%InFile        		:  InputFile  (with file extension)
+%InFileNoExt       	:  InputFile  (without file extension)
+%InFileNoExtNoPath 	:  InputFile  (without file extension and without path)
+%InFilePath        	:  InputFile  (only file path)
+%OutFile       		:  OutputFile (with file extension)
+%OutFileNoExt      	:  OutputFile (without file extension)
+%OutFileNoExtNoPath	:  OutputFile (without file extension and without path)
+%OutFilePath       	:  OutputFile (only file path)
+  </STRING>
+  <STRING id="202">
+Edit the command line here to be used with 
+the above executable file
+You can use multiple placeholders listed 
+below:
+
+%InFile        		:  InputFile  (with 
+file extension)
+%InFileNoExt       	:  InputFile  
+(without file extension)
+%InFileNoExtNoPath 	:  InputFile  
+(without file extension and without path)
+%InFilePath        	:  InputFile  (only 
+file path)
+%OutFile       		:  OutputFile (with 
+file extension)
+%OutFileNoExt      	:  OutputFile 
+(without file extension)
+%OutFileNoExtNoPath	:  OutputFile 
+(without file extension and without path)
+%OutFilePath       	:  OutputFile (only 
+file path)
+  
+</STRING>
+  <STRING id="203">
+Select the executable of the compiler either with the file dialog or
+you can write the filename of the executable without path if it is within your path variable of Windows.
+Sometimes you can also left this field blank if files with the used language extension
+are bound to the right interpreter already by system.';
+  </STRING>
+  <STRING id="204">Save current diagram?</STRING>
+  <STRING id="205">You need to save your diagram first!</STRING>
+  <STRING id="206">Current diagram will be lost. Continue?</STRING>
+  <STRING id="207">Save changes</STRING>
+  <STRING id="208">Properties</STRING>
+  <STRING id="209">Components</STRING>
+ </ENGLISH>
+ <GERMAN>
+  <STRING id="1">T-Diagramm Editor</STRING>
+  <STRING id="2">T-Diagramm Graph</STRING>
+  <STRING id="3">T-Diagramm ausführen</STRING>
+  <STRING id="10">Öffnen</STRING>
+  <STRING id="11">Speichern</STRING>
+  <STRING id="12">Rückgängig</STRING>
+  <STRING id="13">Wiederholen</STRING>
+  <STRING id="14">Diagramm ausführen</STRING>
+  <STRING id="15">Diagramm exportieren</STRING>
+  <STRING id="16">Neu</STRING>
+  <STRING id="20">Datei</STRING>
+  <STRING id="21">Neues Diagramm</STRING>
+  <STRING id="22">Diagramm öffnen</STRING>
+  <STRING id="23">Diagramm speichern</STRING>
+  <STRING id="24">Diagramm speichern unter ...</STRING>
+  <STRING id="25">Beenden</STRING>
+  <STRING id="26">Hilfe</STRING>
+  <STRING id="27">Online Hilfe</STRING>
+  <STRING id="28">Einführungsassistent</STRING>
+  <STRING id="29">Sprache ändern</STRING>
+  <STRING id="30">Über...</STRING>
+  <STRING id="31">gewählte Elemente löschen</STRING>
+  <STRING id="32">gewählte Element(e) ausführen</STRING>
+  <STRING id="33">Kommentar hinzufügen</STRING>
+  <STRING id="40">Bild exportieren</STRING>
+  <STRING id="41">Auflösung</STRING>
+  <STRING id="42">Format</STRING>
+  <STRING id="43">Exportieren</STRING>
+  <STRING id="44">Selektiertes Element duplizieren</STRING>
+  <STRING id="50">Voreinstellung wählen</STRING>
+  <STRING id="51">Wahl:</STRING>
+  <STRING id="60">Programm / Compiler / Interpreter Parameter-Einstellungen</STRING>
+  <STRING id="61">Dateiname:</STRING>
+  <STRING id="62">Parameter:</STRING>
+  <STRING id="63">ausführen in TDiag</STRING>
+  <STRING id="64">extern ausführen (wenn Benutzereingabe benötigt)</STRING>
+  <STRING id="65">Zusammenhängende Elemente mit selektieren</STRING>
+  <STRING id="66">Diagramm</STRING> 
+
+  <STRING id="70">Sprache</STRING>
+  <STRING id="71">Sprach-Name:</STRING>
+  <STRING id="72">Sprach-Label:</STRING>
+  <STRING id="73">Dateierweiterung der Sprache:</STRING>
+  <STRING id="74">Sprache erstellen</STRING>
+  <STRING id="75">Abbrechen</STRING>
+  <STRING id="76">Neu</STRING>
+  <STRING id="77">Diese Sprache wählen</STRING>
+  <STRING id="78">Sprache</STRING>
+  <STRING id="79">Erweiterung</STRING>
+  <STRING id="80">Assistent</STRING>
+  <STRING id="81">Schließen</STRING>
+  <STRING id="82">Zurück</STRING>
+  <STRING id="83">Weiter</STRING>
+  <STRING id="100">TDiag Projekt:</STRING>
+  <STRING id="101">Einführungsassistent</STRING>
+  <STRING id="102">Neues Diagramm</STRING>
+  <STRING id="103">Diagramm öffnen</STRING>
+  <STRING id="104">Hilfe:</STRING>
+  <STRING id="105">Online FAQ</STRING>
+  <STRING id="106">Eine kurze Einführung in die Funktionen von TDiag.</STRING>
+  <STRING id="107">Erstellen Sie ein neues Diagramm.</STRING>
+  <STRING id="108">Öffnen Sie ein vorhandenes Diagramm.</STRING>
+  <STRING id="109">Besuchen Sie das Online Help Center</STRING>
+  <STRING id="110">Besuchen Sie die AtoCC Website</STRING>
+  <STRING id="120">Diagramm ausführen:</STRING>
+  <STRING id="121">Ausführen</STRING>
+  <STRING id="150">Willkommen zum AtoCC TDiagram Editor!
+
+Dieser Assistent wird dir zeigen wie man ein einfaches T-Diagramm entwirft und auf diesem Weg auch gleich die Bedienung des Editors erklären. Du kannst Fenster wie diese bewegen indem du auf die blaue Titelzeile klickst und ziehst.
+
+Verwende den "weiter" button um fortzufahren.
+  </STRING>
+  <STRING id="151">Hier kannst du Diagramme erstellen in dem zu per drag and drop Teile aus der linken Liste herausziehst und auf die Arbeitsfläche legst.
+  
+Lass uns mit einem "Compiler" Baustein beginnen. Klicke und ziehe den Baustein in die mitte der großen weißen Arbeitsfläche. 
+
+TDiag wird dich nun fragen ob du einen vordefinierten Compiler verwenden willst. Für dieses Beispiel wählen wir den Java Compiler aus der Liste aus.
+  </STRING>
+  <STRING id="152">Der Java Compiler ist nun selektiert (hervorgehoben duch eine hell gelbe Farbe).
+
+Auf der linken Seite werden nun Eigenschaften dieses Bausteins angezeigt. TDiag hat bereits alle Einstellungen wie Ein/Ausgabesprache für dich eingestellt.
+
+Im Diagramm sehen wir das der Compiler als Eingabesprache Java und als Ausgabesprache BC (Java Bytecode) verwendet.
+  </STRING>
+  <STRING id="153">Der Compiler selbst ist geschrieben in M (Machinensprachen - ausfürbare Datei) und läuft auf der Maschine "M".
+
+Eine der wichtigsten Eingenschaften eines Bausteins ist "Filename". Hier wird die Startdatei für diesen Compiler eingestellt sowie seine Parameter.
+  </STRING>
+  <STRING id="154">Um die Startdatei auszuwählen klicke einmal in der Eigenschaftsliste links auf "javac.exe %InFile..." um einen Dialog zu öffnen.
+
+Das erste Feld ist "Dateiname". Du kannst hier entweder die Datei direkt angeben ohne Pfad, oder du klickst auf das kleine Symbol rechts neben dem Eingabefeld um die Datei zu suchen.
+  </STRING>
+  <STRING id="155">"javac.exe" sollte bereits in deinem Windows System Pfad eingetragen sein, weshalb wir hier keinen Pfad benötigen.
+
+Vermeide so oft wie möglich Pfade, da diese auf anderen Computern nicht funktionieren könnten (verwende relative Pfade!).
+  </STRING>
+  <STRING id="156">Das nächste Feld ist "Parameter". Hier werden die Kommandozeilenparameter für diese Datei bestimmt.
+
+Beachte dabei, dass jeder Compiler seine eigenen Einstellungen für Parameter benötigt - schau in der Anleitung des Compilers nach wenn du dir unsicher bist.
+
+Du kannst neben dem Parameterfeld das kleine ? klicken um Informationen über die möglichen Platzhalter zu bekommen die verwendet werden können.
+  </STRING>
+  <STRING id="157">Wir können den Dialog wieder schließen und weitere Bauteile zu unserem Diagramm hinzufügen (Du kannst auch jederzeit ein Bauteil über das Rechtsklickmenü löschen).
+
+Drag und Drop ein "Program" auf die linke Seite unseres Java Compiler Bausteins. Das Programm hat keine Sprache voreingestellt in der es geschrieben ist.
+  </STRING>
+  <STRING id="158">Klicke auf "Unknown" neben "WrittenIn" in der Eigenschaftsliste um den Sprachdialog zu öffnen. 
+  
+Der Sprachendialog bietet eine Reihe vorgefertigter Sprachen an. Man kann aber auch neue Sprachen hinzufügen über den entsprechenden Button.
+
+Wir wählen Java als Sprache aus (Doppelklick oder unten per Diese Sprache wählen).
+  </STRING>
+  <STRING id="159">Jetzt bewegen wir den Java Programmbaustein an die passende Stelle (untere rechte Seite des Programm stößt an die linke Seite des Compilerbausteins). Dazu klicke und halte die Maus auf einem Bauteil und verschiebe es.
+
+Du wirst feststellen, dass sich die Farbe des Compilerbausteins ändert, wenn das Programm an die richtige Stelle angedockt wurde.
+Ist ein Bauteil hellrot eingefärbt bedeutet dies, dass der Baustein so nicht (oder noch nicht) funktionieren kann. Das Diagramm sollte also keine roten Bauteile haben.
+  </STRING>
+  <STRING id="160">Bauteile die aneinanderpassen verbinden sich automatisch. Du kannst sie dann zusammen selektieren in dem du auf ein Bauteil doppelt klickst.
+
+Durch einen erneuten Einfachklick auf eine Gruppe von Bauteilen selektierst du wieder ein einzelnes Element.
+  </STRING>
+  <STRING id="161">Füge einen weitern Programmbaustein auf der rechten Seite des Compilers an, welcher unsere Ausgabe repräsentiert.
+
+Der Programmbaustein wird erst an den Compilerbaustein andocken wenn du die Sprache ("WrittenIn" Eingenschaft) auf BC (Java Bytecode) gestellt hast.
+  </STRING>
+  <STRING id="162">Im nächsten Schritt wollen wir die Dateinamen für Ein- und Ausgabe einstellen. 
+  
+  Hierfür solltest du ein einfaches Hallo Welt Programm in Java als "Hello.java" vorliegen haben (wenn nicht, erstelle eine solche Datei - Quelltext für Hallo Welt in Java findest du bei Wikipedia).    
+  </STRING>
+  <STRING id="163">Öffne das Eigenschaftsfenster für "Filename" des Eingabeprogrammbausteins wähle hier die "Hallo.java" Datei aus.
+
+Der Java-Compiler wird diese Datei in "Hello.class" übersetzen. Dies müssen wir am Ausgabeprogrammbaustein eintragen. Hast du bei der Eingabedatei einen Pfad verwendet musst du die Ausgabedatei auch wieder komplett mit diesem Pfad angeben.
+  </STRING>
+  <STRING id="164">Es ist Zeit einen Interpreterbaustein unterhalb des Ausgabeprogramms anzufügen. Drag und Drop einen Interpreterbaustein aus der Komponentenliste wie bisher.
+
+Wähle den Java Interpreter als Voreinstellung aus und bewege den Baustein so, dass er an von unten an das Ausgabeprogramm andockt.
+  </STRING>
+  <STRING id="165">Der Java Interpreter besitzt wieder alle Voreinstellungen und wir müssen uns nicht um die Einstellungen kümmern.
+  
+  Schau aber ruhig einmal die Eigenschaften des Interpreters an.
+  </STRING>
+  <STRING id="166">Wir können nun testen ob wir tatsächlich einen funktionsfähigen Prozess modelliert haben indem wir oben auf "Diagramm ausführen" klicken.
+  
+TDiag fordert uns zunächst auf das aktuelle Diagramm zu speichern, wenn du das nicht ohnehin schon mindestens ein mal getan hast.
+  </STRING>
+  <STRING id="167">Die Ausgabe des Java Compilers bzw Java Interpreters wird angezeigt.
+  </STRING>
+  <STRING id="168">Sollte dein Programm eine Eingabe erfordern (über die Konsole beispielsweise), dann verwende die zweite "Diagramm ausführen" Variante.
+  
+  Klicke dazu auf den kleinen Pfeil neben dem "Diagramm ausführen" Button und wähle "Extern ausführen".
+  </STRING>
+  <STRING id="169">Du kannst nun ein eigenes Projekt beginnen und die Funktionen des TDiagram Editors ausprobieren!
+
+Viel Spaß,
+AtoCC Team
+  </STRING>
+  <STRING id="200">
+Sie können eine Voreinstellung für Compiler/Interpreter wählen. Alle Einstellung für
+Parameter und Sprachen werden dabei automatisch eingestellt. Natürlich können Sie diese
+auch nachher, entsprechend ihren Vorstellungen, abändern.
+Für alle voreingestellte Compiler/Interpreter ist es nötig, dass die EXE Dateien im Systempfad
+enthalten sein müssen damit diese gefunden werden können. Sollte dies bei ihnen nicht der
+Fall sein, können Sie anschließend unter "Filename" den vollständigen Pfad hinzufügen.
+  </STRING>
+  <STRING id="201">
+Wählen Sie hier das Ausgabeformat des Compilers. In den meisten Fällen ist dies einfach
+"%OurFile". Die folgenden Platzhalter können (auch mehrfach) verwendet werden:
+
+%InFile        		:  Eingabedatei (mit Dateierweiterung)
+%InFileNoExt       	:  Eingabedatei (ohne Dateierweiterung)
+%InFileNoExtNoPath 	:  Eingabedatei (ohne Dateierweiterung und ohne Pfad)
+%InFilePath        	:  Eingabedatei (ohne Dateipfad)
+%OutFile       		:  Ausgabedatei (mit Dateierweiterung)
+%OutFileNoExt      	:  Ausgabedatei (ohne Dateierweiterung)
+%OutFileNoExtNoPath	:  Ausgabedatei (ohne Dateierweiterung und ohne Pfad)
+%OutFilePath       	:  Ausgabedatei (ohne Dateipfad)
+  </STRING>
+  <STRING id="202">
+Editieren Sie hier die Kommandozeile, die mit der angegebenen
+ausführbaren Datei verwendet werden soll.
+Die folgenden Platzhalter können (auch mehrfach) verwendet werden:
+
+%InFile        		:  Eingabedatei (mit Dateierweiterung)
+%InFileNoExt       	:  Eingabedatei (ohne Dateierweiterung)
+%InFileNoExtNoPath 	:  Eingabedatei (ohne Dateierweiterung und ohne Pfad)
+%InFilePath        	:  Eingabedatei (ohne Dateipfad)
+%OutFile       		:  Ausgabedatei (mit Dateierweiterung)
+%OutFileNoExt      	:  Ausgabedatei (ohne Dateierweiterung)
+%OutFileNoExtNoPath	:  Ausgabedatei (ohne Dateierweiterung und ohne Pfad)
+%OutFilePath       	:  Ausgabedatei (ohne Dateipfad)
+  </STRING>
+  <STRING id="203">
+Wählen Sie die ausführbare Datei des Compilers. Dazu können Sie entweder den Dateidialog verwenden
+oder den Dateinamen direkt in das Eingabefeld schreiben. Wenn der Dateiname keinen Pfad enthält wird
+das aktuelle Verzeichnis verwendet.';
+  </STRING>
+  <STRING id="204">Aktuelles Diagramm speichern?</STRING>
+  <STRING id="205">Sie müssen ihr Diagramm zuerst speichern!</STRING>
+  <STRING id="206">Das aktuelle Diagramm geht verloren. Fortfahren?</STRING>
+  <STRING id="207">Änderungen speichern</STRING>
+  <STRING id="208">Eigenschaften</STRING>
+  <STRING id="209">Komponenten</STRING>
+ </GERMAN>
+ <POLISH>
+  <STRING id="1">T-Diagram Editor</STRING>
+  <STRING id="2">T-Diagram wykres</STRING>
+  <STRING id="3">Uruchom T-Diagram</STRING>
+  <STRING id="10">Otwórz</STRING>
+  <STRING id="11">Zapisz</STRING>
+  <STRING id="12">Cofnij</STRING>
+  <STRING id="13">Powtórz</STRING>
+  <STRING id="14">Uruchom diagram</STRING>
+  <STRING id="15">Eksportować diagram</STRING>
+  <STRING id="16">nowy</STRING>
+  <STRING id="20">Plik</STRING>
+  <STRING id="21">Nowy diagram</STRING>
+  <STRING id="22">Otwórz diagram</STRING>
+  <STRING id="23">Zapisz diagram</STRING>
+  <STRING id="24">Zapisz digarm jako...</STRING>
+  <STRING id="25">Wyjście</STRING>
+  <STRING id="26">Pomoc</STRING>
+  <STRING id="27">online pomoc</STRING>
+  <STRING id="28">Przewodnik</STRING>
+  <STRING id="29">Zmień język</STRING>
+  <STRING id="30">o...</STRING>
+  <STRING id="31">Usuń zaznaczone częsci diagramu</STRING>
+  <STRING id="32">Uruchom wybrane części diagramu</STRING>
+  <STRING id="33">Dodaj komentarz</STRING>
+  <STRING id="40">Eksportuj obraz</STRING>
+  <STRING id="41">Rozdzielczość</STRING>
+  <STRING id="42">Format</STRING>
+  <STRING id="43">Exportować</STRING>
+
+  <STRING id="51">Wybór</STRING>
+
+  <STRING id="61">Nazwa pliku</STRING>
+  <STRING id="62">Parametry:</STRING>
+  <STRING id="63">Format wyjścia</STRING>
+  <STRING id="70">Język</STRING>
+  <STRING id="71">Nazwa języka</STRING>
+  <STRING id="72">Etykieta języka</STRING>
+  <STRING id="73">Rozszerzenie pliku języka</STRING>
+  <STRING id="74">Utwórz język</STRING>
+  <STRING id="75">Anuluj</STRING>
+  <STRING id="76">Nowy język</STRING>
+  <STRING id="77">Wybierz język</STRING>
+  <STRING id="78">Język</STRING>
+  <STRING id="79">Rozszerzenie</STRING>
+  <STRING id="80">Przewodnik</STRING>
+  <STRING id="81">Zamknij</STRING>
+  <STRING id="82">Wstecz</STRING>
+  <STRING id="83">Dalej</STRING>
+  <STRING id="100">Projekt TDiag:</STRING>
+  <STRING id="101">Przewodnik</STRING>
+  <STRING id="102">Nowy diagram</STRING>
+  <STRING id="103">Otwórz diagram</STRING>
+  <STRING id="104">Pomoc:</STRING>
+  <STRING id="105">Pomoc online</STRING>
+  <STRING id="106">Krótkie wprowadzenie aby zaznajomić sie z funkcjami TDiag-u.</STRING>
+  <STRING id="107">Utówrz pusty projekt.</STRING>
+  <STRING id="108">Otwórz bieżący diagram.</STRING>
+  <STRING id="109">Aby otrzymać dalsze informacje odwiedź stronę Help Center</STRING>
+  <STRING id="110">Odwiedź strone AtoCC.</STRING>
+  <STRING id="120">Uruchom Diagram. </STRING>
+  <STRING id="121">Uruchom</STRING>
+  <STRING id="150">Witamy w Genesis-X7 TDiagram Editor!
+  
+Ten przewodnik zapozna Cie z podstawowymi 
+funkcjami tego edytora i pokaże jak utworzyć 
+prosty diagram.
+
+Kliknij przycisk " dalej " aby kontynuować.
+</STRING>
+  <STRING id="151">Tutaj możesz utworzyć diagram poprzez 
+przecignięcie odpowiednich części po lewej 
+stronie na główny obszar okna.
+
+Zacznijmy od częsci "Kompilator". Przeciągnij 
+diagram do środkowej części białego obszaru.
+
+TDiag zapyta cię jeśli nie będziesz chciał użyć 
+wcześniej zdefiniowanego lub normalnego 
+kompilatora.
+Do tego przykładu wybierz "Java Compiler" z 
+listy.
+</STRING>
+  <STRING id="152">Kompilator Javy jest teraz zaznaczony
+(podkreślony jasnożółtym kolorem).
+
+Po lewej stronie znajduje się lista właściwości. 
+TDiag od razu przygotował wszystkie 
+ustawienia dla tego kompilatora.
+
+W diagramie możesz zauważyć, że kompilator 
+przyjął język Javy za wejściowy a jako 
+wyjściowy został ustawiony BC (Java Byte 
+Code).
+</STRING>
+  <STRING id="153">Sam kompilator jest napisany w M(kod 
+maszynowy-plik exe) i dziala na maszynie "M".
+
+Jedną z najważniejszych ustawień jest "nazwa 
+pliku", która definiuje wykonalność kompilatora 
+i potrzebnych parametrów.
+
+Otwórz "Nazwa pliku" z panelu właściwości 
+poprzez pojedyncze kliknięcie na liście 
+właściwości po lewej stronie.
+</STRING>
+  <STRING id="154">Pierwszym polem, które widzisz jest "nazwa 
+pliku". Możesz albo wpisać nazwę pliku w to 
+pole (będzie traktowane jako  ścieżka względna 
+do ścieżki diagramu) albo użyć dialogu (open 
+dialog) poprzez klikięcie małej ikony na prawym 
+końcu tego pola.
+
+
+javac.exe poinna się znajdować w ustawieniach 
+ścieżki windowsa więc deklaracja ściezki tutaj 
+nie jest konieczna
+</STRING>
+  <STRING id="155">Kolejnym polem jest pole "Parametry". Tutaj 
+musisz zdeklarować "command line" ustawienia 
+polecenia dla kompilatora.
+
+Pamiętaj, że każdy kompilator będzie 
+potrzebował swoje włsne ustawienia- sprawdź 
+manual kompilatora w celu uzyskania tych 
+informacji. 
+
+TDiag oferuje znaki szybkiego dostepu np. 
+mozesz łatwo otworzyć listę klikając na "?" po 
+prawej stronie. 
+
+</STRING>
+  <STRING id="156">Ostatnim polem kompilatora jest pole"Output 
+Format"-Format wyjścia. Wiekszośc 
+kompilatorów oferuje opcje, która wyszczególnia  
+wyjściową nazwę pliku.
+
+Plik wejściowy można tylko zdefiniować jako np. 
+"input.java" który zostanie niezmieniony i 
+skompilowany do "input.class". aby nauczyć 
+TDiag tej funkcji w polu "Output Format"- format 
+wyjściowy jest uzyty %InFileNoExt oraz ".class".
+</STRING>
+  <STRING id="157">Teraz możesz zamknąc okno nazwy pliku i 
+dodać więcej komponentów do diagramu 
+(możesz zawsze usunąc komponent - kliknąć 
+prawym przyciskiem myszy na wybraną czesć 
+diagramu ).
+
+Drag and drop "Program" po lewejstronie 
+compilatora javy.
+Domyślnie nowy program nie ma zadnego 
+ustawienia języka.
+
+Kliknij na "Writtenln" na liście właściwości aby 
+otworzyc panel języka.
+</STRING>
+  <STRING id="158">Możesz wybrać jeden z języków zdefiniowanych 
+w panelu języka. Możesz również dodać nowy 
+język klikając na "New language"-nowy język 
+na dole panelu.
+
+Dla tego przykładu wybierz "Java" i naciśnij 
+"Select this language"-"Wybierz ten język" lub 
+wybierz element z listy. 
+</STRING>
+  <STRING id="159">Teraz przesuń komponent programu java na 
+odpowiednią pozycję jeśli sie tam jeszcze 
+nie znajduje. Możesz również kliknąć 
+click and drag komponent aby go obrócić.
+
+Mozna zauważyć, że kształt kompilatora 
+zmiania kolor z jasno czerwonego na biały, 
+kiedy program lokuje się na odpowiednią
+pozycję.
+
+Jasno czerwony kolor oznacza, że diagram nie 
+pasuje do pozycji. Prawidłowy diagram nie 
+powinien posiadać żadnych czerwonych 
+kształtów.  
+</STRING>
+  <STRING id="160">Części, które do siebie pasują, automatycznie 
+się układają. Jeśli ponownie klikniesz na 
+komponent to wszystkie jego części zostną 
+zaznaczone i zgrupowane razem. Spróbuj 
+przesunąć kompilator i program.
+
+Klikając możesz zaznaczyć pojedynczą część i 
+zmienić jej ustawienia lub usunąć z grupy. 
+</STRING>
+  <STRING id="161">Doadj kolejny komponent prgramu po prawej 
+stronie kompilatora. To bedzie nasz output. 
+
+Aby go zgrupować musisz ustawić "Writelln" dla 
+BC (Java Bytecode).
+</STRING>
+  <STRING id="162">Jeśli odznaczysz jakąś część programu poprzez 
+kliknięcie w obszar poza diagramem, 
+zauważysz, że ta część jest nadal czerwona i 
+nie da się jej zgrupować.
+
+Przyczyną jest to, iż nazwy pliku wejściowego i 
+wyjściowego nie pasują do specyfikacji 
+kompilatora, który jest zdefiniowany we 
+właściwości "Outoput Form".
+</STRING>
+  <STRING id="163">Otwórz "nazwę pliku"  programu wejściowego i 
+napisz "testprogram.java" bez wpisywania  
+ścieżki w dialogu.
+
+Następnie należy zrobić to samo z programem 
+wyjściowym, ale wpisać "testprogram.class" w 
+miejsce "testprogram.java".
+
+Teraz wszystkie części powinny do siebie 
+pasować wiec zgrupuj cały diagram.  
+</STRING>
+  <STRING id="164">Teraz należy dodać tłumacza poniżej programu 
+wyjściowego. Drag and drop jeden z 
+komponentów listy po lewej stronie.????
+
+
+Wybierz "Java Interpreter" i przesuń go na 
+prawą stronę, jeśli sie tam jeszcze nie znajduje.
+
+Na koniec dodaj dane wejściowe-input do 
+tłumaczoengo programu java.
+Przeciągnij  komponenty Input/Output 
+(wejścia/wyjścia) i umieść je po lewej stronie 
+pliku wyjściowego powyżej kompilatora.
+
+</STRING>
+  <STRING id="165">Plik E/A jest dodany do pierwszej linii parametru 
+polecenia-command line dla programu java w 
+trakcie uruchamiania.( w javie możesz je 
+odczytac poprzez zmienną String[] args)
+
+Aby uzyskać nazwę pliku jako pierwszy 
+parametr musisz ustawić ponownie nazwę pliku 
+programu.
+</STRING>
+  <STRING id="166">Ponieważ interpreter- tłumacz został juz 
+dodany, możemy zmienic pole "parametry".
+Możesz albo wpisać "%InFile" albo go 
+zaznaczyć. 
+
+Aby uruchomić diagram, po jego 
+wcześniejszym zapisaniu nalezy kliknąć duży 
+przycisk "Execute diagram-"Uruchom diagram" 
+w górnej częsci panelu.
+</STRING>
+  <STRING id="167">Teraz możesz zaobserwować działanie 
+diagramu w trakcie jego uruchamiania. 
+najprawdopodobniej program wogóle nie 
+zostanie uruchomiony, ponieważ plik 
+"testprogram.java" nie znajduje sie w tym 
+samym katalogu, w którym znajduje sie plik z 
+diagramem.
+
+Skopiuj plik z katalogu TDiag/Sample  do tego 
+samego katalogu, w którym jest zapisany 
+diagram.
+</STRING>
+  <STRING id="168">Teraz diagram powinien działać poprawnie. 
+Okno "Hello World" powinno sie pojawić z 
+nazwą pliku, którą ustawiłeś w komponencie 
+E/A poniżej tekstu "Hello World".
+
+Jesli nie ustawiłeś nazwy pliku dla części E/A 
+wróć i ją ustaw, następnie uruchom program i 
+zobacz różnicę. 
+</STRING>
+  <STRING id="169">Zakończyłeś pracę z tutorialem.
+
+Teraz możesz utworzyć nowy projekt i 
+wypróbować inne funkcje edytora TDiagram!
+
+Wiele sukcesów w dalszej pracy z naszym 
+programem 
+
+życzy
+zespół Genesis-X7 
+</STRING>
+  <STRING id="200">Tutaj  możesz zaznaczyć  już zdefiniowanego 
+kompilatora/interpretera. Wszystkie ustawienia 
+dotyczące parametrów zostaną dodane 
+automatycznie, ale możesz je również później 
+zmienić. Wszystkie zdefiniowane kompilatory/ 
+interpretery  nie wymagają informacji o katologu, 
+ale wszystkie pliki exe powinny należeć do 
+ścieżki systemu.
+
+Możesz również zaznczyć pliki exe kompilatora 
+klikając na "Nazwę pliku" podając całą 
+ścieżkę.
+</STRING>
+  <STRING id="201">Zdefiniuj format wyjścia kompilatora. W 
+wiekszości przypadków format wyjścia-output 
+format będzie "%OutFile".
+Możesz uzyć różne warianty z listy poniżej:
+
+%InFile        		:  InputFile-plik 
+wejściowy  (z rozszerzeniem plliku)
+%InFileNoExt       	:  InputFile  (bez 
+rozszerzenia pliku)
+%InFileNoExtNoPath 	:  InputFile  (bez 
+ścieżki i rozszerzenia pliku)
+%InFilePath        	:  InputFile  (tylko 
+rozszerzenie pliku)
+%OutFile       		:  OutputFile (z 
+rozszerzeniem plliku)
+%OutFileNoExt      	:  OutputFile ( bez 
+rozszerzenia pliku)
+%OutFileNoExtNoPath	:  OutputFile (bez 
+ścieżki i rozszerzenia pliku)
+%OutFilePath       	:  OutputFile (tylko 
+ze ścieżką pliku)
+</STRING>
+  <STRING id="202">Edytuj linię polecenia, która zostanie użyta z 
+plikiem exe.
+Możesz uzyć różne warianty z listy poniżej:
+ 
+%InFile        		:  InputFile-plik 
+wejściowy  (z rozszerzeniem plliku)
+%InFileNoExt       	:  InputFile  (bez 
+rozszerzenia pliku)
+%InFileNoExtNoPath 	:  InputFile  (bez 
+ścieżki i rozszerzenia pliku)
+%InFilePath        	:  InputFile  (tylko 
+rozszerzenie pliku)
+%OutFile       		:  OutputFile (z 
+rozszerzeniem plliku)
+%OutFileNoExt      	:  OutputFile ( bez 
+rozszerzenia pliku)
+%OutFileNoExtNoPath	:  OutputFile (bez 
+ścieżki i rozszerzenia pliku)
+%OutFilePath       	:  OutputFile (tylko 
+ze ścieżką pliku)
+</STRING>
+  <STRING id="203">Wybierz za pomocą kompilatora plik exe 
+kompilatora. Do tego posłuży Ci plik dialogu lub 
+możesz bezpośrednio wpisać nazwę pliku bez 
+rozszerzenia, jeśli plik znajduje się wewnątrz 
+scieżki zmiennej Windowsa.
+
+Jeśli pliki z rozszerzeniem języka zostały 
+powiązane z odpowiednim interpreterem przez 
+system, mozesz zostawic to pole puste.
+</STRING>
+  <STRING id="204">Zapisać bieżący diagram?
+</STRING>
+   <STRING id="205">You need to save your diagram first!</STRING>
+   <STRING id="206">Current diagram will be lost. Continue?</STRING>
+   <STRING id="207">Save changes</STRING>
+ </POLISH>
+ <CZECH>
+  <STRING id="1"></STRING>
+  <STRING id="2"></STRING>
+  <STRING id="3"></STRING>
+  <STRING id="10"></STRING>
+  <STRING id="11"></STRING>
+  <STRING id="12"></STRING>
+  <STRING id="13"></STRING>
+  <STRING id="14"></STRING>
+  <STRING id="15"></STRING>
+  <STRING id="16"></STRING>
+  <STRING id="20"></STRING>
+  <STRING id="21"></STRING>
+  <STRING id="22"></STRING>
+  <STRING id="23"></STRING>
+  <STRING id="24"></STRING>
+  <STRING id="25"></STRING>
+  <STRING id="26"></STRING>
+  <STRING id="27"></STRING>
+  <STRING id="28"></STRING>
+  <STRING id="29"></STRING>
+  <STRING id="30"></STRING>
+  <STRING id="31"></STRING>
+  <STRING id="32"></STRING>
+  <STRING id="33"></STRING>
+  <STRING id="40"></STRING>
+  <STRING id="41"></STRING>
+  <STRING id="42"></STRING>
+  <STRING id="43"></STRING>
+  <STRING id="50"></STRING>
+  <STRING id="51"></STRING>
+  <STRING id="60"></STRING>
+  <STRING id="61"></STRING>
+  <STRING id="62"></STRING>
+  <STRING id="63"></STRING>
+  <STRING id="70"></STRING>
+  <STRING id="71"></STRING>
+  <STRING id="72"></STRING>
+  <STRING id="73"></STRING>
+  <STRING id="74"></STRING>
+  <STRING id="75"></STRING>
+  <STRING id="76"></STRING>
+  <STRING id="77"></STRING>
+  <STRING id="78"></STRING>
+  <STRING id="79"></STRING>
+  <STRING id="80"></STRING>
+  <STRING id="81"></STRING>
+  <STRING id="82"></STRING>
+  <STRING id="83"></STRING>
+  <STRING id="100"></STRING>
+  <STRING id="101"></STRING>
+  <STRING id="102"></STRING>
+  <STRING id="103"></STRING>
+  <STRING id="104"></STRING>
+  <STRING id="105"></STRING>
+  <STRING id="106"></STRING>
+  <STRING id="107"></STRING>
+  <STRING id="108"></STRING>
+  <STRING id="109"></STRING>
+  <STRING id="110"></STRING>
+  <STRING id="120"></STRING>
+  <STRING id="121"></STRING>
+  <STRING id="150"></STRING>
+  <STRING id="151"></STRING>
+  <STRING id="152"></STRING>
+  <STRING id="153"></STRING>
+  <STRING id="154"></STRING>
+  <STRING id="155"></STRING>
+  <STRING id="156"></STRING>
+  <STRING id="157"></STRING>
+  <STRING id="158"></STRING>
+  <STRING id="159"></STRING>
+  <STRING id="160"></STRING>
+  <STRING id="161"></STRING>
+  <STRING id="162"></STRING>
+  <STRING id="163"></STRING>
+  <STRING id="164"></STRING>
+  <STRING id="165"></STRING>
+  <STRING id="166"></STRING>
+  <STRING id="167"></STRING>
+  <STRING id="168"></STRING>
+  <STRING id="169"></STRING>
+  <STRING id="200"></STRING>
+  <STRING id="201"></STRING>
+  <STRING id="202"></STRING>
+  <STRING id="203"></STRING>
+  <STRING id="204"></STRING>
+ </CZECH>
+</LANGUAGE>

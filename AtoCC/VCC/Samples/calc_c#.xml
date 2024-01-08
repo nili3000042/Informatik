@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VCC>
+    <CODETYPE value="C#"/>
+    <SCANNER>
+        <READ value="\(" token="KlammerAuf" color="#E1FFFF"/>
+        <READ value="\)" token="KlammerZu" color="#E1FFFF"/>
+        <READ value="[0-9]+" token="Zahl" color="#E1FFFF"/>
+        <READ value="\+" token="Plus" color="#E1FFFF"/>
+        <READ value="\*" token="Mal" color="#E1FFFF"/>
+        <READ value="\-" token="Minus" color="#E1FFFF"/>
+        <READ value="\/" token="Durch" color="#E1FFFF"/>
+        <READ value="\s|\t|\n|\r" token="IGNORE" color="#E1FFFF"/>
+    </SCANNER>
+    <GLOBALCODE>
+        
+    </GLOBALCODE>
+    <RULES>
+        <RULE name="Ausgabe" color="#FFE1FF">
+            <RIGHTSIDE>
+                <RULE name="Rechnung"/>
+                <CODE>
+                    // Ausgabe des Ergebnisses 
+Output.WriteLine($1);
+
+                </CODE>
+            </RIGHTSIDE>
+        </RULE>
+        <RULE name="Rechnung" color="#FFE1FF">
+            <RIGHTSIDE>
+                <RULE name="Rechnung"/>
+                <TOKEN name="Plus"/>
+                <RULE name="Term"/>
+                <CODE>
+                    // Alle Platzhalter sind Strings und müssen umgewandelt werden
+$$ = (int.Parse($1) + int.Parse($3)).ToString();
+
+                </CODE>
+            </RIGHTSIDE>
+            <RIGHTSIDE>
+                <RULE name="Rechnung"/>
+                <TOKEN name="Minus"/>
+                <RULE name="Term"/>
+                <CODE>
+                    $$ = (int.Parse($1) - int.Parse($3)).ToString();
+
+                </CODE>
+            </RIGHTSIDE>
+            <RIGHTSIDE>
+                <RULE name="Term"/>
+                <CODE>
+                    $$ = $1;
+
+                </CODE>
+            </RIGHTSIDE>
+        </RULE>
+        <RULE name="Term" color="#FFE1FF">
+            <RIGHTSIDE>
+                <RULE name="Term"/>
+                <TOKEN name="Mal"/>
+                <RULE name="Ausdruck"/>
+                <CODE>
+                    $$ = (int.Parse($1) * int.Parse($3)).ToString();
+
+                </CODE>
+            </RIGHTSIDE>
+            <RIGHTSIDE>
+                <RULE name="Term"/>
+                <TOKEN name="Durch"/>
+                <RULE name="Ausdruck"/>
+                <CODE>
+                    $$ = (int.Parse($1) / int.Parse($3)).ToString();
+
+                </CODE>
+            </RIGHTSIDE>
+            <RIGHTSIDE>
+                <RULE name="Ausdruck"/>
+                <CODE>
+                    $$ = $1;
+
+                </CODE>
+            </RIGHTSIDE>
+        </RULE>
+        <RULE name="Ausdruck" color="#FFE1FF">
+            <RIGHTSIDE>
+                <TOKEN name="Zahl"/>
+                <CODE>
+                    $$ = $1;
+
+                </CODE>
+            </RIGHTSIDE>
+            <RIGHTSIDE>
+                <TOKEN name="KlammerAuf"/>
+                <RULE name="Rechnung"/>
+                <TOKEN name="KlammerZu"/>
+                <CODE>
+                    $$ = $2;
+
+                </CODE>
+            </RIGHTSIDE>
+        </RULE>
+    </RULES>
+</VCC>

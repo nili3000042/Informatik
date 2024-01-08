@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LANGUAGE>
+  <ENGLISH>
+    <STRING id="1">kfG Edit</STRING>
+    <STRING id="2">Grammar</STRING>
+    <STRING id="3">Derivation</STRING>
+    <STRING id="4">Definition</STRING>
+    <STRING id="5">LL(1) conditions</STRING>
+    <STRING id="6">Language</STRING>
+    <STRING id="10">Open</STRING>
+    <STRING id="11">Save</STRING>
+    <STRING id="12">Undo</STRING>
+    <STRING id="13">Redo</STRING>
+    <STRING id="14">Validate Grammar</STRING>
+    <STRING id="15">is regular ?</STRING>
+    <STRING id="16">Export Compiler</STRING>
+    <STRING id="17">Export Automaton</STRING>
+    <STRING id="18">New</STRING>
+    <STRING id="20">File</STRING>
+    <STRING id="21">New Grammar</STRING>
+    <STRING id="22">Open Grammar</STRING>
+    <STRING id="23">Save Grammar</STRING>
+    <STRING id="24">Save Grammar as ...</STRING>
+    <STRING id="25">Exit</STRING>
+    <STRING id="26">Help</STRING>
+    <STRING id="27">Online Help</STRING>
+    <STRING id="28">Introduction Wizard</STRING>
+    <STRING id="29">Change language</STRING>
+    <STRING id="30">About</STRING>
+
+    <STRING id="31">Show Symbol List</STRING>
+    <STRING id="32">Copy</STRING>
+    <STRING id="33">Paste</STRING>
+    <STRING id="34">Insert:</STRING>
+    <STRING id="35">Add typical Number rule</STRING>
+    <STRING id="36">Add typical Identifier rule</STRING>
+    <STRING id="37">Format to no OR junctions</STRING>
+    <STRING id="38">Format to only OR junctions</STRING>
+    <STRING id="39">Grammar</STRING>
+    <STRING id="40">Symbol List</STRING>
+    <STRING id="41">
+      <body style="font-family: Tahoma; font-size:80%; background-color:#EEEEEE; margin:2px; padding:0;">
+        <b>How to define a grammar:</b>
+        <ul style="margin-top:0;">
+          <li>You only need to define your production rules here!</li>
+          <li>Terminals can also be written within ' '. Terminals will become black and non-terminals red. </li>
+          <li>First non-terminal on the left side will automatically be the start symbol!</li>
+          <li>
+            A grammar example for palindroms over {a,b}<sup>*</sup>:<br/>
+            <b>
+              <font color="#FF0000">S</font> -> a <font color="#FF0000">S</font> a | b <font color="#FF0000">S</font> b | <font color="#0000FF">EPSILON</font>
+            </b>
+          </li><li>
+            For epsilon rules just leave a blank in a rule or write EPSILON:<br/> S -> <font color="#0000FF">EPSILON</font> | a  or S -> | a  or S -> a |  or even S -> a | | b.
+          </li>
+          <li>You can use rules like S : a | ... | z | 2 | ... | 8 too.</li>
+          <li>You can use comments at the beginning of each line like this: % My Comment.</li>
+          <li>By double clicking items in the symbol list you can add them at cursor position.</li>
+        </ul>
+      </body>
+    </STRING>
+    <STRING id="42">show/hide derivation</STRING>
+    
+    <STRING id="43">Transform:</STRING>
+    <STRING id="44">Remove Epsilon-Rules in grammar.</STRING>
+    <STRING id="45">Add Epsilon to L(G)</STRING>
+    <STRING id="46">Transform left linear regular grammar to a right linear one.</STRING>
+    <STRING id="47">Transform to Chomsky normal form</STRING>
+    <STRING id="48">Rename selected element</STRING>
+
+    <STRING id="50">Export Image</STRING>
+    <STRING id="51">Resolution</STRING>
+    <STRING id="52">Format</STRING>
+    <STRING id="53">Export</STRING>
+
+    <STRING id="60"> Input Sentence:  </STRING>
+    <STRING id="61">Derive this sentence</STRING>
+    <STRING id="62">Export Tree Image</STRING>
+    <STRING id="63">Export current derivation as LaTeX code to your clipboard</STRING>
+    <STRING id="64">Derivation Tree</STRING>
+    <STRING id="65">Derivation</STRING>
+    <STRING id="66">sentencial form</STRING>
+    <STRING id="67">used rule</STRING>
+    <STRING id="68">activate for right derivation</STRING>
+    <STRING id="69">deactivate for left derivation</STRING>
+
+    <STRING id="70">Definition</STRING>
+    <STRING id="71">Diagram</STRING>
+    <STRING id="72">Copy to clipboard</STRING>
+    <STRING id="73">Export to file</STRING>
+    <STRING id="74"> Export definition:   </STRING>
+    <STRING id="75">Derive from here on and choose each applied rule yourself</STRING>
+    <STRING id="76">Back</STRING>
+    <STRING id="77">Apply</STRING>
+    <STRING id="78">Choose next rule to apply...</STRING>
+    <STRING id="79">no rule left - go back</STRING>
+
+    <STRING id="80">Wizard</STRING>
+    <STRING id="81">Close</STRING>
+    <STRING id="82">Previous Step</STRING>
+    <STRING id="83">Next Step</STRING>
+
+    <STRING id="84">Define the alphabet:</STRING>
+    <STRING id="85">Elements of the alphabet (click on them to build a word):</STRING>
+    <STRING id="86">Display more</STRING>
+    <STRING id="87">Delete last character</STRING>
+    <STRING id="88">Define the language L (doubleclick on the items in A* to add the words to L). L = {</STRING>
+
+    <STRING id="90">play animation</STRING>
+    <STRING id="91">pause animation</STRING>
+    <STRING id="92">move slider for direct animation step setting</STRING>
+    <STRING id="93">jump to the start</STRING>
+    <STRING id="94">one step forward</STRING>
+    <STRING id="95">one step back</STRING>
+    <STRING id="96">select parse trees</STRING>
+
+    <STRING id="98">Fundamentals</STRING>
+    <STRING id="99">Experiment with alphabet, word, set of words and language.</STRING>
+    <STRING id="100">kfG Edit Project:</STRING>
+    <STRING id="101">Introduction Wizard</STRING>
+    <STRING id="102">New Grammar</STRING>
+    <STRING id="103">Open Grammar</STRING>
+    <STRING id="104">Getting Help:</STRING>
+    <STRING id="105">Online FAQ</STRING>
+    <STRING id="106">A quick introduction to get in touch with kfG Edit</STRING>
+    <STRING id="107">Create a new grammar.</STRING>
+    <STRING id="108">Open an existing grammar.</STRING>
+    <STRING id="109">To get any further information visit the Online Help Center</STRING>
+    <STRING id="110">Visit the AtoCC website</STRING>
+
+    <STRING id="111">First and Follow</STRING>
+    <STRING id="112">LL(1) Conditions:</STRING>
+    <STRING id="113">Check Condition 1</STRING>
+    <STRING id="114">Check Condition 2</STRING>
+    <STRING id="115">is LL(1) Grammar?</STRING>
+    <STRING id="116">Calculating alternative derivations...</STRING>
+    <STRING id="117">Cancel - just show one solution</STRING>
+
+    <STRING id="120">Some characters in input are not defined in grammar!</STRING>
+    <STRING id="121">Production rule: </STRING>
+    <STRING id="122"> does never terminate!</STRING>
+    <STRING id="123">Rule: </STRING>
+    <STRING id="124"> is not regular!</STRING>
+    <STRING id="125"> nonterminal on wrong side!</STRING>
+    <STRING id="126">No start symbol defined!</STRING>
+    <STRING id="127">Warning: Symbol </STRING>
+    <STRING id="128"> never used!</STRING>
+    <STRING id="129">Your grammar is left regular. Only right regular grammars can be translated to NEA. Transform your grammar to right regular?</STRING>
+    <STRING id="130">Grammar is syntactically correct.</STRING>
+    <STRING id="131">Sentence not deriveable.</STRING>
+    <STRING id="132">Grammar is left regular</STRING>
+    <STRING id="133">Grammar is right regular</STRING>
+    <STRING id="134">Save current project?</STRING>
+    <STRING id="135">Derivation took very long. Grammar might not terminate! Continue?</STRING>
+    <STRING id="136"> never defined!</STRING>
+
+    <STRING id="137">represents the end of input</STRING>
+    <STRING id="138">with</STRING>
+    <STRING id="139">First-Sets</STRING>
+    <STRING id="140">LL(1) first condition fulfilled!</STRING>
+    <STRING id="141">LL(1) first condition not fulfilled!</STRING>
+    <STRING id="142">LL(1) second condition fulfilled!</STRING>
+    <STRING id="143">LL(1) second condition not fulfilled!</STRING>
+    <STRING id="144">Sentence is deriveable but no parse tree can be found.</STRING>
+
+    <STRING id="145">The characters { } are used for set. Use '{' and '}'</STRING>
+    <STRING id="146">You might have an open escape sequenz '... !</STRING>
+    <STRING id="147">There is a , without an element behinde!</STRING>
+    <STRING id="148">This is not a set - you need at lease A = { } as empty set!</STRING>
+    <STRING id="149">Double elements in your alphabet:</STRING>
+    <STRING id="150">Your current word and language will be lost. You realy want to change the alphabet?</STRING>
+    <STRING id="151">The grammar has been copied to your clipboard.</STRING>
+    <STRING id="152">This transformation can only be applied to left linear regular grammars!</STRING>
+    <STRING id="153">Derivation has been copied to your clipboard.</STRING>
+    <STRING id="154">Derivation for </STRING>
+    <STRING id="155">Sentencial forms: </STRING>
+
+    <STRING id="180">Welcome to AtoCC kfG Editor!
+      
+This wizard will show you how to create a context free grammar and will explain the interface of the editor on the way. You can move panels like this by click and drag the blue caption bar.
+      
+Use the button at the right to go one step further.
+    </STRING>
+    <STRING id="181">Here you can create a grammar by writing your production rules.
+    
+Write in the large area "S -> a S a | b S b | c " 
+(without ").
+      
+We have defined a nonterminal S which automatically becomes your start symbol because it is the first one.
+    </STRING>
+    <STRING id="182">On the right side you get a list with all terminals and nonterminals you used yet.
+      
+You can double click on of the items in that list to add it at your current cursor position in the grammar.
+    </STRING>
+    <STRING id="183">There is a little hint panel at the bottom which summurizes some important facts you need to consider using this editor.
+      
+There are two buttons to format your grammar in the toolbar - just click once on both to see what happens with your grammar.
+    </STRING>
+    <STRING id="184">
+      Under Insert you can find some typical parts used in many grammars - if you need them, you can add those parts to your grammar by clicking on them.
+    </STRING>
+    <STRING id="185">Next to the Open and Save buttons your find a "Validate Grammar" button. You can use this button at any time to check if all nonterminals are realy used and so on.
+    
+The button next to it can check if you have written a regular grammar and if not it will tell you which rule is not regular.
+    </STRING>
+    <STRING id="186">On this page you can derive words of your language to see if and how it is derived.
+   
+Type a word like "abcba" in the Input Sentence box and press return. 
+
+You get a parse tree on the left and a derivation list on the right with all rules that have been applied.
+    </STRING>
+    <STRING id="187">You can also use animation by pressing the button next to the slider.
+    
+Importend is the R/L button here - you can switch between rightmost and leftmost derivation which is importend if you have recursiv rules in your grammar.
+    </STRING>
+    <STRING id="188">On this page you can see your formal definition of the grammar you made and export this definition.
+    
+On the right side there is a diagram which is close to syntax diagrams.
+    </STRING>
+    <STRING id="189">You may now start a new project your own and try out the features of kfG Editor!
+    
+Have fun!
+
+AtoCC Team
+    </STRING>
+
+  </ENGLISH>
+  <GERMAN>
+    <STRING id="1">kfG Edit</STRING>
+    <STRING id="2">Grammatik</STRING>
+    <STRING id="3">Ableitung</STRING>
+    <STRING id="4">Definition</STRING>
+    <STRING id="5">LL(1) Forderungen</STRING>
+    <STRING id="6">Sprache</STRING>
+    <STRING id="10">Öffnen</STRING>
+    <STRING id="11">Speichern</STRING>
+    <STRING id="12">Rückgängig</STRING>
+    <STRING id="13">Wiederherstellen</STRING>
+    <STRING id="14">Grammatik überprüfen</STRING>
+    <STRING id="15">ist regulär ?</STRING>
+    <STRING id="16">Export Compiler</STRING>
+    <STRING id="17">Export Automat</STRING>
+    <STRING id="18">Neu</STRING>
+    <STRING id="20">Datei</STRING>
+    <STRING id="21">Neue Grammatik</STRING>
+    <STRING id="22">Grammatik öffnen</STRING>
+    <STRING id="23">Grammatik speichern</STRING>
+    <STRING id="24">Grammatik speichern unter ...</STRING>
+    <STRING id="25">Beenden</STRING>
+    <STRING id="26">Hilfe</STRING>
+    <STRING id="27">Online Hilfe</STRING>
+    <STRING id="28">Einführungsassistent</STRING>
+    <STRING id="29">Sprache ändern</STRING>
+    <STRING id="30">Über...</STRING>
+
+    <STRING id="31">Symbolliste anzeigen</STRING>
+    <STRING id="32">Kopieren</STRING>
+    <STRING id="33">Einfügen</STRING>
+    <STRING id="34">Einfügen:</STRING>
+    <STRING id="35">Typische Zahl-Regel einfügen</STRING>
+    <STRING id="36">Typische Bezeichner-Regel einfügen</STRING>
+    <STRING id="37">Umformatieren ohne ODER Verwendung</STRING>
+    <STRING id="38">Umformatieren nur mit ODER Verwendung</STRING>
+    <STRING id="39">Grammatik</STRING>
+    <STRING id="40">Symbolliste</STRING>
+    <STRING id="41">
+      <body style="font-family: Tahoma; font-size:80%; background-color:#EEEEEE; margin:2px; padding:0;">
+        <b>Wie erstellt man eine Grammatik:</b>
+        <ul style="margin-top:0;">
+          <li>Man definiert hier nur die Produktionsregeln!</li>
+          <li>Terminale können in ' ' geschrieben werden. Terminale werden schwarz gefärbt und Nichtterminale rot. </li>
+          <li>Das erste Nichtterminal auf der linken Seite wird automatisch zum Spitzensymbol erklärt!</li>
+          <li>
+            Eine Beispielgrammtik für Palindrome über {a,b}<sup>*</sup>:<br/>
+            <b>
+              <font color="#FF0000">S</font> -> a <font color="#FF0000">S</font> a | b <font color="#FF0000">S</font> b | <font color="#0000FF">EPSILON</font>
+          </b>
+        </li>
+        <li>
+          Für Epsilon-Regeln lässt man einfach leer oder schreibt EPSILON:<br/> S -> <font color="#0000FF">EPSILON</font> | a  oder S -> | a  oder S -> a |  oder auch S -> a | | b.
+          </li>
+          <li>Man kann auch Regeln der Form : a | ... | z | 2 | ... | 8 verwenden.</li>
+          <li>Kommentare können wie folgt am Anfang jeder Zeile verwendet werden: % Mein Kommentar.</li>
+          <li>Durch einen Doppelclick in der Symbolliste lässt sich das gewählte Symbol an Cursor-Position einfügen.</li>
+        </ul>
+      </body>
+    </STRING>
+    <STRING id="42">Ableitung anzeigen/ausblenden</STRING>
+
+    <STRING id="43">Transformation:</STRING>
+    <STRING id="44">Epsilon-Regeln entfernen</STRING>
+    <STRING id="45">Epsilon zu L(G) hinzufügen</STRING>
+    <STRING id="46">Linkslineare reguläre Grammatik in rechtlineare Grammatik transformieren.</STRING>
+    <STRING id="47">In Chomsky Normal Form transformieren</STRING>
+    <STRING id="48">gewähltes Element umbenennen</STRING>
+
+    <STRING id="50">Bild exportieren</STRING>
+    <STRING id="51">Auflösung</STRING>
+    <STRING id="52">Format</STRING>
+    <STRING id="53">Exportieren</STRING>
+
+    <STRING id="60"> Eingabewort:  </STRING>
+    <STRING id="61">Dieses Wort ableiten</STRING>
+    <STRING id="62">Export Ableitungsbaum</STRING>
+    <STRING id="63">Ableitung als LaTeX-Code in die Zwischenablage kopieren</STRING>
+    <STRING id="64">Ableitungsbaum</STRING>
+    <STRING id="65">Ableitung</STRING>
+    <STRING id="66">Satzform</STRING>
+    <STRING id="67">angewandte Regel</STRING>
+    <STRING id="68">aktivieren für Rechtsableitung</STRING>
+    <STRING id="69">deaktivieren für Linksableitung</STRING>
+
+    <STRING id="70">Definition</STRING>
+    <STRING id="71">Diagramm</STRING>
+    <STRING id="72">in die Zwischenablage</STRING>
+    <STRING id="73">Export in Datei</STRING>
+    <STRING id="74"> Export Definition:   </STRING>
+    <STRING id="75">Manuelles Wählen der anzuwendenden Produktionsregeln.</STRING>
+    <STRING id="76">Zurück</STRING>
+    <STRING id="77">Anwenden</STRING>
+    <STRING id="78">Wähle nächste Regel...</STRING>
+    <STRING id="79">keine Regel - geh zurück</STRING>
+                    
+    <STRING id="80">Assistent</STRING>
+    <STRING id="81">Schließen</STRING>
+    <STRING id="82">Zurück</STRING>
+    <STRING id="83">Weiter</STRING>
+
+    <STRING id="84">Alphabet definieren:</STRING>
+    <STRING id="85">Zeichen des Alphabets (anklicken um ein Wort zu konstruieren):</STRING>
+    <STRING id="86">Mehr anzeigen</STRING>
+    <STRING id="87">Letztes Zeichen entfernen</STRING>
+    <STRING id="88">Sprache L definieren (Doppelklick auf Wörter in A* um diese zu L hinzuzufügen): L = {</STRING>
+    
+    <STRING id="90">Animation abspielen</STRING>
+    <STRING id="91">Animation pausieren</STRING>
+    <STRING id="92">Bewegen um Animation direkt zu steuern</STRING>
+    <STRING id="93">an den Anfang springen</STRING>
+    <STRING id="94">einen Schritt zurück</STRING>
+    <STRING id="95">einen Schritt weiter</STRING>
+    <STRING id="96">Ableitung auswählen</STRING>
+
+    <STRING id="98">Grundbegriffe</STRING>
+    <STRING id="99">Experimentieren Sie mit Alphabet, Wort, Wortmenge und Spache.</STRING>
+    <STRING id="100">kfG Edit Projekt:</STRING>
+    <STRING id="101">Einführungsassistent</STRING>
+    <STRING id="102">Neue Grammatik</STRING>
+    <STRING id="103">Grammatik öffnen</STRING>
+    <STRING id="104">Hilfe:</STRING>
+    <STRING id="105">Online FAQ</STRING>
+    <STRING id="106">Eine kurze Einführung in die Funktionen von kfG Edit.</STRING>
+    <STRING id="107">Erstellen Sie eine neue Grammatik.</STRING>
+    <STRING id="108">Öffnen Sie eine vorhandene Grammatik.</STRING>
+    <STRING id="109">Besuchen Sie das Online Help Center</STRING>
+    <STRING id="110">Besuchen Sie die AtoCC Website</STRING>
+
+    <STRING id="112">LL(1) Forderungen:</STRING>
+    <STRING id="113">Forderung 1 prüfen</STRING>
+    <STRING id="114">Forderung 2 prüfen</STRING>
+    <STRING id="115">ist LL(1) Grammatik?</STRING>
+    <STRING id="116">Berechne alternative Ableitungen...</STRING>
+    <STRING id="117">Abbrechen und eine mögliche Lösung anzeigen</STRING>
+
+    <STRING id="120">Einige Zeichen des Eingabeworts sind nicht in der Grammatik definiert!</STRING>
+    <STRING id="121">Produktionsregel: </STRING>
+    <STRING id="122"> terminiert nicht!</STRING>
+    <STRING id="123">Regel: </STRING>
+    <STRING id="124"> ist nicht regulär!</STRING>
+    <STRING id="125"> Nichtterminal auf der falschen Seite!</STRING>
+    <STRING id="126">Kein Spitzensymbol definiert!</STRING>
+    <STRING id="127">Warnung: Symbol </STRING>
+    <STRING id="128"> nie verwendet!</STRING>
+    <STRING id="129">Die Grammatik ist linkslinear. Nur rechtslineare Grammatiken können in einen NEA transformiert werden. 
+Soll die Grammatik zunächst in eine rechtslineare transformiert werden?</STRING>
+    <STRING id="130">Grammatik ist syntaktisch korrekt.</STRING>
+    <STRING id="131">Eingabewort konnte nicht abgeleitet werden.</STRING>
+    <STRING id="132">Grammatik ist linkslinear</STRING>
+    <STRING id="133">Grammatik ist rechtslinear</STRING>
+    <STRING id="134">Aktuelle Grammatik speichern?</STRING>
+    <STRING id="135">Ableitung braucht sehr lange. Grammatik terminiert möglicherweise nicht! Fortfahren?</STRING>
+    <STRING id="136"> nicht definiert!</STRING>
+
+    <STRING id="137">symbolisiert das Ende des Eingabeworts</STRING>
+    <STRING id="138">mit</STRING>
+    <STRING id="139">First-Mengen</STRING>
+    <STRING id="140">LL(1) Forderung 1 erfüllt!</STRING>
+    <STRING id="141">LL(1) Forderung 1 nicht erfüllt!</STRING>
+    <STRING id="142">LL(1) Forderung 2 erfüllt!</STRING>
+    <STRING id="143">LL(1) Forderung 2 nicht erfüllt!</STRING>
+    <STRING id="144">Eingabewort konnte zwar abgeleitet werden, aber ein Ableitungsbaum konnte nicht erstellt werden.</STRING>
+
+    <STRING id="145">Die Zeichen { } werden für die Menge verwendet. Benutzen Sie '{' und '}'!</STRING>
+    <STRING id="146">Es gibt eine offene Escape-Sequenz '... !</STRING>
+    <STRING id="147">Einem , folgt kein Zeichen!</STRING>
+    <STRING id="148">Es handelt sich nicht um eine Menge. Es muss mindestens A = { } für die leere Menge angegeben werden!</STRING>
+    <STRING id="149">Es gibt doppelte Elemente im Alphabet: </STRING>
+    <STRING id="150">Das aktuelle Wort w und die Sprache L gehen verloren. Möchten Sie wirklich das Alphabet ändern?</STRING>
+    <STRING id="151">Die Grammatik wurde in die Zwischenablage kopiert.</STRING>
+    <STRING id="152">Diese Transformation kann nur auf linkslineare reguläre Grammatiken angewendet werden!</STRING>
+    <STRING id="153">Ableitung wurde in die Zwischenablage kopiert.</STRING>
+    <STRING id="154">Ableitung für </STRING>
+    <STRING id="155">Satzformfolge: </STRING>
+
+    <STRING id="180">Willkommen zum AtoCC kfG Editor!
+      
+Dieser Assistent wird dir zeigen wie du eine einfache kontextfreie Grammatik erstellst und dir die Funktionen des Editors auf diesem Weg erklären. Du kannst Fensterchen wie dieses bewegen, in dem du auf die blaue Titelzeile klickst und verschiebst.
+      
+Klicke auf "weiter" um auf die nächste Seite zu gelangen.
+    </STRING>
+    <STRING id="181">Hier kannst du Grammatiken erstellen, in dem du deren Produktionsregeln aufschreibst.
+    
+Schreibe in die große Eingabefläche "S -> a S a | b S b | c " 
+(ohne die ").
+      
+Wir haben ein Nichtterminal S definiert welches automatisch zum Startsymbol ernannt wird (da es das erste ist).
+    </STRING>
+    <STRING id="182">Auf der rechten Seite hast du eine Symbolliste mit allen Terminalen und Nichtterminalen die du bislang verwendet hast.
+      
+Du kannst auf ein Element doppelt klicken um es an der aktuellen Stelle in deiner Grammatik einzufügen.
+    </STRING>
+    <STRING id="183">Unterhalb des Eingabefelds ist ein kleines Hilfsfenster welches grundlegende Dinge zusammenfasst, die bei der Erstellung einer Grammatik im Editor zu beachten sind.
+      
+In der Toolbar finden sich zwei Buttons für "Format". Klicke jeden einmal an und schau wie sich deine Grammatik verändert.
+    </STRING>
+    <STRING id="184">Unter Einfügen finden sich ein paar typische Grammatikbausteine (Zahl und Bezeichner) - du kannst diese bei Bedarf durch einen Klick auf den Button einfügen.
+    </STRING>
+    <STRING id="185">Neben dem Öffnen und Speichern Button findet sich ein "Grammatik überprüfen" Button. Mit diesem lässt sich überprüfen ob alle Nichtterminale auch verwendet wurden usw.
+    
+Der Button daneben erlaubt es dir zu überprüfen ob deine definierte Grammatik regulär ist oder nicht.
+    </STRING>
+    <STRING id="186">Auf dieser Seite kannst du Wörter der Sprache ableiten und sehen wie dies geschiet.
+    
+Gib das Wort "abcba" in das Eingabefeld ein und bestätige mit Enter. 
+
+Es entsteht links ein Ableitungsbaum und rechts eine Liste der Ableitungen und der angewendeten Regeln.
+    </STRING>
+    <STRING id="187">Du kannst die Ableitung auch animieren in dem du auf den Button rechts neben dem Schieberegler klickst.
+    
+Wichtig ist der R/L Button. Mit diesem kannst du zwischen Rechts- und Linksableitung wählen. Viele Grammatiken enthalten rekursive Regeln und können deshalb meist nur in einer Richtung abgeleitet werden.
+    </STRING>
+    <STRING id="188">Auf dieser Seite bekommst du die formale Definition deiner Grammatik als 4-Tupel. 
+    
+Auf der rechten Seite ist ein Diagramm angegeben, welches sich stark an Syntax-Diagrammen orientiert.
+    </STRING>
+    <STRING id="189">Du kannst nun ein eigenes Projekt beginnen und die Funktionen von kfG Edit testen!
+    
+Viel Spaß,
+
+AtoCC Team
+    </STRING>
+  </GERMAN>
+</LANGUAGE>

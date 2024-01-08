@@ -1,0 +1,27 @@
+PROGRAM
+
+PRINT '**********************'
+PRINT ' Hallo Welt! '
+PRINT '**********************'
+PRINT ''
+
+$A := 3
+
+WHILE $A > 0 DO BEGIN
+ PRINT $A
+ PRINT ''
+ DEC $A
+END
+
+$B := 0  
+WHILE $B != 121 DO BEGIN
+ PRINT 'Beenden? (y/n)' 
+ GET $B
+ PRINT ''
+
+ IF $B == 121 THEN BEGIN 
+   PRINT 'Tschüß...'   
+ END
+END
+
+END.

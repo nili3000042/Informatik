@@ -1,0 +1,20 @@
+Start Turtle
+
+(define lastdir (current-directory))
+(current-directory SchemeEditDirectory)
+(define TurtleProcess (process "Turtle.exe")) 
+(current-directory lastdir)
+(define TurtlePort (cadr TurtleProcess))      
+                                      
+(define Turtle                            
+  (lambda varlist                     
+    (let ((s ""))                     
+      (for-each                       
+        (lambda (n)                   
+          (cond                       
+            ((number? n) (set! s (string-append s (number->string n) " "))) 
+            ((symbol? n) (set! s (string-append s (symbol->string n) " "))) 
+            ((string? n) (set! s (string-append s n " ")))))                
+          varlist) 
+      (display (string-append s (string #\return #\linefeed )) TurtlePort))))
+

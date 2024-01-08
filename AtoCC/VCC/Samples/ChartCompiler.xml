@@ -1,0 +1,97 @@
+<VCC>
+    <CODETYPE value="C#"/>
+    <SCANNER>
+        <READ value="[0-9]+\,?[0-9]*" token="Zahl" color="#E1FFFF"/>
+        <READ value="[\r\s\t\n]+" token="Trenner" color="#E1FFFF"/>
+    </SCANNER>
+    <GLOBALCODE>
+        // Chart Compiler
+//
+// use ChartCompiler.exe in.txt out.jpg
+//
+// in.txt use integer or float values one per line
+
+// Sample in.txt:
+//
+// 25,46
+// 44,00
+// 12
+// 123,897
+
+
+ArrayList a = new ArrayList();
+
+
+    </GLOBALCODE>
+    <RULES>
+        <RULE name="Grafik" color="#FFE1FF">
+            <RIGHTSIDE>
+                <RULE name="Werte"/>
+                <CODE>
+                    System.Drawing.Font f = new System.Drawing.Font("Arial",10);
+Random rnd = new Random();
+
+float maxvalue = 0;
+int   maxscale = 1;
+
+for (int i = 0; i&lt; a.Count; i++)
+ if (maxvalue &lt; (float)a[i]) maxvalue = (float)a[i];
+
+maxvalue = maxvalue + maxvalue/10;
+
+while (maxvalue &gt; 1){
+  maxvalue = maxvalue / 10;
+  maxscale = maxscale * 10;
+}
+
+System.Drawing.Bitmap b = new System.Drawing.Bitmap(40+a.Count*70,200);
+System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(b);
+
+g.Clear(System.Drawing.Color.White);
+g.DrawRectangle(System.Drawing.Pens.Black,0,0,40+a.Count*70-2,198);
+g.DrawLine(System.Drawing.Pens.Black,10,10,10,190);
+g.DrawString(maxscale.ToString(),f,System.Drawing.Brushes.Black,12,7);
+g.DrawString((maxscale/2).ToString(),f,System.Drawing.Brushes.Black,12,92);
+g.DrawString("0",f,System.Drawing.Brushes.Black,12,173);
+for (int i=0; i&lt;a.Count; i++)
+{
+	int h = (int)(180 * (float)a[i] /maxscale);
+	g.FillRectangle(new System.Drawing.SolidBrush(System.Drawing.Color.FromArgb(rnd.Next(100)+100,rnd.Next(100)+100,rnd.Next(100)+100)),30+i*70,190-h,50,h);
+	g.DrawString((i+1).ToString(),f,System.Drawing.Brushes.Black,30+i*70+22,190-h-17);
+}
+g.DrawLine(System.Drawing.Pens.Black,10,190,30+a.Count*70-2,190);
+
+// Save to OutputStream as jpg
+b.Save(Output.BaseStream,System.Drawing.Imaging.ImageFormat.Jpeg);
+
+
+                </CODE>
+            </RIGHTSIDE>
+        </RULE>
+        <RULE name="Werte" color="#FFE1FF">
+            <RIGHTSIDE>
+                <RULE name="Wert"/>
+                <CODE>
+                    
+                </CODE>
+            </RIGHTSIDE>
+            <RIGHTSIDE>
+                <RULE name="Wert"/>
+                <TOKEN name="Trenner"/>
+                <RULE name="Werte"/>
+                <CODE>
+                    
+                </CODE>
+            </RIGHTSIDE>
+        </RULE>
+        <RULE name="Wert" color="#FFE1FF">
+            <RIGHTSIDE>
+                <TOKEN name="Zahl"/>
+                <CODE>
+                    a.Add(float.Parse($1));
+
+                </CODE>
+            </RIGHTSIDE>
+        </RULE>
+    </RULES>
+</VCC>

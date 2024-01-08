@@ -1,0 +1,310 @@
+uses Windows, Messages, SysUtils, Classes, Dialogs, shellapi, Math
+
+(* global definitions: *)
+
+type TOutput = class
+     public
+      Text : String;
+      procedure WriteLine(s : String);
+      constructor Create();
+     end;
+
+constructor TOutput.Create;
+begin Text := ''; end;
+
+procedure TOutput.WriteLine(S : String);
+begin Text := Text + s; end;
+
+var Output : TOutput;
+
+%%
+
+
+var
+yylexpos : Integer = -1;
+yylval   : string = '';
+
+function yylex () : integer;
+begin
+  inc(yylexpos);
+  result := 0;
+  if(yylexpos > high(TokenList)) then begin yylval := ''; exit; end;
+  yylval := TokenList[yylexpos].val;
+  result := TokenList[yylexpos].token;
+end;
+
+const yymaxdepth = 10240;
+
+function yyparse : Integer;
+
+
+var yystate, yysp, yyn    : Integer;
+    yys : array [1..yymaxdepth] of Integer;
+    yyv : array [1..yymaxdepth] of String;
+    yyval : String;
+
+yychar   : Integer; (* current lookahead character *)
+
+yydebug  : Boolean; (* set to true to enable debugging output of parser *)
+
+yyflag    : ( yyfnone, yyfaccept, yyfabort, yyferror );
+yyerrflag : Integer;
+
+
+procedure yyerror ( msg : String );
+  begin
+    writeln(msg);
+  end(*yyerrmsg*);
+
+procedure yyclearin;
+  begin
+    yychar := -1;
+  end(*yyclearin*);
+
+procedure yyaccept;
+  begin
+    yyflag := yyfaccept;
+  end(*yyaccept*);
+
+procedure yyabort;
+  begin
+    yyflag := yyfabort;
+  end(*yyabort*);
+
+procedure yyerrlab;
+  begin
+    yyflag := yyferror;
+  end(*yyerrlab*);
+
+procedure yyerrok;
+  begin
+    yyerrflag := 0;
+  end(*yyerrork*);
+
+
+procedure yyaction ( yyruleno : Integer );
+  (* local definitions: *)
+%%
+begin
+  (* actions: *)
+  case yyruleno of
+%%
+  end;
+end(*yyaction*);
+
+(* parse table: *)
+%%
+
+const _error = 256; (* error token *)
+
+function yyact(state, sym : Integer; var act : Integer) : Boolean;
+  (* search action table *)
+  var k : Integer;
+  begin
+    k := yyal[state];
+    while (k<=yyah[state]) and (yya[k].sym<>sym) do inc(k);
+    if k>yyah[state] then
+      yyact := false
+    else
+      begin
+        act := yya[k].act;
+        yyact := true;
+      end;
+  end(*yyact*);
+
+function yygoto(state, sym : Integer; var nstate : Integer) : Boolean;
+  (* search goto table *)
+  var k : Integer;
+  begin
+    k := yygl[state];
+    while (k<=yygh[state]) and (yyg[k].sym<>sym) do inc(k);
+    if k>yygh[state] then
+      yygoto := false
+    else
+      begin
+        nstate := yyg[k].act;
+        yygoto := true;
+      end;
+  end(*yygoto*);
+
+label parse, next, error, errlab, shift, reduce, accept, abort;
+
+begin(*yyparse*)
+
+  (* initialize: *)
+
+  yystate := 0; yychar := -1; yyerrflag := 0; yysp := 0;
+
+{$ifdef yydebug}
+  yydebug := true;
+{$else}
+  yydebug := false;
+{$endif}
+
+parse:
+
+  (* push state and value: *)
+
+  inc(yysp);
+  if yysp>yymaxdepth then
+    begin
+      yyerror('yyparse stack overflow');
+      goto abort;
+    end;
+  yys[yysp] := yystate; yyv[yysp] := yyval;
+
+next:
+
+  if (yyd[yystate]=0) and (yychar=-1) then
+    (* get next symbol *)
+    begin
+      yychar := yylex; if yychar<0 then yychar := 0;
+    end;
+
+  if yydebug then writeln('state ', yystate, ', char ', yychar);
+
+  (* determine parse action: *)
+
+  yyn := yyd[yystate];
+  if yyn<>0 then goto reduce; (* simple state *)
+
+  (* no default action; search parse table *)
+
+  if not yyact(yystate, yychar, yyn) then goto error
+  else if yyn>0 then                      goto shift
+  else if yyn<0 then                      goto reduce
+  else                                    goto accept;
+
+error:
+
+  (* error; start error recovery: *)
+
+  if yyerrflag=0 then yyerror('syntax error');
+
+errlab:
+
+  if yyerrflag<=2 then                  (* incomplete recovery; try again *)
+    begin
+      yyerrflag := 3;
+      (* uncover a state with shift action on error token *)
+      while (yysp>0) and not ( yyact(yys[yysp], _error, yyn) and
+                               (yyn>0) ) do
+        begin
+          if yydebug then
+            if yysp>1 then
+              writeln('error recovery pops state ', yys[yysp], ', uncovers ',
+                      yys[yysp-1])
+            else
+              writeln('error recovery fails ... abort');
+          dec(yysp);
+        end;
+      if yysp=0 then goto abort; (* parser has fallen from stack; abort *)
+      yystate := yyn;            (* simulate shift on error *)
+      goto parse;
+    end
+  else                                  (* no shift yet; discard symbol *)
+    begin
+      if yydebug then writeln('error recovery discards char ', yychar);
+      if yychar=0 then goto abort; (* end of input; abort *)
+      yychar := -1; goto next;     (* clear lookahead char and try again *)
+    end;
+
+shift:
+
+  (* go to new state, clear lookahead character: *)
+
+  yystate := yyn; yychar := -1; yyval := yylval;
+  if yyerrflag>0 then dec(yyerrflag);
+
+  goto parse;
+
+reduce:
+
+  (* execute action, pop rule from stack, and go to next state: *)
+
+  if yydebug then writeln('reduce ', -yyn);
+
+  yyflag := yyfnone; yyaction(-yyn);
+  dec(yysp, yyr[-yyn].len);
+  if yygoto(yys[yysp], yyr[-yyn].sym, yyn) then yystate := yyn;
+
+  (* handle action calls to yyaccept, yyabort and yyerror: *)
+
+  case yyflag of
+    yyfaccept : goto accept;
+    yyfabort  : goto abort;
+    yyferror  : goto errlab;
+  end;
+
+  goto parse;
+
+accept:
+
+  yyparse := 0; exit;
+
+abort:
+
+  yyparse := 1; exit;
+
+end(*yyparse*);
+
+
+var ShowTokens : boolean = false;
+    InputFilename : String = '';
+    OutputFilename : String = ''; 
+    iterationVar : Integer; SL : TStringList; inputstream,outputstream  : string ;
+begin
+try 
+ for iterationVar := 1 to ParamCount do begin
+  if lowercase(ParamStr(iterationVar)) =  '-t' then ShowTokens := true else
+  if (InputFilename = '') then InputFilename := ParamStr(iterationVar) else
+  if (OutputFilename = '') then OutputFilename := ParamStr(iterationVar) else begin
+   Writeln('Too many argument!');
+   ExitCode := 1;
+   exit;
+  end;
+ end;
+ if (InputFilename = '') then begin
+   Writeln('You need to specify input and outputfile: compiler.exe input.txt output.txt');
+   ExitCode := 1;
+   exit;
+ end;
+ SL := TStringList.Create();
+ SL.LoadFromFile(InputFilename);
+ inputstream := SL.Text;
+ while(inputstream[length(inputstream)] = #10)or(inputstream[length(inputstream)] = #13) do
+  Delete(inputstream,length(inputstream),1);
+ SL.Free;
+ outputstream := '';
+
+
+ if not Scanner(inputstream) then begin
+  ExitCode := 1;
+  exit;
+ end;
+
+ if (ShowTokens) then begin
+  for iterationVar := 0 to high(TokenList) do 
+   WriteLn('TokenID: ',TokenList[iterationVar].token,'  =  '+TokenList[iterationVar].val);
+ end;
+
+ Output := TOutput.Create();
+
+ if yyparse() <> 0 then begin
+  ExitCode := 1;
+  exit;
+ end;
+
+ outputstream := Output.Text;
+
+ if (OutputFilename <> '') then begin
+  SL := TStringList.Create();
+  SL.SetText(pchar(outputstream));
+  SL.SaveToFile(OutputFilename);
+  SL.Free;
+ end else 
+  Writeln(outputstream);
+Except
+end;
+ ExitCode := 0;
+end.

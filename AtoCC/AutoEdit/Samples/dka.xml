@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AUTOMATON>
+    <TYPE value="DKA"/>
+    <ALPHABET>
+        <ITEM value="!"/>
+        <ITEM value="a"/>
+        <ITEM value="b"/>
+    </ALPHABET>
+    <STACKALPHABET>
+        <ITEM value="#"/>
+        <ITEM value="A"/>
+        <ITEM value="B"/>
+    </STACKALPHABET>
+    <STATE name="q3" finalstate="false">
+        <TRANSITION target="q3">
+            <LABEL read="a" topofstack="A" write="AA"/>
+            <LABEL read="a" topofstack="B" write="AB"/>
+            <LABEL read="a" topofstack="#" write="A#"/>
+            <LABEL read="b" topofstack="#" write="B#"/>
+            <LABEL read="b" topofstack="B" write="BB"/>
+            <LABEL read="b" topofstack="A" write="BA"/>
+        </TRANSITION>
+        <TRANSITION target="q1">
+            <LABEL read="!" topofstack="A" write="A"/>
+            <LABEL read="!" topofstack="B" write="B"/>
+        </TRANSITION>
+        <TRANSITION target="q2">
+            <LABEL read="!" topofstack="#" write="#"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q1" finalstate="false">
+        <TRANSITION target="q1">
+            <LABEL read="a" topofstack="A" write="EPSILON"/>
+            <LABEL read="b" topofstack="B" write="EPSILON"/>
+        </TRANSITION>
+        <TRANSITION target="q2">
+            <LABEL read="EPSILON" topofstack="#" write="EPSILON"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q2" finalstate="true"/>
+    <INITIALSTATE value="q3"/>
+    <STACKINITIALCHAR value="#"/>
+    <LAYOUT>
+        <STATELAYOUT name="q3">
+            <LEFT value="241"/>
+            <TOP value="231"/>
+            <TRANSITIONLAYOUT target="q3" drawvertical="true">
+                <TOP value="-195"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q1" drawvertical="true"/>
+            <TRANSITIONLAYOUT target="q2" drawvertical="true"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q1">
+            <LEFT value="529"/>
+            <TOP value="151"/>
+            <TRANSITIONLAYOUT target="q1" drawvertical="true">
+                <TOP value="-120"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q2" drawvertical="true"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q2">
+            <LEFT value="529"/>
+            <TOP value="287"/>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Verdana;}}
+\viewkind4\uc1\pard\lang1031\f0\fs22 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>

@@ -1,0 +1,306 @@
+import java.io.*;
+import java.util.*;
+import java.util.regex.*;
+
+        class __MyCompilerTemplateName__
+        {
+                YYARec[] yya;
+                YYARec[] yyg;
+                YYRRec[] yyr;
+                int[] yyd;
+                int[] yyal;
+                int[] yyah;
+                int[] yygl;
+                int[] yygh;
+
+                int yyn = 0;
+                int yystate = 0;
+                int yychar = -1;
+                int yynerrs = 0;
+                int yyerrflag = 0;
+                int yysp = 0;
+                int yymaxdepth = 1024;
+                int yyflag = 0;
+                int yyfnone   = 0;
+                int[] yys = new int[1024];
+                String[] yyv = new String[1024];
+
+                String yyval = "";
+
+                public static class TOutput extends PrintWriter { 
+                 public TOutput(OutputStreamWriter o) { super(o); }
+                 public TOutput(BufferedWriter b) { super(b); }
+                 public TOutput(PrintStream s) { super(s); }
+                 public void WriteLine(String s) { println(s); } 
+                }
+                TOutput Output;
+
+                class YYARec
+                {
+                        public int sym;
+                        public int act;
+                        public YYARec (int s, int a){ sym = s; act = a; }
+                }
+
+                class YYRRec
+                {
+                        public int len;
+                        public int sym;
+                        public YYRRec (int l, int s){ sym = s; len = l; }
+                }
+
+                ////////////////////////////////////////////////////////////////
+                /// Constant values / tokens
+                ////////////////////////////////////////////////////////////////
+%%
+
+                /// <summary>
+                /// Der Haupteinstiegspunkt für die Anwendung.
+                /// </summary>
+                public static void main(String[] args)
+                {
+                        __MyCompilerTemplateName__ compiler = new __MyCompilerTemplateName__();
+                        String inputstream = "";
+
+                        boolean ShowTokens = false;
+                        String InputFilename = "";
+                        String OutputFilename = "";
+
+                        for (String s : args)
+                        {
+                                if (s.toLowerCase().equals("-t"))
+                                {
+                                        ShowTokens = true;
+                                }
+                                else
+                                {
+                                        if (InputFilename.equals(""))  InputFilename = s; else
+                                        if (OutputFilename.equals("")) OutputFilename = s; else
+                                        {
+                                                System.out.println("Too many arguments!");
+                                                System.exit(1);
+                                        }
+                                }
+                        }
+                        if (InputFilename.equals(""))
+                        {
+                                System.out.println("You need to specify input and outputfile: compiler.exe input.txt output.txt");
+                                System.exit(1);
+                        }
+
+                        try{
+
+						FileInputStream in=new FileInputStream(InputFilename);
+						int len=in.available();
+						for(int i=1;i<=len;i++)
+						{
+						   inputstream += (char)in.read();
+						}
+                        in.close();
+
+                        ////////////////////////////////////////////////////////////////
+                        /// Compiler Code:
+                        ////////////////////////////////////////////////////////////////
+
+			
+
+                        compiler.Output = null;
+                        if (!OutputFilename.equals(""))
+                        {
+                                File myFile = new File(OutputFilename);
+                                myFile.delete();
+                                
+                                compiler.Output = new TOutput(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(OutputFilename),"UTF8")));
+                        }
+                        else
+                        {
+								try {
+									compiler.Output = new TOutput(new OutputStreamWriter(System.out, "UTF8"));
+								} catch (UnsupportedEncodingException error) {
+	                                compiler.Output = new TOutput(System.out);
+								}
+                        }
+                        }catch (Exception e) {e.printStackTrace(); System.exit(1);}
+
+                        if (!compiler.Scanner(inputstream)) System.exit(1);
+                        if (ShowTokens)
+                        {
+                                for (Object o : compiler.TokenList)
+                                {
+                                        AToken t = (AToken)o;
+                                        System.out.println("TokenID: "+t.token+"  =  "+t.val);
+                                }
+                        }
+                        compiler.InitTables();
+                        if(!compiler.yyparse()) System.exit(1);
+
+                        if (compiler.Output != null) compiler.Output.close();			
+                }
+                public void yyaction (int yyruleno)
+                {
+                        switch (yyruleno)
+                        {
+                                ////////////////////////////////////////////////////////////////
+                                /// YYAction code:
+                                ////////////////////////////////////////////////////////////////
+%%
+%%
+                                default : return;
+                        }
+                }
+
+                public void InitTables()
+                {
+                        ////////////////////////////////////////////////////////////////
+                        /// Init Table code:
+                        ////////////////////////////////////////////////////////////////
+%%
+                }
+
+                public boolean yyact(int state, int sym)
+                {
+                        int k = yyal[state];
+                        while ( k <= yyah[state] && yya[k].sym != sym) k++;
+                        if (k > yyah[state]) return false;
+                        yyn = yya[k].act;
+                        return true;
+                }
+                public boolean yygoto(int state, int sym)
+                {
+                        int k = yygl[state];
+                        while ( k <= yygh[state] && yyg[k].sym != sym) k++;
+                        if (k > yygh[state]) return false;
+                        yyn = yyg[k].act;
+                        return true;
+                }
+
+                public void yyerror (String s)
+                {
+						if (Output != null) Output.WriteLine(s);
+                        System.out.println(s);
+                }
+
+                int yylexpos = -1;
+                String yylval = "";
+
+                public int yylex ()
+                {
+                        yylexpos++;
+                        if(yylexpos >= TokenList.size())
+                        {
+                                yylval = "";
+                                return 0;
+                        }
+                        else
+                        {
+                                yylval = ((AToken)TokenList.get(yylexpos)).val;
+                                return ((AToken)TokenList.get(yylexpos)).token;
+                        }
+                }
+
+
+                public boolean yyparse ()
+                {
+                        boolean jumpToNext = false;
+                        while(true){ // Parse:
+                        if (!jumpToNext){
+                        yysp++;
+                        if (yysp>yymaxdepth)
+                        {
+                                yyerror("yyparse stack overflow");
+                                return false;
+                        }
+
+                        yys[yysp] = yystate;
+                        yyv[yysp] = yyval;
+                        }
+                        jumpToNext = false;
+
+                        if (yyd[yystate]==0 && yychar==-1)
+                        {
+                            yychar = yylex();
+                            if (yychar<0) yychar = 0;
+                        }
+
+                        yyn = yyd[yystate];
+                        if (yyn != 0) {
+                         /// reduce:
+                         yyflag = yyfnone;
+                         yyaction(-yyn);
+                         yysp -= yyr[-yyn].len;
+                         if (yygoto(yys[yysp], yyr[-yyn].sym)) yystate = yyn;
+                         switch (yyflag)
+                         {
+                                 case 1 : return true;
+                                 case 2 : return false;
+                                 case 3 : {
+                                   int r = yy_errlab();
+                                   if (r == 0) return false;
+                                   if (r == 1) continue;
+                                   if (r == 2) {jumpToNext = true; continue; }
+                                 }
+                         }
+                         continue; // PARSE:
+                         ///////////////
+                        }
+
+                        if (! yyact(yystate, yychar)) {
+                          if (yyerrflag==0) yyerror("syntax error");
+                          int r = yy_errlab();
+                          if (r == 0) return false;
+                          if (r == 1) continue;
+                          if (r == 2) {jumpToNext = true; continue; }
+                        }
+                        else if (yyn>0) {
+                         /// shift:
+                         yystate = yyn;
+                         yychar = -1;
+                         yyval = yylval;
+                         if (yyerrflag>0) yyerrflag--;
+                         continue; // PARSE:
+                         ///////////////
+                        }
+                        else if (yyn<0) {
+                         /// reduce:
+                         yyflag = yyfnone;
+                         yyaction(-yyn);
+                         yysp -= yyr[-yyn].len;
+                         if (yygoto(yys[yysp], yyr[-yyn].sym)) yystate = yyn;
+                         switch (yyflag)
+                         {
+                                 case 1 : return true;
+                                 case 2 : return false;
+                                 case 3 : {
+                                   int r = yy_errlab();
+                                   if (r == 0) return false;
+                                   if (r == 1) continue;
+                                   if (r == 2) {jumpToNext = true; continue; }
+                                 }
+                         }
+                         continue; // PARSE:
+                         ///////////////
+                        }
+                        else return true;
+                        } // WHILE Parse:
+                }
+
+                public int yy_errlab (){
+                        if (yyerrflag==0) yynerrs++;
+                        if (yyerrflag<=2)
+                        {
+                                yyerrflag = 3;
+                                while (yysp>0 && !(yyact(yys[yysp], 255) && yyn > 0)) yysp--;
+
+                                if (yysp==0) return 0;
+                                yystate = yyn;
+                                return 1; // PARSE:
+                        }
+                        else
+                        {
+                                if (yychar==0) return 0;
+                                yychar = -1;
+                                return 2;
+                        }
+                }
+
+     

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="MOORE"/>
+    <ALPHABET>
+        <ITEM value="10"/>
+        <ITEM value="20"/>
+    </ALPHABET>
+    <OUTPUTALPHABET>
+        <ITEM value="Bitte 40 Cent einwerfen werfen \n"/>
+        <ITEM value="Danke Ihr Beleg wird gedruckt \n"/>
+        <ITEM value="Noch 10 Cent einwerfen \n"/>
+        <ITEM value="Noch 20 Cent einwerfen \n"/>
+        <ITEM value="Noch 30 Cent einwerfen \n"/>
+    </OUTPUTALPHABET>
+    <STATE name="q0" output="Bitte 40 Cent einwerfen werfen \n" finalstate="false">
+        <TRANSITION target="q1">
+            <LABEL read="10"/>
+        </TRANSITION>
+        <TRANSITION target="q2">
+            <LABEL read="20"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q1" output="Noch 30 Cent einwerfen \n" finalstate="false">
+        <TRANSITION target="q2">
+            <LABEL read="10"/>
+        </TRANSITION>
+        <TRANSITION target="q3">
+            <LABEL read="20"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q2" output="Noch 20 Cent einwerfen \n" finalstate="false">
+        <TRANSITION target="q3">
+            <LABEL read="10"/>
+        </TRANSITION>
+        <TRANSITION target="q4">
+            <LABEL read="20"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q3" output="Noch 10 Cent einwerfen \n" finalstate="false">
+        <TRANSITION target="q4">
+            <LABEL read="10"/>
+            <LABEL read="20"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q4" output="Danke Ihr Beleg wird gedruckt \n" finalstate="false">
+        <TRANSITION target="q4">
+            <LABEL read="10"/>
+            <LABEL read="20"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="q0"/>
+    <LAYOUT>
+        <STATELAYOUT name="q0">
+            <LEFT value="100"/>
+            <TOP value="54"/>
+            <TRANSITIONLAYOUT target="q1" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q2" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q1">
+            <LEFT value="187"/>
+            <TOP value="21"/>
+            <TRANSITIONLAYOUT target="q2" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q3" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q2">
+            <LEFT value="187"/>
+            <TOP value="102"/>
+            <TRANSITIONLAYOUT target="q3" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q4" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q3">
+            <LEFT value="315"/>
+            <TOP value="21"/>
+            <TRANSITIONLAYOUT target="q4" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q4">
+            <LEFT value="315"/>
+            <TOP value="102"/>
+            <TRANSITIONLAYOUT target="q4" drawvertical="false">
+                <TOP value="94"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 &lt;Blub&gt; \'df\'e4\'f6\'fc
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>

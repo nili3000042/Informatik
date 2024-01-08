@@ -1,0 +1,51 @@
+<TDIAGRAM>
+    <LANGUAGES>
+        <LANGUAGE value="Scheme" label="S" defaultextension=".ss"/>
+        <LANGUAGE value="Binary Executables" label="M" defaultextension=".exe;.com"/>
+    </LANGUAGES>
+    <PROGRAMS>
+        <PROGRAM value="1">
+            <FILENAME value="scheme.ss"/>
+            <RUNNINGON value=""/>
+            <LABELTEXT value="P"/>
+            <LANGUAGE value="Scheme"/>
+            <LAYOUT>
+                <X value="228"/>
+                <Y value="24"/>
+            </LAYOUT>
+            <DOCK_U value="0"/>
+        </PROGRAM>
+    </PROGRAMS>
+    <INTERPRETERS>
+        <INTERPRETER value="0">
+            <NAME value="Scheme Interpreter"/>
+            <FILENAME value="petite --script %InFile"/>
+            <RUNNINGON value="M"/>
+            <INPUTLANGUAGE value="Scheme"/>
+            <WRITTENIN value="Binary Executables"/>
+            <LAYOUT>
+                <X value="228"/>
+                <Y value="120"/>
+            </LAYOUT>
+            <DOCK_O value="1"/>
+        </INTERPRETER>
+    </INTERPRETERS>
+    <COMPILERS/>
+    <EAS/>
+    <COMMENTS>
+        <COMMENT value="2">
+            <TEXT value="Scheme Interpreter"/>
+            <LAYOUT>
+                <X value="300"/>
+                <Y value="144"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="3">
+            <TEXT value="Scheme Program"/>
+            <LAYOUT>
+                <X value="300"/>
+                <Y value="48"/>
+            </LAYOUT>
+        </COMMENT>
+    </COMMENTS>
+</TDIAGRAM>

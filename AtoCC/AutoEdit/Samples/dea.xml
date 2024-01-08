@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="a"/>
+        <ITEM value="b"/>
+    </ALPHABET>
+    <STATE name="q0" finalstate="false">
+        <TRANSITION target="q1">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q3">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q1" finalstate="false">
+        <TRANSITION target="q2">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q3">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q2" finalstate="true">
+        <TRANSITION target="q3">
+            <LABEL read="a"/>
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q3" finalstate="false">
+        <TRANSITION target="q3">
+            <LABEL read="a"/>
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="q0"/>
+    <LAYOUT>
+        <STATELAYOUT name="q0">
+            <LEFT value="100"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q1" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q3" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q1">
+            <LEFT value="200"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q2" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q3" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q2">
+            <LEFT value="200"/>
+            <TOP value="200"/>
+            <TRANSITIONLAYOUT target="q3" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q3">
+            <LEFT value="100"/>
+            <TOP value="200"/>
+            <TRANSITIONLAYOUT target="q3" drawvertical="false">
+                <TOP value="120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Verdana;}}
+\viewkind4\uc1\pard\lang1031\f0\fs22 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>

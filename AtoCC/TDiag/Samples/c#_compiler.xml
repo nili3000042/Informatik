@@ -1,0 +1,118 @@
+<TDIAGRAM>
+    <LANGUAGES>
+        <LANGUAGE value="C#" label="CS" defaultextension=".cs"/>
+        <LANGUAGE value="Textfile" label="Txt" defaultextension=".txt"/>
+        <LANGUAGE value="Images" label="Img" defaultextension=".jpg;.jpeg;.bmp;.gif;.tga;.tif"/>
+        <LANGUAGE value="Binary Executables" label="M" defaultextension=".exe;.com"/>
+    </LANGUAGES>
+    <PROGRAMS>
+        <PROGRAM value="1">
+            <FILENAME value="ChartCompiler_Input.txt"/>
+            <RUNNINGON value=""/>
+            <LABELTEXT value="P"/>
+            <LANGUAGE value="Textfile"/>
+            <LAYOUT>
+                <X value="192"/>
+                <Y value="60"/>
+            </LAYOUT>
+            <DOCK_UR value="0"/>
+        </PROGRAM>
+        <PROGRAM value="2">
+            <FILENAME value="ChartCompiler_out.jpg"/>
+            <RUNNINGON value="M"/>
+            <LABELTEXT value="P"/>
+            <LANGUAGE value="Images"/>
+            <LAYOUT>
+                <X value="384"/>
+                <Y value="60"/>
+            </LAYOUT>
+            <DOCK_UL value="0"/>
+        </PROGRAM>
+    </PROGRAMS>
+    <INTERPRETERS/>
+    <COMPILERS>
+        <COMPILER value="0">
+            <NAME value="MyCompiler"/>
+            <FILENAME value="ChartCompiler.exe %InFile %OutFile"/>
+            <RUNNINGON value="M"/>
+            <OUTPUTFORMAT value="%OutFile"/>
+            <INPUTLANGUAGE value="Textfile"/>
+            <OUTPUTLANGUAGE value="Images"/>
+            <WRITTENIN value="Binary Executables"/>
+            <LAYOUT>
+                <X value="240"/>
+                <Y value="108"/>
+            </LAYOUT>
+            <DOCK_UL value="3"/>
+            <DOCK_L value="1"/>
+            <DOCK_R value="2"/>
+        </COMPILER>
+        <COMPILER value="3">
+            <NAME value="C# Compiler"/>
+            <FILENAME value="csc.exe /out:%OutFile %InFile"/>
+            <RUNNINGON value="M"/>
+            <OUTPUTFORMAT value="%outfile"/>
+            <INPUTLANGUAGE value="C#"/>
+            <OUTPUTLANGUAGE value="Binary Executables"/>
+            <WRITTENIN value="Binary Executables"/>
+            <LAYOUT>
+                <X value="144"/>
+                <Y value="156"/>
+            </LAYOUT>
+            <DOCK_L value="10"/>
+            <DOCK_R value="0"/>
+        </COMPILER>
+        <COMPILER value="10">
+            <NAME value="MyCompiler"/>
+            <FILENAME value="ChartCompiler.cs"/>
+            <RUNNINGON value=""/>
+            <OUTPUTFORMAT value=""/>
+            <INPUTLANGUAGE value="Textfile"/>
+            <OUTPUTLANGUAGE value="Images"/>
+            <WRITTENIN value="C#"/>
+            <LAYOUT>
+                <X value="48"/>
+                <Y value="108"/>
+            </LAYOUT>
+            <DOCK_UR value="3"/>
+        </COMPILER>
+    </COMPILERS>
+    <EAS/>
+    <COMMENTS>
+        <COMMENT value="6">
+            <TEXT value="C# Compiler"/>
+            <LAYOUT>
+                <X value="108"/>
+                <Y value="252"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="7">
+            <TEXT value="ChartCompiler.exe"/>
+            <LAYOUT>
+                <X value="264"/>
+                <Y value="72"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="11">
+            <TEXT value="OutputFile"/>
+            <LAYOUT>
+                <X value="384"/>
+                <Y value="24"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="9">
+            <TEXT value="ChartCompiler.cs"/>
+            <LAYOUT>
+                <X value="72"/>
+                <Y value="72"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="10">
+            <TEXT value="InputFile"/>
+            <LAYOUT>
+                <X value="192"/>
+                <Y value="24"/>
+            </LAYOUT>
+        </COMMENT>
+    </COMMENTS>
+</TDIAGRAM>

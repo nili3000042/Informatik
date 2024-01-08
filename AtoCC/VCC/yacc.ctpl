@@ -1,0 +1,276 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Text.RegularExpressions;
+
+namespace VCCCompiler
+{
+        /// <summary>
+        /// Zusammenfassung für MyCompiler.
+        /// </summary>
+        class MyCompiler
+        {
+                YYARec[] yya;
+                YYARec[] yyg;
+                YYRRec[] yyr;
+                int[] yyd;
+                int[] yyal;
+                int[] yyah;
+                int[] yygl;
+                int[] yygh;
+
+                int yyn = 0;
+                int yystate = 0;
+                int yychar = -1;
+                int yynerrs = 0;
+                int yyerrflag = 0;
+                int yysp = 0;
+                int yymaxdepth = 1024;
+                int yyflag = 0;
+                int yyfnone   = 0;
+                int[] yys = new int[1024];
+                string[] yyv = new string[1024];
+
+                string yyval = "";
+
+                FileStream OutputStream;
+                StreamWriter Output;
+
+                class YYARec
+                {
+                        public int sym;
+                        public int act;
+                        public YYARec (int s, int a){ sym = s; act = a; }
+                }
+
+                class YYRRec
+                {
+                        public int len;
+                        public int sym;
+                        public YYRRec (int l, int s){ sym = s; len = l; }
+                }
+
+                ////////////////////////////////////////////////////////////////
+                /// Constant values / tokens
+                ////////////////////////////////////////////////////////////////
+%%
+
+                /// <summary>
+                /// Der Haupteinstiegspunkt für die Anwendung.
+                /// </summary>
+                [STAThread]
+                static int Main(string[] args)
+                {
+
+                        bool ShowTokens = false;
+                        string InputFilename = "";
+                        string OutputFilename = "";
+
+                        foreach (string s in args)
+                        {
+                                if (s.ToLower() == "-t")
+                                {
+                                        ShowTokens = true;
+                                }
+                                else
+                                {
+                                        if (InputFilename == "")  InputFilename = s; else
+                                        if (OutputFilename == "") OutputFilename = s; else
+                                        {
+                                                Console.WriteLine("Too many arguments!");
+                                                return 1;
+                                        }
+                                }
+                        }
+                        if (InputFilename == "")
+                        {
+                                System.Console.WriteLine("You need to specify input and outputfile: compiler.exe input.txt output.txt");
+                                return 1;
+                        }
+
+                        StreamReader in_s = File.OpenText(InputFilename);
+                        string inputstream = in_s.ReadToEnd();
+                        in_s.Close();
+
+                        ////////////////////////////////////////////////////////////////
+                        /// Compiler Code:
+                        ////////////////////////////////////////////////////////////////
+                        MyCompiler compiler = new MyCompiler();
+                        compiler.Output = null;
+                        if (OutputFilename != "")
+                        {
+                                File.Delete(OutputFilename);
+                                compiler.OutputStream = File.OpenWrite(OutputFilename);
+                                compiler.Output = new StreamWriter(compiler.OutputStream,new System.Text.UTF8Encoding(false));
+                        }
+                        else
+                        {
+                                compiler.Output = new StreamWriter(Console.OpenStandardOutput(),new System.Text.UTF8Encoding(false));
+
+                        }
+
+                        if (!compiler.Scanner(inputstream)) return 1;
+                        if (ShowTokens)
+                        {
+                                foreach (AToken t in compiler.TokenList)
+                                {
+                                        Console.WriteLine("TokenID: "+t.token+"  =  "+t.val);
+                                }
+                        }
+                        compiler.InitTables();
+                        if (!compiler.yyparse()) return 1;
+
+                        if (compiler.Output != null) compiler.Output.Close();
+			return 0;
+                }
+                public void yyaction (int yyruleno)
+                {
+                        switch (yyruleno)
+                        {
+                                ////////////////////////////////////////////////////////////////
+                                /// YYAction code:
+                                ////////////////////////////////////////////////////////////////
+%%
+%%
+                                default : return;
+                        }
+                }
+
+                public void InitTables()
+                {
+                        ////////////////////////////////////////////////////////////////
+                        /// Init Table code:
+                        ////////////////////////////////////////////////////////////////
+%%
+                }
+
+                public bool yyact(int state, int sym , ref int act)
+                {
+                        int k = yyal[state];
+                        while ( k <= yyah[state] && yya[k].sym != sym) k++;
+                        if (k > yyah[state]) return false;
+                        act = yya[k].act;
+                        return true;
+                }
+                public bool yygoto(int state, int sym , ref int nstate)
+                {
+                        int k = yygl[state];
+                        while ( k <= yygh[state] && yyg[k].sym != sym) k++;
+                        if (k > yygh[state]) return false;
+                        nstate = yyg[k].act;
+                        return true;
+                }
+
+                public void yyerror (string s)
+                {
+                        System.Console.Write(s);
+                }
+
+                int yylexpos = -1;
+                string yylval = "";
+
+                public int yylex ()
+                {
+                        yylexpos++;
+                        if(yylexpos >= TokenList.Count)
+                        {
+                                yylval = "";
+                                return 0;
+                        }
+                        else
+                        {
+                                yylval = ((AToken)TokenList[yylexpos]).val;
+                                return ((AToken)TokenList[yylexpos]).token;
+                        }
+                }
+
+                public bool yyparse ()
+                {
+
+                        parse:
+
+                                yysp++;
+                        if (yysp>yymaxdepth)
+                        {
+                                yyerror("yyparse stack overflow");
+                                goto abort;
+                        }
+
+                        yys[yysp] = yystate;
+                        yyv[yysp] = yyval;
+
+                        next:
+
+                                if (yyd[yystate]==0 && yychar==-1)
+                                {
+                                        yychar = yylex();
+                                        if (yychar<0) yychar = 0;
+                                }
+
+                        yyn = yyd[yystate];
+                        if (yyn != 0) goto reduce;
+
+
+                        if (! yyact(yystate, yychar, ref yyn)) goto error;
+                        else if (yyn>0) goto shift;
+                        else if (yyn<0) goto reduce;
+                        else            goto accept;
+
+                        error:
+
+                                if (yyerrflag==0) yyerror("syntax error");
+
+                        errlab:
+
+                                if (yyerrflag==0) yynerrs++;
+
+                        if (yyerrflag<=2)
+                        {
+                                yyerrflag = 3;
+                                while (yysp>0 && !(yyact(yys[yysp], 255, ref yyn) && yyn > 0)) yysp--;
+
+                                if (yysp==0) goto abort;
+                                yystate = yyn;
+                                goto parse;
+                        }
+                        else
+                        {
+                                if (yychar==0) goto abort;
+                                yychar = -1; goto next;
+                        }
+
+                        shift:
+
+                        yystate = yyn;
+                        yychar = -1;
+                        yyval = yylval;
+                        if (yyerrflag>0) yyerrflag--;
+                        goto parse;
+
+                        reduce:
+
+                        yyflag = yyfnone;
+                        yyaction(-yyn);
+                        yysp -= yyr[-yyn].len;
+
+                        if (yygoto(yys[yysp], yyr[-yyn].sym, ref yyn)) yystate = yyn;
+
+                        switch (yyflag)
+                        {
+                                case 1 : goto accept;
+                                case 2 : goto abort;
+                                case 3 : goto errlab;
+                        }
+
+                        goto parse;
+
+                        accept:
+
+                                return true;
+
+                        abort:
+
+                                return false;
+                }
+        }
+}

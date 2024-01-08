@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="MEALY"/>
+    <ALPHABET>
+        <ITEM value="1"/>
+        <ITEM value="0"/>
+    </ALPHABET>
+    <OUTPUTALPHABET>
+        <ITEM value="Tür auf"/>
+        <ITEM value="Tür schon offen"/>
+        <ITEM value="Tür zu"/>
+        <ITEM value="Tür schon zu"/>
+    </OUTPUTALPHABET>
+    <STATE name="q0" finalstate="false">
+        <TRANSITION target="q1">
+            <LABEL read="1" output="Tür auf"/>
+        </TRANSITION>
+        <TRANSITION target="q0">
+            <LABEL read="0" output="Tür schon zu"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q1" finalstate="false">
+        <TRANSITION target="q0">
+            <LABEL read="0" output="Tür zu"/>
+        </TRANSITION>
+        <TRANSITION target="q1">
+            <LABEL read="1" output="Tür schon offen"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="q0"/>
+    <LAYOUT>
+        <STATELAYOUT name="q0">
+            <LEFT value="100"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q1" drawvertical="true">
+                <LEFT value="-1"/>
+                <TOP value="-70"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q0" drawvertical="true">
+                <TOP value="120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q1">
+            <LEFT value="287"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q0" drawvertical="true">
+                <LEFT value="-1"/>
+                <TOP value="70"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q1" drawvertical="true">
+                <TOP value="120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\ansicpg1252\deff0\deflang1031{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>

@@ -1,0 +1,1534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LANGUAGE>
+ <ENGLISH>
+  <STRING id="1">Automaton Editor</STRING>
+  <STRING id="2">Type</STRING>
+  <STRING id="3">Alphabet</STRING>
+  <STRING id="4">Transition Table</STRING>
+  <STRING id="5">Transition Graph</STRING>
+  <STRING id="6">Publish</STRING>
+  <STRING id="7">Simulation</STRING>
+  <STRING id="10">Open</STRING>
+  <STRING id="11">Save</STRING>
+  <STRING id="12">Undo</STRING>
+  <STRING id="13">Redo</STRING>
+  <STRING id="14">New</STRING>
+  <STRING id="15">Notepad</STRING>
+  <STRING id="20">File</STRING>
+  <STRING id="21">New Automaton</STRING>
+  <STRING id="22">Open Automaton</STRING>
+  <STRING id="23">Save Automaton</STRING>
+  <STRING id="24">Save Automaton as ...</STRING>
+  <STRING id="25">Export ...</STRING>
+  <STRING id="26">Transition Graph Image</STRING>
+  <STRING id="27">Definition Graph Image</STRING>
+  <STRING id="28">Transition Table Graph Image</STRING>
+  <STRING id="29">Automaton Definition XML</STRING>
+  <STRING id="30">Lex and Yacc Template</STRING>
+  <STRING id="31">Exit</STRING>
+  <STRING id="32">Help</STRING>
+  <STRING id="33">Online Help</STRING>
+  <STRING id="34">Introduction Wizard</STRING>
+  <STRING id="35">Change Language</STRING>
+  <STRING id="36">About</STRING>
+  <STRING id="40">Automaton:</STRING>
+  <STRING id="41">Introduction Wizard</STRING>
+  <STRING id="42">A quick introduction to get in touch with AutoEdit.</STRING>
+  <STRING id="43">New Automaton</STRING>
+  <STRING id="44">Create an empty automaton.</STRING>
+  <STRING id="45">Open Automaton</STRING>
+  <STRING id="46">Open an existing automaton.</STRING>
+  <STRING id="47">Getting Help:</STRING>
+  <STRING id="48">Online FAQ</STRING>
+  <STRING id="49">To get any further information visit the Online Help Center.</STRING>
+  <STRING id="50">www.AtoCC.de</STRING>
+  <STRING id="51">Visit the AtoCC website.</STRING>
+  <STRING id="52">Tip of the day:</STRING>
+  <STRING id="55">Close</STRING>
+  <STRING id="56">Previous Step</STRING>
+  <STRING id="57">Next Step</STRING>
+  <STRING id="60">Edit Type:</STRING>
+  <STRING id="61">Set automaton type</STRING>
+  <STRING id="62">Convert to DEA</STRING>
+  <STRING id="63">Convert to NEA</STRING>
+  <STRING id="64">Minimize Automaton</STRING>
+  <STRING id="65">Validate Automaton</STRING>
+  <STRING id="66">Back</STRING>
+  <STRING id="67">Next</STRING>
+  <STRING id="70">Add Alphabet Item</STRING>
+  <STRING id="71">Delete Alphabet Item</STRING>
+  <STRING id="72">Predefined Alphabet</STRING>
+  <STRING id="73">Clear</STRING>
+  <STRING id="74">Delete all items in this list</STRING>
+  <STRING id="75">Initial char</STRING>
+  <STRING id="76">Set selected Stack/Tape character as initial character.</STRING>
+  <STRING id="80">Edit Transition Table:</STRING>
+  <STRING id="81">Add State</STRING>
+  <STRING id="82">Add Transition</STRING>
+  <STRING id="83">Add Label</STRING>
+  <STRING id="84">Delete selected</STRING>
+  <STRING id="85">Edit initial conditions:</STRING>
+  <STRING id="86">Automaton initial state:</STRING>
+  <STRING id="87">Stack/Tape initial character:</STRING>
+  <STRING id="88">State Transition Table:</STRING>
+  <STRING id="89">Click on "Add State" to create a first state.</STRING>
+  <STRING id="90">OR click on "Next" for visual design.</STRING>
+  <STRING id="95">Treeview</STRING>
+  <STRING id="96">Properties</STRING>
+  <STRING id="97">Layout</STRING>
+  <STRING id="98">New State (s)</STRING>
+  <STRING id="99">New Transition (t)</STRING>
+  <STRING id="100">New Label (l)</STRING>
+  <STRING id="101">Delete Selection</STRING>
+  <STRING id="102">Autoarrange Graph</STRING>
+  <STRING id="103">Validate Automaton</STRING>
+  <STRING id="104">Export Image as...</STRING>
+  <STRING id="105">Show Treeview</STRING>
+  <STRING id="106">Show Properties</STRING>
+  <STRING id="107">Copy element layout to all similar elements.</STRING>
+  <STRING id="108">Toggle Final-State</STRING>
+  <STRING id="110">Edit Publish settings:</STRING>
+  <STRING id="111">Change Font</STRING>
+  <STRING id="112">Export Graph ...</STRING>
+  <STRING id="113">Export Definition ...</STRING>
+  <STRING id="114">Export Transitions ...</STRING>
+  <STRING id="115">Export as HTML</STRING>
+  <STRING id="116">HTML Publish:</STRING>
+  <STRING id="117">print page</STRING>
+  <STRING id="120">Edit Simulation settings:</STRING>
+  <STRING id="121">Input:</STRING>
+  <STRING id="122">Single Step</STRING>
+  <STRING id="123">Speed:</STRING>
+  <STRING id="124">Step forward</STRING>
+  <STRING id="125">Export Scheme Code</STRING>
+  <STRING id="126">Configuration sequence</STRING>
+  <STRING id="127">fast check - is accepted?</STRING>
+  <STRING id="128">Export Grammar</STRING>
+  <STRING id="129">Export Compiler</STRING>
+   
+  <STRING id="130"><html><head></head><body style="Font-Family:Verdana;"><i>DEA are equivalent descriptions for regular languages.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">d</font>,q<sub>0</sub>,E)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">d</font> ... total transition function, Q x <font face="Symbol">S</font>
+		<font face="Symbol">®</font> Q,<br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>E ... finite set of final states (E <font face="Symbol">Í</font> Q)<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> and (q<sub>0</sub>,w) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>) and q<sub>e</sub>
+			<font face="Symbol">Î</font> E }</b><br/><br/><br/><small><i>DEA can be converted to an equivalent minimal DEA or to a NEA</i></small></body></html></STRING>
+  <STRING id="131"><html><head></head><body style="Font-Family:Verdana;"><i>NEA are equivalent descriptions for regular languages.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">d</font>,q<sub>0</sub>,E)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">d</font> ... total transition function, Q x (<font face="Symbol">S</font> U {<font face="Symbol">e</font>}) <font face="Symbol">®</font>
+		<i>P</i>(Q),<br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>E ... finite set of final states (E <font face="Symbol">Í</font> Q)<br/><br/>You can use <font face="Symbol">e</font> labels for spontaneous transitions.<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> and (q<sub>0</sub>,w) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>) and q<sub>e</sub>
+			<font face="Symbol">Î</font> E }</b><br/><br/><br/><small><i>NEA can be converted to an equivalent DEA or to a NEA without <font face="Symbol">e</font></i></small></body></html></STRING>
+  <STRING id="132"><html><head></head><body style="Font-Family:Verdana;"><i>DKA are equivalent descriptions for LR(k) languages.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">G</font>,<font face="Symbol">d</font>,q<sub>0</sub>,k<sub>0</sub>,E)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">G</font> ... stack alphabet,<br/><font face="Symbol">d</font> ... partial transition function, Q x (<font face="Symbol">S</font> U {<font face="Symbol">e</font>}) x <font face="Symbol">G</font>
+		<font face="Symbol">®</font> Q x <font face="Symbol">G</font><sup>*</sup><br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>k<sub>0</sub> ... stack preset character (k<sub>0</sub>
+		<font face="Symbol">Î</font>
+		<font face="Symbol">G</font> and k<sub>0</sub>
+		<font face="Symbol">&#207;</font>
+		<font face="Symbol">S</font>),<br/>E ... finite set of final states (E <font face="Symbol">Í</font> Q)<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> and (q<sub>0</sub>,w,k<sub>0</sub>) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>,K) and q<sub>e</sub>
+			<font face="Symbol">Î</font> E and K <font face="Symbol">Î</font>
+			<font face="Symbol">G</font><sup>*</sup> }</b><br/></body></html></STRING>
+  <STRING id="133"><html><head></head><body style="Font-Family:Verdana;"><i>NKA are equivalent descriptions for Chomsky-type-2-languages.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">G</font>,<font face="Symbol">d</font>,q<sub>0</sub>,k<sub>0</sub>,E)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">G</font> ... stack alphabet,<br/><font face="Symbol">d</font> ... partial transition function, Q x (<font face="Symbol">S</font> U {<font face="Symbol">e</font>}) x <font face="Symbol">G</font>
+		<font face="Symbol"></font> P<sub>finite</sub>(Q x <font face="Symbol">G</font><sup>*</sup>)<br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>k<sub>0</sub> ... stack preset character (k<sub>0</sub>
+		<font face="Symbol">Î</font>
+		<font face="Symbol">G</font> and k<sub>0</sub>
+		<font face="Symbol">&#207;</font>
+		<font face="Symbol">S</font>),<br/>E ... finite set of final states (E <font face="Symbol">Í</font> Q)<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> and (q<sub>0</sub>,w,k<sub>0</sub>) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>,K) and q<sub>e</sub>
+			<font face="Symbol">Î</font> E and K <font face="Symbol">Î</font>
+			<font face="Symbol">G</font><sup>*</sup> }</b><br/></body></html></STRING>
+  <STRING id="134"><html><head></head><body style="Font-Family:Verdana;"><i>DTM are equivalent descriptions for Chomsky-typ-0-languages.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">G</font>,<font face="Symbol">d</font>,q<sub>0</sub>,$,E)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">G</font> ... tape alphabet (<font face="Symbol">S</font>
+		<font face="Symbol">Í</font>
+		<font face="Symbol">G</font> \ {$}),<br/><font face="Symbol">d</font> ... partial transition function, (Q \ E) x <font face="Symbol">G</font>
+		<font face="Symbol">®</font> Q x <font face="Symbol">G</font> x {L,N,R}<br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>$ ... tape preset character ($ <font face="Symbol">Î</font>
+		<font face="Symbol">G</font> and $ <font face="Symbol">&#207;</font>
+		<font face="Symbol">S</font>),<br/>E ... finite set of final states (E <font face="Symbol">Í</font> Q)<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> | q<sub>0</sub>w |-*- <font face="Symbol">a</font>q<sub>e</sub><font face="Symbol">b</font>), with <font face="Symbol">a</font>, <font face="Symbol">b</font>
+			<font face="Symbol">Î</font> <font face="Symbol">G</font><sup>*</sup> and q<sub>e</sub>
+			<font face="Symbol">Î</font> E}</b><br/></body></html></STRING>
+   <STRING id="135"><html><head></head><body style="Font-Family:Verdana;"><i>Moore machines are similar to DEA's but can perform output on each state reached.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">D</font>,<font face="Symbol">d</font>,<font face="Symbol">l</font>,q<sub>0</sub>)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">D</font> ... output alphabet,<br/><font face="Symbol">l</font> ... total function, <font face="Symbol">l</font> : Q <font face="Symbol">®</font> <font face="Symbol">D</font>,<br/><font face="Symbol">d</font> ... total transition function, Q x <font face="Symbol">S</font>
+		<font face="Symbol">®</font> Q,<br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/><br/></body></html></STRING>
+   <STRING id="136"><html><head></head><body style="Font-Family:Verdana;"><i>Mealy machines are similar to DEA's but can perform output for each individual character read from the input.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">D</font>,<font face="Symbol">d</font>,<font face="Symbol">l</font>,q<sub>0</sub>)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">D</font> ... output alphabet,<br/><font face="Symbol">l</font> ... total function, <font face="Symbol">l</font> : Q x <font face="Symbol">S</font> <font face="Symbol">®</font> <font face="Symbol">D</font>,<br/><font face="Symbol">d</font> ... total transition function, Q x <font face="Symbol">S</font>
+		<font face="Symbol">®</font> Q,<br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/><br/></body></html></STRING>
+  <STRING id="150">Welcome to AutoEdit!
+
+This wizard will guide you step by step through the main functions of this editor.
+
+Please click on "Next Step" after finishing a page of this tutorial to continue.
+  </STRING>
+  <STRING id="151">First we need to specify the type of the automaton we going to create.
+Click on "Set automaton type" and choose "NEA" for this tutorial from the upcoming menu.
+Hint: On this page you can also convert or minimize your already defined automata later.</STRING>
+  <STRING id="152">Now we can define an alphabet for our NEA.
+Therefore we can either add single characters to the alphabet or just append an entire alphabet by clicking on "Predefined Alphabet".
+For this example we choose "a,b,c". </STRING>
+  <STRING id="153">You have now two possibilities to define the automaton. We will first take a look on the table based design. 
+Click once on "Add State". A gray rectangle will represent our new statement q_0.
+Please create another state q_1 the same way.</STRING>
+  <STRING id="154">Now click once on the first gray rectangle on the right (if you done it right, it will change its color to red).
+Now you can add a transition from this state to another by clicking on "Add Transition" on the left.
+Choose as "Target:" the second state q_1.</STRING>
+  <STRING id="155">A transition needs labels (input characters) which can be created by "Add Label" on the left (it will be attached to the current selected transition).
+With "Read:" we can select the input character (leave it "a" right now).
+Create another label on the same transition (just click "Add Label" again).</STRING>
+  <STRING id="156">So we created a transition from q_0 to q_1 with the input characters a and b.
+Define another transition at q_0 and choose q_0 as "Target:"  (a self transition).
+Create the missing label for "c" here.</STRING>
+  <STRING id="157">Select the state q_1 and create a transition here, too. Choose q_1 as "Target:" (again a self transition).
+Create two labels on this new transition for a and b.
+Finally we create the last transition from q_1 to q_0 and attach the label for "c".
+At q_1 we choose "final state" YES and select q_0 as the "initial state" (lower left corner) for our automaton.
+We are done defining our NEA which now accepts all words not ending on "c".</STRING>
+  <STRING id="158">Here you can arrange the transition graph of your automaton.
+This graphical design is also the second possibility to define an entire automaton.
+Click once on q_0 to select this statement. Now you can see all properties of the selected item in the lower left corner of the screen.
+To navigate through all parts of the automaton you can also use the tree view on the left.</STRING>
+  <STRING id="159">When you move your mouse over a statement a blue ring will appear. You can click and hold down on the inner blue circle to move a statement around. Click and hold down on the outer blue ring to create a transition from one state to another.
+When you finished arranging your automaton we can continue with exporting.</STRING>
+  <STRING id="160">On this page you can see all information regarding your just defined automaton.
+You can either export the entire page as HTML or single parts of it as images of different formats.
+A resolution of 72 DPI is suitable for monitor presentations (like webpage's). Higher resolutions can be used for print media.</STRING>
+  <STRING id="161">Here you can simulate the behavior of your automaton.
+Type "abcb" in the "Input" text field and click on "Start Simulation". The transition graph is now animated and beneath you can see all steps that were performed, yet.</STRING>
+  <STRING id="162">We are already at the end of this little tutorial.
+On the webpage you can find a FAQ and some exercises including solutions.
+
+Have fun,
+AtoCC Team
+  </STRING>
+  <STRING id="170">NEA to DEA</STRING>
+  <STRING id="171">DEA to NEA
+
+OR
+
+NEAepsilon to NEA</STRING>
+  <STRING id="172">DEA to Minimal-DEA
+
+OR
+
+optimize transitions / statements</STRING>
+  <STRING id="173">Close</STRING>
+  <STRING id="174">Hide</STRING>
+  <STRING id="175">Expand</STRING>
+  <STRING id="176">Collapse</STRING>
+  <STRING id="177">delete selected items</STRING>
+  <STRING id="180">The value "EPSILON" is not allowed here!</STRING>
+  <STRING id="181">You can only create one transition to each state!</STRING>
+  <STRING id="182">You need to define an alphabet for this automaton!</STRING>
+  <STRING id="183">Missing label:</STRING>
+  <STRING id="184">Too many labels at statement:</STRING>
+  <STRING id="185">Double labels at transition:</STRING>
+  <STRING id="186">Your input contains invalid characters! (check your alphabet)</STRING>
+  <STRING id="187">
+The work of the automaton was stopped after 1`000 steps. It might work forever!
+  </STRING>
+  <STRING id="188">
+The work of the automaton was stopped after cloning 1`000 machines. It might work forever!
+  </STRING>
+  <STRING id="189">This is not a valid automaton file! Reason:
+  </STRING>
+  <STRING id="190">This seems not to be JFLAP FinitAutomaton definition!</STRING>
+  <STRING id="191">This is not a valid JFLAP automaton file! Reason:
+  </STRING>
+  <STRING id="192">No alphabet item for a new label!</STRING>
+  <STRING id="193">Can not transform an invalid automaton!</STRING>
+  <STRING id="194">Can not minimize an invalid automaton!</STRING>
+  <STRING id="195">is valid!</STRING>
+  <STRING id="196">is invalid!</STRING>
+  <STRING id="197">
+The simulation table will become very big. This will take some time and a huge amount of system memory.
+You want to continue?
+  </STRING>
+  <STRING id="198">Save current automaton?</STRING>
+  <STRING id="199">All current data will be lost. Are you sure?</STRING>
+  <STRING id="200">Delete state:</STRING>
+  <STRING id="201">Delete transition:</STRING>
+  <STRING id="202">Delete label:</STRING>
+  <STRING id="203">
+Would you like to use GIF images (fewer colors / smaller imagesize)?
+If you say "no" JPEG images will be used!
+  </STRING>
+  <STRING id="204">Your current automaton and it's layout may be lost, are you sure?</STRING>
+  <STRING id="205">Convert current NEA with epsilon trans. to NEA without epsilon trans.?</STRING>
+  <STRING id="206">Your current automaton is invalid! You need to change it in order to get a valid one again. (Setting another automaton type is not a transformation!)</STRING>
+  <STRING id="207">Also create PDF file from this EPS file?</STRING>
+  <STRING id="208">Current Type</STRING>
+  <STRING id="209">initial state</STRING>
+  <STRING id="210">Use this setting for all similar elements, too?</STRING>
+  <STRING id="211">Steps:</STRING>
+  <STRING id="212">This automaton does not match to the lesson description!</STRING>
+  <STRING id="213">Lesson:</STRING>
+  <STRING id="214">Try:</STRING>
+  <STRING id="215">Tape Alphabet Items:</STRING>
+  <STRING id="216">Edit Tape Alphabet:</STRING>
+  <STRING id="217">Stack Alphabet Items:</STRING>
+  <STRING id="218">Edit Stack Alphabet:</STRING>
+  <STRING id="219">Input Alphabet Items:</STRING>
+  <STRING id="220">Edit Input Alphabet:</STRING>
+  <STRING id="221">State:</STRING>
+  <STRING id="222">final state:</STRING>
+  <STRING id="223">Transition:</STRING>
+  <STRING id="224">Target:</STRING>
+  <STRING id="225">Label:</STRING>
+  <STRING id="226">Read:</STRING>
+  <STRING id="227">TopOfStack:</STRING>
+  <STRING id="228">Push:</STRING>
+  <STRING id="229">Write:</STRING>
+  <STRING id="230">Direction:</STRING>
+  <STRING id="231">Read:</STRING>
+  <STRING id="232">Input is not accepted by this automaton!</STRING>
+  <STRING id="233">You need to select an initial state!</STRING>
+  <STRING id="234">Creating the RegularExpression will take more time - continue?</STRING>
+  <STRING id="235">You need to define at least one final state!</STRING>
+  <STRING id="240">Output Alphabet Items:</STRING>
+  <STRING id="241">Edit Output Alphabet:</STRING>
+  <STRING id="242">Output:</STRING>
+  <STRING id="243">This automaton type can not be checked automatically. Use the simulation tab to validate your automaton.</STRING>
+  <STRING id="244">LaTeX code has been saved in your clipboard use "paste" in your LaTeX document now!</STRING>
+  <STRING id="245">There are unknown characters in push: </STRING>
+  <STRING id="246">NKA is not normelized at: </STRING>
+  <STRING id="247">The automaton is not complete. Do you want to auto complete it now?</STRING>
+
+  <STRING id="250">Automaton Lessons:</STRING>
+  <STRING id="251">Select a lesson</STRING>
+  <STRING id="252">Students select a lesson from the server.</STRING>
+  <STRING id="253">Lessons</STRING>
+  <STRING id="254">Search</STRING>
+  <STRING id="255">Loading Data...</STRING>
+  <STRING id="256">Author:</STRING>
+  <STRING id="257">Date:</STRING>
+  <STRING id="258">Description</STRING>
+  <STRING id="259">Select this lesson</STRING>
+  <STRING id="261">Task</STRING>
+  <STRING id="262">Check:</STRING>
+  <STRING id="263">Check your solution</STRING>
+  <STRING id="264">Show solution</STRING>
+  <STRING id="265">Check</STRING>
+  <STRING id="266">Your solution is wrong!
+Try to simulate the automaton in order to find your mistake or change your automaton.
+  </STRING>
+  <STRING id="267">Your solution is right!
+Here you can see the reference solution for this lesson:
+  </STRING>
+  <STRING id="268">Back to automaton</STRING>
+  <STRING id="269">Select another lesson</STRING>
+  <STRING id="270">Go to Simulation</STRING>
+  <STRING id="271">Lessons</STRING>
+  <STRING id="272">Check Solution</STRING>
+  <STRING id="273">Create new lesson</STRING>
+  <STRING id="274">Teachers can upload a new lesson here.</STRING>
+  <STRING id="275">Create new Lessonn</STRING>
+  <STRING id="276">Submit form</STRING>
+  <STRING id="277">Task description</STRING>
+  <STRING id="278">Alphabet for this task</STRING>
+  <STRING id="279">Edit your lessons</STRING>
+  <STRING id="280">Teachers can modify there own lessons.</STRING>
+  <STRING id="281">Add comment</STRING>
+
+  <STRING id="292">Trace</STRING>
+  <STRING id="293">Configuration sequence</STRING>
+  <STRING id="294">Trace protocol</STRING>
+  <STRING id="295">Check multiple input</STRING>
+  <STRING id="296">Check</STRING>
+  <STRING id="297">Length:</STRING>
+  <STRING id="298">Create Random Word</STRING>
+  <STRING id="299">Delete</STRING>
+  <STRING id="300">
+You can save your transition graph as a vector images (SVG or EPS) too.
+So you will have no quality loss while rescaling.
+  </STRING>
+  <STRING id="301">
+You can generate Scheme Code for all your automata at the simulation page. Use a program like SchemeEdit to run them.
+  </STRING>
+  <STRING id="302">
+The introduction wizard is a good start to learn how to use this program.
+  </STRING>
+ </ENGLISH>
+ <GERMAN>
+  <STRING id="1">Automaton Editor</STRING>
+  <STRING id="2">Typ</STRING>
+  <STRING id="3">Alphabet</STRING>
+  <STRING id="4">Übergangstabelle</STRING>
+  <STRING id="5">Übergangsgraph</STRING>
+  <STRING id="6">Exportieren</STRING>
+  <STRING id="7">Simulation</STRING>
+  <STRING id="10">Öffnen</STRING>
+  <STRING id="11">Speichern</STRING>
+  <STRING id="12">Rückgängig</STRING>
+  <STRING id="13">Wiederholen</STRING>
+  <STRING id="14">Neu</STRING>
+  <STRING id="15">Notizblock</STRING>
+  <STRING id="20">Datei</STRING>
+  <STRING id="21">Neuer Automat</STRING>
+  <STRING id="22">Automat öffnen</STRING>
+  <STRING id="23">Automat speichern</STRING>
+  <STRING id="24">Automat speichern unter ...</STRING>
+  <STRING id="25">Exportieren ...</STRING>
+  <STRING id="26">Übergangsgraph</STRING>
+  <STRING id="27">Definitions Graph</STRING>
+  <STRING id="28">Übergangstabelle</STRING>
+  <STRING id="29">Automatdefinition XML</STRING>
+  <STRING id="30">Lex und Yacc Vorlage</STRING>
+  <STRING id="31">Beenden</STRING>
+  <STRING id="32">Hilfe</STRING>
+  <STRING id="33">Online Hilfe</STRING>
+  <STRING id="34">Einführungsassistent</STRING>
+  <STRING id="35">Sprache ändern</STRING>
+  <STRING id="36">Info</STRING>
+  <STRING id="40">Automat:</STRING>
+  <STRING id="41">Einführungsassistent</STRING>
+  <STRING id="42">Eine kurze Einführung in die Funktionen dieses Editors.</STRING>
+  <STRING id="43">Neuer Automat</STRING>
+  <STRING id="44">Erstellen Sie einen neuen Automaten.</STRING>
+  <STRING id="45">Automat öffnen</STRING>
+  <STRING id="46">Öffnen Sie einen vorhandenen Automaten.</STRING>
+  <STRING id="47">Hilfe:</STRING>
+  <STRING id="48">Online FAQ</STRING>
+  <STRING id="49">Besuchen Sie das Online Help Center.</STRING>
+  <STRING id="50">www.AtoCC.de</STRING>
+  <STRING id="51">Besuchen Sie die AtoCC Webseite.</STRING>
+  <STRING id="52">Tip des Tages:</STRING>
+  <STRING id="55">Schließen</STRING>
+  <STRING id="56">zurück</STRING>
+  <STRING id="57">weiter</STRING>
+  <STRING id="60">Typ:</STRING>
+  <STRING id="61">Automatentyp ändern</STRING>
+  <STRING id="62">In DEA konvertieren</STRING>
+  <STRING id="63">In NEA konvertieren</STRING>
+  <STRING id="64">Automat minimieren</STRING>
+  <STRING id="65">Automat überprüfen</STRING>
+  <STRING id="66">Zurück</STRING>
+  <STRING id="67">Weiter</STRING>
+  <STRING id="70">Neues Zeichen</STRING>
+  <STRING id="71">Zeichen löschen</STRING>
+  <STRING id="72">Alphabete</STRING>
+  <STRING id="73">leeren</STRING>
+  <STRING id="74">Alle Elemente dieser Liste löschen</STRING>
+  <STRING id="75">Vorbelegungszeichen</STRING>
+  <STRING id="76">Selektiertes Stack/Bandalphabetszeichen als Vorbelegungszeichen wählen.</STRING>
+  <STRING id="80">Übergangstabelle:</STRING>
+  <STRING id="81">Neuer Zustand</STRING>
+  <STRING id="82">Neuer Übergang</STRING>
+  <STRING id="83">Neues Label</STRING>
+  <STRING id="84">Löschen</STRING>
+  <STRING id="85">Anfangsbedingungen:</STRING>
+  <STRING id="86">Anfangszustand:</STRING>
+  <STRING id="87">Vorbelegungszeichen:</STRING>
+  <STRING id="88">Zustandsübergangstabelle:</STRING>
+  <STRING id="89">Klicken Sie auf "Neuer Zustand" um einen Zustand anzulegen.</STRING>
+  <STRING id="90">ODER klicken Sie auf "Weiter" für einen graphischen Entwurf.</STRING>
+  <STRING id="95">Baumansicht</STRING>
+  <STRING id="96">Eigenschaften</STRING>
+  <STRING id="97">Layout</STRING>
+  <STRING id="98">Neuer Zustand (s)</STRING>
+  <STRING id="99">Neuer Übergang (t)</STRING>
+  <STRING id="100">Neues Label (l)</STRING>
+  <STRING id="101">Löschen</STRING>
+  <STRING id="102">Automatisches Ausrichten</STRING>
+  <STRING id="103">Automat auf Gültigkeit prüfen</STRING>
+  <STRING id="104">Graph exportieren als...</STRING>
+  <STRING id="105">Baumansicht anzeigen</STRING>
+  <STRING id="106">Eingenschaften anzeigen</STRING>
+  <STRING id="107">Layout des selektierten Elements auf alle gleichartigen Elemente kopieren.</STRING>
+  <STRING id="108">Umschalten - Endzustand Ja/Nein</STRING>
+  <STRING id="110">Exporteinstellungen:</STRING>
+  <STRING id="111">Schriftart ändern</STRING>
+  <STRING id="112">Export Graph ...</STRING>
+  <STRING id="113">Export Definition ...</STRING>
+  <STRING id="114">Export Tabelle ...</STRING>
+  <STRING id="115">Export als HTML</STRING>
+  <STRING id="116">HTML Ausgabe:</STRING>
+  <STRING id="117">Drucken</STRING>
+  <STRING id="120">Simulationseinstellungen:</STRING>
+  <STRING id="121">Eingabe:</STRING>
+  <STRING id="122">Einzelschritt</STRING>
+  <STRING id="123">Geschwindigkeit:</STRING>
+  <STRING id="124">Schritt weiter</STRING>
+  <STRING id="125">Export Scheme Code</STRING>
+  <STRING id="126">Konfigurationenfolge</STRING>
+  <STRING id="127">Schnelltest - wird akzeptiert?</STRING>
+  <STRING id="128">Export Grammatik</STRING>
+  <STRING id="129">Export Compiler</STRING>
+   
+  <STRING id="130"><html><head></head><body style="Font-Family:Verdana;"><i>DEA sind äquivalente Beschreibungen für reguläre Sprachen.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">d</font>,q<sub>0</sub>,E)<br/><br/>Q ... endliche Menge von Zuständen,<br/><font face="Symbol">S</font> ... Eingabealphabet,<br/><font face="Symbol">d</font> ... totale Überführungsfunktion, Q x <font face="Symbol">S</font>
+		<font face="Symbol">®</font> Q,<br/>q<sub>0</sub> ... Anfangszustand (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>E ... endliche Menge von Endzuständen (E <font face="Symbol">Í</font> Q)<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> und (q<sub>0</sub>,w) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>) und q<sub>e</sub>
+			<font face="Symbol">Î</font> E }
+</b><br/><br/><br/><small><i>Ein DEA kann in einen äquivalenten Minimal-DEA oder in einen äquivalenten NEA konvertiert werden.</i></small></body></html></STRING>
+  <STRING id="131"><html><head></head><body style="Font-Family:Verdana;"><i>NEA sind äquivalente Beschreibungen für reguläre Sprachen.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">d</font>,q<sub>0</sub>,E)<br/><br/>Q ... endliche Menge von Zuständen,<br/><font face="Symbol">S</font> ... Eingabealphabet,<br/><font face="Symbol">d</font> ... totale Überführungsfunktion, Q x (<font face="Symbol">S</font> U {<font face="Symbol">e</font>}) <font face="Symbol">®</font>
+		<i>P</i>(Q),<br/>q<sub>0</sub> ... Anfangszustand (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>E ... endliche Menge von Endzuständen (E <font face="Symbol">Í</font> Q)<br/><br/>Sie können spontane Übergänge(<font face="Symbol">e</font>-Übergänge) verwenden.<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> und (q<sub>0</sub>,w) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>) und q<sub>e</sub>
+			<font face="Symbol">Î</font> E }
+</b><br/><br/><br/><small><i>Ein NEA kann in einen äquivalenten DEA oder einen äquivalenten NEA ohne <font face="Symbol">e</font>-Übergänge konvertiert werden.</i></small></body></html></STRING>
+  <STRING id="132"><html><head></head><body style="Font-Family:Verdana;"><i>DKA sind äquivalente Beschreibungen für LR(k) Sprachen.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">G</font>,<font face="Symbol">d</font>,q<sub>0</sub>,k<sub>0</sub>,E)<br/><br/>Q ... endliche Menge von Zuständen,<br/><font face="Symbol">S</font> ... Eingabealphabet,<br/><font face="Symbol">G</font> ... Stackalphabet,<br/><font face="Symbol">d</font> ... partielle Überführungsfunktion, Q x (<font face="Symbol">S</font> U {<font face="Symbol">e</font>}) x <font face="Symbol">G</font>
+		<font face="Symbol">®</font> Q x <font face="Symbol">G</font><sup>*</sup><br/>q<sub>0</sub> ... Anfangszustand (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>k<sub>0</sub> ... Stackvorbelegungszeichen (k<sub>0</sub>
+		<font face="Symbol">Î</font>
+		<font face="Symbol">G</font> und k<sub>0</sub>
+		<font face="Symbol">&#207;</font>
+		<font face="Symbol">S</font>),<br/>E ... endliche Menge von Endzuständen (E <font face="Symbol">Í</font> Q)<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> und (q<sub>0</sub>,w,k<sub>0</sub>) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>,K) und q<sub>e</sub>
+			<font face="Symbol">Î</font> E und K <font face="Symbol">Î</font>
+			<font face="Symbol">G</font><sup>*</sup> }
+</b><br/></body></html></STRING>
+  <STRING id="133"><html><head></head><body style="Font-Family:Verdana;"><i>NKA  sind äquivalente Beschreibungen für Chomsky-Typ-2-Sprachen.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">G</font>,<font face="Symbol">d</font>,q<sub>0</sub>,k<sub>0</sub>,E)<br/><br/>Q ... endliche Menge von Zuständen,<br/><font face="Symbol">S</font> ... Eingabealphabet,<br/><font face="Symbol">G</font> ... Stackalphabet,<br/><font face="Symbol">d</font> ... partielle Überführungsfunktion, Q x (<font face="Symbol">S</font> U {<font face="Symbol">e</font>}) x <font face="Symbol">G</font>
+		<font face="Symbol">®</font> P<sub>endlich</sub>(Q x <font face="Symbol">G</font><sup>*</sup>)<br/>q<sub>0</sub> ... Anfangszustand (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>k<sub>0</sub> ... Stackvorbelegungszeichen (k<sub>0</sub>
+		<font face="Symbol">Î</font>
+		<font face="Symbol">G</font> und k<sub>0</sub>
+		<font face="Symbol">&#207;</font>
+		<font face="Symbol">S</font>),<br/>E ... endliche Menge von Endzuständen (E <font face="Symbol">Í</font> Q)<br/><br/><b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> und (q<sub>0</sub>,w,k<sub>0</sub>) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>,K) und q<sub>e</sub>
+			<font face="Symbol">Î</font> E und K <font face="Symbol">Î</font>
+			<font face="Symbol">G</font><sup>*</sup> }
+</b><br/></body></html></STRING>
+  <STRING id="134"><html><head></head><body style="Font-Family:Verdana;"><i>DTM sind äquivalente Beschreibungen für Chomsky-Typ-0-Sprachen.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">G</font>,<font face="Symbol">d</font>,q<sub>0</sub>,$,E)<br/><br/>Q ... endliche Menge von Zuständen,<br/><font face="Symbol">S</font> ... Eingabealphabet,<br/><font face="Symbol">G</font> ... Bandalphabet (<font face="Symbol">S</font>
+		<font face="Symbol">Í</font>
+		<font face="Symbol">G</font> \ {$} ),<br/><font face="Symbol">d</font> ... partielle Überführungsfunktion, Q x <font face="Symbol">G</font>
+		<font face="Symbol">®</font> Q x <font face="Symbol">G</font> x {L,N,R}<br/>q<sub>0</sub> ... Anfangszustand (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/>$ ... Bandvorbelegungszeichen ($ <font face="Symbol">Î</font>
+		<font face="Symbol">G</font> und $ <font face="Symbol">&#207;</font>
+		<font face="Symbol">S</font>),<br/>E ... endliche Menge von Endzuständen (E <font face="Symbol">Í</font> Q)<br/><br/>
+    <b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> | q<sub>0</sub>w |-*- <font face="Symbol">a</font>q<sub>e</sub><font face="Symbol">b</font>), with <font face="Symbol">a</font>, <font face="Symbol">b</font>
+			<font face="Symbol">Î</font> <font face="Symbol">G</font><sup>*</sup> and q<sub>e</sub>
+			<font face="Symbol">Î</font> E}</b><br/></body></html></STRING>
+   <STRING id="135"><html><head></head><body style="Font-Family:Verdana;"><i>Moore Maschinen sind DEA's sehr ähnlich, können jedoch mit jedem erreichten Zustand eine Ausgaben erzeugen.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">D</font>,<font face="Symbol">d</font>,<font face="Symbol">l</font>,q<sub>0</sub>)<br/><br/>Q ... endliche Menge von Zuständen,<br/><font face="Symbol">S</font> ... Eingabealphabet,<br/><font face="Symbol">D</font> ... Ausgabealphabet,<br/><font face="Symbol">l</font> ... totale Funktion, <font face="Symbol">l</font> : Q <font face="Symbol">®</font> <font face="Symbol">D</font>,<br/><font face="Symbol">d</font> ... totale Überführungsfunktion, Q x <font face="Symbol">S</font>
+		<font face="Symbol">®</font> Q,<br/>q<sub>0</sub> ... Startzustand (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/><br/></body></html></STRING>
+   <STRING id="136"><html><head></head><body style="Font-Family:Verdana;"><i>Mealy Maschinen sind DEA's sehr ähnlich, können jedoch mit jedem gelesenen Eingabezeichen eine Ausgabe erzeugen.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">D</font>,<font face="Symbol">d</font>,<font face="Symbol">l</font>,q<sub>0</sub>)<br/><br/>Q ... endliche Menge von Zuständen,<br/><font face="Symbol">S</font> ... Eingabealphabet,<br/><font face="Symbol">D</font> ... Ausgabealphabet,<br/><font face="Symbol">l</font> ... totale Funktion, <font face="Symbol">l</font> : Q x <font face="Symbol">S</font> <font face="Symbol">®</font> <font face="Symbol">D</font>,<br/><font face="Symbol">d</font> ... totale Überführungsfunktion, Q x <font face="Symbol">S</font>
+		<font face="Symbol">®</font> Q,<br/>q<sub>0</sub> ... Startzustand (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/><br/></body></html></STRING>
+  <STRING id="150">Willkommen bei AutoEdit!
+
+Dieser Assistent wird Ihnen Schritt für Schritt erklären wie Sie einen einfachen Automaten mit diesem Editor eintwerfen.
+
+Klicken Sie auf "weiter" um jeweils zur nächsten Seite des Tutorials zu gelangen.
+  </STRING>
+  <STRING id="151">Zunächst wird der Typ des zu erstellenden Automaten festgelegt.
+Klicken Sie auf "Automatentyp ändern" und wählen Sie für dieses Tutorial "NEA" aus dem erscheinenden Menü.
+Hinweis: Auf dieser Seite können Sie auch vorhandene Automaten konvertieren oder minimieren.</STRING>
+  <STRING id="152">Nun können wir ein Alphabet für diesen NEA festlegen.
+Hierfür können entweder einzelne Zeichen dem Alphabet hinzugefügt werden, oder ein vordefiniertes Alphabet angefügt werden, um Zeit zu sparen.
+Klicken Sie auf "Alphabete" und wählen Sie für dieses Beispiel das vorgefertigtes Alphabet "a,b,c". </STRING>
+  <STRING id="153">Es stehen Ihnen nun zwei Möglichkeiten zur Verfügung den Automaten zu definieren. Zunächst wollen wir den tabelarischen Entwurf kennen lernen.  
+Klicken Sie auf "Neuer Zustand". Ein graues Rechteck stellt anschließend den neuen Zustand dar.
+Erstellen Sie einen zweiten Zustand auf die selbe Weise.</STRING>
+  <STRING id="154">Klicken Sie auf das erste graue Rechteck um es zu selektieren (bei Erfolg färbt es sich rot).
+Klicken Sie nun auf "Neuer Übergang" um eine Verbindung zwischen zwei Zuständen zu erstellen.
+Wählen Sie als "Ziel:" den Zustand q_1.</STRING>
+  <STRING id="155">Um ein Label (Eingabezeichen) am erstellten Übergang zu definieren klicken Sie auf "Neues Label".
+In der "Lese:" Auswahl können Sie nun eines der Alphabetszeichen auswählen (belassen Sie die Wahl bei "a").
+Erstellen Sie ein weiteres Label für den gleichen Übergang (erneuter Klick auf "Neues Label").</STRING>
+  <STRING id="156">Nun haben wir einen Übergang zwischen q_0 und q_1 mit den Eingabezeichen a und b erstellt.
+Erstellen Sie nun analog einen weiteren Übergang am Zustand q_0 und wählen als "Ziel:" q_0 aus (Übergang auf sich selbst).
+Erstellen Sie hier das noch fehlende Label für das Eingabezeichen c.</STRING>
+  <STRING id="157">Wählen Sie nun den Zustand q_1 aus. Erstellen Sie wieder einen Übergang am Zustand q_1 und wählen als "Ziel:" q_1 aus (Übergang auf sich selbst).
+Erstellen Sie auch hier die Labels für die Eingabezeichen a und b.
+Nun erstellen wir noch einen letzen Übergang an q_1 mit dem Ziel q_0 und anschließend das passende Label für das Zeichen c.
+Wir deklarieren q_1 als Endzustand ("YES") und wählen q_0 auch als "Anfangszustand" (links unten) für den Automaten.
+Unser Automat akzeptiert nun alle Wörter die nicht mit einem "c" enden.</STRING>
+  <STRING id="158">An dieser Stelle können Sie den Graphen Ihres Automaten anpassen.
+Es ist aber auch möglich einen Automaten komplett in dieser Ansicht zu entwerfen.
+Klicken Sie auf den Zustand q_0 um diesen zu selektieren. Nun sehen Sie im linken unteren Bereich die Eigenschaften des selektierten Objekts.
+Um durch die einzelnen Bestandteile des Automaten schneller zu navigieren, können Sie die Baumdarstellung oben links verwenden.</STRING>
+  <STRING id="159">Wenn Sie mit der Maus über einen Zustand fahren, erscheint ein blauer Ring im Zustand. Klicken und halten Sie die linke Maustaste auf dem inneren Kreis, um den Zustand zu verschieben. Klicken und halten Sie die linke Maustaste auf dem äußerem Ring, um einen Übergang von einem Zustand zu einem anderen zu erzeugen.
+Wenn Sie mit der Ausrichten des Graphen zufrieden sind, können wir ihn nun Exportieren.</STRING>
+  <STRING id="160">Auf dieser Seite können Sie alle Informationen über den erstellten Automaten auf einmal sehen.
+Sie können die sowohl gesamte Seite als HTML als auch Teile davon in verschiedenen Grafikformaten exportieren.
+Eine Auflösung von 72 DPI ist besonders für die Bildschirmdarstellung geeignet (Webseiten). Höhere Auflösungen können für Druckmedien verwendet werden.</STRING>
+  <STRING id="161">Hier kann man das Verhalten des Automaten simulieren.
+Schreiben Sie "abcb" in das Eingabefeld und klicken Sie auf "Start Simulation". Schrittweise wird nun der Graph durchwandert. Das kleine "?" kann verwendet werden um schnell festzustellen ob das Eingabewort vom Automaten akzeptiert wird. </STRING>
+  <STRING id="162">Damit sind wir auch schon am Ende dieser kleinen Einführung.
+Auf der Webseite finden Sie neben einem FAQ auch einige Übungsaufgaben mit Lösungen.
+
+Viel Spaß,
+AtoCC Team
+  </STRING>
+  <STRING id="170">NEA zu DEA</STRING>
+  <STRING id="171">DEA zu NEA
+
+ODER
+
+NEAepsilon zu NEA</STRING>
+  <STRING id="172">DEA zu Minimal-DEA
+
+ODER
+
+Sonst Zustände optimiert</STRING>
+  <STRING id="173">Schließen</STRING>
+  <STRING id="174">Ausblenden</STRING>
+  <STRING id="175">Vergrößern</STRING>
+  <STRING id="176">Verkleinern</STRING>
+  <STRING id="177">selektierte Zeichen löschen</STRING>
+  <STRING id="180">Der Wert "EPSILON" ist hier nicht erlaubt!</STRING>
+  <STRING id="181">Sie können immer nur einen Übergäng von einem Zustand zu einem anderen Zustand erstellen!</STRING>
+  <STRING id="182">Sie müssen ein Alphabet für diesen Automaten festlegen!</STRING>
+  <STRING id="183">Fehlendes Label:</STRING>
+  <STRING id="184">Zu viele Labels am Zustand:</STRING>
+  <STRING id="185">Doppelte Labels am Übergang:</STRING>
+  <STRING id="186">Ihre Eingabe enthält unzulässige Zeichen! (prüfen Sie Ihr Alphabet)</STRING>
+  <STRING id="187">
+    Die Arbeit des Automaten wurde nach 1000 Schritten abgebrochen. Vermutlich würde er ewig weiterlaufen.
+  </STRING>
+  <STRING id="188">
+    Die Arbeit des Automaten wurde nach klonen von 1000 parallelen Maschinen abgebrochen. Vermutlich würde er ewig weiterlaufen.
+  </STRING>
+  <STRING id="189">Dies ist keine gültige Automatendefinition! Grund:
+  </STRING>
+  <STRING id="190">Dies scheint keine JFLAP FinitAutomaton Definition zu sein!</STRING>
+  <STRING id="191">Dies ist keine lesbare JFLAP Datei! Grund:
+  </STRING>
+  <STRING id="192">Kein weiteres Alphabetszeichen für ein neues Label vorhanden!</STRING>
+  <STRING id="193">Ein ungültiger Automat kann nicht konvertiert werden!</STRING>
+  <STRING id="194">Ein ungültiger Automat kann nicht minimiert werden!</STRING>
+  <STRING id="195">ist gültig!</STRING>
+  <STRING id="196">ist ungültig!</STRING>
+  <STRING id="197">
+Die Simulationstabelle wird sehr groß werden. Dies wird ein wenig Zeit und eine große Menge an Systemspeicher benötigen.
+Möchten Sie fortfahren?
+  </STRING>
+  <STRING id="198">Den aktuellen Automaten speichern?</STRING>
+  <STRING id="199">Alle Änderungen gehen verloren. Sind Sie sicher?</STRING>
+  <STRING id="200">Zustand löschen:</STRING>
+  <STRING id="201">Übergang löschen:</STRING>
+  <STRING id="202">Label löschen:</STRING>
+  <STRING id="203">
+Möchten Sie GIF Grafiken (weniger Farben / kleinere Datenmenge) verwenden?
+Wenn Sie mit "nein" antworten werden JPEG Grafiken verwendet!
+  </STRING>
+  <STRING id="204">Ihr aktueller Automat und sein Layout gehen verloren, sind Sie sicher?</STRING>
+  <STRING id="205">Den aktuellen NEA mit Epsilonübergängen in ein äquivalenten NEA ohne Epsilonübergängen konvertieren?</STRING>
+  <STRING id="206">Der aktuelle Automat ist ungültig! Sie müssen ihn entsprechend verändern um gegebenen Falls die Gültigkeit wiederherzustellen. (Das Ändern des Types stellt keine Transformation dar!)</STRING>
+  <STRING id="207">Passende PDF Datei zu dieser EPS Datei erzeugen?</STRING>
+  <STRING id="208">Aktueller Typ</STRING>
+  <STRING id="209">Startzustand</STRING>
+  <STRING id="210">Diese Einstellung für alle gleichartigen Elemente übernehmen?</STRING>
+  <STRING id="211">Zustandsfolge:</STRING>
+  <STRING id="212">Dieser Automat passt nicht zur Aufgabenbeschreibung!</STRING>
+  <STRING id="213">Aufgabe:</STRING>
+  <STRING id="214">Versuch:</STRING>
+  <STRING id="215">Bandalphabet:</STRING>
+  <STRING id="216">Edit Bandalphabet:</STRING>
+  <STRING id="217">Stackalphabet:</STRING>
+  <STRING id="218">Edit Stackalphabet:</STRING>
+  <STRING id="219">Eingabealphabet:</STRING>
+  <STRING id="220">Edit Eingabealphabet:</STRING>
+  <STRING id="221">Zustand:</STRING>
+  <STRING id="222">Endzustand:</STRING>
+  <STRING id="223">Übergang:</STRING>
+  <STRING id="224">Ziel:</STRING>
+  <STRING id="225">Label:</STRING>
+  <STRING id="226">Read:</STRING>
+  <STRING id="227">TopOfStack:</STRING>
+  <STRING id="228">Push:</STRING>
+  <STRING id="229">Write:</STRING>
+  <STRING id="230">Richtung:</STRING>
+  <STRING id="231">Read:</STRING>
+  <STRING id="232">Eingabe wird vom Automaten nicht akzeptiert!</STRING>
+  <STRING id="233">Sie müssen einen Startzustand auswählen!</STRING>
+  <STRING id="234">Die Erstellung des Regulären Ausdrucks benötigt mehr Zeit - fortfahren?</STRING>
+  <STRING id="235">Sie müssen mindestens einen Endzustand wählen!</STRING>
+  <STRING id="240">Ausgabealphabet:</STRING>
+  <STRING id="241">Edit Ausgabealphabet:</STRING>
+  <STRING id="242">Ausgabe:</STRING>
+  <STRING id="243">Dieser Automatentyp kann nicht automatisch überprüft werden. Verwenden Sie die Simulationsseite um die korrekte Arbeitsweise Ihres Automaten zu prüfen.</STRING>
+  <STRING id="244">LaTeX Quelltext wurde in die Zwischenablage kopiert. Verwenden Sie nun "Einfügen" in Ihrem LaTeX Dokument!</STRING>
+  <STRING id="245">Es befinden sich unbekannte Kellerzeichen in: </STRING>
+  <STRING id="246">NKA ist nicht normalisiert: Kellerwörter zu lang bei: </STRING>
+  <STRING id="247">Der Automat ist unvollständig. Soll er automatisch vervollständigt werden?</STRING>
+
+  <STRING id="250">Automaten Aufgaben:</STRING>
+  <STRING id="251">Aufgabe auswählen</STRING>
+  <STRING id="252">Studierende wählen eine Aufgabe zur Bearbeitung aus.</STRING>
+  <STRING id="253">Aufgaben</STRING>
+  <STRING id="254">Suchen</STRING>
+  <STRING id="255">Lade Daten...</STRING>
+  <STRING id="256">Autor:</STRING>
+  <STRING id="257">Datum:</STRING>
+  <STRING id="258">Aufgabenstellung</STRING>
+  <STRING id="259">diese Aufgabe auswählen</STRING>
+  <STRING id="261">Aufgabe</STRING>
+  <STRING id="262">Prüfen:</STRING>
+  <STRING id="263">Lösung überprüfen</STRING>
+  <STRING id="264">Lösung anzeigen</STRING>
+  <STRING id="265">Prüfen</STRING>
+  <STRING id="266">Ihre Lösung war leider falsch!
+Versuchen Sie mit Hilfe der Simulation Fehler zu finden und ändern Sie den
+Automaten entsprechend.
+  </STRING>
+  <STRING id="267">Ihre Lösung war richtig!
+Die Musterlösung für diese Aufgabe wurde wie folgt angegeben:
+  </STRING>
+  <STRING id="268">Zurück zum Automaten</STRING>
+  <STRING id="269">Andere Aufgabe wählen</STRING>
+  <STRING id="270">Zur Simulation</STRING>
+  <STRING id="271">Aufgabenliste</STRING>
+  <STRING id="272">Aufgabe prüfen</STRING>
+  <STRING id="273">Aufgabe erstellen</STRING>
+  <STRING id="274">Lehrende können eine vorbereitete Aufgabe einreichen.</STRING>
+  <STRING id="275">Neue Aufgabe erstellen</STRING>
+  <STRING id="276">Formular absenden</STRING>
+  <STRING id="277">Aufgabenstellung</STRING>
+  <STRING id="278">Alphabet für diese Aufgabe</STRING>
+  <STRING id="279">Aufgabe editieren</STRING>
+  <STRING id="280">Lehrende können eine vorhandene Aufgabenstellung überarbeiten.</STRING>
+  <STRING id="281">Kommentar einfügen</STRING>
+   
+  <STRING id="292">Protokoll</STRING>
+  <STRING id="293">Konfigurationenfolge</STRING>
+  <STRING id="294">Simulationsprotokoll</STRING>
+  <STRING id="295">Mehrere Eingaben prüfen</STRING>
+  <STRING id="296">Prüfen</STRING>
+  <STRING id="297">Länge:</STRING>
+  <STRING id="298">Zufallswort erzeugen</STRING>
+  <STRING id="299">Löschen</STRING>
+  <STRING id="300">
+Sie können Übergangsgraphen auch als Vector Graphik speichern (SVG oder EPS).
+Es entstehen somit keine Qualitätsverluste beim scalieren.
+  </STRING>
+  <STRING id="301">
+Sie können für alle Automaten Scheme Code auf der Simulationsseite erzeugen. Benutzen Sie ein Programm wie SchemeEdit um diese auszuführen.
+  </STRING>
+  <STRING id="302">
+Der Einführungsassistent ist ein guter Startpunkt um sich mit diesem Programm vertraut zu machen.
+  </STRING>
+   <STRING id="303">
+Wenn Sie GhostScript installiert haben (zum Beispiel mit Miktex) können Sie Graphen über EPS automatisch auch in PDF umwandeln lassen. 
+     
+Export - Format EPS 
+(Frage nach PDF mit JA beantworten)
+   </STRING>
+   <STRING id="304">
+Für DEA's und NEA's werden unter "Exportieren" auch die entsprechenden Grammatiken für den entwickelten Automaten angezeigt. 
+   </STRING>
+   <STRING id="305">
+Moore und Mealy Maschinen sind DEA's mit Ausgabe. Verwenden Sie "\n" in einem Zeichen des Ausgabealphabets um einen Zeilenumbruch zu erzeugen.
+   </STRING>
+   <STRING id="306">
+Turing Maschinen können auch an einer anderen Stelle der Eingabe ihre Arbeit starten. Verwenden Sie im Eingabewort das spezielle Zeichen "^" um den Startpunkt zu definieren.
+   </STRING>
+ </GERMAN>
+ <POLISH>
+  <STRING id="1">Edytor automatu</STRING>
+  <STRING id="2">Typ</STRING>
+  <STRING id="3">Alfabet</STRING>
+  <STRING id="4">tabela przejścia</STRING>
+  <STRING id="5">Wykres przejścia/przejściowy</STRING>
+  <STRING id="6">Opublikować</STRING>
+  <STRING id="7">Symulacja</STRING>
+  <STRING id="10">Otwórz</STRING>
+  <STRING id="11">Zapisz</STRING>
+  <STRING id="12">Wstecz</STRING>
+  <STRING id="13">Powtórz</STRING>
+  <STRING id="14">Nowy</STRING>
+  <STRING id="15">Notatnik</STRING>
+  <STRING id="20">Plik</STRING>
+  <STRING id="21">Nowy Automat</STRING>
+  <STRING id="22">Otwórz automat</STRING>
+  <STRING id="23">Zapisz automat</STRING>
+  <STRING id="24">Zapisz automat jako...</STRING>
+  <STRING id="25">eksportować...</STRING>
+  <STRING id="26">Wykres przejścia</STRING>
+  <STRING id="27">Wykresy definicji</STRING>
+  <STRING id="28">Tabela przejścia</STRING>
+  <STRING id="29">Definicja automatu XML</STRING>
+  <STRING id="30">Lex i Yacc szablon</STRING>
+  <STRING id="31">Wyjście</STRING>
+  <STRING id="32">pomoc</STRING>
+  <STRING id="33">Pomoc online</STRING>
+  <STRING id="34">Przewodnik (instalacyjny)</STRING>
+  <STRING id="35">Zmień język</STRING>
+  <STRING id="36">Info</STRING>
+  <STRING id="40">Automat</STRING>
+  <STRING id="41">Przewodnik</STRING>
+  <STRING id="42">Krótkie wprowadzenie w funkcje edytora</STRING>
+  <STRING id="43">Nowy automat</STRING>
+  <STRING id="44">Utwórz nowy automat.</STRING>
+  <STRING id="45">Otwórz Automat</STRING>
+  <STRING id="46">Otwórz instniejący automat.</STRING>
+  <STRING id="47">Pomoc:</STRING>
+  <STRING id="48">Pomoc Online</STRING>
+  <STRING id="49">Aby otrzymać dalsze informacje proszę odwiedzić stronę Help Center.</STRING>
+  <STRING id="50">www.AtoCC.de</STRING>
+  <STRING id="51">Proszę odwiedzić stronę AtoCC.</STRING>
+  <STRING id="52">Rada/wskazówka dnia:</STRING>
+  <STRING id="55">Zamknij</STRING>
+  <STRING id="56">Wstecz</STRING>
+  <STRING id="57">Dalej</STRING>
+  <STRING id="60">Typ:</STRING>
+  <STRING id="61">Ustaw typ automatu</STRING>
+  <STRING id="62">Konwertuj do DEA</STRING>
+  <STRING id="63">Konwertuj do NEA</STRING>
+  <STRING id="64">Minimalizuj automat</STRING>
+  <STRING id="65">Sprawdź automat</STRING>
+  <STRING id="66">Z powrotem/ wstecz</STRING>
+  <STRING id="67">Dalej</STRING>
+  <STRING id="70">Nowy znak</STRING>
+  <STRING id="71">Usuń znak</STRING>
+  <STRING id="72">Alfabet</STRING>
+  <STRING id="73">Wyczyść</STRING>
+  <STRING id="74">Usuń wszystkie elementy z listy</STRING>
+  <STRING id="75">Initial char</STRING>
+  <STRING id="76">Set selected Stack/Tape character as initial character.</STRING>
+  <STRING id="80">Edytuj tabelę przejścia</STRING>
+  <STRING id="81">Nowy stan</STRING>
+  <STRING id="82">Dodaj przejście</STRING>
+  <STRING id="83">Nowa etykieta</STRING>
+  <STRING id="84">Usuń zaznaczenie</STRING>
+  <STRING id="85">Edytuj warunki początkowe:</STRING>
+  <STRING id="86">Stan początkowy automatu</STRING>
+  <STRING id="87">Stos/Ciąg znaku początkowego </STRING>
+  <STRING id="88">Stan tabeli przejścia</STRING>
+  <STRING id="89">Kliknij "Add State"-"Nowy stan" aby utworzyć pierwszy stan.</STRING>
+  <STRING id="90">LUB kliknij na "Następny" w celu podglądu projektu.</STRING>
+  <STRING id="95">Widok drzewa</STRING>
+  <STRING id="96">Właściwości/Cechy</STRING>
+  <STRING id="97">Układ</STRING>
+  <STRING id="98">Nowy stan (s)</STRING>
+  <STRING id="99">Nowe przejście (t)</STRING>
+  <STRING id="100">Nowa etykieta (l)</STRING>
+  <STRING id="101">Usuń zaznaczenie</STRING>
+  <STRING id="102">Wykres automatyczny</STRING>
+  <STRING id="103">Sprawdź ważność automatu</STRING>
+  <STRING id="104">Eksportuj obraz jako...</STRING>
+  <STRING id="105">Pokaż element w formie drzewa.</STRING>
+  <STRING id="106">Wyświetl właściwości</STRING>
+  <STRING id="107">Skopiuj element dla wszystkich podobnych elementów.</STRING>
+  <STRING id="108">Przełącz-końcowy stan Tak/Nie</STRING>
+  <STRING id="110">Ustawienia eksportu:</STRING>
+  <STRING id="111">Zmień czcionkę</STRING>
+  <STRING id="112">Eksportuj wykres</STRING>
+  <STRING id="113">Eksportuj definicję</STRING>
+  <STRING id="114">Eksportuj tabelę</STRING>
+  <STRING id="115">Eksportuj jako HTML</STRING>
+  <STRING id="116">Opublikuj HTML</STRING>
+  <STRING id="117">Drukuj stronę</STRING>
+  <STRING id="120">Właściwości symulacji</STRING>
+  <STRING id="121">Dane wejściowe</STRING>
+  <STRING id="122">Pojedynczy krok</STRING>
+  <STRING id="123">Prędkość</STRING>
+  <STRING id="124">Krok dalej</STRING>
+  <STRING id="125">Eksportuj kod schematu</STRING>
+  <STRING id="126">Configuration sequence</STRING>
+  <STRING id="127">Szybki test-zatwierdzić</STRING>
+  <STRING id="130"><html><head></head><body style="Font-&#xA;&#xA;Family:Verdana;"><i>
+DEA są równoważnymi opisami dla języków 
+regularnych.</i><br/><br/><b>Definicja: 
+skończony zbiór stanów</b><br/><br/>M = 
+(Q,<font face="Symbol">S</font>,<font face="Symbol">d</font>,q<sub>0</sub>,E)
+<br/><br/>Q ... skończony zbiór stanów,
+<br/><font face="Symbol">S</font> ... dane 
+wejściowe alfabet,<br/><font face="Symbol">d</font> ... całkowite 
+przejście funkcji, Q x <font face="Symbol">S
+</font>
+		<font face="Symbol">®
+</font> Q,<br/>q<sub>0</sub> ... 
+początkowy stan (q<sub>0</sub>
+		<font face="Symbol">Î
+</font> Q),<br/>E ... skończony zbiór 
+końcowych stanów(E <font face="Symbol">Í
+</font> Q)<br/><br/><b>L(M) = {w | w 
+<font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> i (q
+<sub>0</sub>,w) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>) i q<sub>e</sub>
+			<font face="Symbol">Î</font> E }</b><br/>
+		<br/><br/><small><i>DEA 
+może zostać skonwertowany do odpowiedniej 
+minimal-DEA lub równoważnej NEA</i>
+		</small>
+	</body></html></STRING>
+  <STRING id="131"><html><head></head><body style="Font-&#xA;&#xA;Family:Verdana;"><i>
+NEA są równoważnymi opisami dla języków 
+regularnych.</i><br/><br/><b>Definicja:</b>
+		<br/><br/>M = (Q,<font face="Symbol">S
+</font>,<font face="Symbol">d</font>,q
+<sub>0</sub>,E)<br/><br/>Q ... skończony 
+zbiór stanów,<br/><font face="Symbol">S
+</font> ... dane wejściowe alfabet,<br/>
+		<font face="Symbol">d
+</font> ... całkwita 
+funkcja przejścia, Q x (<font face="Symbol">
+S</font> U {<font face="Symbol">e</font>}) 
+<font face="Symbol">®</font>
+		<i>P</i>(Q),<br/>q<sub>0
+</sub> ... stan początkowy (q<sub>0</sub>
+		<font face="Symbol">Î
+</font> Q),<br/>E ... skończony zbiór 
+stanów końcowych(E <font face="Symbol">Í
+</font> Q)<br/><br/>Możesz użyc <font face="Symbol">e</font> etykiet dla 
+przejść spontanicznych.<br/><br/><b>L
+(M) = {w | w <font face="Symbol">Î
+</font>
+			<font face="Symbol">S</font><sup>*</sup> i (q
+<sub>0</sub>,w) |-*- (q<sub>e</sub>,<font face="Symbol">e</font>) i q<sub>e</sub>
+			<font face="Symbol">Î</font> E }</b><br/>
+		<br/><br/><small><i>NEA 
+może być skonwertowana do równoważnej  
+DEA lub do NEA bez <font face="Symbol">e
+</font>
+			</i></small>
+	</body></html></STRING>
+  <STRING id="132"><html><head></head><body style="Font-
+&#xA;&#xA;Family:Verdana; Font-
+Size:10pt;"><i>
+DKA są odpowiednimi opisami  jezyków LR
+(k).</i>
+		<br/><br/><b>Definicja:
+</b><br/><br/>M = 
+(Q,<font face="Symbol">S</font>,<font 
+face="Symbol">G</font>,<font 
+face="Symbol">d</font>,q<sub>0</sub>,k
+<sub>0</sub>,E)<br/><br/>Q ... skończony 
+zbiór stanów,<br/><font face="Symbol">S
+</font> ... dane wejściowe alfabet,<br/>
+		<font face="Symbol">G
+</font> ... stack 
+alphabet,<br/><font face="Symbol">d</font> 
+... częściowa funkcja przejścia, Q x (<font 
+face="Symbol">S</font> U {<font 
+face="Symbol">e</font>}) x <font 
+face="Symbol">G</font>
+		<font face="Symbol">®
+</font> Q x <font face="Symbol">G</font>
+		<sup>*</sup><br/>q<sub>0
+</sub> ... 
+start state (q<sub>0</sub>
+		<font face="Symbol">Î
+</font> Q),<br/>k<sub>0</sub> ... domyślny 
+ciąg znaku (k<sub>0</sub>
+		<font face="Symbol">Î
+</font>
+		<font face="Symbol">G
+</font> and k<sub>0</sub>
+		<font face="Symbol">&#207;
+</font>
+		<font face="Symbol">S
+</font>),<br/>E ...skończony zbiór stanów 
+końcowych (E <font face="Symbol">Í
+</font> Q)<br/><br/><b>L(M) = {w | w 
+<font face="Symbol">Î</font>
+			<font 
+face="Symbol">S</font><sup>*</sup> i (q
+<sub>0</sub>,w,k<sub>0</sub>) |-*- (q
+<sub>e</sub>,<font face="Symbol">e
+</font>,K) and q<sub>e</sub>
+			<font 
+face="Symbol">Î</font> E and K <font 
+face="Symbol">Î</font>
+			<font 
+face="Symbol">G</font><sup>*</sup> }</b>
+		<br/></body></html>
+</STRING>
+  <STRING id="133"><html><head></head><body style="Font-
+&#xA;Family:Verdana;"><i>
+NKA są 
+odpowiednimi opisami dla języków Chromsky-
+typ-2 .</i><br/><br/><b>Definicja:</b><br/>
+		<br/>M = (Q,<font 
+face="Symbol">S</font>,
+<font face="Symbol">G</font>,<font 
+face="Symbol">d</font>,q<sub>0</sub>,k
+<sub>0</sub>,E)<br/><br/>Q ... skończony 
+zbiór stanów<br/><font face="Symbol">S
+</font> ... dane wejściowe alfabetu,<br/>
+		<font face="Symbol">G
+</font> ... ciąg alfabetu,<br/><font 
+face="Symbol">d</font> 
+... częściowa funkcja przejścia, Q x (<font 
+face="Symbol">S</font> U {<font 
+face="Symbol">e</font>}) x <font 
+face="Symbol">G</font>
+		<font face="Symbol">®
+</font> P<sub>finite</sub>(Q x <font 
+face="Symbol">G</font><sup>*</sup>)
+<br/>q<sub>0</sub> ... start state (q
+<sub>0</sub>
+		<font face="Symbol">Î
+</font> Q),<br/>k<sub>0</sub> ... ciąg 
+domyślnych znaków(k<sub>0</sub>
+		<font face="Symbol">Î
+</font>
+		<font face="Symbol">G
+</font> and k<sub>0</sub>
+		<font face="Symbol">&#207;
+</font>
+		<font face="Symbol">S
+</font>),<br/>E ... skończony zbiór 
+końcowych stanów (E <font face="Symbol">Í
+</font> Q)<br/><br/><b>L(M) = {w | w 
+<font face="Symbol">Î</font>
+			<font 
+face="Symbol">S</font><sup>*</sup> and 
+(q<sub>0</sub>,w,k<sub>0</sub>) |-*- (q
+<sub>e</sub>,<font face="Symbol">e
+</font>,K) and q<sub>e</sub>
+			<font 
+face="Symbol">Î</font> E and K <font 
+face="Symbol">Î</font>
+			<font 
+face="Symbol">G</font><sup>*</sup> }</b>
+		<br/></body></html>
+</STRING>
+  <STRING id="134"><html><head></head><body style="Font-
+&#xA;Family:Verdana;"><i>
+DTM są 
+dopowiednimi opisami dla języków Chromsky-
+Typ-0.</i><br/><br/><b>Definicja:</b><br/>
+		<br/>M = (Q,<font 
+face="Symbol">S</font>,
+<font face="Symbol">G</font>,<font 
+face="Symbol">d</font>,q<sub>0</sub>,
+$,E)<br/><br/>Q ... finite set of states,<br/>
+		<font face="Symbol">S
+</font> ... ciąg alfabetu<br/><font 
+face="Symbol">G</font> ... ciąg alfabetu
+(<font face="Symbol">S</font>
+		<font face="Symbol">Í
+</font>
+		<font face="Symbol">G
+</font> \ {$}),<br/><font face="Symbol">d
+</font> ... partial transition function, (Q \ E) 
+x <font face="Symbol">G</font>
+		<font face="Symbol">®
+</font> Q x <font face="Symbol">G</font> 
+x {L,N,R}<br/>q<sub>0</sub> ... start 
+state (q<sub>0</sub>
+		<font face="Symbol">Î
+</font> Q),<br/>$ ... tape preset character 
+($ <font face="Symbol">Î</font>
+		<font face="Symbol">G
+</font> and $ <font face="Symbol">&#207;</font>
+		<font face="Symbol">S
+</font>),<br/>E ... finite set of final states (E 
+<font face="Symbol">Í</font> Q)<br/>
+		<br/>
+<b>L(M) = {w | w <font face="Symbol">Î</font>
+			<font face="Symbol">S</font><sup>*</sup> | q<sub>0</sub>w |-*- <font face="Symbol">a</font>q<sub>e</sub><font face="Symbol">b</font>), with <font face="Symbol">a</font>, <font face="Symbol">b</font>
+			<font face="Symbol">Î</font> <font face="Symbol">G</font><sup>*</sup> and q<sub>e</sub>
+			<font face="Symbol">Î</font> E}
+</b><br/>
+	</body></html>
+</STRING>
+   <STRING id="135"><html><head></head><body style="Font-Family:Verdana;"><i>Moore machines are similar to DEA's but can perform output on each state reached.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">D</font>,<font face="Symbol">d</font>,<font face="Symbol">l</font>,q<sub>0</sub>)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">D</font> ... output alphabet,<br/><font face="Symbol">l</font> ... total function, <font face="Symbol">l</font> : Q <font face="Symbol">®</font> <font face="Symbol">D</font>,<br/><font face="Symbol">d</font> ... total transition function, Q x <font face="Symbol">S</font>
+		<font face="Symbol">®</font> Q,<br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/><br/></body></html></STRING>
+   <STRING id="136"><html><head></head><body style="Font-Family:Verdana;"><i>Mealy machines are similar to DEA's but can perform output for each individual character read from the input.</i><br/><br/><b>Definition:</b><br/><br/>M = (Q,<font face="Symbol">S</font>,<font face="Symbol">D</font>,<font face="Symbol">d</font>,<font face="Symbol">l</font>,q<sub>0</sub>)<br/><br/>Q ... finite set of states,<br/><font face="Symbol">S</font> ... input alphabet,<br/><font face="Symbol">D</font> ... output alphabet,<br/><font face="Symbol">l</font> ... total function, <font face="Symbol">l</font> : Q x <font face="Symbol">S</font> <font face="Symbol">®</font> <font face="Symbol">D</font>,<br/><font face="Symbol">d</font> ... total transition function, Q x <font face="Symbol">S</font>
+		<font face="Symbol">®</font> Q,<br/>q<sub>0</sub> ... start state (q<sub>0</sub>
+		<font face="Symbol">Î</font> Q),<br/><br/></body></html></STRING>
+  <STRING id="150">Witamy w AtoCC AutoEdit!
+
+Ten przewodnik poprowadzi cię przez proces 
+tworzenia prostego automatu i objaśni 
+interfejs edytora.
+
+Kliknij przycisk "Dalej " aby kontynuować.
+</STRING>
+  <STRING id="151">Na początku  musisz zdefiniować typ 
+automatu, który zamierzasz utworzyć.
+
+Kliknij na " Ustaw typ automatonu " i wybierz 
+NEA z menu.
+
+Wskazówka: W tym miejscu można również 
+skonertować istniejące automaty. 
+
+Kliknij przycisk " dalej " aby kontynuować.
+</STRING>
+  <STRING id="152">Tearaz można zdefiniować alfabet dla danego 
+automatu.
+
+Alfabet można utworzyć przez dodanie 
+znaku alfabetu lub przez użycie już 
+zdefiniowanych alfabetów.
+
+Dla tego przykładu użyjemy wcześniej 
+zdefiniowany alfabet "a,b,c" 
+
+Kliknij przycisk "dalej " aby kontynuować.
+</STRING>
+  <STRING id="153">Na tej stronie można utworzyć stany, przejścia i 
+etykiety.
+
+Kliknij na "dodaj stan"a pojawi sie prostokąt 
+który wyświtli nowy stan.
+
+Utwórz nowy stan w ten sam sposób.
+
+Kliknij przycisk " dalej " aby kontynuować.
+
+</STRING>
+  <STRING id="154">Kliknij na pierwszy utworzony panel aby go 
+zaznaczyć.
+
+Kliknij przycisk "Dodaj Przejście" aby utworzyć 
+związek pomiędzy obydwoma stanami.
+
+Wybierz jako "Target" -cel stan q1.
+
+Kliknij przycisk " dalej " aby kontynuować.
+</STRING>
+  <STRING id="155">
+Kliknij "Nowa etykieta" aby dodać etykietę do 
+nowego przejścia.
+
+W rubryce "Value"-wartość możesz wybrać 
+jedną z liter alfabetu.
+
+Utwórz dalszą etykietę dla tego samego 
+przejścia.
+
+Kliknij przycisk " dalej " aby kontynuować.
+</STRING>
+  <STRING id="156">
+Połączenie pomiędzy q0 a q1  za pomocą liter a 
+i b zostało utworzone.
+
+Utórz ikolejne przejście w stanie q1 i ustaw jako 
+cel q0.Dodaj etykiety dla liter a i b.
+
+Kliknij przycisk " dalej " aby kontynuować.
+
+</STRING>
+  <STRING id="157">
+Na koniec dodaj kolejne przejście od q0 do 
+q0 i utwórz brakującą etykietę c. 
+
+Zdeklaruj q0 jako stan końcowy i 
+równocześnie zaznacz go jako stan 
+początkowy dla automatu.
+
+Nasz automat akceptuje wszystkie słowa o 
+parzystej liczbie z a i b.
+
+Kliknij przycisk " dalej " aby kontynuować.
+
+</STRING>
+  <STRING id="158">Na tej stronie możesz dopasować graf do 
+swojego automatonu.
+
+Knliknij na stan q0 aby go zaznaczyć. Na 
+panelu po lewej stronie są widoczne wszystkie 
+właściwości wybranego objektu.
+
+Użyj panelu po lwej stronie dla łatwiejszej 
+nawigacji pzez komponenty automatu.
+
+Kliknij przycisk " dalej " aby kontynuować.
+</STRING>
+  <STRING id="159">
+Jeśli zakończyłeś pracę z wykresem możesz go 
+eksportować.
+ 
+Kliknij przycisk " dalej " aby kontynuować.
+</STRING>
+  <STRING id="160">
+Na tej stronie możesz przeglądać wszystkie 
+informacje o automacie.
+
+Możesz również eksportować całą stronę jako 
+stronę HTML lub jej część jako obraz.
+
+Rozdzielczość 92 DPI jest w szczególnośći 
+przeznaczona do ekranu. Wyższa rozdzielczość 
+jest bardziej użyteczna w celach drukowania. 
+
+Kliknij przycisk " dalej " aby kontynuować.
+</STRING>
+  <STRING id="161">
+Tutaj możesz obejrzeć symulację zachowania 
+się automatonu.
+
+Napisz "abb" w pole "Input"-dane wejściowe i 
+naciśnij "Start simulation"-rozpocznij symulację.
+
+Kliknij przycisk " dalej " aby kontynuować.
+</STRING>
+  <STRING id="162">
+Zakończyłeś pracę z tutorialem.
+
+Teraz możesz utworzyć nowy automat i 
+wypróbować inne funkcje edytora.
+
+Wiele sukcesów w dalszej pracy z programem 
+
+życzy
+zespół AtoCC 
+</STRING>
+  <STRING id="170">Nea do Dea</STRING>
+  <STRING id="171">DEA do NEA
+
+LUB
+
+NEAepsilon do NEA</STRING>
+  <STRING id="172">DEA do Minimal-DEA
+
+LUB
+
+Optymalizuj przejścia</STRING>
+  <STRING id="173">Wyłącz / Zamknij</STRING>
+  <STRING id="174">Ukryj</STRING>
+  <STRING id="175">Powiększ</STRING>
+  <STRING id="176">Pomniejsz</STRING>
+  <STRING id="177">Usuń zaznaczone elementy</STRING>
+  <STRING id="180">Wartość "EPSILON" jest niedozwolona!</STRING>
+  <STRING id="181">Możesz utowrzyć tylko jedno przejście do każdego stanu.</STRING>
+  <STRING id="182">Musisz zdefiniować alfabet dla tego automatu.</STRING>
+  <STRING id="183">Brakująca etykieta:</STRING>
+  <STRING id="184">Za duża liczba etykiet w tym stanie.</STRING>
+  <STRING id="185">Podwójne etykiety dla przejścia.</STRING>
+  <STRING id="186">Twoje dane wejściowe zawierają nieodpowiedni znak (proszę sprawdzić alfabet).</STRING>
+  <STRING id="187">Nie został znaleziony żaden wynik.
+Automat może zakceptować twoje dane 
+wejściowe, ale symulacja zostanie anulwana.
+</STRING>
+  <STRING id="188">Nie został znaleziony żaden wynik.
+
+Automat może zakceptować twoje dane 
+wejściowe ale symulacja zostanie anulwana.
+</STRING>
+  <STRING id="189">Definicja automatu jest nieprawidłowa! Powód:</STRING>
+  <STRING id="190">To nie jest definicja JFLAP FinitAutomaton !</STRING>
+  <STRING id="191">To nie jest czytelny plik JFLAP. Powód:</STRING>
+  <STRING id="192">Nie znaleziono znaku alfabetu dla nowej etykiety!</STRING>
+  <STRING id="193">Nieprawidłowy automat! Automat nie może zostać skonwertowany.</STRING>
+  <STRING id="194">Nieprawidłowy automat! Automat nie może zostać zminimalizowany.</STRING>
+  <STRING id="195">jest prawidłowy!</STRING>
+  <STRING id="196">jest nieprawidłowy!</STRING>
+  <STRING id="197">Tabela symuacji  zajmie sporo miejsca na dysku 
+oraz potrwa dłużej niż oczekiwano. Chcesz kontynuować?</STRING>
+  <STRING id="198">Zapisać bieżący automat?</STRING>
+  <STRING id="199">Wszystkie bieżące dane zostaną utracone. Jesteś pewien?</STRING>
+  <STRING id="200">Usuń stan:</STRING>
+  <STRING id="201">Usuń przejście:</STRING>
+  <STRING id="202">Usuń etykietę:</STRING>
+  <STRING id="203">Chesz użyć obrazu GIF (mniej kolorów/ mniejszy rozmiar obrazu)? Jeśli klikniesz "nie"zostanie utworzony obraz 
+JPEG.</STRING>
+  <STRING id="204">Twój bieżacy atomat i układ zostaną utracone, jesteś pewien?</STRING>
+  <STRING id="205">Skonwertować bieżący NEA z przejściem lub bez przejścia epsilon?</STRING>
+  <STRING id="206">Twój bieżący automat jest nieprawidłowy! Musi zostać zmieniony aby wznowić jego waż ność. (Zmiana typu automatu nie jest transformacją!)</STRING>
+  <STRING id="207">Utworzyć plik PDFz pliku EPS?</STRING>
+  <STRING id="208">Bieżący typ</STRING>
+  <STRING id="209">Stan początkowy</STRING>
+  <STRING id="210">Użyć tych ustawień do wszystkich podobnych elementów?</STRING>
+  <STRING id="211">Kroki:</STRING>
+  <STRING id="212">Ten automat nie pasuje do opisu zadania!</STRING>
+  <STRING id="213">Lekcja/zadanie:</STRING>
+  <STRING id="214">Próba:</STRING>
+  <STRING id="215">Ciąg znaków alfabetu</STRING>
+  <STRING id="216">Tape Alphabet:</STRING>
+  <STRING id="217">Stack alphabet:</STRING>
+  <STRING id="218">Edytuj stos/ciąg alfabetu</STRING>
+  <STRING id="219">Elementy alfabetu:</STRING>
+  <STRING id="220">Edytuj Alfabet</STRING>
+  <STRING id="221">Stan:</STRING>
+  <STRING id="222">Stan końcowy:</STRING>
+  <STRING id="223">Przejście:</STRING>
+  <STRING id="224">Cel:</STRING>
+  <STRING id="225">Etykieta:</STRING>
+  <STRING id="226">Czytaj:</STRING>
+  <STRING id="227">TopOfStack</STRING>
+  <STRING id="228">Push:</STRING>
+  <STRING id="229">Napisz:</STRING>
+  <STRING id="230">Kierunek:</STRING>
+  <STRING id="231">Czytaj:</STRING>
+  <STRING id="232">Dane wejściowe nie są zaakceptowane przez automat!</STRING>
+  <STRING id="233">Musisz zaznaczyc stan początkowy!</STRING>
+  <STRING id="234">Utworzenie regularnych wyrażeń zajmie troche więcej czasu? Kontynuować?</STRING>
+  <STRING id="235">You need to define at least one final state!</STRING>
+  <STRING id="240">Output Alphabet Items:</STRING>
+  <STRING id="241">Edit Output Alphabet:</STRING>
+  <STRING id="242">Output:</STRING>
+  <STRING id="243">This automaton type can not be checked automatically. Use the simulation tab to validate your automaton.</STRING>
+  <STRING id="244">LaTeX code has been saved in your clipboard use "paste" in your LaTeX document now!</STRING>
+  <STRING id="245">There are unknown characters in push: </STRING>
+  <STRING id="246">NKA is not normelized at: </STRING>
+  <STRING id="247">The automaton is not complete. Do you want to auto complete it now?</STRING>
+
+  <STRING id="250">Zadania automatu:</STRING>
+  <STRING id="251">Utwórz nowe zadanie</STRING>
+  <STRING id="252">Wybierz jedno z zadań z serwera</STRING>
+  <STRING id="253">Zadania</STRING>
+  <STRING id="254">Szukaj</STRING>
+  <STRING id="255">Wczytywanie danych...</STRING>
+  <STRING id="256">Autor:</STRING>
+  <STRING id="257">Data:</STRING>
+  <STRING id="258">Opis</STRING>
+  <STRING id="259">Zaznacz zadanie</STRING>
+  <STRING id="261">Zadanie</STRING>
+  <STRING id="262">Sprawdź:</STRING>
+  <STRING id="263">Sprawdź rozwiązanie/wynik</STRING>
+  <STRING id="264">Pokaż rozwiązanie/wynik</STRING>
+  <STRING id="265">Sprawdź</STRING>
+  <STRING id="266">Twoje rozwiązaie jest niestety nieprawidłowe!
+Spróbuj za pomocą symulacji znaleźć błąd lub 
+zmień automat!
+</STRING>
+  <STRING id="267">Twoje rozwiązanie jest poprawne!
+Tutaj możesz znaleźć przykładowe rozwiązanie 
+dla tego zadania:
+</STRING>
+  <STRING id="268">Wróć do automatu</STRING>
+  <STRING id="269">Wybierz nowe zadanie</STRING>
+  <STRING id="270">Przejdź do symulacji</STRING>
+  <STRING id="271">Lista zadań</STRING>
+  <STRING id="272">Sprawdź rozwiązanie</STRING>
+  <STRING id="273">Utwórz nowe zadanie</STRING>
+  <STRING id="274">Utwórz nowe zadanie na serwerze</STRING>
+  <STRING id="275">Utwórz nowe zadanie</STRING>
+  <STRING id="276">Wyślij formularz</STRING>
+  <STRING id="277">Opis zadania</STRING>
+  <STRING id="278">Alafabet dla tego zadania</STRING>
+  <STRING id="279">Edit your lessons</STRING>
+  <STRING id="280">Teachers can modify there own lessons.</STRING>
+  <STRING id="281">Add comment</STRING>
+   
+  <STRING id="292">Protokół</STRING>
+  <STRING id="293">Configuration sequence</STRING>
+  <STRING id="294">Protokół symulacji</STRING>
+  <STRING id="295">Sprawdż dane wejściowe</STRING>
+  <STRING id="296">Sprawdź</STRING>
+  <STRING id="297">Długość</STRING>
+  <STRING id="298">Utwórz przypadkowe słowo</STRING>
+  <STRING id="299">Usuń</STRING>
+  <STRING id="300">Możesz również zapisać wykres przejścia jako 
+wektor obrazów (SVG lub EPS)
+W ten sposób nie dojdzie do utraty jakości 
+podczas skalowania.
+</STRING>
+  <STRING id="301">Możesz generować Scheme Code dla 
+wszystkich automatów na stronie symulacji.
+
+Użyj programu SchmeEdit aby je uruchomić. 
+</STRING>
+  <STRING id="302">Przewodnik jest dobrym początkiem aby 
+zaznajomić sie z tym programem. 
+</STRING>
+ </POLISH>
+ <CZECH>
+  <STRING id="1"></STRING>
+  <STRING id="2"></STRING>
+  <STRING id="3"></STRING>
+  <STRING id="4"></STRING>
+  <STRING id="5"></STRING>
+  <STRING id="6"></STRING>
+  <STRING id="7"></STRING>
+  <STRING id="10"></STRING>
+  <STRING id="11"></STRING>
+  <STRING id="12"></STRING>
+  <STRING id="13"></STRING>
+  <STRING id="14"></STRING>
+  <STRING id="15"></STRING>
+  <STRING id="20"></STRING>
+  <STRING id="21"></STRING>
+  <STRING id="22"></STRING>
+  <STRING id="23"></STRING>
+  <STRING id="24"></STRING>
+  <STRING id="25"></STRING>
+  <STRING id="26"></STRING>
+  <STRING id="27"></STRING>
+  <STRING id="28"></STRING>
+  <STRING id="29"></STRING>
+  <STRING id="30"></STRING>
+  <STRING id="31"></STRING>
+  <STRING id="32"></STRING>
+  <STRING id="33"></STRING>
+  <STRING id="34"></STRING>
+  <STRING id="35"></STRING>
+  <STRING id="36"></STRING>
+  <STRING id="40"></STRING>
+  <STRING id="41"></STRING>
+  <STRING id="42"></STRING>
+  <STRING id="43"></STRING>
+  <STRING id="44"></STRING>
+  <STRING id="45"></STRING>
+  <STRING id="46"></STRING>
+  <STRING id="47"></STRING>
+  <STRING id="48"></STRING>
+  <STRING id="49"></STRING>
+  <STRING id="50"></STRING>
+  <STRING id="51"></STRING>
+  <STRING id="52"></STRING>
+  <STRING id="55"></STRING>
+  <STRING id="56"></STRING>
+  <STRING id="57"></STRING>
+  <STRING id="60"></STRING>
+  <STRING id="61"></STRING>
+  <STRING id="62"></STRING>
+  <STRING id="63"></STRING>
+  <STRING id="64"></STRING>
+  <STRING id="65"></STRING>
+  <STRING id="66"></STRING>
+  <STRING id="67"></STRING>
+  <STRING id="70"></STRING>
+  <STRING id="71"></STRING>
+  <STRING id="72"></STRING>
+  <STRING id="73"></STRING>
+  <STRING id="74"></STRING>
+  <STRING id="80"></STRING>
+  <STRING id="81"></STRING>
+  <STRING id="82"></STRING>
+  <STRING id="83"></STRING>
+  <STRING id="84"></STRING>
+  <STRING id="85"></STRING>
+  <STRING id="86"></STRING>
+  <STRING id="87"></STRING>
+  <STRING id="88"></STRING>
+  <STRING id="89"></STRING>
+  <STRING id="90"></STRING>
+  <STRING id="95"></STRING>
+  <STRING id="96"></STRING>
+  <STRING id="97"></STRING>
+  <STRING id="98"></STRING>
+  <STRING id="99"></STRING>
+  <STRING id="100"></STRING>
+  <STRING id="101"></STRING>
+  <STRING id="102"></STRING>
+  <STRING id="103"></STRING>
+  <STRING id="104"></STRING>
+  <STRING id="105"></STRING>
+  <STRING id="106"></STRING>
+  <STRING id="107"></STRING>
+  <STRING id="108"></STRING>
+  <STRING id="110"></STRING>
+  <STRING id="111"></STRING>
+  <STRING id="112"></STRING>
+  <STRING id="113"></STRING>
+  <STRING id="114"></STRING>
+  <STRING id="115"></STRING>
+  <STRING id="116"></STRING>
+  <STRING id="117"></STRING>
+  <STRING id="120"></STRING>
+  <STRING id="121"></STRING>
+  <STRING id="122"></STRING>
+  <STRING id="123"></STRING>
+  <STRING id="124"></STRING>
+  <STRING id="125"></STRING>
+  <STRING id="126"></STRING>
+  <STRING id="127"></STRING>
+  <STRING id="130"></STRING>
+  <STRING id="131"></STRING>
+  <STRING id="132"></STRING>
+  <STRING id="133"></STRING>
+  <STRING id="134"></STRING>
+  <STRING id="150"></STRING>
+  <STRING id="151"></STRING>
+  <STRING id="152"></STRING>
+  <STRING id="153"></STRING>
+  <STRING id="154"></STRING>
+  <STRING id="155"></STRING>
+  <STRING id="156"></STRING>
+  <STRING id="157"></STRING>
+  <STRING id="158"></STRING>
+  <STRING id="159"></STRING>
+  <STRING id="160"></STRING>
+  <STRING id="161"></STRING>
+  <STRING id="162"></STRING>
+  <STRING id="170"></STRING>
+  <STRING id="171"></STRING>
+  <STRING id="172"></STRING>
+  <STRING id="173"></STRING>
+  <STRING id="174"></STRING>
+  <STRING id="175"></STRING>
+  <STRING id="176"></STRING>
+  <STRING id="177"></STRING>
+  <STRING id="180"></STRING>
+  <STRING id="181"></STRING>
+  <STRING id="182"></STRING>
+  <STRING id="183"></STRING>
+  <STRING id="184"></STRING>
+  <STRING id="185"></STRING>
+  <STRING id="186"></STRING>
+  <STRING id="187"></STRING>
+  <STRING id="188"></STRING>
+  <STRING id="189"></STRING>
+  <STRING id="190"></STRING>
+  <STRING id="191"></STRING>
+  <STRING id="192"></STRING>
+  <STRING id="193"></STRING>
+  <STRING id="194"></STRING>
+  <STRING id="195"></STRING>
+  <STRING id="196"></STRING>
+  <STRING id="197"></STRING>
+  <STRING id="198"></STRING>
+  <STRING id="199"></STRING>
+  <STRING id="200"></STRING>
+  <STRING id="201"></STRING>
+  <STRING id="202"></STRING>
+  <STRING id="203"></STRING>
+  <STRING id="204"></STRING>
+  <STRING id="205"></STRING>
+  <STRING id="206"></STRING>
+  <STRING id="207"></STRING>
+  <STRING id="208"></STRING>
+  <STRING id="209"></STRING>
+  <STRING id="210"></STRING>
+  <STRING id="211"></STRING>
+  <STRING id="212"></STRING>
+  <STRING id="213"></STRING>
+  <STRING id="214"></STRING>
+  <STRING id="215"></STRING>
+  <STRING id="216"></STRING>
+  <STRING id="217"></STRING>
+  <STRING id="218"></STRING>
+  <STRING id="219"></STRING>
+  <STRING id="220"></STRING>
+  <STRING id="221"></STRING>
+  <STRING id="222"></STRING>
+  <STRING id="223"></STRING>
+  <STRING id="224"></STRING>
+  <STRING id="225"></STRING>
+  <STRING id="226"></STRING>
+  <STRING id="227"></STRING>
+  <STRING id="228"></STRING>
+  <STRING id="229"></STRING>
+  <STRING id="230"></STRING>
+  <STRING id="231"></STRING>
+  <STRING id="232"></STRING>
+  <STRING id="233"></STRING>
+  <STRING id="234"></STRING>
+  <STRING id="250"></STRING>
+  <STRING id="251"></STRING>
+  <STRING id="252"></STRING>
+  <STRING id="253"></STRING>
+  <STRING id="254"></STRING>
+  <STRING id="255"></STRING>
+  <STRING id="256"></STRING>
+  <STRING id="257"></STRING>
+  <STRING id="258"></STRING>
+  <STRING id="259"></STRING>
+  <STRING id="261"></STRING>
+  <STRING id="262"></STRING>
+  <STRING id="263"></STRING>
+  <STRING id="264"></STRING>
+  <STRING id="265"></STRING>
+  <STRING id="266"></STRING>
+  <STRING id="267"></STRING>
+  <STRING id="268"></STRING>
+  <STRING id="269"></STRING>
+  <STRING id="270"></STRING>
+  <STRING id="271"></STRING>
+  <STRING id="272"></STRING>
+  <STRING id="273"></STRING>
+  <STRING id="274"></STRING>
+  <STRING id="275"></STRING>
+  <STRING id="276"></STRING>
+  <STRING id="277"></STRING>
+  <STRING id="278"></STRING>
+  <STRING id="292"></STRING>
+  <STRING id="293"></STRING>
+  <STRING id="294"></STRING>
+  <STRING id="295"></STRING>
+  <STRING id="296"></STRING>
+  <STRING id="297"></STRING>
+  <STRING id="298"></STRING>
+  <STRING id="299"></STRING>
+  <STRING id="300"></STRING>
+  <STRING id="301"></STRING>
+  <STRING id="302"></STRING>
+ </CZECH>
+</LANGUAGE>

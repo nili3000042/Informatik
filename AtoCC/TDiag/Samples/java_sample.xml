@@ -1,0 +1,94 @@
+<TDIAGRAM>
+    <LANGUAGES>
+        <LANGUAGE value="Java" label="Java" defaultextension=".java"/>
+        <LANGUAGE value="Java Bytecode" label="BC" defaultextension=".class"/>
+        <LANGUAGE value="Binary Executables" label="M" defaultextension=".exe;.com"/>
+    </LANGUAGES>
+    <PROGRAMS>
+        <PROGRAM value="1">
+            <FILENAME value="testprogram.java"/>
+            <RUNNINGON value=""/>
+            <LABELTEXT value="P"/>
+            <LANGUAGE value="Java"/>
+            <LAYOUT>
+                <X value="132"/>
+                <Y value="60"/>
+            </LAYOUT>
+            <DOCK_UR value="0"/>
+        </PROGRAM>
+        <PROGRAM value="2">
+            <FILENAME value="testprogram.class %InFile"/>
+            <RUNNINGON value=""/>
+            <LABELTEXT value="P"/>
+            <LANGUAGE value="Java Bytecode"/>
+            <LAYOUT>
+                <X value="324"/>
+                <Y value="60"/>
+            </LAYOUT>
+            <DOCK_U value="3"/>
+            <DOCK_UL value="0"/>
+        </PROGRAM>
+    </PROGRAMS>
+    <INTERPRETERS>
+        <INTERPRETER value="3">
+            <NAME value="Java Interpreter"/>
+            <FILENAME value="java.EXE -cp %InFilePath %InFileNoExtNoPath"/>
+            <RUNNINGON value="M"/>
+            <INPUTLANGUAGE value="Java Bytecode"/>
+            <WRITTENIN value="Binary Executables"/>
+            <LAYOUT>
+                <X value="324"/>
+                <Y value="156"/>
+            </LAYOUT>
+            <DOCK_O value="2"/>
+        </INTERPRETER>
+    </INTERPRETERS>
+    <COMPILERS>
+        <COMPILER value="0">
+            <NAME value="Java Compiler"/>
+            <FILENAME value="javac.exe %InFile"/>
+            <RUNNINGON value="M"/>
+            <OUTPUTFORMAT value="%InFileNoExt.class"/>
+            <INPUTLANGUAGE value="Java"/>
+            <OUTPUTLANGUAGE value="Java Bytecode"/>
+            <WRITTENIN value="Binary Executables"/>
+            <LAYOUT>
+                <X value="180"/>
+                <Y value="108"/>
+            </LAYOUT>
+            <DOCK_L value="1"/>
+            <DOCK_R value="2"/>
+        </COMPILER>
+    </COMPILERS>
+    <EAS/>
+    <COMMENTS>
+        <COMMENT value="4">
+            <TEXT value="Java Compiler"/>
+            <LAYOUT>
+                <X value="216"/>
+                <Y value="60"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="5">
+            <TEXT value="Java Interpreter"/>
+            <LAYOUT>
+                <X value="384"/>
+                <Y value="192"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="6">
+            <TEXT value="Program"/>
+            <LAYOUT>
+                <X value="132"/>
+                <Y value="12"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="7">
+            <TEXT value="Program"/>
+            <LAYOUT>
+                <X value="324"/>
+                <Y value="12"/>
+            </LAYOUT>
+        </COMMENT>
+    </COMMENTS>
+</TDIAGRAM>

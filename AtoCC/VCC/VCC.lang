@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LANGUAGE>
+  <ENGLISH>
+    <STRING id="1">Visual CC</STRING>
+    <STRING id="2">Scanner-Definition</STRING>
+    <STRING id="3">Parser-Definition</STRING>
+    <STRING id="4">Output Log</STRING>
+    <STRING id="5">Language</STRING>
+    <STRING id="6">Scanner-Simulation</STRING>
+    <STRING id="10">Open</STRING>
+    <STRING id="11">Save</STRING>
+    <STRING id="12">Undo</STRING>
+    <STRING id="13">Redo</STRING>
+    <STRING id="14">Create Compiler</STRING>
+    <STRING id="15">Export Automaton</STRING>
+    <STRING id="16">Export T-Diagram</STRING>
+    <STRING id="17">New</STRING>
+    <STRING id="18">Export Grammar</STRING>
+    <STRING id="19">Create Compiler as ...</STRING>
+    <STRING id="20">File</STRING>
+    <STRING id="21">New VCC-File</STRING>
+    <STRING id="22">Open VCC-File</STRING>
+    <STRING id="23">Save VCC-File</STRING>
+    <STRING id="24">Save VCC-File as ...</STRING>
+    <STRING id="25">Exit</STRING>
+    <STRING id="26">Help</STRING>
+    <STRING id="27">Online Help</STRING>
+    <STRING id="28">Introduction Wizard</STRING>
+    <STRING id="29">Change Language</STRING>
+    <STRING id="30">About</STRING>
+    <STRING id="80">Wizard</STRING>
+    <STRING id="81">Close</STRING>
+    <STRING id="82">Previous Step</STRING>
+    <STRING id="83">Next Step</STRING>
+    <STRING id="100">VCC Project:</STRING>
+    <STRING id="101">Introduction Wizard</STRING>
+    <STRING id="102">New VCC-File</STRING>
+    <STRING id="103">Open VCC-File</STRING>
+    <STRING id="104">Getting Help:</STRING>
+    <STRING id="105">Online FAQ</STRING>
+    <STRING id="106">Start a quick introduction to get in touch with VCC.</STRING>
+    <STRING id="107">Create an empty project.</STRING>
+    <STRING id="108">Open an existing project.</STRING>
+    <STRING id="109">To get any further information visit the Online Help Center.</STRING>
+    <STRING id="110">Click to visit the AtoCC website.</STRING>
+    
+    <STRING id="111">Type in or load your scanner input here:</STRING>
+    <STRING id="112">Possible Tokens:</STRING>
+    <STRING id="113">Choosen Token:</STRING>
+    <STRING id="114">Tokenlist:</STRING>
+    <STRING id="115">  Animation Control:</STRING>
+    <STRING id="116">Run Scanner</STRING>
+    <STRING id="117">Load from File</STRING>
+    <STRING id="118">Scanner Animation</STRING>
+
+    <STRING id="120">Language Type:</STRING>
+    <STRING id="121">use C# Code</STRING>
+    <STRING id="122">use Scheme Code</STRING>
+    <STRING id="123">Select the programming language for this project </STRING>
+    <STRING id="124">use Java Code</STRING>
+    <STRING id="125">use Delphi Code</STRING>
+    <STRING id="130"> Create your scanner by defining your token here.</STRING>
+    <STRING id="131">Show Token Tree</STRING>
+    <STRING id="132">Show Token Properties</STRING>
+    <STRING id="133">Move item down</STRING>
+    <STRING id="134">Move item up</STRING>
+    <STRING id="135">Create new Token</STRING>
+    <STRING id="136">Delete selected Token</STRING>
+    <STRING id="137">Token</STRING>
+    <STRING id="138">Properties</STRING>
+    <STRING id="139">Token classes</STRING>
+    <STRING id="140">New Token</STRING>
+    <STRING id="141">Delete Token</STRING>
+    <STRING id="142">Save current project?</STRING>
+    <STRING id="143">Token name cannot include spaces or special chars!</STRING>
+    <STRING id="144">Rulen name cannot include spaces or special chars!</STRING>
+    <STRING id="145">Tokenname cannot be the same as a rule name!</STRING>
+    <STRING id="150"> Create your parser here.</STRING>
+    <STRING id="151">Show Parser Tree</STRING>
+    <STRING id="152">Show Properties</STRING>
+    <STRING id="153">Move item down/right</STRING>
+    <STRING id="154">Move item up/left</STRING>
+    <STRING id="155">Create new Rule</STRING>
+    <STRING id="156">Add right rule side</STRING>
+    <STRING id="157">Add a Rule on right side</STRING>
+    <STRING id="158">Add a Token on right side</STRING>
+    <STRING id="159">Delete selected Items</STRING>
+    <STRING id="160">Tree</STRING>
+    <STRING id="161">Properties</STRING>
+    <STRING id="162">Syntactical Rules</STRING>
+    <STRING id="163">Global Code</STRING>
+    <STRING id="164">S-Statement for: </STRING>
+    <STRING id="165">New Rule</STRING>
+    <STRING id="166">New right Rulde-side</STRING>
+    <STRING id="167">Rules</STRING>
+    <STRING id="168">Token</STRING>
+    <STRING id="169">Delete</STRING>
+    <STRING id="170">Show all code fragments at once</STRING>
+    <STRING id="180">States</STRING>
+    <STRING id="181">YACC Output</STRING>
+    <STRING id="182">Output Log</STRING>
+    <STRING id="183">LL(1) Parser</STRING>
+    <STRING id="184">Generate LL(1) recursive descent parser (top down).</STRING>
+    <STRING id="185">LALR(1) Parser</STRING>
+    <STRING id="186">Generate LALR(1) lookahead LR parser (bottom up).</STRING>
+    <STRING id="187">Parser Type:</STRING>
+    <STRING id="188">LL(1) condition 1 not fulfilled, check your grammar in kfG-Edit!</STRING>
+    <STRING id="189">LL(1) condition 2 not fulfilled, check your grammar in kfG-Edit!</STRING>
+    <STRING id="190">intersected with</STRING>
+    <STRING id="191">is not an empty set!</STRING>
+    <STRING id="192">There was no compiler found for your selected language!
+Please ensure the system path value is set properly to locate your compiler.
+    </STRING>
+    <STRING id="193">yet undefined S-Attributes have been created automatically!</STRING>
+    <STRING id="194">You have not defined an IGNORE Token yet.
+Do you want to ignore Spaces, Linefeeds and Tabs in your source language files?
+(If yes, an IGNORE Token will be created automatically for that purpose in your scanner definition.)
+    </STRING>
+    <STRING id="195">The input will not be accepted by the scanner but you can still simulate until the unmatched input occurs. The animation will stop then.</STRING>
+    <STRING id="196">Scanning could not complete. No matching token found at:</STRING>
+    <STRING id="197">Scanning successfully completed.</STRING>
+
+    <STRING id="200">Welcome to Visual Compiler Compiler!
+
+This wizard will show you how to create a simple compiler and will explaine the interface of the editor on the way.
+
+Use the "next" button to go one step further.
+    </STRING>
+    <STRING id="201">First we need to create a scanner definition for our compiler!
+
+The scanner reads text input from an input file and creates a list of token value pairs. This list is used afterwards by the parser.
+    </STRING>
+    <STRING id="202">Click right in the Scanner panel or use the button from the toolbar to create a new Token.
+
+You have to name the new token. For this example use "Number". You also need to provide a expression for this token. You can edit it in the properties panel on the left. Write "\d+"
+    </STRING>
+    <STRING id="203">"\d+" is a regular expression for a number \d is a macro for a digit. You could also write "[0-9]+". To learn more about regular expressions, consult the online help.
+    </STRING>
+    <STRING id="204">Create another token: "Sub" with expression "\-" (if you are not sure if a character is used as a metasymbol for the regular expression language escape it with \ ).
+
+Create another token: "Add" with expression "\+".
+    </STRING>
+    <STRING id="205">We create the last token: "IGNORE" with expression "\s|\n|\t|\r"
+
+"Ignore" is a special token because it will not result in a token value pair for the parser. With other words spaces, returns, line feeds and tabs will not be recognized at all. This Token is often used for programming languages.
+    </STRING>
+    <STRING id="206">You can also set a different color for each token. This may help reading the parser table later on.
+To select a token just click on it or select from the list on the left.
+
+You can also move token up or down the tree by pressing the buttons in the toolbar. If two token expressions with the same length match always the topmost will be used. So in seldom cases the order is important!
+    </STRING>
+    <STRING id="207">Now we can define our parser definition. Click right in the Parser panel and select New Rule.
+Our first Rule will get the name "Input". You will get a box for each rule in the working area.
+
+A new rule already has a empty right side which is represented by a gray box inside.
+    </STRING>
+    <STRING id="208">Create another rule the same way and name it "Expression".
+Click once on the gray box inside this new rule to select it. 
+
+By right click on it you can add Rules and Token to this right side.
+    </STRING>
+    <STRING id="209">Add the token "Number" to this rule side. You will get a rounded box inside the gray one.
+
+Now we said that "Expression" can become "Number". Add another right side to this rule by right click on it and say "New Rightside". You get another gray box inside the Expression rule below the first. 
+    </STRING>
+    <STRING id="210">Select this new gray box now by clicking on it.
+This time we add a rule to this right side. Right click on it and select the rule "Expression"
+
+Add the token "Add" the same way to this rule. To complete this right side add again the rule "Expression". Now we have a rule: "Expression" can become "Expression Add Expression".
+    </STRING>
+    <STRING id="211">In the same way we can create another rightside for "Expression" can become "Expression Sub Expression". 
+To do it, add another right side (gray box) and add again rule Expression, token Sub and rule Expression to it.
+    </STRING>
+    <STRING id="212">Now we can create an element in the rightside of the "Input" rule: "Expression"
+
+We get "Input" can become "Expression". Because "Input" is our first rule this will automatically become our starting rule.
+    </STRING>
+    <STRING id="213">We need to add S-Attribute code for each right side now.
+
+Start at the "Input" can become "Expression" rule part. Select it and write the following code to the Code panel at the bottom:
+
+Output.WriteLine($1);
+
+$1 is a special variable that holds the value of the 1. rule part "Expression"
+    </STRING>
+    <STRING id="214">Now we realy want to calculate "Expression Add Expression". Therefore we click the 2. right side item of "Expression" and write a S-Attribute for it. The result of the calculation we store in $$ which is than the content of $1 in the starting rule.
+    </STRING>
+    <STRING id="215">
+      Add the code for the "Add" and "Sub" rules.
+
+      for "Add":
+      $$ = (int.Parse($1) + int.Parse($3)).ToString();
+
+      for "Sub":
+      $$ = (int.Parse($1) - int.Parse($3)).ToString();
+    </STRING>
+    <STRING id="216">Our calculator compiler is ready to use now. Click on "Create Compiler" in the system toolbar.
+
+Save the C# file in a working folder of your choice. In the same directory also the executable will be created for your compiler.
+
+Now you can create an input file like input.txt with the content: "123+456- 789  + 1" with the command "notepad input.txt".
+
+Running the compiler with "compilername.exe input.txt" will present you the result on screen.
+    </STRING>
+    <STRING id="217">Keep in mind that VCC values ($$,$1,$2...) are always strings. So you need to convert them like in this sample if you need numbers!
+
+You can also add global code to your compiler on the parser page when selecting no item at all. So you can define helper functions or define variables.
+    </STRING>
+    <STRING id="218">You have finished this litte tutorial.
+
+You may now start a new project your own and try out the features of VCC! You should also check out the examples from the wepage www.atocc.de
+
+Have fun!
+AtoCC Team
+    </STRING>
+  </ENGLISH>
+  <GERMAN>
+    <STRING id="1">Visual CC</STRING>
+    <STRING id="2">Scanner-Definition</STRING>
+    <STRING id="3">Parser-Definition</STRING>
+    <STRING id="4">Ausgabe Log</STRING>
+    <STRING id="5">Sprache</STRING>
+    <STRING id="6">Scanner-Simulation</STRING>
+    <STRING id="10">Öffnen</STRING>
+    <STRING id="11">Speichern</STRING>
+    <STRING id="12">Rückgängig</STRING>
+    <STRING id="13">Wiederholen</STRING>
+    <STRING id="14">Compiler generieren</STRING>
+    <STRING id="15">Export Automat</STRING>
+    <STRING id="16">Export T-Diagramm</STRING>
+    <STRING id="17">Neu</STRING>
+    <STRING id="18">Export Grammatik</STRING>
+    <STRING id="19">Compiler generieren unter ...</STRING>
+    <STRING id="20">Datei</STRING>
+    <STRING id="21">Neue VCC-Datei</STRING>
+    <STRING id="22">VCC-Datei öffnen</STRING>
+    <STRING id="23">VCC-Datei speichern</STRING>
+    <STRING id="24">VCC-Datei speichern unter ...</STRING>
+    <STRING id="25">Beenden</STRING>
+    <STRING id="26">Hilfe</STRING>
+    <STRING id="27">Online Hilfe</STRING>
+    <STRING id="28">Einführungsassistent</STRING>
+    <STRING id="29">Sprache wechseln</STRING>
+    <STRING id="30">Über...</STRING>
+    <STRING id="80">Assistent</STRING>
+    <STRING id="81">Beenden</STRING>
+    <STRING id="82">Zurück</STRING>
+    <STRING id="83">Weiter</STRING>
+    <STRING id="100">VCC Projekt:</STRING>
+    <STRING id="101">Einführungsassistent</STRING>
+    <STRING id="102">Neue VCC-Datei</STRING>
+    <STRING id="103">VCC-Datei öffnen</STRING>
+    <STRING id="104">Hilfe:</STRING>
+    <STRING id="105">Online FAQ</STRING>
+    <STRING id="106">Starten Sie eine kurze Einführung in die Funktionen von VCC.</STRING>
+    <STRING id="107">Erstellen Sie ein neues Projekt.</STRING>
+    <STRING id="108">Öffnen Sie ein vorhandenes VCC Projekt.</STRING>
+    <STRING id="109">Um weitere Informationen zu erhalten besuchen Sie das Online Help Center</STRING>
+    <STRING id="110">Besuchen Sie die AtoCC Website</STRING>
+
+    <STRING id="111">Schreiben Sie hier die zu analysierende Eingabe oder laden Sie diese aus einer Datei:</STRING>
+    <STRING id="112">Mögliche Token:</STRING>
+    <STRING id="113">Gewähltes Token:</STRING>
+    <STRING id="114">Tokenliste:</STRING>
+    <STRING id="115">  Animationskontrolle:</STRING>
+    <STRING id="116">Scanner ausführen</STRING>
+    <STRING id="117">Aus Datei laden</STRING>
+    <STRING id="118">Scanner Animation</STRING>
+
+    <STRING id="120">Sprache:</STRING>
+    <STRING id="121">C# Quellcode</STRING>
+    <STRING id="122">Scheme Quellcode</STRING>
+    <STRING id="123">Wählen Sie die Programmiersprache für dieses Projekt.</STRING>
+    <STRING id="124">Java Quellcode</STRING>
+    <STRING id="125">Delphi Quellcode</STRING>
+    <STRING id="130"> Erstellen Sie hier ihren Scanner, indem Sie Token definieren.</STRING>
+    <STRING id="131">Tokenliste anzeigen</STRING>
+    <STRING id="132">Tokeneigenschaften anzeigen</STRING>
+    <STRING id="133">Token nach unten bewegen</STRING>
+    <STRING id="134">Token nach oben bewegen</STRING>
+    <STRING id="135">neues Token erstellen</STRING>
+    <STRING id="136">gewähltes Token löschen</STRING>
+    <STRING id="137">Token</STRING>
+    <STRING id="138">Eigenschaften</STRING>
+    <STRING id="139">Tokenklassen</STRING>
+    <STRING id="140">Neues Token</STRING>
+    <STRING id="141">Token löschen</STRING>
+    <STRING id="142">Änderungen am Projekt speichern?</STRING>
+    <STRING id="143">Tokenname darf keine Leerzeichen oder andere Sonderzeichen enthalten!</STRING>
+    <STRING id="144">Nichtterminalname darf keine Leerzeichen oder andere Sonderzeichen enthalten!</STRING>
+    <STRING id="145">Tokenname darf nicht gleich einem Nichtterminal sein!</STRING>
+    <STRING id="150"> Erstellen Sie hier ihren Parser, indem Sie die Nichtterminale mit Produktionsregeln erstellen.</STRING>
+    <STRING id="151">Parser-Baumansicht anzeigen</STRING>
+    <STRING id="152">Eigenschaften anzeigen</STRING>
+    <STRING id="153">Element nach unten/rechts bewegen</STRING>
+    <STRING id="154">Element nach oben/links bewegen</STRING>
+    <STRING id="155">neues Nichtterminal erstellen</STRING>
+    <STRING id="156">rechte Regelseite hinzufügen</STRING>
+    <STRING id="157">Nichtterminal zur rechten Regelseite hinzufügen</STRING>
+    <STRING id="158">Token zur rechten Regelseite hinzufügen</STRING>
+    <STRING id="159">selektiertes Element löschen</STRING>
+    <STRING id="160">Baumansicht</STRING>
+    <STRING id="161">Eigenschaften</STRING>
+    <STRING id="162">Syntaxregeln</STRING>
+    <STRING id="163">Globaler Quellcode</STRING>
+    <STRING id="164">S-Ausdruck für: </STRING>
+    <STRING id="165">Neues Nichtterminal</STRING>
+    <STRING id="166">Neue rechte Regelseite</STRING>
+    <STRING id="167">Nichtterminale</STRING>
+    <STRING id="168">Token</STRING>
+    <STRING id="169">Löschen</STRING>
+    <STRING id="170">Alle Quelltextfragmente anzeigen</STRING>
+    <STRING id="180">Zustände</STRING>
+    <STRING id="181">YACC Ausgabe</STRING>
+    <STRING id="182">Ausgabe</STRING>
+    <STRING id="183">LL(1) Parser</STRING>
+    <STRING id="184">Erzeugen Sie einen LL(1) Parser (Top down, rekursiver Abstieg).</STRING>
+    <STRING id="185">LALR(1) Parser</STRING>
+    <STRING id="186">Erzeugen Sie einen LALR(1) Parser (Bottom up).</STRING>
+    <STRING id="187">Parsertyp:</STRING>
+    <STRING id="188">LL(1) Forderung 1 nicht erfüllt, prüfen Sie die Grammatik in kfG-Edit!</STRING>
+    <STRING id="189">LL(1) Forderung 2 nicht erfüllt, prüfen Sie die Grammatik in kfG-Edit!</STRING>
+    <STRING id="190">geschnitten mit</STRING>
+    <STRING id="191">ist keine leere Menge!</STRING>
+    <STRING id="192">Der nötige Compiler wurde für die gewählte Programmiersprache nicht gefunden!
+Bitte überprüfen Sie die System-Path-Variable damit VCC den Compiler finden kann.
+    </STRING>
+    <STRING id="193">bislang noch nicht definierte(s) S-Attribut(e) wurden automatisch erstellt!</STRING>
+    <STRING id="194">Du hast kein IGNORE Token definiert.
+Möchtest du Leerzeichen, Zeilenumbrüche und Tabulatoren in deinen Quellsprache-Dateien ignorieren?
+(Wenn Ja, dann wird nun automatisch ein IGNORE Token für dieses Zweck in deiner Scannerdefinition erstellt.)
+    </STRING>
+    <STRING id="195">Die Eingabe wird vom Scanner nicht akzeptiert. Die Simulation wird nur bis zur Problemstelle ausgeführt.</STRING>
+    <STRING id="196">Scannvorgang konnte nicht erfolgreich durchgeführt werden. Kein passendes Token gefunden an der Stelle:</STRING>
+    <STRING id="197">Scannvorgang erfolgreich durchgeführt.</STRING>
+
+    <STRING id="200">Willkommen im Visual Compiler Compiler!
+
+Dieser Assistent wird dir zeigen wie du einen einfacher Compiler erstellst und dabei etwas die Bedienung des Editors erläutern.
+
+Verwende den "weiter" Knopf um auf die nächste Seite zu gelangen.
+    </STRING>
+    <STRING id="201">Als erstes müssen wir eine Scanner Definition für unseren Compiler erstellen!
+
+Der Scanner liest eine text Datei ein und erstellt daraus eine Tokenname-Wert Paar Liste. Diese Liste wird später vom Parser verwendet.
+    </STRING>
+    <STRING id="202">Klicke rechts auf die Zeichenfläche um ein neues Token zu erstellen oder verwende den Button in der Toolbar.
+
+Nun haben wir ein neues Token. Für dieses Beispiel benennen wir es mit "Zahl" (Links unten eingeben). Darüber hinaus müssen wir eine "Expression" für dieses Token angeben. Wir schreiben hier "\d+" hinein.
+    </STRING>
+    <STRING id="203">"\d+" ist ein Regulärer Ausdruck für eine Zahl. "\d" ist ein Macro für eine beliebige Ziffer. Wir können auch "[0-9]+" schreiben, welches die gleiche Bedeutung besitzt. Um mehr über reguläre Ausdrücke zu lernen, verwende die Online Hilfe.
+    </STRING>
+    <STRING id="204">Wir erstellen ein weiteres Token: "Minus" mit expression "\-" (immer wenn du dir nicht sicher bist, ob ein Zeichen als Metazeichen in regulären Ausdrücken verwendet wird, schreibe ein "\" vor das Zeichen).
+
+Erstellen wir noch ein Token für: "Plus" mit expression "\+".
+    </STRING>
+    <STRING id="205">Wir erstellen noch ein letztes Token: "IGNORE" mit expression "\s|\n|\t|\r"
+
+"Ignore" ist ein spezielles Token weil kein Tokenname-Wert Paar erstellt wird. Mit anderen Worten überlesen wir alle Leerzeichen, Zeilenumbrüche, Tabs und Wagenrückläufe. Dieses Token wird sehr oft für Programmiersprachen verwendet.
+    </STRING>
+    <STRING id="206">Du kannst auch eine eigene Farbe für jedes Token definieren um es später im Parser besser wieder zu erkennen.
+Um ein Token zu selektieren, klicke einmal darauf oder wähle es in der Liste links aus.
+
+Du kannst Token über die entsprechenden Buttons in der Toolbar auch auf und ab bewegen. Wenn zwei Token Expressions mit der selben Zeichenlänge passen, wird stets das am weitesten oben stehende Token gewählt. Die Reihenfolge ist also in seltenen Fällen wichtig!
+    </STRING>
+    <STRING id="207">Nun können wir unsere Parserdefinition erstellen. Klicke dazu rechts auf der Arbeitsfläche oder verwende das ensprechende Symbol in der Toolbar.
+Unser erstes Nichtterminal bekommt den Namen "Eingabe". Du bekommst jeweils ein Rechteck für jedes erstellte Nichtterminal. 
+
+Ein neues Nichtterminal bekommt automatisch eine leere rechte Regelseite als Produktionsregel, welche durch ein graues Rechteck im Inneren dargestellt wird.
+    </STRING>
+    <STRING id="208">Erstelle noch ein zweites Nichtterminal auf die gleiche Weise und nenne sie es "Ausdruck".
+Klicke nun einmal links auf das graue Rechteck innerhalb dieser neuen Regel.
+
+Durch einen Rechtsklick können nun Nichtterminale und Token auf dieser rechten Regelseite eingefügt werden.
+    </STRING>
+    <STRING id="209">Füge das Token "Zahl" dieser rechten Regelseite hinzu. Du bekommst ein abgerundetes Rechteck innerhalb des grauen Rechtecks.
+
+Wir haben damit definiert, dass "Ausdruck" zu "Zahl" abgeleitet werden kann. Füge eine weitere rechte Regelseite durch einen Rechtsklick hinzu.
+Wir bekommen ein neues graues Rechteck unter dem ersten.
+    </STRING>
+    <STRING id="210">Selektiere nun dieses neue graue Rechteck um es auszuwählen.
+Dieses mal wollen wir ein Nichtterminal in der rechten Regelseite einfügen. Mit einem Rechtsklick wählen wir das Nichtterminal "Ausdruck" aus.
+
+Anschließend fügen wir das Token "Plus" an. Abschließend fügen wir nocheinmal das Nichtterminal "Ausdruck" an. Wir haben nun eine Regel: "Ausdruck" kann zu "Ausdruck Plus Ausdruck" abgeleitet werden.
+    </STRING>
+    <STRING id="211">Auf die gleiche Weise können wir nun noch eine weitere rechte Regelseite einfügen für: "Ausdruck" wird zu "Ausdruck Minus Ausdruck". 
+Dazu fügen wir zunächst eine neue rechte Regelseite an und fügen dann "Ausdruck", "Minus" und "Ausdruck" an.
+    </STRING>
+    <STRING id="212">Nun können wir ein Element in der rechten Regelseite von "Eingabe" hinzufügen: die Regel "Ausdruck".
+
+Wir haben nun eine Regel "Eingabe" wird zu "Ausdruck" definiert. Da "Eingabe" die erste Regel in der Liste links ist, wird diese automatisch zur Startregel bestimmt.
+    </STRING>
+    <STRING id="213">Wir können jetzt sogenannte S-Attribute in Form von kurzen Quelltextschnipseln anfügen. Jede rechte Regelseite bekommt dazu ein eigenes S-Attribut.
+
+Beginnen wir mit "Eingabe" und der rechten Regelseite "Ausdruck". Wir selektieren diese rechte Regelseite und tragen im Code Fenster ganz unten ein:
+
+Output.WriteLine($1);
+
+$1 ist dabei eine spezielle Variable die für den Inhalt von "Ausdruck" als erstes Element der rechten Regelseite steht.
+    </STRING>
+    <STRING id="214">Nun wollen wir den Wert von "Ausdruck Plus Ausdruck" berechnen. Dazu klicken wir auf die 2. rechte Regelseite der Regel "Ausdruck" und fügen ein S-Attribut an. Das Ergebnis der Berechnung speichern wir in "$$" ab, welches dann den Inhalt von $1 in der ersten Regel darstellen wird.</STRING>
+    <STRING id="215">
+      Füge jetzt den Quelltext für die "Plus" und "Minus" Regelseiten ein.
+
+      Für "Plus":
+      $$ = (int.Parse($1) + int.Parse($3)).ToString();
+
+      Für "Minus":
+      $$ = (int.Parse($1) - int.Parse($3)).ToString();
+    </STRING>
+    <STRING id="216">Unser Rechencompiler ist nun fertig. Durch einen Klick auf "Compiler generieren" in der Toolbar wird dieser erstellt und eine Konsole geöffnet.
+
+Gib einen Dateinamen für die erstellte C# Datei in einem beliebigen Arbeitsverzeichnis an. Im gleichen Verzeichnis wird dann automatisch die ausführbare Datei des Compilers erzeugt.
+
+Wir erstellen nun noch eine Eingabedatei input.txt über den Konsolenbefehl: "notepad input.txt" und schreiben in die Datei: "123+456- 789  + 1".
+
+Der Compiler kann nun mit "compilername.exe input.txt" aufgerufen werden und liefert das Rechenergebnis.
+    </STRING>
+    <STRING id="217">Beachte das alle Platzhalter ($$,$1,$2...) immer vom Datentyp String sind. Wenn du diese also als Zahlen interpretieren möchtest, ist eine entsprechende Konvertierung wie eben gezeigt nötig!
+
+Wir können auch globalen Quelltext für den zu erzeugenden Compiler einfügen wenn wir keine Regel auswählen. Hier können Hilfsfunktionen und globale Variablen definiert werden.
+    </STRING>
+    <STRING id="218">Damit endet dieses Tutorial.
+
+Du kannst jetzt ein eigenes Projekt starten und die Funktionen von VCC ausprobieren! Du solltest auch die Beispiele auf der www.atocc.de Webseite anschauen.
+
+Viel Spaß!
+AtoCC Team
+    </STRING>
+  </GERMAN>
+  <POLISH>
+    <STRING id="1">Visual CC</STRING>
+    <STRING id="2">Skaner</STRING>
+    <STRING id="3">Parser /analizator składniowy</STRING>
+    <STRING id="4">Output Log</STRING>
+    <STRING id="5">Typ języka</STRING>
+    <STRING id="10">Otwórz</STRING>
+    <STRING id="11">Zapisz</STRING>
+    <STRING id="12">Wstecz</STRING>
+    <STRING id="13">Powtórz</STRING>
+    <STRING id="14">Utwórz kompilator</STRING>
+    <STRING id="15">Eksportuj automaton</STRING>
+    <STRING id="16">Eksportuj T-Diagram</STRING>
+    <STRING id="17">Nowy</STRING>
+    <STRING id="19">Utwórz kompilator jako...</STRING>
+    <STRING id="20">Plik</STRING>
+    <STRING id="21">Nowy VCC-plik</STRING>
+    <STRING id="22">Otwórz VCC-plik</STRING>
+    <STRING id="23">Zapisz VCC-plik</STRING>
+    <STRING id="24">Zapisz VCC-plik jako...</STRING>
+    <STRING id="25">Wyjście</STRING>
+    <STRING id="26">Pomoc</STRING>
+    <STRING id="27">pomoc online</STRING>
+    <STRING id="28">Przewodnik instalacyjny</STRING>
+    <STRING id="29">Zmień język</STRING>
+    <STRING id="30">o...</STRING>
+    <STRING id="80">Przewodnik</STRING>
+    <STRING id="81">Zakończ</STRING>
+    <STRING id="82">Wstecz</STRING>
+    <STRING id="83">Dalej</STRING>
+    <STRING id="100">VCC projekt:</STRING>
+    <STRING id="101">Przewodnik instalacyjny</STRING>
+    <STRING id="102">Nowy VCC- plik</STRING>
+    <STRING id="103">Otwórz VCC-plik</STRING>
+    <STRING id="104">Pomoc:</STRING>
+    <STRING id="105">Pomoc online</STRING>
+    <STRING id="106">Uruchom przewodnik aby zapoznać się z VCC.</STRING>
+    <STRING id="107">Utwórz pusty projekt.</STRING>
+    <STRING id="108">Otwórz bieżący projekt.</STRING>
+    <STRING id="109">Aby uzuskać dalsze informacje odwiedź stronę Online Help Center.</STRING>
+    <STRING id="110">Odwiedź stronę internetową AtoCC.</STRING>
+    <STRING id="120">Typ języka:</STRING>
+    <STRING id="121">Użyj kodu C#</STRING>
+    <STRING id="122">Użyj kodu systemu</STRING>
+    <STRING id="123">Wybierz język programowania dla tego projektu.</STRING>
+    <STRING id="124">Użyj kodu Java</STRING>
+    <STRING id="125">Użyj kodu Delphi</STRING>
+    <STRING id="130">Utwórz swój skaner, definiując token.</STRING>
+    <STRING id="131">Pokaż listę tokena.</STRING>
+    <STRING id="132">Pokaż właściwości tokena.</STRING>
+    <STRING id="133">Przesuń token w dół.</STRING>
+    <STRING id="134">Przesuń token w górę.</STRING>
+    <STRING id="135">Utwórz nowy token</STRING>
+    <STRING id="136">Usuń zanaczony token.</STRING>
+    <STRING id="137">Token</STRING>
+    <STRING id="138">Właściwości</STRING>
+    <STRING id="139">Skaner</STRING>
+    <STRING id="140">Nowy token</STRING>
+    <STRING id="141">Usuń token</STRING>
+    <STRING id="142">Save current project?</STRING>
+    <STRING id="143">Token name cannot include spaces or special chars!</STRING>
+    <STRING id="144">Rulen name cannot include spaces or special chars!</STRING>
+    <STRING id="150">Utwórz parser, definiując reguły.</STRING>
+    <STRING id="151">Pokaż Parser w formie drzewa.</STRING>
+    <STRING id="152">Pokaż właściwości</STRING>
+    <STRING id="153">Przesuń element w dół.</STRING>
+    <STRING id="154">Przesuń element w górę.</STRING>
+    <STRING id="155">Utwórz nowe reguły</STRING>
+    <STRING id="156">Dodaj prawą stronę wyrażenia</STRING>
+    <STRING id="157">Dodaj regułę do prawej strony wyrażenia</STRING>
+    <STRING id="158">Dodaj tokena do prawej strony wyrażenia/równania.</STRING>
+    <STRING id="159">Usuń zaznaczony element</STRING>
+    <STRING id="160">Widok drzewa</STRING>
+    <STRING id="161">Właściwości</STRING>
+    <STRING id="162">Parser</STRING>
+    <STRING id="163">Kod globalny</STRING>
+    <STRING id="164">Kod dla reguły</STRING>
+    <STRING id="165">Nowa reguła</STRING>
+    <STRING id="166">Nowa prawa strona wyrażenia/równania</STRING>
+    <STRING id="167">Reguły</STRING>
+    <STRING id="168">Token</STRING>
+    <STRING id="169">Usuń</STRING>
+    <STRING id="180">Stany</STRING>
+    <STRING id="181">Yacc output/dane wyjsciowe</STRING>
+    <STRING id="200">Welcome to Visual Compiler Compiler!
+
+This wizard will show you how to create a simple compiler and will explaine the interface of the editor on the way.
+
+Use the "next" button to go one step further.
+    </STRING>
+    <STRING id="201">First we need to create a scanner definition for our compiler!
+
+The scanner reads text input from an input file and creates a list of token value pairs. This list is used afterwards by the parser.
+    </STRING>
+    <STRING id="202">Click right in the Scanner panel or use the button from the toolbar to create a new Token.
+
+You have to name the new token. For this example use "Number". You also need to provide a expression for this token. You can edit it in the properties panel on the left. Write "\d+"
+    </STRING>
+    <STRING id="203">"\d+" is a regular expression for a number \d is a macro for a digit. You could also write "[0-9]+". To learn more about regular expressions, consult the online help.
+    </STRING>
+    <STRING id="204">Create another token: "Sub" with expression "\-" (if you are not sure if a character is used as a metasymbol for the regular expression language escape it with \ ).
+
+Create another token: "Add" with expression "\+".
+    </STRING>
+    <STRING id="205">We create the last token: "IGNORE" with expression "\s|\n|\t|\r"
+
+"Ignore" is a special token because it will not result in a token value pair for the parser. With other words spaces, returns, line feeds and tabs will not be recognized at all. This Token is often used for programming languages.
+    </STRING>
+    <STRING id="206">You can also set a different color for each token. This may help reading the parser table later on.
+To select a token just click on it or select from the list on the left.
+
+You can also move token up or down the tree by pressing the buttons in the toolbar. If two token expressions with the same length match always the topmost will be used. So in seldom cases the order is important!
+    </STRING>
+    <STRING id="207">Now we can define our parser definition. Click right in the Parser panel and select New Rule.
+Our first Rule will get the name "Input". You will get a box for each rule in the working area.
+
+A new rule already has a empty right side which is represented by a gray box inside.
+    </STRING>
+    <STRING id="208">Create another rule the same way and name it "Expression".
+Click once on the gray box inside this new rule to select it. 
+
+By right click on it you can add Rules and Token to this right side.
+    </STRING>
+    <STRING id="209">Add the token "Number" to this rule side. You will get a rounded box inside the gray one.
+
+Now we said that "Expression" can become "Number". Add another right side to this rule by right click on it and say "New Rightside". You get another gray box inside the Expression rule below the first. 
+    </STRING>
+    <STRING id="210">Select this new gray box now by clicking on it.
+This time we add a rule to this right side. Right click on it and select the rule "Expression"
+
+Add the token "Add" the same way to this rule. To complete this right side add again the rule "Expression". Now we have a rule: "Expression" can become "Expression Add Expression".
+    </STRING>
+    <STRING id="211">In the same way we can create another rightside for "Expression" can become "Expression Sub Expression". 
+To do it, add another right side (gray box) and add again rule Expression, token Sub and rule Expression to it.
+    </STRING>
+    <STRING id="212">Now we can create an element in the rightside of the "Input" rule: "Expression"
+
+We get "Input" can become "Expression". Because "Input" is our first rule this will automatically become our starting rule.
+    </STRING>
+    <STRING id="213">We need to add S-Attribute code for each right side now.
+
+Start at the "Input" can become "Expression" rule part. Select it and write the following code to the Code panel at the bottom:
+
+Output.WriteLine($1);
+
+$1 is a special variable that holds the value of the 1. rule part "Expression"
+    </STRING>
+    <STRING id="214">Now we realy want to calculate "Expression Add Expression". Therefore we click the 2. right side item of "Expression" and write a S-Attribute for it. The result of the calculation we store in $$ which is than the content of $1 in the starting rule.
+    </STRING>
+    <STRING id="215">
+      Add the code for the "Add" and "Sub" rules.
+
+      for "Add":
+      $$ = (int.Parse($1) + int.Parse($3)).ToString();
+
+      for "Sub":
+      $$ = (int.Parse($1) - int.Parse($3)).ToString();
+    </STRING>
+    <STRING id="216">Our calculator compiler is ready to use now. Click on "Create Compiler" in the system toolbar.
+
+Save the C# file in a working folder of your choice. In the same directory also the executable will be created for your compiler.
+
+Now you can create an input file like input.txt with the content: "123+456- 789  + 1" with the command "notepad input.txt".
+
+Running the compiler with "compilername.exe input.txt" will present you the result on screen.
+    </STRING>
+    <STRING id="217">Keep in mind that VCC values ($$,$1,$2...) are always strings. So you need to convert them like in this sample if you need numbers!
+
+You can also add global code to your compiler on the parser page when selecting no item at all. So you can define helper functions or define variables.
+    </STRING>
+    <STRING id="218">You have finished this litte tutorial.
+
+You may now start a new project your own and try out the features of VCC! You should also check out the examples from the wepage www.atocc.de
+
+Have fun!
+AtoCC Team
+    </STRING>
+  </POLISH>
+  <CZECH>
+    <STRING id="1"></STRING>
+    <STRING id="2"></STRING>
+    <STRING id="3"></STRING>
+    <STRING id="4"></STRING>
+    <STRING id="5"></STRING>
+    <STRING id="10"></STRING>
+    <STRING id="11"></STRING>
+    <STRING id="12"></STRING>
+    <STRING id="13"></STRING>
+    <STRING id="14"></STRING>
+    <STRING id="15"></STRING>
+    <STRING id="16"></STRING>
+    <STRING id="20"></STRING>
+    <STRING id="21"></STRING>
+    <STRING id="22"></STRING>
+    <STRING id="23"></STRING>
+    <STRING id="24"></STRING>
+    <STRING id="25"></STRING>
+    <STRING id="26"></STRING>
+    <STRING id="27"></STRING>
+    <STRING id="28"></STRING>
+    <STRING id="29"></STRING>
+    <STRING id="30"></STRING>
+    <STRING id="80"></STRING>
+    <STRING id="81"></STRING>
+    <STRING id="82"></STRING>
+    <STRING id="83"></STRING>
+    <STRING id="100"></STRING>
+    <STRING id="101"></STRING>
+    <STRING id="102"></STRING>
+    <STRING id="103"></STRING>
+    <STRING id="104"></STRING>
+    <STRING id="105"></STRING>
+    <STRING id="106"></STRING>
+    <STRING id="107"></STRING>
+    <STRING id="108"></STRING>
+    <STRING id="109"></STRING>
+    <STRING id="110"></STRING>
+    <STRING id="120"></STRING>
+    <STRING id="121"></STRING>
+    <STRING id="122"></STRING>
+    <STRING id="123"></STRING>
+    <STRING id="130"></STRING>
+    <STRING id="131"></STRING>
+    <STRING id="132"></STRING>
+    <STRING id="133"></STRING>
+    <STRING id="134"></STRING>
+    <STRING id="135"></STRING>
+    <STRING id="136"></STRING>
+    <STRING id="137"></STRING>
+    <STRING id="138"></STRING>
+    <STRING id="139"></STRING>
+    <STRING id="140"></STRING>
+    <STRING id="141"></STRING>
+    <STRING id="150"></STRING>
+    <STRING id="151"></STRING>
+    <STRING id="152"></STRING>
+    <STRING id="153"></STRING>
+    <STRING id="154"></STRING>
+    <STRING id="155"></STRING>
+    <STRING id="156"></STRING>
+    <STRING id="157"></STRING>
+    <STRING id="158"></STRING>
+    <STRING id="159"></STRING>
+    <STRING id="160"></STRING>
+    <STRING id="161"></STRING>
+    <STRING id="162"></STRING>
+    <STRING id="163"></STRING>
+    <STRING id="164"></STRING>
+    <STRING id="165"></STRING>
+    <STRING id="166"></STRING>
+    <STRING id="167"></STRING>
+    <STRING id="168"></STRING>
+    <STRING id="169"></STRING>
+    <STRING id="180"></STRING>
+    <STRING id="181"></STRING>
+    <STRING id="200"></STRING>
+    <STRING id="201"></STRING>
+    <STRING id="202"></STRING>
+    <STRING id="203"></STRING>
+    <STRING id="204"></STRING>
+    <STRING id="205"></STRING>
+    <STRING id="206"></STRING>
+    <STRING id="207"></STRING>
+    <STRING id="208"></STRING>
+    <STRING id="209"></STRING>
+    <STRING id="210"></STRING>
+    <STRING id="211"></STRING>
+    <STRING id="212"></STRING>
+    <STRING id="213"></STRING>
+    <STRING id="214"></STRING>
+    <STRING id="215"></STRING>
+    <STRING id="216"></STRING>
+    <STRING id="217"></STRING>
+    <STRING id="218"></STRING>
+  </CZECH>
+</LANGUAGE>

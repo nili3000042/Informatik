@@ -1,0 +1,170 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Parser
+;;;  ex.: (Parser '((BeginToken . "BEGIN") (IfToken . "IF") ...))
+;;;       (Parser (Scanner "BEGIN IF X > 5 THEN INC(X); END"))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+%%
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define Parser
+ (lambda (TokenList)
+  (define-syntax while
+    (syntax-rules ()
+      ((while test statement)
+       (letrec ((loop (lambda () (cond (test statement (loop))))))
+         (loop)))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  (letrec (
+   (yyaction
+    (lambda (yyruleno)
+%%
+     (cond 
+%%
+     )))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Temp Variables
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+%%
+   (yystate 0) ;;; State
+   (yys '(0))  ;;; Stack
+   (yysp 0)    ;;; Stackpointer
+   (yyv '(0))  ;;; Valuestack
+   (yyval 0)   ;;; Current value
+   (yylval 0)  ;;; LexValue
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   (yyfnone 0)   (yyfaccept 1) (yyfabort 2)     (yyferror 3)
+   (yynerrs 0)   (yyactval 0)  (yynstate 0)     (yyerrflag 0) 
+   (yylexpos -1) (yyresult #f) (yyflag 0)       (yyn 0)
+   (yychar -1) (yymaxdepth 1024)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   (list-set!
+     (lambda (ls n i)
+       (cond 
+         ((and (>= n 0) (null? ls)) (append ls (list i)))
+         ((null? ls) '())
+         ((= n 0) (cons i (list-set! (cdr ls) (- n 1) i)))
+         (else (cons (car ls) (list-set! (cdr ls) (- n 1) i))))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   (yyact
+     (lambda (state sym act)
+       (letrec ((k 0))
+         (set! k (list-ref yyal state))
+         (while (and (<= k (list-ref yyah state)) 
+                     (not (eq? (car (list-ref yya k)) sym)))
+                (set! k (+ k 1)))
+         (if (> k (list-ref yyah state)) #f
+           (begin (set! yyactval (cdr (list-ref yya k))) #t)))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   (yygoto
+     (lambda (state sym nstate)
+       (letrec ((k 0))
+         (set! k (list-ref yygl state))
+         (while (and (<= k (list-ref yygh state)) 
+                     (not (eq? (car (list-ref yyg k)) sym)))
+                (set! k (+ k 1)))
+         (if (> k (list-ref yygh state)) #f
+           (begin (set! yynstate (cdr (list-ref yyg k))) #t)))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   (yylex
+     (lambda ()
+       (set! yylexpos (+ yylexpos 1))
+       (if (>= yylexpos (length TokenList))
+         (begin (set! yylval 0) 0)
+         (begin
+           (set! yylval (cdr (list-ref TokenList yylexpos)))
+           (eval (car (list-ref TokenList yylexpos)))))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   (yyparse
+     (lambda ()
+       (set! yystate 0) (set! yyn     0) (set! yys '(0))    (set! yyv '(0))
+       (set! yyval   0) (set! yylval  0) (set! yyactval  0) (set! yynstate 0)
+       (set! yychar -1) (set! yynerrs 0) (set! yyerrflag 0) (set! yysp 0)
+       (letrec 
+         ((parse   ;;;  (* push state and value: *)
+            (lambda ()
+              (set! yysp (+ yysp 1))
+              (if (> yysp yymaxdepth) 
+                (begin (yyerror "Stack overflow!") (abort))
+                (begin
+                  (set! yys (list-set! yys yysp yystate))
+                  (set! yyv (list-set! yyv yysp yyval))
+                  (next)))))
+          (next    ;;; (* get next symbol *)
+            (lambda ()
+              (if (and (= (list-ref yyd yystate) 0) (= yychar -1))
+                (begin
+                  (set! yychar (yylex))
+                  (if (< yychar 0) (set! yychar 0))
+                  ))
+                 (set! yyn (list-ref yyd yystate))
+   
+              ;(printf "state ~a, char ~a ~n" yystate yychar)
+
+              (if (not (= yyn 0)) (reduce)
+                (begin
+                  (if (not (yyact yystate yychar yyn))
+                    (begin
+                      (set! yyn yyactval)
+                      (error))
+                    (begin
+                      (set! yyn yyactval)
+                      (cond
+                        ((> yyn 0) (shift))
+                        ((< yyn 0) (reduce))
+                        (else (accept)))))))))
+          (error 
+            (lambda ()
+              (if (= yyerrflag 0) (yyerror "Syntax Error while parsing") (errlab))))
+          (errlab
+            (lambda ()
+              (if (= yyerrflag 0) (set! yynerrs (+ yynerrs 1)))
+              (if (<= yyerrflag 2) 
+                (begin ;; (* incomplete recovery; try again *)
+                  (set! yyerrflag 3)
+                  (set! yyactval yyn)
+                  (while (and (> yysp 0) (not (and (yyact (list-ref yys yysp) 256 yyn)
+                              (> yyactval 0)))) 
+                      (set! yysp (- yysp 1)))
+                  (set! yyn yyactval)
+                  (if (= yysp 0) (abort)
+                    (begin
+                      (set! yystate yyn)
+                      (parse))))
+                (begin
+                  (if (= yychar 0) (abort)
+                    (begin
+                      (set! yychar -1)
+                      (next)))))))
+          (shift
+            (lambda ()  ;;; (* go to new state, clear lookahead character: *)
+              (set! yystate yyn)
+              (set! yychar -1)
+              (set! yyval yylval)
+              (if (> yyerrflag 0) (set! yyerrflag (- yyerrflag 1)))
+              (parse)))
+          (reduce
+            (lambda () ;;; (* execute action, pop rule from stack, and go to next state: *)
+              ;(printf "reduce: ~a~n" (- yyn))
+              (set! yyflag yyfnone)
+              (yyaction (- yyn))
+              (set! yysp (- yysp (car (list-ref yyr (- yyn)))))
+              (set! yynstate yyn)
+              (if (yygoto (list-ref yys yysp) (cdr (list-ref yyr (- yyn))) yyn)
+                       (set! yystate yynstate))
+              (set! yyn yynstate)
+              (cond 
+                ((= yyflag yyfaccept) (accept))
+                ((= yyflag yyfabort)  (abort))
+                ((= yyflag yyferror)  (errlab))
+                (else (parse)))))
+          (accept (lambda () (set! yyresult #t)))
+          (abort  (lambda () (set! yyresult #f)))
+       )
+    (parse) yyresult)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   (yyerror  (lambda (Message) (error 'Parser Message)(newline)))
+   (yyaccept (lambda () (set! yyflag yyfaccept)))
+   (yyabort  (lambda () (set! yyflag yyfabort)))
+   (yyerrlab (lambda () (set! yyflag yyferror)))
+   (yyerrok  (lambda () (set! yyerrflag 0)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   ) (yyparse))))

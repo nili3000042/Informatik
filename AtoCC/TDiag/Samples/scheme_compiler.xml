@@ -1,0 +1,140 @@
+<TDIAGRAM>
+    <LANGUAGES>
+        <LANGUAGE value="Assembler" label="ASM" defaultextension=".asm"/>
+        <LANGUAGE value="Scheme" label="S" defaultextension=".ss"/>
+        <LANGUAGE value="Textfile" label="Txt" defaultextension=".txt"/>
+        <LANGUAGE value="Binary Executables" label="M" defaultextension=".exe;.com"/>
+        <LANGUAGE value="Object" label="Obj" defaultextension=".obj"/>
+    </LANGUAGES>
+    <PROGRAMS>
+        <PROGRAM value="2">
+            <FILENAME value="Quelltext.txt"/>
+            <RUNNINGON value=""/>
+            <LABELTEXT value="P"/>
+            <LANGUAGE value="Textfile"/>
+            <LAYOUT>
+                <X value="132"/>
+                <Y value="48"/>
+            </LAYOUT>
+            <DOCK_UR value="0"/>
+        </PROGRAM>
+        <PROGRAM value="10">
+            <FILENAME value="ausgabe.exe"/>
+            <RUNNINGON value=""/>
+            <LABELTEXT value="P"/>
+            <LANGUAGE value="Binary Executables"/>
+            <LAYOUT>
+                <X value="612"/>
+                <Y value="48"/>
+            </LAYOUT>
+            <DOCK_UL value="8"/>
+        </PROGRAM>
+    </PROGRAMS>
+    <INTERPRETERS>
+        <INTERPRETER value="1">
+            <NAME value="Scheme Interpreter"/>
+            <FILENAME value="petite --script %InFile"/>
+            <RUNNINGON value="M"/>
+            <INPUTLANGUAGE value="Scheme"/>
+            <WRITTENIN value="Binary Executables"/>
+            <LAYOUT>
+                <X value="228"/>
+                <Y value="192"/>
+            </LAYOUT>
+            <DOCK_O value="0"/>
+        </INTERPRETER>
+    </INTERPRETERS>
+    <COMPILERS>
+        <COMPILER value="0">
+            <NAME value="Scheme Compiler"/>
+            <FILENAME value="compiler.ss %InFile %OutFile"/>
+            <RUNNINGON value=""/>
+            <OUTPUTFORMAT value="%outfile"/>
+            <INPUTLANGUAGE value="Textfile"/>
+            <OUTPUTLANGUAGE value="Assembler"/>
+            <WRITTENIN value="Scheme"/>
+            <LAYOUT>
+                <X value="180"/>
+                <Y value="96"/>
+            </LAYOUT>
+            <DOCK_U value="1"/>
+            <DOCK_L value="2"/>
+            <DOCK_R value="5"/>
+        </COMPILER>
+        <COMPILER value="5">
+            <NAME value="MyCompiler"/>
+            <FILENAME value="TASM.EXE %InFile"/>
+            <RUNNINGON value="M"/>
+            <OUTPUTFORMAT value="%InFileNoExt.obj"/>
+            <INPUTLANGUAGE value="Assembler"/>
+            <OUTPUTLANGUAGE value="Object"/>
+            <WRITTENIN value="Binary Executables"/>
+            <LAYOUT>
+                <X value="324"/>
+                <Y value="96"/>
+            </LAYOUT>
+            <DOCK_L value="0"/>
+            <DOCK_R value="8"/>
+        </COMPILER>
+        <COMPILER value="8">
+            <NAME value="MyCompiler"/>
+            <FILENAME value="TLINK.EXE %InFile, %OutFile"/>
+            <RUNNINGON value="M"/>
+            <OUTPUTFORMAT value="%OutFile"/>
+            <INPUTLANGUAGE value="Object"/>
+            <OUTPUTLANGUAGE value="Binary Executables"/>
+            <WRITTENIN value="Binary Executables"/>
+            <LAYOUT>
+                <X value="468"/>
+                <Y value="96"/>
+            </LAYOUT>
+            <DOCK_L value="5"/>
+            <DOCK_R value="10"/>
+        </COMPILER>
+    </COMPILERS>
+    <EAS/>
+    <COMMENTS>
+        <COMMENT value="4">
+            <TEXT value="Scheme Interpreter"/>
+            <LAYOUT>
+                <X value="108"/>
+                <Y value="216"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="7">
+            <TEXT value="TASM Compiler"/>
+            <LAYOUT>
+                <X value="360"/>
+                <Y value="60"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="8">
+            <TEXT value="TLINK Linker"/>
+            <LAYOUT>
+                <X value="504"/>
+                <Y value="60"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="9">
+            <TEXT value="Program in S"/>
+            <LAYOUT>
+                <X value="120"/>
+                <Y value="12"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="10">
+            <TEXT value="Program EXE"/>
+            <LAYOUT>
+                <X value="600"/>
+                <Y value="12"/>
+            </LAYOUT>
+        </COMMENT>
+        <COMMENT value="11">
+            <TEXT value="MyCompiler"/>
+            <LAYOUT>
+                <X value="216"/>
+                <Y value="60"/>
+            </LAYOUT>
+        </COMMENT>
+    </COMMENTS>
+</TDIAGRAM>

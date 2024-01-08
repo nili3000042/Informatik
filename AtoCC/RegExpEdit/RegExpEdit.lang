@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LANGUAGE>
+  <ENGLISH>
+    <STRING id="1">RegExp Editor</STRING>
+    <STRING id="2">Alphabet</STRING>
+    <STRING id="3">RegExp</STRING>
+    <STRING id="4">Simulation</STRING>
+    <STRING id="5">NEA Graph</STRING>
+    <STRING id="6">Minimized NEA Graph</STRING>
+    <STRING id="10">Open</STRING>
+    <STRING id="11">Save</STRING>
+    <STRING id="16">Export Grammar</STRING>
+    <STRING id="17">Export Automaton</STRING>
+    <STRING id="18">New</STRING>
+    <STRING id="20">File</STRING>
+    <STRING id="21">New RegExp</STRING>
+    <STRING id="22">Open RegExp</STRING>
+    <STRING id="23">Save RegExp</STRING>
+    <STRING id="24">Save RegExp as ...</STRING>
+    <STRING id="25">Exit</STRING>
+    <STRING id="26">Help</STRING>
+    <STRING id="27">Online Help</STRING>
+    <STRING id="28">Introduction Wizard</STRING>
+    <STRING id="29">Change language</STRING>
+    <STRING id="30">About</STRING>
+    
+    <STRING id="40">RegExp Project:</STRING>
+    <STRING id="41">A quick introduction to get in touch with RegExpEdit.</STRING>
+    <STRING id="42">Create an empty project.</STRING>
+    <STRING id="43">Getting Help:</STRING>
+    <STRING id="44">To get any further information visit the Online Help Center.</STRING>
+    <STRING id="45">Visit the AtoCC website.</STRING>
+
+    <STRING id="65">  Alphabet Items:</STRING>
+    <STRING id="66">Back</STRING>
+    <STRING id="67">Next</STRING>
+    <STRING id="70">Add Alphabet Item</STRING>
+    <STRING id="71">Delete Alphabet Item</STRING>
+    <STRING id="72">Predefined Alphabet</STRING>
+    <STRING id="73">Clear</STRING>
+    <STRING id="74">Delete all items in this list</STRING>
+
+    <STRING id="75"> Enter RegExp here </STRING>
+    <STRING id="76">Use the formal notation for regular expressions. </STRING>
+    <STRING id="77">Like: (a+b)*ab(a+b)* for L = {w | w contains ab} over {a,b}.</STRING>
+    <STRING id="78"> Minimized RegExp  </STRING>
+    <STRING id="79"> Compare RegExp with another </STRING>
+    <STRING id="80">Compare</STRING>
+    <STRING id="81"> Transform to NEA </STRING>
+    <STRING id="82">Generate NEA graph for your RegExp at the right.</STRING>
+    <STRING id="83">Show NEA</STRING>
+
+    <STRING id="90">Load:</STRING>
+    <STRING id="91">Edit:</STRING>
+    <STRING id="92">Load Input File</STRING>
+    <STRING id="93">Replace all with ...</STRING>
+    <STRING id="94">Only keep matched</STRING>
+    <STRING id="95">back to last version</STRING>
+    <STRING id="96">Type in or load your input here:</STRING>
+    <STRING id="97">Processing:</STRING>
+    
+    <STRING id="100">
+      <html>
+      Hint: For <b><font face="Symbol">e</font></b> you must write <b>EPSILON</b> in your RegExp.<br/>
+        <b>
+          <table cellpadding="3" border="1">
+            <tr>
+              <td><font face="Symbol">e</font>u = u<font face="Symbol">e</font> = u</td>
+              <td><font face="Symbol">e</font>* = <font face="Symbol">e</font></td>
+              <td>u+v = v+u</td><td>u+u = u</td><td>(u*)* = u*</td><td>u(v+w) = uv+uw</td>
+              <td>(uv)*u = u(vu)*</td><td>(u+v)* = (u* + v*)*</td>
+            </tr>
+          </table>
+        </b>
+      </html>
+    </STRING>
+
+    <STRING id="110">Error in XML File:</STRING>
+    <STRING id="111">You need to define two expressions in order to compare them!</STRING>
+    <STRING id="112">Second expressions has characters not defined in alphabet!</STRING>
+    <STRING id="113">Both expressions define the same language!</STRING>
+    <STRING id="114">The expressions define different languages!</STRING>
+    <STRING id="115">Save current RegExp?</STRING>
+    <STRING id="116">Error in RegExp (or characters are not defined in Alphabet)!</STRING>
+    <STRING id="117">The automaton has over 300 statements. It would take too much time to minimize it.</STRING>
+    <STRING id="118">Generating NEA with Epsilon Transitions...</STRING>
+    <STRING id="119">Generating NEA without Epsilon Transitions...</STRING>
+    <STRING id="120">Generating DEA from NEA...</STRING>
+    <STRING id="121">Generating Minimal-DEA...</STRING>
+
+    <STRING id="140">Introduction Wizard</STRING>
+    <STRING id="141">Close</STRING>
+    <STRING id="142">Previous Step</STRING>
+    <STRING id="143">Next Step</STRING>
+
+    <STRING id="150">Welcome to RegExp Editor!
+    
+This wizard will show you how to create a RegExp and will explaine the interface of the editor on the way.
+    
+Use the button at the right to go one step further.</STRING>
+    <STRING id="151">First we need to create an alphabet for our RegExp.
+      
+You can either create one by clicking the "Add Alphabet Item" button or by using one of the predefined alphabets.
+      
+For this example we can use the "Predefined Alphabet" button and select a,b,c.
+      
+Use the button at the right to go one step further.</STRING>
+    <STRING id="152">On this page we will define the RegExp itself.
+    
+Use the formal notation derived from regular sets.
+    
+Type aa+bb+cc in the first textbox.
+    
+Use the button at the right to go one step further.</STRING>
+    <STRING id="153">You can see in the next box a minimized version of your RegExp (ours is already minimized).
+    
+In the third box you can compare the RegExp with a second one. To check if both match the same language.
+     
+Use the button at the right to go one step further.</STRING>
+    <STRING id="154">We can generate a finite automaton from the RegExp. Just click on Show NEA button.
+   
+There are two versions of NEA that can be displayed.
+    
+You can switch between each version above the graph image.
+    
+Use the button at the right to go one step further.</STRING>
+    <STRING id="155">On this page we can apply the RegExp on any input text.
+      
+In the large textarea we write:
+     
+"In this text bubble some strange words occur we just accept."
+      
+Use the button at the right to go one step further.</STRING>
+    <STRING id="156">All elements of the text are highlighted where our RegExp matches the input.
+      
+You can use typical replace actions here to see how mighty Search and Replace with regular expressions can be.
+      
+Use the button at the right to go one step further.</STRING>
+    <STRING id="157">You have finished this litte tutorial.    
+You may now start a new project your own and try out the features of RegExp Editor!
+Also try the various export functions this tool offers.
+    
+Have fun!    
+AtoCC Team</STRING>
+
+  </ENGLISH>
+  <GERMAN>
+    <STRING id="1">RegExp Editor</STRING>
+    <STRING id="2">Alphabet</STRING>
+    <STRING id="3">RegExp</STRING>
+    <STRING id="4">Simulation</STRING>
+    <STRING id="5">NEA Graph</STRING>
+    <STRING id="6">Minimierter NEA Graph</STRING>
+    <STRING id="10">Öffnen</STRING>
+    <STRING id="11">Speichern</STRING>
+
+    <STRING id="16">Export Grammatik</STRING>
+    <STRING id="17">Export Automat</STRING>
+    <STRING id="18">Neu</STRING>
+    <STRING id="20">Datei</STRING>
+    <STRING id="21">Neuer RegExp</STRING>
+    <STRING id="22">RegExp öffnen</STRING>
+    <STRING id="23">RegExp speichern</STRING>
+    <STRING id="24">RegExp speichern unter ...</STRING>
+    <STRING id="25">Beenden</STRING>
+    <STRING id="26">Hilfe</STRING>
+    <STRING id="27">Online Hilfe</STRING>
+    <STRING id="28">Einführungsassistent</STRING>
+    <STRING id="29">Sprache ändern</STRING>
+    <STRING id="30">Über...</STRING>
+    
+    <STRING id="40">RegExp Projekt:</STRING>
+    <STRING id="41">Eine schnelle Einführung in RegExpEdit.</STRING>
+    <STRING id="42">Ein neues Projekt anlegen.</STRING>
+    <STRING id="43">Hilfe:</STRING>
+    <STRING id="44">Besuchen Sie das Online Help Center</STRING>
+    <STRING id="45">Besuchen Sie die AtoCC Website</STRING>
+
+    <STRING id="65">  Alphabetszeichen:</STRING>
+    <STRING id="66">Zurück</STRING>
+    <STRING id="67">Weiter</STRING>
+    <STRING id="70">Neues Zeichen</STRING>
+    <STRING id="71">Zeichen löschen</STRING>
+    <STRING id="72">Alphabete</STRING>
+    <STRING id="73">leeren</STRING>
+    <STRING id="74">Alle Elemente dieser Liste löschen</STRING>
+
+    <STRING id="75"> RegExp eingeben </STRING>
+    <STRING id="76">Verwenden Sie die formale Notation für reguläre Ausdrücke. </STRING>
+    <STRING id="77">Beispiel: (a+b)*ab(a+b)* für L = {w | w enthält ab} über {a,b}.</STRING>
+    <STRING id="78"> Minimierter RegExp  </STRING>
+    <STRING id="79"> RegExp miteinander vergleichen </STRING>
+    <STRING id="80">Vergleichen</STRING>
+    <STRING id="81"> In NEA transformieren </STRING>
+    <STRING id="82">NEA aus RegExp generieren und rechts anzeigen.</STRING>
+    <STRING id="83">Anzeigen</STRING>
+
+    <STRING id="90">Laden:</STRING>
+    <STRING id="91">Edit:</STRING>
+    <STRING id="92">Datei öffnen</STRING>
+    <STRING id="93">Alle ersetzen mit ...</STRING>
+    <STRING id="94">Nur erkannte Teile</STRING>
+    <STRING id="95">letzte Version</STRING>
+    <STRING id="96">Geben Sie hier einen Eingabetext ein:</STRING>
+    <STRING id="97">Bearbeitung:</STRING>
+
+    <STRING id="100">
+      <html>
+      Hinweis: Für <b><font face="Symbol">e</font></b> müssen Sie <b>EPSILON</b> in Ihrem RegExp verwenden.<br/>
+        <b>
+          <table cellpadding="3" border="1">
+            <tr>
+              <td><font face="Symbol">e</font>u = u<font face="Symbol">e</font> = u</td>
+              <td><font face="Symbol">e</font>* = <font face="Symbol">e</font></td>
+              <td>u+v = v+u</td><td>u+u = u</td><td>(u*)* = u*</td><td>u(v+w) = uv+uw</td>
+              <td>(uv)*u = u(vu)*</td><td>(u+v)* = (u* + v*)*</td>
+            </tr>
+          </table>
+        </b>
+      </html> 
+    </STRING>
+
+    <STRING id="110">Fehler in der XML Datei:</STRING>
+    <STRING id="111">Sie müssen zwei Ausdrücke angeben um diese vergleichen zu können!</STRING>
+    <STRING id="112">Der zweite Ausdruck enthält Zeichen, die nicht im Alphabet definiert wurden!</STRING>
+    <STRING id="113">Beide Ausdrücke definieren die gleiche Sprache!</STRING>
+    <STRING id="114">Die Ausdrücke definieren unterschiedliche Sprachen!</STRING>
+    <STRING id="115">Aktuellen RegExp speichern?</STRING>
+    <STRING id="116">Fehlerhafter RegExp (oder Zeichen nicht im Alphabet definiert)!</STRING>
+    <STRING id="117">Der Automat hat mehr als 300 Zustände. Die Minimierung würde zu viel Zeit in Anspruch nehmen.</STRING>
+    <STRING id="118">Erstelle NEA mit Epsilon Übergängen...</STRING>
+    <STRING id="119">Erstelle NEA ohne Epsilon Übergängen...</STRING>
+    <STRING id="120">Erstelle DEA aus NEA...</STRING>
+    <STRING id="121">Erstelle Minimal-DEA...</STRING>
+
+    <STRING id="140">Einführungsassistent</STRING>
+    <STRING id="141">Schließen</STRING>
+    <STRING id="142">zurück</STRING>
+    <STRING id="143">weiter</STRING>
+
+    <STRING id="150">Willkommen beim RegExp Editor!
+    
+Dieser Assistent wird Ihnen zeigen, wie Sie einen RegExp definieren und dabei das Benutzerinterface des Editors erklären.
+    
+Klicken Sie auf "weiter" um jeweils zur nächsten Seite des Tutorials zu gelangen.</STRING>
+    <STRING id="151">Zunächst müssen wir ein Alphabet für unseren RegExp angeben.
+      
+Sie können entweder über "Neues Zeichen" einzelne Zeichen hinzufügen, oder ein vorgefertigtes Alphabet über die Schaltfläche "Alphabete" einfügen.
+      
+Für dieses Beispiel wollen wir über "Alphabete" a,b,c wählen.
+      
+Klicken Sie auf "weiter" um jeweils zur nächsten Seite des Tutorials zu gelangen.</STRING>
+    <STRING id="152">Auf dieser Seite werden wir den RegExp selbst definieren.
+    
+Verwenden Sie dazu die wissenschaftliche Notation, welche von regulären Mengen abgeleitet wird.
+    
+Geben Sie in das erste Textfeld aa+bb+cc ein.
+    
+Klicken Sie auf "weiter" um jeweils zur nächsten Seite des Tutorials zu gelangen.</STRING>
+    <STRING id="153">Im darunterliegenden Textfeld wird eine minimierte Version des Ausdrucks angegeben (unserer ist bereits minimal).
+    
+Im dritten Eingabefeld kann ein zweiter RegExp eingegeben werden, um zu vergleichen, ob beide Ausdrucke die gleiche Sprache beschreiben.
+     
+Klicken Sie auf "weiter" um jeweils zur nächsten Seite des Tutorials zu gelangen.</STRING>
+    <STRING id="154">Wir können uns einen endlichen Automaten für unseren RegExp generieren lassen. Klicken wir dazu einfach auf "Anzeigen". 
+    
+Es werden zwei Versionen von NEA generiert.
+    
+Sie können zwischen beiden Versionen über die Tabs oberhalb des Überführungsgraphen umschalten.
+    
+Klicken Sie auf "weiter" um jeweils zur nächsten Seite des Tutorials zu gelangen.</STRING>
+    <STRING id="155">Auf dieser Seite können wir den RegExp praktisch auf einen beliebigen Eingabetext anwenden.
+      
+In das große Textfeld schreiben wir:
+      
+"In In this text bubble some strange words occur we just accept."
+      
+Klicken Sie auf "weiter" um jeweils zur nächsten Seite des Tutorials zu gelangen.</STRING>
+    <STRING id="156">Alle Textteile die auf unseren RegExp passsen werden blau dargestellt.
+      
+Sie können typische Suche und Ersetze Funktionen anwenden um die Leistungsfähigkeit von regulären Ausdrücken zu erkennen.
+      
+Klicken Sie auf "weiter" um jeweils zur nächsten Seite des Tutorials zu gelangen.</STRING>
+    <STRING id="157">Damit sind wir auch schon am Ende dieser kleinen Einführung.
+Sie können nun einen eigenen Ausdruck definieren.
+Versuchen Sie auch die vielfältigen Exportfunktionen in diesem Werkzeug.
+
+Viel Spaß,
+AtoCC Team</STRING>
+  </GERMAN>
+</LANGUAGE>

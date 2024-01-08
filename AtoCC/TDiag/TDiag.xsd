@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TDIAGRAM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="LANGUAGES">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LANGUAGE" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="value" type="xs:string" use="required"/>
+									<xs:attribute name="label" type="xs:string" use="required"/>
+									<xs:attribute name="defaultextension" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PROGRAMS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PROGRAM" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="LANGUAGE">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="FILENAME">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="RUNNINGON">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="LABELTEXT">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="LAYOUT">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="X">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Y">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_U" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_UL" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_UR" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_L" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_R" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+									<xs:attribute name="value" type="xs:decimal" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="INTERPRETERS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="INTERPRETER" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="NAME" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="FILENAME">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="RUNNINGON">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="INPUTLANGUAGE">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="WRITTENIN">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="LAYOUT">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="X">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Y">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_O" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+									<xs:attribute name="value" type="xs:decimal" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="COMPILERS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COMPILER" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+                  <xs:all>
+                    <xs:element name="NAME" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="FILENAME">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="RUNNINGON">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="OUTPUTFORMAT" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="INPUTLANGUAGE">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="OUTPUTLANGUAGE">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="WRITTENIN">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="LAYOUT">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="X">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Y">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_U" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_UL" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_UR" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_L" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_R" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+									<xs:attribute name="value" type="xs:decimal" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EAS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EA" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="FILENAME">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="LABELTEXT">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="LAYOUT">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="X">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Y">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_L" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DOCK_R" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:integer" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+									<xs:attribute name="value" type="xs:decimal" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="COMMENTS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COMMENT" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="TEXT">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="LAYOUT">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="X">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Y">
+														<xs:complexType>
+															<xs:attribute name="value" type="xs:decimal" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+									<xs:attribute name="value" type="xs:decimal" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
