@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="0"/>
+        <ITEM value="1"/>
+        <ITEM value="2"/>
+        <ITEM value="3"/>
+        <ITEM value="4"/>
+        <ITEM value="5"/>
+        <ITEM value="6"/>
+        <ITEM value="7"/>
+        <ITEM value="8"/>
+        <ITEM value="9"/>
+    </ALPHABET>
+    <STATE name="XXX" finalstate="false">
+        <TRANSITION target="0XX">
+            <LABEL read="0"/>
+        </TRANSITION>
+        <TRANSITION target="Falsch">
+            <LABEL read="1"/>
+            <LABEL read="2"/>
+            <LABEL read="3"/>
+            <LABEL read="4"/>
+            <LABEL read="5"/>
+            <LABEL read="6"/>
+            <LABEL read="7"/>
+            <LABEL read="8"/>
+            <LABEL read="9"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="0XX" finalstate="false">
+        <TRANSITION target="00X">
+            <LABEL read="0"/>
+        </TRANSITION>
+        <TRANSITION target="Falsch">
+            <LABEL read="1"/>
+            <LABEL read="2"/>
+            <LABEL read="3"/>
+            <LABEL read="4"/>
+            <LABEL read="5"/>
+            <LABEL read="6"/>
+            <LABEL read="7"/>
+            <LABEL read="8"/>
+            <LABEL read="9"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="00X" finalstate="false">
+        <TRANSITION target="Offen">
+            <LABEL read="0"/>
+        </TRANSITION>
+        <TRANSITION target="Falsch">
+            <LABEL read="1"/>
+            <LABEL read="2"/>
+            <LABEL read="3"/>
+            <LABEL read="4"/>
+            <LABEL read="5"/>
+            <LABEL read="6"/>
+            <LABEL read="7"/>
+            <LABEL read="8"/>
+            <LABEL read="9"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="Offen" finalstate="true"/>
+    <STATE name="Falsch" finalstate="true"/>
+    <INITIALSTATE value="XXX"/>
+    <LAYOUT>
+        <STATELAYOUT name="XXX">
+            <LEFT value="100"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="0XX" drawvertical="false">
+                <LEFT value="12"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="Falsch" drawvertical="false">
+                <LEFT value="-46"/>
+                <TOP value="46"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="0XX">
+            <LEFT value="220"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="00X" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="Falsch" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="00X">
+            <LEFT value="333"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="Offen" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="Falsch" drawvertical="false">
+                <LEFT value="58"/>
+                <TOP value="42"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="Offen">
+            <LEFT value="427"/>
+            <TOP value="100"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="Falsch">
+            <LEFT value="220"/>
+            <TOP value="178"/>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>
