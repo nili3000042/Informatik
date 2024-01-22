@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="E"/>
+        <ITEM value="K"/>
+    </ALPHABET>
+    <STATE name="q_0" finalstate="false">
+        <TRANSITION target="q_1">
+            <LABEL read="K"/>
+        </TRANSITION>
+        <TRANSITION target="q_2">
+            <LABEL read="E"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_1" finalstate="false">
+        <TRANSITION target="q_2">
+            <LABEL read="K"/>
+        </TRANSITION>
+        <TRANSITION target="q_3">
+            <LABEL read="E"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_2" finalstate="false">
+        <TRANSITION target="q_3">
+            <LABEL read="K"/>
+        </TRANSITION>
+        <TRANSITION target="q_4">
+            <LABEL read="E"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_3" finalstate="false">
+        <TRANSITION target="q_4">
+            <LABEL read="K"/>
+        </TRANSITION>
+        <TRANSITION target="q_5">
+            <LABEL read="E"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_4" finalstate="true">
+        <TRANSITION target="q_5">
+            <LABEL read="E"/>
+            <LABEL read="K"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_5" finalstate="false">
+        <TRANSITION target="q_5">
+            <LABEL read="E"/>
+            <LABEL read="K"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="q_0"/>
+    <LAYOUT>
+        <STATELAYOUT name="q_0">
+            <LEFT value="100"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false">
+                <LEFT value="-11"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false">
+                <LEFT value="-18"/>
+                <TOP value="-116"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_1">
+            <LEFT value="193"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_3" drawvertical="false">
+                <LEFT value="-11"/>
+                <TOP value="140"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_2">
+            <LEFT value="294"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_3" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_4" drawvertical="false">
+                <LEFT value="18"/>
+                <TOP value="-163"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_3">
+            <LEFT value="379"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_4" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_5" drawvertical="false">
+                <LEFT value="-47"/>
+                <TOP value="25"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_4">
+            <LEFT value="483"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_5" drawvertical="false">
+                <LEFT value="69"/>
+                <TOP value="20"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_5">
+            <LEFT value="430"/>
+            <TOP value="206"/>
+            <TRANSITIONLAYOUT target="q_5" drawvertical="false">
+                <TOP value="-120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <SIMULATIONINPUT>
+            <INPUT value="KEKEEKKEEK"/>
+            <INPUT value="KEKEKEKEKK"/>
+            <INPUT value="KKEEKEKKKK"/>
+            <INPUT value="EEEKKEKEKK"/>
+            <INPUT value="KKEEKEEKEK"/>
+            <INPUT value="KEEEKEKKKE"/>
+            <INPUT value="KEEEKKEKKK"/>
+            <INPUT value="EEKEKEKKEE"/>
+            <INPUT value="EEKKEEKEKE"/>
+            <INPUT value="KKKKKEEEKE"/>
+            <INPUT value="KKKEEKKKEE"/>
+        </SIMULATIONINPUT>
+        <NOTEPAD>
+            {\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="Forward"/>
+        <ITEM value="Play"/>
+        <ITEM value="Stop"/>
+    </ALPHABET>
+    <STATE name="Ruhe" finalstate="true">
+        <TRANSITION target="schneller Vorlauf">
+            <LABEL read="Forward"/>
+        </TRANSITION>
+        <TRANSITION target="Film Läuft">
+            <LABEL read="Play"/>
+        </TRANSITION>
+        <TRANSITION target="Ruhe">
+            <LABEL read="Stop"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="Film Läuft" finalstate="false">
+        <TRANSITION target="Ruhe">
+            <LABEL read="Stop"/>
+        </TRANSITION>
+        <TRANSITION target="schneller Vorlauf">
+            <LABEL read="Forward"/>
+        </TRANSITION>
+        <TRANSITION target="Film Läuft">
+            <LABEL read="Play"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="schneller Vorlauf" finalstate="false">
+        <TRANSITION target="Film Läuft">
+            <LABEL read="Play"/>
+        </TRANSITION>
+        <TRANSITION target="Ruhe">
+            <LABEL read="Stop"/>
+        </TRANSITION>
+        <TRANSITION target="schneller Vorlauf">
+            <LABEL read="Forward"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="Ruhe"/>
+    <LAYOUT>
+        <STATELAYOUT name="Ruhe">
+            <LEFT value="100"/>
+            <TOP value="133"/>
+            <TRANSITIONLAYOUT target="schneller Vorlauf" drawvertical="false">
+                <LEFT value="54"/>
+                <TOP value="-36"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="Film Läuft" drawvertical="false">
+                <LEFT value="1"/>
+                <TOP value="-65"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="Ruhe" drawvertical="false">
+                <TOP value="-120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="Film Läuft">
+            <LEFT value="348"/>
+            <TOP value="133"/>
+            <TRANSITIONLAYOUT target="Ruhe" drawvertical="false">
+                <LEFT value="1"/>
+                <TOP value="65"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="schneller Vorlauf" drawvertical="false">
+                <LEFT value="53"/>
+                <TOP value="38"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="Film Läuft" drawvertical="false">
+                <TOP value="-120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="schneller Vorlauf">
+            <LEFT value="216"/>
+            <TOP value="311"/>
+            <TRANSITIONLAYOUT target="Film Läuft" drawvertical="false">
+                <LEFT value="-51"/>
+                <TOP value="-39"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="Ruhe" drawvertical="false">
+                <LEFT value="-55"/>
+                <TOP value="35"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="schneller Vorlauf" drawvertical="false">
+                <TOP value="132"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <SIMULATIONINPUT>
+            <INPUT value="222"/>
+            <INPUT value="112"/>
+            <INPUT value="112"/>
+            <INPUT value="222"/>
+            <INPUT value="111"/>
+            <INPUT value="112"/>
+            <INPUT value="211"/>
+            <INPUT value="111"/>
+            <INPUT value="121"/>
+            <INPUT value="111"/>
+            <INPUT value="221"/>
+            <INPUT value="222"/>
+            <INPUT value="211"/>
+            <INPUT value="211"/>
+            <INPUT value="221"/>
+            <INPUT value="221"/>
+        </SIMULATIONINPUT>
+        <NOTEPAD>
+            {\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>

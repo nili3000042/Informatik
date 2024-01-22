@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="a"/>
+        <ITEM value="b"/>
+    </ALPHABET>
+    <STATE name="q_0" finalstate="false">
+        <TRANSITION target="q_1">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q_2">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_1" finalstate="false">
+        <TRANSITION target="q_2">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q_3">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_2" finalstate="false">
+        <TRANSITION target="q_0">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q_4">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_3" finalstate="false">
+        <TRANSITION target="q_2">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q_1">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_4" finalstate="false">
+        <TRANSITION target="q_5">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q_3">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_5" finalstate="false">
+        <TRANSITION target="q_0">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q_6">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_6" finalstate="true"/>
+    <INITIALSTATE value="q_0"/>
+    <LAYOUT>
+        <STATELAYOUT name="q_0">
+            <LEFT value="83"/>
+            <TOP value="115"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false">
+                <LEFT value="-1"/>
+                <TOP value="-50"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false">
+                <LEFT value="33"/>
+                <TOP value="-38"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_1">
+            <LEFT value="216"/>
+            <TOP value="43"/>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false">
+                <LEFT value="50"/>
+                <TOP value="-1"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_3" drawvertical="false">
+                <LEFT value="-1"/>
+                <TOP value="-50"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_2">
+            <LEFT value="194"/>
+            <TOP value="209"/>
+            <TRANSITIONLAYOUT target="q_0" drawvertical="false">
+                <LEFT value="-32"/>
+                <TOP value="39"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_4" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_3">
+            <LEFT value="378"/>
+            <TOP value="43"/>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false">
+                <LEFT value="-1"/>
+                <TOP value="50"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_4">
+            <LEFT value="342"/>
+            <TOP value="209"/>
+            <TRANSITIONLAYOUT target="q_5" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_3" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_5">
+            <LEFT value="452"/>
+            <TOP value="115"/>
+            <TRANSITIONLAYOUT target="q_0" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_6" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_6">
+            <LEFT value="477"/>
+            <TOP value="43"/>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>

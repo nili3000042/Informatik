@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="m"/>
+        <ITEM value="n"/>
+    </ALPHABET>
+    <STATE name="q_0" finalstate="false">
+        <TRANSITION target="q_1">
+            <LABEL read="m"/>
+        </TRANSITION>
+        <TRANSITION target="q_2">
+            <LABEL read="n"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_1" finalstate="false">
+        <TRANSITION target="q_2">
+            <LABEL read="n"/>
+        </TRANSITION>
+        <TRANSITION target="Trap">
+            <LABEL read="m"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_2" finalstate="true">
+        <TRANSITION target="q_1">
+            <LABEL read="n"/>
+        </TRANSITION>
+        <TRANSITION target="Trap">
+            <LABEL read="m"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="Trap" finalstate="false">
+        <TRANSITION target="Trap">
+            <LABEL read="m"/>
+            <LABEL read="n"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="q_0"/>
+    <LAYOUT>
+        <STATELAYOUT name="q_0">
+            <LEFT value="100"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false"/>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_1">
+            <LEFT value="200"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false">
+                <LEFT value="50"/>
+                <TOP value="-1"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="Trap" drawvertical="false">
+                <PENCOLOR value="$C0C0C0"/>
+                <LABELLAYOUT read="m">
+                    <FONTCOLOR value="$666666"/>
+                </LABELLAYOUT>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_2">
+            <LEFT value="200"/>
+            <TOP value="200"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false">
+                <LEFT value="-50"/>
+                <TOP value="-1"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="Trap" drawvertical="false">
+                <PENCOLOR value="$C0C0C0"/>
+                <LABELLAYOUT read="m">
+                    <FONTCOLOR value="$666666"/>
+                </LABELLAYOUT>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="Trap">
+            <LEFT value="100"/>
+            <TOP value="200"/>
+            <COLOR value="$EEEEEE"/>
+            <PENCOLOR value="$C0C0C0"/>
+            <FONTCOLOR value="$666666"/>
+            <TRANSITIONLAYOUT target="Trap" drawvertical="false">
+                <TOP value="120"/>
+                <PENCOLOR value="$C0C0C0"/>
+                <FONTCOLOR value="$666666"/>
+                <LABELLAYOUT read="m">
+                    <FONTCOLOR value="$666666"/>
+                </LABELLAYOUT>
+                <LABELLAYOUT read="n">
+                    <FONTCOLOR value="$666666"/>
+                </LABELLAYOUT>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <SIMULATIONINPUT>
+            <INPUT value="nnmmn"/>
+            <INPUT value="nnnnm"/>
+            <INPUT value="mnnnn"/>
+            <INPUT value="nnnmm"/>
+            <INPUT value="mnmnm"/>
+            <INPUT value="nmnnn"/>
+            <INPUT value="mnnmm"/>
+            <INPUT value="mnnmm"/>
+            <INPUT value="mnmmm"/>
+            <INPUT value="nnmmn"/>
+            <INPUT value="mmmnn"/>
+            <INPUT value="nmnnn"/>
+            <INPUT value="nmnmn"/>
+            <INPUT value="nmmmm"/>
+            <INPUT value="nmmmm"/>
+            <INPUT value="mmmnn"/>
+            <INPUT value="mnmmn"/>
+        </SIMULATIONINPUT>
+        <NOTEPAD>
+            {\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>
