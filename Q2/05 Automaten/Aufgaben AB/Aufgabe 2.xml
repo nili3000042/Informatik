@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="0"/>
+        <ITEM value="1"/>
+    </ALPHABET>
+    <STATE name="q_0" finalstate="false">
+        <TRANSITION target="q_1">
+            <LABEL read="1"/>
+        </TRANSITION>
+        <TRANSITION target="q_0">
+            <LABEL read="0"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_1" finalstate="false">
+        <TRANSITION target="q_1">
+            <LABEL read="1"/>
+        </TRANSITION>
+        <TRANSITION target="q_2">
+            <LABEL read="0"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_2" finalstate="true">
+        <TRANSITION target="q_0">
+            <LABEL read="0"/>
+        </TRANSITION>
+        <TRANSITION target="q_1">
+            <LABEL read="1"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="q_0"/>
+    <LAYOUT>
+        <STATELAYOUT name="q_0">
+            <LEFT value="100"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_0" drawvertical="false">
+                <TOP value="-120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_1">
+            <LEFT value="300"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false">
+                <TOP value="-120"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false">
+                <LEFT value="25"/>
+                <TOP value="-44"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_2">
+            <LEFT value="500"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_0" drawvertical="false">
+                <LEFT value="27"/>
+                <TOP value="223"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false">
+                <LEFT value="-26"/>
+                <TOP value="43"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>

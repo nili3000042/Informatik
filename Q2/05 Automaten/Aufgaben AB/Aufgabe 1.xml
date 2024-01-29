@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="a"/>
+        <ITEM value="b"/>
+    </ALPHABET>
+    <STATE name="z_0" finalstate="false">
+        <TRANSITION target="z_1">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="z_3">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="z_1" finalstate="false">
+        <TRANSITION target="z_2">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="z_0">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="z_2" finalstate="false">
+        <TRANSITION target="z_3">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="z_1">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="z_3" finalstate="true">
+        <TRANSITION target="z_0">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="z_2">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="z_0"/>
+    <LAYOUT>
+        <STATELAYOUT name="z_0">
+            <LEFT value="100"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="z_1" drawvertical="false">
+                <LEFT value="-1"/>
+                <TOP value="-50"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="z_3" drawvertical="false">
+                <LEFT value="50"/>
+                <TOP value="-1"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="z_1">
+            <LEFT value="300"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="z_2" drawvertical="false">
+                <LEFT value="36"/>
+                <TOP value="34"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="z_0" drawvertical="false">
+                <LEFT value="-1"/>
+                <TOP value="50"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="z_2">
+            <LEFT value="300"/>
+            <TOP value="300"/>
+            <TRANSITIONLAYOUT target="z_3" drawvertical="false">
+                <LEFT value="35"/>
+                <TOP value="35"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="z_1" drawvertical="false">
+                <LEFT value="-38"/>
+                <TOP value="-33"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="z_3">
+            <LEFT value="100"/>
+            <TOP value="300"/>
+            <TRANSITIONLAYOUT target="z_0" drawvertical="false">
+                <LEFT value="-50"/>
+                <TOP value="-1"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="z_2" drawvertical="false">
+                <TOP value="-49"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>
