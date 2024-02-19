@@ -77,13 +77,7 @@
             <LABEL read="c"/>
         </TRANSITION>
     </STATE>
-    <STATE name="q_7" finalstate="true">
-        <TRANSITION target="q_7">
-            <LABEL read="a"/>
-            <LABEL read="b"/>
-            <LABEL read="c"/>
-        </TRANSITION>
-    </STATE>
+    <STATE name="q_7" finalstate="true"/>
     <INITIALSTATE value="q_0"/>
     <LAYOUT>
         <STATELAYOUT name="q_0">
@@ -161,12 +155,9 @@
         <STATELAYOUT name="q_7">
             <LEFT value="600"/>
             <TOP value="300"/>
-            <TRANSITIONLAYOUT target="q_7" drawvertical="false">
-                <TOP value="-120"/>
-            </TRANSITIONLAYOUT>
         </STATELAYOUT>
         <NOTEPAD>
-            {\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+            {\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 \viewkind4\uc1\pard\lang1031\fs20 
 \par }
 
