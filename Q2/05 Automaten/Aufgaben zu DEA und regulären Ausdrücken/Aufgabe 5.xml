@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOMATON>
+    <TYPE value="DEA"/>
+    <ALPHABET>
+        <ITEM value="a"/>
+        <ITEM value="b"/>
+    </ALPHABET>
+    <STATE name="q_0" finalstate="false">
+        <TRANSITION target="q_1">
+            <LABEL read="b"/>
+        </TRANSITION>
+        <TRANSITION target="q_0">
+            <LABEL read="a"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_1" finalstate="false">
+        <TRANSITION target="q_2">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q_3">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_2" finalstate="true">
+        <TRANSITION target="q_1">
+            <LABEL read="b"/>
+        </TRANSITION>
+        <TRANSITION target="q_0">
+            <LABEL read="a"/>
+        </TRANSITION>
+    </STATE>
+    <STATE name="q_3" finalstate="true">
+        <TRANSITION target="q_2">
+            <LABEL read="a"/>
+        </TRANSITION>
+        <TRANSITION target="q_3">
+            <LABEL read="b"/>
+        </TRANSITION>
+    </STATE>
+    <INITIALSTATE value="q_0"/>
+    <LAYOUT>
+        <STATELAYOUT name="q_0">
+            <LEFT value="100"/>
+            <TOP value="150"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false"/>
+            <TRANSITIONLAYOUT target="q_0" drawvertical="false">
+                <TOP value="-120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_1">
+            <LEFT value="200"/>
+            <TOP value="150"/>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false">
+                <LEFT value="-22"/>
+                <TOP value="-30"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_3" drawvertical="false">
+                <LEFT value="-12"/>
+                <TOP value="18"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_2">
+            <LEFT value="300"/>
+            <TOP value="100"/>
+            <TRANSITIONLAYOUT target="q_1" drawvertical="false">
+                <LEFT value="29"/>
+                <TOP value="17"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_0" drawvertical="false">
+                <LEFT value="22"/>
+                <TOP value="-58"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <STATELAYOUT name="q_3">
+            <LEFT value="300"/>
+            <TOP value="200"/>
+            <TRANSITIONLAYOUT target="q_2" drawvertical="false">
+                <LEFT value="62"/>
+            </TRANSITIONLAYOUT>
+            <TRANSITIONLAYOUT target="q_3" drawvertical="false">
+                <TOP value="-120"/>
+            </TRANSITIONLAYOUT>
+        </STATELAYOUT>
+        <NOTEPAD>
+            {\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\lang1031\fs20 
+\par }
+
+        </NOTEPAD>
+    </LAYOUT>
+</AUTOMATON>
